@@ -25,5 +25,8 @@
         <module name="testshiro3" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="testshiro3" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

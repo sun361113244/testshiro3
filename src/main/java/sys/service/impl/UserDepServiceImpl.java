@@ -14,19 +14,16 @@ public class UserDepServiceImpl implements UserDepService
     @Resource
     private RbacUserDepMapper rbacUserDepMapper;
 
-    @Override
     public List<RbacDep> selectDepListByUserId(Integer id)
     {
         return rbacUserDepMapper.selectDepListByUserId(id);
     }
 
-    @Override
     public int deleteByUserId(Integer id)
     {
         return rbacUserDepMapper.deleteByUserId(id);
     }
 
-    @Override
     public void insertUserDep(Integer id, Integer stationId)
     {
         rbacUserDepMapper.insertUserDep(id , stationId);

@@ -48,9 +48,7 @@ public class SysController
             {
                 userDepService.insertUserDep( id , arrayStations[i]);
             }
-//            RbacDep dep = new RbacDep( id ,null ,null , null, null , (byte)2);
-//            int res = depService.updateDep(dep);
-//
+
             mav.addObject("sqlresult" ,delRes);
             return mav;
         }

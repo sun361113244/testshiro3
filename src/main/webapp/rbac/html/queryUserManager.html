@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <link href="../../static/jslib/jquery-ui/jquery-ui.css"  rel="stylesheet"/>
+    <link href="../../static/jslib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/jslib/fontawesome4.2/css/font-awesome.css" rel="stylesheet">
+    <link href="../../static/jslib/animate/animate.css" rel="stylesheet">
+    <link href="../../static/css/style.css" rel="stylesheet">
+    <link href="../../static/css/theme/default.css" rel="stylesheet">
+    <!-- ================== END BASE CSS STYLE ================== -->
+
+    <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+    <link href="../../static/css/ExBootstrap.css">
+    <link href="../../static/jslib/dataTables-1.10.7/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+
+    <!-- ================== BEGIN BASE JS ================== -->
+    <script src="../../static/jslib/jquery/jquery-1.11.2.min.js"></script>
+    <script src="../../static/jslib/jquery/jquery-migrate-1.1.0.min.js"></script>
+    <script src="../../static/jslib/jquery-ui/jquery-ui.js"></script>
+    <script src="../../static/jslib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../static/jslib/holder/holder.js"></script>
+    <script src="../../static/jslib/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <script src="../../static/jslib/jquery-cookie/jquery.cookie.js"></script>
+    <!--[if lt IE 9]> -->
+    <script src="../../static/jslib/crossbrowserjs/html5shiv.js"></script>
+    <script src="../../static/jslib/crossbrowserjs/respond.min.js"></script>
+    <script src="../../static/jslib/crossbrowserjs/excanvas.min.js"></script>
+    <!-- <![endif] -->
+    <script src = "../../static/js/util.js"></script>
+    <script src="../../static/js/apps.js"></script>
+    <!-- ================== END BASE JS ================== -->
+
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script  src="../../static/jslib/dataTables-1.10.7/js/jquery.dataTables.min.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+
+    <script>
+        var table_user;
+        $(function () {
+            table_user = initUserTable();
+            App.init(1);
+            initStationList();
+        })
+        function initStationList()
+        {
+            $.ajax({
+                url : getContextPath() + "/stationController/selectAllStation",
+                dataType : "json" ,
+                async : true ,
+                success : function(data)
+                {
+                    var stationList = data.records;
+
+                    for(var elem in stationList)
+                    {
+                        var str = '<label><input name=\"stationsInput\" id=\"' + 'station' +  stationList[elem].id + '\" type=\"checkbox\" value = ' + stationList[elem].id + ' />' + stationList[elem].name + '</label>';
+                        $('#stationList').append(str);
+                    }
+                }
+            });
+        }
+        /**
+         * 表格初始化
+         * @returns {*|jQuery}
+         */
+        function initUserTable() {
+            var table = $("#tb_user").dataTable({
+                "deferRender": true,                //延迟渲染
+                "processing": true,                 // 是否显示处理状态
+                "info": true,                        //是否显示左下信息
+                "scrollY": "400px",                 // 垂直滚动
+                "ajax": {
+                    "url": getContextPath() + "/userController/selectAllUsers",
+//                    "url": "../../static/json/users.json",
+                    "type": "POST",
+                    "async": true
+                },
+                "language": {
+                    "emptyTable": "无数据可显示",
+                    "info": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
+                    "infoEmpty": "记录数为0",
+                    "infoFiltered": "(全部记录数 _MAX_ 条)",
+                    "loadingRecords": "正在加载数据，请稍后....",
+                    "processing": "数据处理中，请稍后......",
+                    "search": "查询",
+                    "lengthMenu": "每页显示 _MENU_ 条记录",
+                    "zeroRecords": "没有检索到数据",
+                    "paginate": {
+                        "first": "首页",
+                        "last": "尾页",
+                        "next": "下页",
+                        "previous": "上页"
+                    }
+                },
+                "columnDefs": [
+                    {
+                        "defaultContent": "",
+                        "targets": "_all"
+                    }
+                ],
+                "columns": [
+                    {
+                        "data": "id",
+                        "title": "用户ID",
+                        "orderable": false
+                    },
+                    {
+                        "data": "userName",
+                        "title": "用户名称",
+                        "orderable": false
+                    },
+                    {
+                        "data": "givenName",
+                        "title": "用户中文名",
+                        "orderable": false
+                    },
+                    {
+                        "data": "status",
+                        "title": "用户状态",
+                        "orderable": false,
+                        "render": function (data, type, row) {
+                            switch (data)
+                            {
+                                case 1:
+                                    return "启用";
+                                case 3:
+                                    return "锁定";
+                                default :
+                                    return "未知";
+                            }
+                        }
+                    },
+                    {
+                        "data": "createTime",
+                        "title": "创建时间",
+                        "orderable": false,
+                        "render": function (data, type, row) {
+                            var date = new Date(data);
+                            return date.toLocaleString();
+                        }
+                    },
+                    {
+                        "data": "updateTime",
+                        "title": "修改时间",
+                        "orderable": false,
+                        "render": function (data, type, row) {
+                            var date = new Date(data);
+                            return date.toLocaleString();
+                        }
+                    },
+                    {
+                        "data": "loginTime",
+                        "title": "上次登录时间",
+                        "orderable": false,
+                        "render": function (data, type, row) {
+                            var date = new Date(data);
+                            return date.toLocaleString();
+                        }
+                    },
+                    {
+                        "data": "loginCount",
+                        "title": "登录次数",
+                        "orderable": false
+                    },
+                    {
+                        data: null,
+                        "title": "操作",
+                        className: "center",
+                        defaultContent: '<a href="#">Edit</a> / <a href="#">Delete</a>',
+                        "render": function (data, type, row) {
+                            var resStr = "<a href='javascript:void(0);' " +
+                            "onclick='authorizeUserStation(\"" + data.id + "\")'>站点授权</a>";
+                            return resStr;
+                        }
+                    }
+                ]
+            });
+
+            // 单行选中变色
+            $('#tb_user tbody').on('click', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    table_user.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+            });
+
+            // 双击弹出modual
+            $('#tb_user tbody').on('dblclick', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    table_user.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+            });
+            return table;
+        }
+        function addUser() {
+            $('#userFlag').attr("value", "add");
+
+            $('#userId').val("");
+            $('#userName').val("");
+            $('#userPasswrod').val("");
+            $('#givenName').val("");
+            $('#status').val("1");
+            $('#userModal').modal('show');
+        }
+        function editUser() {
+            $('#userFlag').attr("value", "edit");
+
+            var selectedItem = $('#tb_user').DataTable().row('.selected').data();
+
+            $('#userId').attr("value", selectedItem.id);
+            $('#userName').attr("value", selectedItem.userName);
+            $('#userPasswrod').attr("value", selectedItem.userPasswrod);
+            $('#givenName').attr("value", selectedItem.givenName);
+            $('#status').attr("value", selectedItem.status);
+            $('#userModal').modal('show');
+        }
+        function confirmInputUser()
+        {
+            if($.trim($('#userName').val()) == '')
+            {
+                alert('用户名称不能为空！');
+                return ;
+            }
+            if($.trim($('#userPasswrod').val()) == '')
+            {
+                alert('用户密码不能为空！');
+                return ;
+            }
+            if($.trim($('#givenName').val()) == '')
+            {
+                alert('用户姓名不能为空！');
+                return ;
+            }
+
+            var oper = $('#userFlag').attr("value");
+            var url;
+            switch (oper) {
+                case "add":
+                    url = getContextPath() + "/userController/addUser";
+                    break;
+                case "edit":
+                    url = getContextPath() + "/userController/editUser";
+                    break;
+            }
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {
+                    id : $('#userId').val(),
+                    name : $('#userName').val(),
+                    pwd : $('#userPasswrod').attr("value"),
+                    givenname : $('#givenName').attr("value"),
+                    status :  $('#status').attr("value")
+                },
+                success: function (data) {
+                    if(data.sqlresult > 0 )
+                    {
+                        alert('修改成功');
+                    }
+                    else
+                    {
+                        switch (data.sqlresult)
+                        {
+                            case -1:
+                                alert('sql语句错误');
+                                break;
+                            case -2:
+                                alert('用户名称已存在');
+                                break;
+                            default :
+                                alert('修改失败');
+                                break;
+                        }
+                    }
+                    $('#userModal').modal('hide');
+                    table_user.api().ajax.reload();
+                }
+            });
+        }
+        function deleteUser() {
+            $.ajax({
+                type: "POST",
+                url: getContextPath() + "/userController/deleteUser",
+                data: {
+                    id : table_user.api().row('.selected').data().id
+                },
+                success: function (data) {
+                    if(data.sqlresult > 0 )
+                    {
+                        alert('删除成功');
+                    }
+                    else
+                    {
+                        alert('删除失败');
+                    }
+                    table_user.api().ajax.reload();
+                }
+            });
+        }
+    function authorizeUserStation(id)
+    {
+        initStationListOnSelUser(id);
+        $('#stationSelId').val(id);
+        $('#stationAuthModal').modal('show');
+    }
+    function initStationListOnSelUser(id)
+    {
+        $.ajax({
+            url : getContextPath() + "/stationController/selectAllStationOnSelUser",
+            dataType : "json" ,
+            async : true ,
+            data : { id : id },
+            success : function(data)
+            {
+                var stationList = data.stationList;
+                var userStationList = data.userStationList;
+
+                for(var elem in stationList)
+                {
+                    $("#station" + stationList[elem].id ).attr("checked" , false);
+                }
+                for(var elem in userStationList)
+                {
+                    $("#station" + userStationList[elem].id ).attr("checked" , true);
+                }
+            }
+        });
+    }
+    function confirmInputAuthStation()
+    {
+        var id = $('#stationSelId').val();
+        var arrayStations = new Array();
+        $("input[name='stationsInput']:checkbox").each(function()
+        { //由于复选框一般选中的是多个,所以可以循环输出
+            if($(this).attr("checked"))
+                arrayStations.push($(this).val());
+        });
+
+        $.ajax({
+            url : getContextPath() + "/sysController/authorizeDep",
+            dataType : "json" ,
+            async : false ,
+            data : {
+                id : id ,
+                arrayStations : arrayStations
+            },
+            success : function(data)
+            {
+                if(data.sqlresult >= 0)
+                {
+                    alert("授权成功");
+                }
+                else
+                {
+                    alert("授权失败");
+                }
+            }
+        });
+        $('#stationAuthModal').modal('hide');
+
+    }
+    </script>
+    <title></title>
+</head>
+<body>
+<!-- begin #page-loader -->
+<div id="page-loader" class="fade in">
+    <span class="spinner"></span>
+</div>
+<!-- end #page-loader -->
+<!-- begin #page-container -->
+<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+    <!-- begin #header -->
+    <div id="header" class="header navbar navbar-inverse navbar-fixed-top">
+        <!-- begin container-fluid -->
+        <div class="container-fluid">
+            <!-- begin mobile sidebar expand / collapse button -->
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand"><span class="navbar-logo"></span>权限管理平台</a>
+                <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+                        </span>
+                </button>
+            </div>
+            <!-- end mobile sidebar expand / collapse button -->
+            <!-- begin header navigation right -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <form class="navbar-form full-width">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="输入关键字"/>
+                            <button type="submit" class="btn btn-search">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </li>
+                <li class="dropdown navbar-user"><a href="javascript;" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="hidden-xs activeUserName">Admin</span> <b class="caret"></b></a>
+                    <ul class="dropdown-menu animated fadeInLeft">
+                        <li class="arrow"></li>
+                        <li><a href="javascript;">设置</a></li>
+                        <li class="divider"></li>
+                        <li><a href="../../logout" >注销</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- end header navigation right -->
+        </div>
+        <!-- end container-fluid -->
+    </div>
+    <!-- end #header -->
+    <!-- begin #sidebar -->
+    <div id="sidebar" class="sidebar">
+        <!-- begin sidebar scrollbar -->
+        <div data-scrollbar="true" data-height="100%">
+            <!-- begin sidebar user -->
+            <ul class="nav">
+                <li class="nav-profile">
+                    <div class="info activeUserName">
+                        admin
+                        <small>万集研发工程师</small>
+                    </div>
+                </li>
+            </ul>
+            <!-- end sidebar user -->
+            <!-- begin sidebar nav -->
+            <ul id="menuList" class="nav">
+
+            </ul>
+            <!-- end sidebar nav -->
+        </div>
+        <!-- end sidebar scrollbar -->
+    </div>
+    <div class="sidebar-bg">
+    </div>
+    <!-- end #sidebar -->
+    <!-- begin #content -->
+    <div id="content" class="content">
+        <!-- begin row -->
+        <div class="row">
+            <!-- begin col-12 -->
+            <div class="col-md-12">
+                <!-- begin panel -->
+                <div class="panel panel-inverse">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">用户信息</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div style="margin-bottom: 20px">
+                            <button type="button" class="btn btn-primary" style="margin-left: 20px" onclick="addUser()">添&nbsp;&nbsp;加</button>
+                            <button type="button" class="btn btn-success" style="margin-left: 20px" onclick="editUser()">
+                                修&nbsp;&nbsp;改
+                            </button>
+                            <button type="button" class="btn btn-danger" style="margin-left: 20px"
+                                    onclick="deleteUser()">删&nbsp;&nbsp;除
+                            </button>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="tb_user" cellpadding="0" cellspacing="0" class = "display">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- end panel -->
+            </div>
+            <!-- end col-12 -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end #content -->
+</div>
+<!-- end page container -->
+<!-- start modal -->
+<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- start modal_header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">用户信息</h4>
+            </div>
+            <!-- end modal_header -->
+            <!-- start modal-body -->
+            <div class="modal-body">
+                <form class="form-horizontal" id="resForm">
+                    <input type="hidden" id="userFlag" name="userFlag">
+                    <input type="hidden" id="userId" name="userId">
+                    <div class="control-group">
+                        <label class="control-label" for="userName">&nbsp;&nbsp;&nbsp;&nbsp;用户名称：</label>
+                        <input type="text" id="userName" name="userName">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="userPasswrod">&nbsp;&nbsp;&nbsp;&nbsp;用户密码：</label>
+                        <input type="text" id="userPasswrod" name="userPasswrod">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="givenName">用户中文名：</label>
+                        <input type="text" id="givenName" name="givenName">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="status">&nbsp;&nbsp;&nbsp;&nbsp;用户状态：</label>
+                        <select id="status" name="status">
+                            <option value="1">启用</option>
+                            <option value="3">锁定</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <!-- end modal-body -->
+            <!-- start modal-footer -->
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="btnSave" onclick="confirmInputUser()">确定</button>
+                <button class="btn btn-danger" data-dismiss="modal"
+                        aria-hidden="true">取消
+                </button>
+            </div>
+            <!-- end modal-footer -->
+        </div>
+    </div>
+</div>
+<!-- end modal -->
+<!-- start modal -->
+<div class="modal fade" id="stationAuthModal" tabindex="-1" role="dialog" aria-labelledby="myStationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- start modal_header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myStationModalLabel">站点访问信息</h4>
+            </div>
+            <!-- end modal_header -->
+            <!-- start modal-body -->
+            <div id = "stationList" class="modal-body">
+                <input id="stationSelId" value = "" style="display: none;" />
+            </div>
+            <!-- end modal-body -->
+            <!-- start modal-footer -->
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="btnSaveAuthStation" onclick="confirmInputAuthStation()">确定</button>
+                <button class="btn btn-danger" data-dismiss="modal"
+                        aria-hidden="true">取消
+                </button>
+            </div>
+            <!-- end modal-footer -->
+        </div>
+    </div>
+</div>
+<!-- end modal -->
+</body>
+</html>

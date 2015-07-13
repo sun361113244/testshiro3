@@ -5374,11 +5374,6 @@ ul.tagit.inverse li.tagit-choice .tagit-close:focus .ui-icon-close:before, ul.ta
 
 .login-cover-bg {
     background: #666;
-    background: -moz-radial-gradient(center, ellipse cover, #666 0, #000 100%);
-    background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0%, #666), color-stop(100%, #000));
-    background: -webkit-radial-gradient(center, ellipse cover, #666 0, #000 100%);
-    background: -o-radial-gradient(center, ellipse cover, #666 0, #000 100%);
-    background: -ms-radial-gradient(center, ellipse cover, #666 0, #000 100%);
     background: radial-gradient(ellipse at center, #666 0, #000 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#000000', GradientType=1);
     opacity: .6;
@@ -5844,7 +5839,6 @@ ul.tagit.inverse li.tagit-choice .tagit-close:focus .ui-icon-close:before, ul.ta
     position: absolute;
     top: 25px;
     right: 25px;
-    background: url(assets/plugins/superbox/img/close.gif) center center no-repeat;
     width: 35px;
     height: 35px
 }

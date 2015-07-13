@@ -18,7 +18,6 @@ import java.util.List;
 @Service
 public class MenuServiceOnColorAdminImpl implements MenuService
 {
-    @Override
     public String getMenuStr(List<RbacUri> menus, Integer index)
     {
         List<TreeNode> menuTree = TreeHelper.changeEnititiesToTreeNodes(menus);
@@ -48,7 +47,6 @@ public class MenuServiceOnColorAdminImpl implements MenuService
 
         Collections.sort(rootNode.getChildList(), new Comparator<TreeNode>()
         {
-            @Override
             public int compare(TreeNode o1, TreeNode o2)
             {
                 return o1.getSelfId() > o2.getSelfId() ? 1:-1;
@@ -120,7 +118,6 @@ public class MenuServiceOnColorAdminImpl implements MenuService
                     Element ul = li.addElement("ul").addAttribute("class" ,"sub-menu");
                     Collections.sort(treeNode.getChildList(), new Comparator<TreeNode>()
                     {
-                        @Override
                         public int compare(TreeNode o1, TreeNode o2)
                         {
                             return o1.getSelfId() > o2.getSelfId() ? 1:-1;
@@ -144,7 +141,6 @@ public class MenuServiceOnColorAdminImpl implements MenuService
                     Element ul = li.addElement("ul").addAttribute("class" ,"sub-menu");
                     Collections.sort(treeNode.getChildList(), new Comparator<TreeNode>()
                     {
-                        @Override
                         public int compare(TreeNode o1, TreeNode o2)
                         {
                             return o1.getSelfId() > o2.getSelfId() ? 1:-1;

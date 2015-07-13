@@ -14,7 +14,6 @@ public class UserUriServiceImpl implements UserUriService
     @Resource
     private RbacUserUriMapper rbacUserUriMapper;
 
-    @Override
     public List<RbacUri> selectMenuListByUserId(Integer id)
     {
         return rbacUserUriMapper.selectMenuListByUserId(id);
