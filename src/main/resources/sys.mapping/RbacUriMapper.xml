@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sys.mapper.RbacUriMapper">
+    <resultMap id="UriResultMap" type="sys.entity.RbacUri">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="parent_id" jdbcType="INTEGER" property="parentId" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="permission" jdbcType="VARCHAR" property="permission" />
+        <result column="uri" jdbcType="VARCHAR" property="uri" />
+        <result column="iconCls" jdbcType="VARCHAR" property="iconcls" />
+        <result column="tree_code" jdbcType="VARCHAR" property="treeCode" />
+        <result column="show_type" jdbcType="TINYINT" property="showType" />
+        <result column="sort" jdbcType="TINYINT" property="sort" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    </resultMap>
+    <sql id="Uri_Column_List">
+        id, parent_id, name, permission, uri, iconCls, tree_code, show_type, sort, create_time,
+        update_time
+    </sql>
+</mapper>
