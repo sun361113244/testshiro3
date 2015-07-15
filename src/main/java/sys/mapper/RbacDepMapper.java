@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface RbacDepMapper
 {
-    int selectIsDepCodeExist(String code);
+    int selectIsDepCodeExist(@Param("code") String code);
 
-    int selectIsDepNameExist(String name);
+    int selectIsDepNameExist(@Param("name") String name);
 
     int selectIsDepCodeExistExceptID(@Param("id")Integer id, @Param("code")String code);
 

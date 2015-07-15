@@ -11,6 +11,11 @@
     <link href="../../static/css/theme/default.css" rel="stylesheet">
     <!-- ================== END BASE CSS STYLE ================== -->
 
+    <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+    <link href="../../static/jslib/dataTables-1.10.7/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <link href="../../static/css/ExBootstrap.css" rel="stylesheet"/>
+    <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+
     <!-- ================== BEGIN BASE JS ================== -->
     <script src="../../static/jslib/jquery/jquery-1.11.2.min.js"></script>
     <script src="../../static/jslib/jquery/jquery-migrate-1.1.0.min.js"></script>
@@ -27,10 +32,118 @@
     <script src = "../../static/js/util.js"></script>
     <script src="../../static/js/apps.js"></script>
     <!-- ================== END BASE JS ================== -->
+
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script  src="../../static/jslib/dataTables-1.10.7/js/jquery.dataTables.min.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
     <script>
+        var table_role;
         $(function(){
+            table_role = initRoleTable();
             App.init(1);
-        })
+        });
+        /**
+         * 表格初始化
+         * @returns {*|jQuery}
+         */
+        function initRoleTable() {
+            var table = $("#tb_role").dataTable({
+                "deferRender": true,                //延迟渲染
+                "info": true,                        //是否显示左下信息
+                "processing": true,                 // 是否显示处理状态
+                "retrieve": true,
+                "scrollY": "350px",                 // 垂直滚动
+                "ajax": {
+                    "url": getContextPath() + "/roleController/selectAllRoleOnActiveUser",
+//                    "url": "../../static/json/stations.json",
+                    "type": "POST",
+                    "async": true
+                },
+                "language": {
+                    "emptyTable": "无数据可显示",
+                    "info": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
+                    "infoEmpty": "记录数为0",
+                    "infoFiltered": "(全部记录数 _MAX_ 条)",
+                    "loadingRecords": "正在加载数据，请稍后....",
+                    "processing": "数据处理中，请稍后......",
+                    "search": "查询",
+                    "lengthMenu": "每页显示 _MENU_ 条记录",
+                    "zeroRecords": "没有检索到数据",
+                    "paginate": {
+                        "first": "首页",
+                        "last": "尾页",
+                        "next": "下页",
+                        "previous": "上页"
+                    }
+                },
+                "columnDefs": [
+                    {
+                        "defaultContent": "",
+                        "targets": "_all"
+                    }
+                ],
+                "columns": [
+                    {
+                        "data": "id",
+                        "title": "角色ID",
+                        "orderable": false
+                    },
+                    {
+                        "data": "name",
+                        "title": "角色名称",
+                        "orderable": false
+                    },
+                    {
+                        "data": "description",
+                        "title": "角色描述",
+                        "orderable": false
+                    },
+                    {
+                        "data": "createTime",
+                        "title": "创建时间",
+                        "width": "150px",
+                        "orderable": false,
+                        "render": function (data, type, row) {
+                            var date = new Date(data);
+                            return date.toLocaleString();
+                        }
+                    },
+                    {
+                        "data": "updateTime",
+                        "title": "修改时间",
+                        "width": "150px",
+                        "orderable": false,
+                        "render": function (data, type, row) {
+                            var date = new Date(data);
+                            return date.toLocaleString();
+                        }
+                    }
+                ]
+            });
+
+            // 单行选中变色
+            $('#tb_role tbody').on('click', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    table_role.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+            });
+
+            // 双击弹出modual
+            $('#tb_role tbody').on('dblclick', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    table_role.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+            });
+            return table;
+        }
     </script>
     <title></title>
 </head>
@@ -111,7 +224,28 @@
     <div id="content" class="content">
         <!-- begin row -->
         <div class="row">
-
+            <!-- begin col-12 -->
+            <div class="col-md-12">
+                <!-- begin panel -->
+                <div class="panel panel-inverse">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">角色信息</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div style="margin-bottom: 20px">
+                            <button type="button" class="btn btn-primary" style="margin-left: 20px" onclick="addRole()">添&nbsp;&nbsp;加</button>
+                            <button type="button" class="btn btn-success" style="margin-left: 20px" onclick="editRole()">修&nbsp;&nbsp;改</button>
+                            <button type="button" class="btn btn-danger" style="margin-left: 20px" onclick="delRole()">删&nbsp;&nbsp;除</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="tb_role" cellpadding="0" cellspacing="0" class = "display">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- end panel -->
+            </div>
+            <!-- end col-12 -->
         </div>
         <!-- end row -->
     </div>

@@ -3,6 +3,8 @@ package sys.controller;
 import org.apache.commons.beanutils.converters.ByteConverter;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,7 +20,7 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-@RequestMapping("/stationController")
+@RequestMapping("/departmentController")
 public class DepartmentController
 {
     @Resource
@@ -79,7 +81,7 @@ public class DepartmentController
     /**
      * 根据当前用户从数据库加载部门
      */
-    @RequestMapping("/selectAllStationOnActiveUser")
+    @RequestMapping("/selectAllDepartmentOnActiveUser")
     public ModelAndView selectAllDepartmentOnActiveUser(Integer draw)
     {
         try
@@ -88,27 +90,26 @@ public class DepartmentController
             ActiveUser activeUser = (ActiveUser)currentUser.getPrincipal();
 
             ModelAndView mav = new ModelAndView("DataTablesAjaxView");
-            List<RbacDep> stationList = userDepService.selectDepListByUserId(activeUser.getUserid());
+            List<RbacDep> departmentList = userDepService.selectDepListByUserId(activeUser.getUserid());
 
             if(draw != null)
             {
                 mav.addObject("draw", draw);
             }
-            mav.addObject("records", stationList);
-            mav.addObject("recordsTotal", stationList.size());
-            mav.addObject("recordsFiltered", stationList.size());
+            mav.addObject("data", departmentList);
+            mav.addObject("recordsTotal", departmentList.size());
+            mav.addObject("recordsFiltered", departmentList.size());
             return mav;
         }
         catch (Exception ex)
         {
-            System.out.println(ex.getMessage());
             ModelAndView mav = new ModelAndView("JsonView");
             mav.addObject("result" , -1);
             return mav;
         }
     }
 
-    @RequestMapping("/addStation")
+    @RequestMapping("/addDepartment")
     public ModelAndView addDepartment( @RequestParam("code")String code, @RequestParam("name")String name)
     {
         try
@@ -134,14 +135,13 @@ public class DepartmentController
         }
         catch (Exception ex)
         {
-            System.out.println(ex.getMessage());
             ModelAndView mav = new ModelAndView("JsonView");
             mav.addObject("sqlresult" ,-1);
             return mav;
         }
     }
 
-    @RequestMapping("/editStation")
+    @RequestMapping("/editDepartment")
     public ModelAndView editDep(@RequestParam("id")Integer id , @RequestParam("code")String code,
                                     @RequestParam("name")String name)
     {
@@ -169,7 +169,6 @@ public class DepartmentController
         }
         catch (Exception ex)
         {
-            System.out.println(ex.getMessage());
             ModelAndView mav = new ModelAndView("JsonView");
             mav.addObject("sqlresult" ,-1);
             return mav;
@@ -177,7 +176,7 @@ public class DepartmentController
 
     }
 
-    @RequestMapping("/deleteStation")
+    @RequestMapping("/deleteDepartment")
     public ModelAndView deleteDep(@RequestParam("id")Integer id)
     {
         try
@@ -191,7 +190,6 @@ public class DepartmentController
         }
         catch (Exception ex)
         {
-            System.out.println(ex.getMessage());
             ModelAndView mav = new ModelAndView("JsonView");
             mav.addObject("sqlresult" ,-1);
             return mav;

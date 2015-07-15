@@ -13,6 +13,7 @@
 
     <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
     <link href="../../static/jslib/dataTables-1.10.7/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <link href="../../static/css/ExBootstrap.css" rel="stylesheet"/>
     <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
 
     <!-- ================== BEGIN BASE JS ================== -->
@@ -35,42 +36,26 @@
     <!-- ================== BEGIN PAGE LEVEL JS ================== -->
     <script  src="../../static/jslib/dataTables-1.10.7/js/jquery.dataTables.min.js"></script>
     <!-- ================== END PAGE LEVEL JS ================== -->
-    <style type="text/css">
-        .modal {
-            text-align: center;
-        }
 
-        .modal:before {
-            display: inline-block;
-            vertical-align: middle;
-            content: " ";
-            height: 100%;
-        }
-
-        .modal-dialog {
-            display: inline-block;
-            text-align: left;
-            vertical-align: middle;
-        }
-    </style>
     <script>
-        var table_station;
+        var table_department;
         $(function () {
-            table_station = initStationTable();
+            table_department = initDepartmentTable();
             App.init(1);
-        })
+        });
         /**
          * 表格初始化
          * @returns {*|jQuery}
          */
-        function initStationTable() {
-            var table = $("#tb_station").dataTable({
-                "processing": true,                 // 是否显示处理状态
+        function initDepartmentTable() {
+            var table = $("#tb_department").dataTable({
                 "deferRender": true,                //延迟渲染
                 "info": true,                        //是否显示左下信息
-                "scrollY": "400px",                 // 垂直滚动
+                "processing": true,                 // 是否显示处理状态
+                "retrieve": true,
+                "scrollY": "350px",                 // 垂直滚动
                 "ajax": {
-                    "url": getContextPath() + "/stationController/selectAllStationOnActiveUser",
+                    "url": getContextPath() + "/departmentController/selectAllDepartmentOnActiveUser",
 //                    "url": "../../static/json/stations.json",
                     "type": "POST",
                     "async": true
@@ -101,17 +86,17 @@
                 "columns": [
                     {
                         "data": "id",
-                        "title": "站点ID",
+                        "title": "部门ID",
                         "orderable": false
                     },
                     {
                         "data": "code",
-                        "title": "站点编号",
+                        "title": "部门编号",
                         "orderable": false
                     },
                     {
                         "data": "name",
-                        "title": "站点名称",
+                        "title": "部门名称",
                         "orderable": false
                     },
                     {
@@ -138,52 +123,62 @@
             });
 
             // 单行选中变色
-            $('#tb_station tbody').on('click', 'tr', function () {
+            $('#tb_department tbody').on('click', 'tr', function () {
                 if ($(this).hasClass('selected')) {
                     $(this).removeClass('selected');
                 }
                 else {
-                    table_station.$('tr.selected').removeClass('selected');
+                    table_department.$('tr.selected').removeClass('selected');
                     $(this).addClass('selected');
                 }
             });
 
             // 双击弹出modual
-            $('#tb_station tbody').on('dblclick', 'tr', function () {
+            $('#tb_department tbody').on('dblclick', 'tr', function () {
                 if ($(this).hasClass('selected')) {
                     $(this).removeClass('selected');
                 }
                 else {
-                    table_station.$('tr.selected').removeClass('selected');
+                    table_department.$('tr.selected').removeClass('selected');
                     $(this).addClass('selected');
                 }
             });
             return table;
         }
-        function addStation() {
-            $('#stationFlag').attr("value", "add");
+        function addDepartment() {
+            $('#departmentFlag').attr("value", "add");
 
-            $('#stationId').val("");
-            $('#stationCode').val("");
-            $('#stationName').val("");
-            $('#stationModal').modal('show');
+            $('#departmentId').val("");
+            $('#departmentCode').val("");
+            $('#departmentName').val("");
+            $('#departmentModal').modal('show');
         }
-        function editStation() {
-            $('#stationFlag').attr("value", "edit");
+        function editDepartment() {
+            $('#departmentFlag').attr("value", "edit");
 
-            var selectedItem = $('#tb_station').DataTable().row('.selected').data();
-
-            $('#stationId').attr("value", selectedItem.id);
-            $('#stationCode').attr("value", selectedItem.code);
-            $('#stationName').attr("value", selectedItem.name);
-            $('#stationModal').modal('show');
+            var selectedItem = $('#tb_department').DataTable().row('.selected').data();
+            if(selectedItem == null)
+            {
+                alert("未选中记录！");
+                return;
+            }
+            $('#departmentId').attr("value", selectedItem.id);
+            $('#departmentCode').attr("value", selectedItem.code);
+            $('#departmentName').attr("value", selectedItem.name);
+            $('#departmentModal').modal('show');
         }
-        function deleteStation() {
+        function delDepartment() {
+            var selectedItem = $('#tb_department').DataTable().row('.selected').data();
+            if(selectedItem == null)
+            {
+                alert("未选中记录！");
+                return;
+            }
             $.ajax({
                 type: "POST",
-                url: getContextPath() + "/stationController/deleteStation",
+                url: getContextPath() + "/departmentController/deleteDepartment",
                 data: {
-                    id : table_station.api().row('.selected').data().id
+                    id : selectedItem.id
                 },
                 success: function (data) {
                     if(data.sqlresult > 0 )
@@ -194,47 +189,46 @@
                     {
                         alert('删除失败');
                     }
-                    table_station.api().ajax.reload();
+                    table_department.api().ajax.reload();
                 }
             });
         }
-        function confirmInputStation()
+        function confirmInputDepartment()
         {
-            $('#stationModal').modal('hide');
-
-            if($.trim($('#stationName').val()) == '')
+            if($.trim($('#departmentName').val()) == '')
             {
                 alert('站点名称不能为空！');
                 return ;
             }
-            if($.trim($('#stationCode').val()) == '')
+            if($.trim($('#departmentCode').val()) == '')
             {
                 alert('站点编号不能为空！');
                 return ;
             }
 
-            var oper = $('#stationFlag').attr("value");
+            var oper = $('#departmentFlag').attr("value");
             var url;
             switch (oper) {
                 case "add":
-                    url = getContextPath() + "/stationController/addStation";
+                    url = getContextPath() + "/departmentController/addDepartment";
                     break;
                 case "edit":
-                    url = getContextPath() + "/stationController/editStation";
+                    url = getContextPath() + "/departmentController/editDepartment";
                     break;
             }
             $.ajax({
                 type: "POST",
                 url: url,
                 data: {
-                    id : $('#stationId').val(),
-                    name : $('#stationName').val(),
-                    code : $('#stationCode').attr("value")
+                    id : $('#departmentId').val(),
+                    name : $('#departmentName').val(),
+                    code : $('#departmentCode').attr("value")
                 },
                 success: function (data) {
                     if(data.sqlresult > 0 )
                     {
                         alert('修改成功');
+                        $('#departmentModal').modal('hide');
                     }
                     else
                     {
@@ -254,7 +248,7 @@
                                 break;
                         }
                     }
-                    table_station.api().ajax.reload();
+                    table_department.api().ajax.reload();
                 }
             });
         }
@@ -343,20 +337,16 @@
                 <!-- begin panel -->
                 <div class="panel panel-inverse">
                     <div class="panel-heading">
-                        <h4 class="panel-title">站点信息</h4>
+                        <h4 class="panel-title">部门信息</h4>
                     </div>
                     <div class="panel-body">
                         <div style="margin-bottom: 20px">
-                            <button type="button" class="btn btn-primary" style="margin-left: 20px" onclick="addStation()">添&nbsp;&nbsp;加</button>
-                            <button type="button" class="btn btn-success" style="margin-left: 20px" onclick="editStation()">
-                                修&nbsp;&nbsp;改
-                            </button>
-                            <button type="button" class="btn btn-danger" style="margin-left: 20px"
-                                    onclick="deleteStation()">删&nbsp;&nbsp;除
-                            </button>
+                            <button type="button" class="btn btn-primary" style="margin-left: 20px" onclick="addDepartment()">添&nbsp;&nbsp;加</button>
+                            <button type="button" class="btn btn-success" style="margin-left: 20px" onclick="editDepartment()">修&nbsp;&nbsp;改</button>
+                            <button type="button" class="btn btn-danger" style="margin-left: 20px" onclick="delDepartment()">删&nbsp;&nbsp;除</button>
                         </div>
                         <div class="table-responsive">
-                            <table id="tb_station" cellpadding="0" cellspacing="0" class = "display">
+                            <table id="tb_department" cellpadding="0" cellspacing="0" class = "display">
                             </table>
                         </div>
                     </div>
@@ -371,35 +361,35 @@
 </div>
 <!-- end page container -->
 <!-- start modal -->
-<div class="modal fade" id="stationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="departmentModal" tabindex="-1" role="dialog" aria-labelledby="departmentModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <!-- start modal_header -->
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">站点信息</h4>
+                <h4 class="modal-title" id="departmentModalLabel">站点信息</h4>
             </div>
             <!-- end modal_header -->
             <!-- start modal-body -->
             <div class="modal-body">
                 <form class="form-horizontal" id="resForm">
-                    <input type="hidden" id="stationFlag" name="stationFlag">
-                    <input type="hidden" id="stationId" name="stationId">
+                    <input type="hidden" id="departmentFlag" name="departmentFlag">
+                    <input type="hidden" id="departmentId" name="departmentId">
                     <div class="control-group">
-                        <label class="control-label" for="stationCode">站点编号：</label>
-                        <input type="text" id="stationCode" name="stationName">
+                        <label class="control-label" for="departmentCode">部门编号：</label>
+                        <input type="text" id="departmentCode" name="departmentName" maxlength="30">
                     </div>
                     <div class="control-group">
-                        <label class="control-label" for="stationName">站点名称：</label>
-                        <input type="text" id="stationName" name="stationName">
+                        <label class="control-label" for="departmentName">部门名称：</label>
+                        <input type="text" id="departmentName" name="departmentName" maxlength="30">
                     </div>
                 </form>
             </div>
             <!-- end modal-body -->
             <!-- start modal-footer -->
             <div class="modal-footer">
-                <button class="btn btn-primary" id="btnSave" onclick="confirmInputStation()">确定</button>
+                <button class="btn btn-primary" id="btnSave" onclick="confirmInputDepartment()">确定</button>
                 <button class="btn btn-danger" data-dismiss="modal"
                         aria-hidden="true">取消
                 </button>

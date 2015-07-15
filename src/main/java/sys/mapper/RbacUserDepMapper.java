@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface RbacUserDepMapper
 {
-    List<RbacDep> selectDepListByUserId(Integer id);
+    List<RbacDep> selectDepListByUserId(@Param("id") Integer id);
 
     int deleteByUserId(Integer id);
 

@@ -30,7 +30,7 @@ public class DataTablesAjaxView extends AbstractView
         response.getWriter().write("\"recordsFiltered\":" + (model.get("recordsFiltered") != null ? model.get("recordsFiltered"): 0) + ",");
         response.getWriter().write("\"data\":" );
 
-        response.getWriter().write(JSON.toJSONString(model.get("records")));
+        response.getWriter().write(JSON.toJSONString(model.get("data")));
         response.getWriter().write("}");
         response.getWriter().close();
     }
