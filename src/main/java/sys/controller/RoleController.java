@@ -1,13 +1,11 @@
 package sys.controller;
 
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import sys.entity.ActiveUser;
 import sys.entity.RbacRole;
-import sys.service.RoleService;
+
+import sys.service.UserRoleService;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -17,18 +15,15 @@ import java.util.List;
 public class RoleController
 {
     @Resource
-    private RoleService roleService;
+    private UserRoleService userRoleService;
 
-    @RequestMapping("/selectAllRoleOnActiveUser")
-    public ModelAndView selectAllRoleOnActiveUser(Integer draw)
+    @RequestMapping("/selectAllRoles")
+    public ModelAndView selectAllRoles(Integer draw)
     {
         try
         {
-            Subject currentUser = SecurityUtils.getSubject();
-            ActiveUser activeUser = (ActiveUser)currentUser.getPrincipal();
-
             ModelAndView mav = new ModelAndView("DataTablesAjaxView");
-            List<RbacRole> roleList = roleService.selectRoleListByUserId(activeUser.getUserid());
+            List<RbacRole> roleList = userRoleService.selectAllRoles();
 
             if(draw != null)
             {

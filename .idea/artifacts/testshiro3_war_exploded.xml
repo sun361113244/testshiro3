@@ -39,7 +39,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/testshiro3/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="D:\IDeaProject\testshiro3\target/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="testshiro3/web/Web" />
     </root>

@@ -11,11 +11,5 @@ import java.util.List;
 @Service
 public class RoleServiceImpl implements RoleService
 {
-    @Resource
-    private RbacRoleMapper rbacDepMapper;
 
-    public List<RbacRole> selectRoleListByUserId(Integer userid)
-    {
-        return rbacDepMapper.selectRoleListByUserId(userid);
-    }
 }
