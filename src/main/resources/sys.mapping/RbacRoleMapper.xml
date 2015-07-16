@@ -10,6 +10,12 @@
         <result column="status" property="status" jdbcType="INTEGER" />
     </resultMap>
     <sql id="Role_Column_List" >
-        rbac_role.id,rbac_role.name,rbac_role.description,rbac_dep.create_time,rbac_dep.update_time,rbac_dep.status
+        rbac_role.id,rbac_role.name,rbac_role.description,rbac_role.create_time,rbac_role.update_time,rbac_role.status
     </sql>
+    <select id="selectAllRoles" resultMap="RbacRoleResultMap">
+        SELECT
+        <include refid="Role_Column_List"/>
+        FROM rbac_role
+        WHERE status = 1
+    </select>
 </mapper>
