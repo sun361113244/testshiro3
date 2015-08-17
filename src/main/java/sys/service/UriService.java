@@ -1,17 +1,16 @@
-package sys.mapper;
+package sys.service;
 
-import org.apache.ibatis.annotations.Param;
 import sys.entity.RbacUri;
 
 import java.util.List;
 
-public interface RbacUriMapper
+public interface UriService
 {
     List<RbacUri> selectUriList();
 
     int insertUri(RbacUri rbacUri);
 
-    int deleteUriById(@Param("id") Integer id);
+    int deleteUriById(Integer id);
 
     int updateUri(RbacUri rbacUri);
 }

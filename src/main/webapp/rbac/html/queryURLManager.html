@@ -11,6 +11,11 @@
     <link href="../../static/css/theme/default.css" rel="stylesheet">
     <!-- ================== END BASE CSS STYLE ================== -->
 
+    <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+    <link href="../../static/jslib/dataTables-1.10.7/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <link href="../../static/css/ExBootstrap.css" rel="stylesheet"/>
+    <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+
     <!-- ================== BEGIN BASE JS ================== -->
     <script src="../../static/jslib/jquery/jquery-1.11.2.min.js"></script>
     <script src="../../static/jslib/jquery/jquery-migrate-1.1.0.min.js"></script>
@@ -27,10 +32,304 @@
     <script src = "../../static/js/util.js"></script>
     <script src="../../static/js/apps.js"></script>
     <!-- ================== END BASE JS ================== -->
+
+    <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script  src="../../static/jslib/dataTables-1.10.7/js/jquery.dataTables.min.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
     <script>
+        var table_uri;
         $(function(){
+            table_uri = initUriTable();
             App.init(1);
         })
+        /**
+         * 表格初始化
+         * @returns {*|jQuery}
+         */
+        function initUriTable() {
+            var table = $("#tb_uri").dataTable({
+                "deferRender": true,                //延迟渲染
+                "info": true,                        //是否显示左下信息
+                "processing": true,                 // 是否显示处理状态
+                "retrieve": true,
+                "scrollY": "350px",                 // 垂直滚动
+                "ajax": {
+                    "url": getContextPath() + "/uriController/selectAllUris",
+//                    "url": "../../static/json/stations.json",
+                    "type": "POST",
+                    "async": true
+                },
+                "language": {
+                    "emptyTable": "无数据可显示",
+                    "info": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
+                    "infoEmpty": "记录数为0",
+                    "infoFiltered": "(全部记录数 _MAX_ 条)",
+                    "loadingRecords": "正在加载数据，请稍后....",
+                    "processing": "数据处理中，请稍后......",
+                    "search": "查询",
+                    "lengthMenu": "每页显示 _MENU_ 条记录",
+                    "zeroRecords": "没有检索到数据",
+                    "paginate": {
+                        "first": "首页",
+                        "last": "尾页",
+                        "next": "下页",
+                        "previous": "上页"
+                    }
+                },
+                "columnDefs": [
+                    {
+                        "defaultContent": "",
+                        "targets": "_all"
+                    }
+                ],
+                "columns": [
+                    {
+                        "data": "id",
+                        "title": "ID",
+                        "orderable": false
+                    },
+                    {
+                        "data": "parentId",
+                        "title": "父ID",
+                        "orderable": false
+                    },
+                    {
+                        "data": "name",
+                        "title": "资源名称",
+                        "orderable": false
+                    },
+                    {
+                        "data": "permission",
+                        "title": "权限",
+                        "orderable": false
+                    },
+                    {
+                        "data": "uri",
+                        "title": "uri",
+                        "orderable": false
+                    },
+                    {
+                        "data": "iconcls",
+                        "title": "图标",
+                        "orderable": false
+                    },
+                    {
+                        "data": "treeCode",
+                        "title": "树列表",
+                        "orderable": false
+                    },
+                    {
+                        "data": "showType",
+                        "title": "资源类型",
+                        "orderable": false,
+                        "render": function (data, type, row) {
+                            switch(data)
+                            {
+                                case 0:
+                                    return '菜单';
+                                case 2:
+                                    return '功能';
+                                default:
+                                    return '未知';
+                            }
+                        }
+                    },
+                    {
+                        "data": "sort",
+                        "title": "权重",
+                        "orderable": false
+                    },
+                    {
+                        "data": "createTime",
+                        "title": "创建时间",
+                        "width": "150px",
+                        "orderable": false,
+                        "render": function (data, type, row) {
+                            var date = new Date(data);
+                            return date.toLocaleString();
+                        }
+                    },
+                    {
+                        "data": "updateTime",
+                        "title": "修改时间",
+                        "width": "150px",
+                        "orderable": false,
+                        "render": function (data, type, row) {
+                            var date = new Date(data);
+                            return date.toLocaleString();
+                        }
+                    }
+                ]
+            });
+
+            // 单行选中变色
+            $('#tb_uri tbody').on('click', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    table_uri.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+            });
+
+            // 双击弹出modual
+            $('#tb_uri tbody').on('dblclick', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    table_uri.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                }
+            });
+            return table;
+        }
+        function addUri() {
+            $('#uriFlag').attr("value", "add");
+
+            $('#uriId').val("");
+            $('#parentId').val("");
+            $('#uriName').val("");
+            $('#uriPermission').val("");
+            $('#uriLoc').val("");
+            $('#iconCls').val("");
+            $('#showType').val(0);
+            $('#treeCode').val("");
+            $('#sort').val("");
+
+            $('#uriModal').modal('show');
+        }
+        function editUri() {
+            $('#uriFlag').attr("value", "edit");
+
+            var selectedItem = $('#tb_uri').DataTable().row('.selected').data();
+            if(selectedItem == null)
+            {
+                alert("未选中记录！");
+                return;
+            }
+            $('#uriId').attr("value", selectedItem.id);
+            $('#parentId').val(selectedItem.parentId);
+            $('#uriName').val(selectedItem.name);
+            $('#uriPermission').val(selectedItem.permission);
+            $('#uriLoc').val(selectedItem.uri);
+            $('#iconCls').val(selectedItem.iconcls);
+            $('#showType').val(selectedItem.showType);
+            $('#treeCode').val(selectedItem.treeCode);
+            $('#sort').val(selectedItem.sort);
+            $('#uriModal').modal('show');
+        }
+        function delUri() {
+            var selectedItem = $('#tb_uri').DataTable().row('.selected').data();
+            if(selectedItem == null)
+            {
+                alert("未选中记录！");
+                return;
+            }
+            $.ajax({
+                type: "POST",
+                url: getContextPath() + "/uriController/deleteUri",
+                data: {
+                    id : selectedItem.id
+                },
+                success: function (data) {
+                    if(data.sqlresult > 0 )
+                    {
+                        alert('删除成功');
+                    }
+                    else
+                    {
+                        alert('删除失败');
+                    }
+                    table_uri.api().ajax.reload();
+                }
+            });
+        }
+        function confirmInputUri()
+        {
+            if($.trim($('#parentId').val()) == '')
+            {
+                alert('父ID不能为空！');
+                return ;
+            }
+            if($.trim($('#uriName').val()) == '')
+            {
+                alert('资源名称不能为空！');
+                return ;
+            }
+            if($.trim($('#uriPermission').val()) == '')
+            {
+                alert('权限不能为空！');
+                return ;
+            }
+            if($.trim($('#uriLoc').val()) == '')
+            {
+                alert('uri地址不能为空！');
+                return ;
+            }
+            if($.trim($('#iconCls').val()) == '')
+            {
+                alert('图标不能为空！');
+                return ;
+            }
+            if($.trim($('#treeCode').val()) == '')
+            {
+                alert('子节点不能为空！');
+                return ;
+            }
+            if($.trim($('#sort').val()) == '')
+            {
+                alert('权重不能为空！');
+                return ;
+            }
+
+            var oper = $('#uriFlag').attr("value");
+            var url;
+            switch (oper) {
+                case "add":
+                    url = getContextPath() + "/uriController/addUri";
+                    break;
+                case "edit":
+                    url = getContextPath() + "/uriController/editUri";
+                    break;
+            }
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {
+                    id : $('#uriId').val(),
+                    parentId : $('#parentId').val(),
+                    uriName : $('#uriName').val(),
+                    uriPermission : $('#uriPermission').val(),
+                    uriLoc : $('#uriLoc').val(),
+                    iconCls : $('#iconCls').val(),
+                    showType : $('#showType').val(),
+                    treeCode : $('#treeCode').val(),
+                    sort : $('#sort').val()
+                },
+                success: function (data) {
+                    if(data.sqlresult > 0 )
+                    {
+                        alert('修改成功');
+                        $('#uriModal').modal('hide');
+                    }
+                    else
+                    {
+                        switch (data.sqlresult)
+                        {
+                            case -1:
+                                alert('sql语句错误');
+                                break;
+                            default :
+                                alert('修改失败');
+                                break;
+                        }
+                    }
+                    table_uri.api().ajax.reload();
+                }
+            });
+        }
     </script>
     <title></title>
 </head>
@@ -111,12 +410,119 @@
     <div id="content" class="content">
         <!-- begin row -->
         <div class="row">
-
+            <!-- begin col-12 -->
+            <div class="col-md-12">
+                <!-- begin panel -->
+                <div class="panel panel-inverse">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">资源信息</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div style="margin-bottom: 20px">
+                            <button type="button" class="btn btn-primary" style="margin-left: 20px" onclick="addUri()">添&nbsp;&nbsp;加</button>
+                            <button type="button" class="btn btn-success" style="margin-left: 20px" onclick="editUri()">修&nbsp;&nbsp;改</button>
+                            <button type="button" class="btn btn-danger" style="margin-left: 20px" onclick="delUri()">删&nbsp;&nbsp;除</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table id="tb_uri" cellpadding="0" cellspacing="0" class = "display">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- end panel -->
+            </div>
+            <!-- end col-12 -->
         </div>
         <!-- end row -->
     </div>
     <!-- end #content -->
 </div>
 <!-- end page container -->
+<!-- start modal -->
+<div class="modal fade" id="uriModal" tabindex="-1" role="dialog" aria-labelledby="uriModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- start modal_header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="uriModalLabel">资源信息</h4>
+            </div>
+            <!-- end modal_header -->
+            <!-- start modal-body -->
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form class="form-horizontal" action="/" method="POST">
+                        <fieldset>
+                            <input type="hidden" id="uriFlag" name="uriFlag">
+                            <input type="hidden" id="uriId" name="uriId">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="parentId">父ID：</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" type="text" id="parentId" name="parentId" maxlength="30">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="uriName">资源名称：</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" type="text" id="uriName" name="uriName" maxlength="30">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="uriPermission">权限：</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" type="text" id="uriPermission" name="uriPermission" maxlength="50">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="uriLoc">uri地址：</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" type="text" id="uriLoc" name="uriLoc" maxlength="50">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="iconCls">图标：</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" type="text" id="iconCls" name="iconCls" maxlength="30">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="treeCode">子节点：</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" type="text" id="treeCode" name="treeCode" maxlength="30">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">显示类型：</label>
+                                <div class="col-md-8">
+                                    <select id = "showType" class="form-control">
+                                        <option value="0">菜单</option>
+                                        <option value="2">功能</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="sort">权重：</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" type="text" id="sort" name="sort" maxlength="30">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <!-- end modal-body -->
+            <!-- start modal-footer -->
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="btnSave" onclick="confirmInputUri()">确定</button>
+                <button class="btn btn-danger" data-dismiss="modal"
+                        aria-hidden="true">取消
+                </button>
+            </div>
+            <!-- end modal-footer -->
+        </div>
+    </div>
+</div>
+<!-- end modal -->
 </body>
 </html>

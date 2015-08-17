@@ -15,6 +15,21 @@ public class RbacRole {
 
     private Integer status;
 
+    public RbacRole()
+    {
+
+    }
+
+    public RbacRole(Integer id, String name, String description , Date createTime , Date updateTime , Integer status)
+    {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.createTime = createTime;
+        this.updateTime = updateTime;
+        this.status = status;
+    }
+
     public Integer getId() {
         return id;
     }

@@ -16,14 +16,6 @@ import java.util.List;
 public class UserRoleServiceImpl implements UserRoleService
 {
     @Resource
-    private RbacRoleMapper rbacRoleMapper;
-
-    @Resource
     private RbacUserRoleMapper rbacUserRoleMapper;
-
-    public List<RbacRole> selectAllRoles()
-    {
-        return rbacRoleMapper.selectAllRoles();
-    }
 
 }

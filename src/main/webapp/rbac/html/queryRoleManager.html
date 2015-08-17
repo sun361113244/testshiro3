@@ -13,6 +13,7 @@
 
     <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
     <link href="../../static/jslib/dataTables-1.10.7/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <link href="../../static/jslib/zTree_v3/css/zTreeStyle/zTreeStyle.css"/>
     <link href="../../static/css/ExBootstrap.css" rel="stylesheet"/>
     <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
 
@@ -35,6 +36,8 @@
 
     <!-- ================== BEGIN PAGE LEVEL JS ================== -->
     <script  src="../../static/jslib/dataTables-1.10.7/js/jquery.dataTables.min.js"></script>
+    <script src="../../static/jslib/zTree_v3/js/jquery.ztree.core-3.5.min.js"></script>
+    <script src="../../static/jslib/zTree_v3/js/jquery.ztree.excheck-3.5.min.js"></script>
     <!-- ================== END PAGE LEVEL JS ================== -->
     <script>
         var table_role;
@@ -117,6 +120,17 @@
                             var date = new Date(data);
                             return date.toLocaleString();
                         }
+                    },
+                    {
+                        data: null,
+                        "title": "操作",
+                        className: "center",
+                        defaultContent: '<a href="#">授权</a>',
+                        "render": function (data, type, row) {
+                            var resStr = "<a href='javascript:void(0);' " +
+                                    "onclick='authorizeUserUri(\"" + data.id + "\")'><i class='fa fa-wrench fa-lg' data-toggle='tooltip' data-placement='bottom' title='授权'></i></a>";
+                            return resStr;
+                        }
                     }
                 ]
             });
@@ -143,6 +157,117 @@
                 }
             });
             return table;
+        }
+
+        function addRole() {
+            $('#roleFlag').attr("value", "add");
+
+            $('#roleId').val("");
+            $('#roleName').val("");
+            $('#roleDescription').val("");
+            $('#roleModal').modal('show');
+        }
+        function editRole() {
+            $('#roleFlag').attr("value", "edit");
+
+            var selectedItem = $('#tb_role').DataTable().row('.selected').data();
+            if(selectedItem == null)
+            {
+                alert("未选中记录！");
+                return;
+            }
+            $('#roleId').attr("value", selectedItem.id);
+            $('#roleName').attr("value", selectedItem.name);
+            $('#roleDescription').attr("value", selectedItem.description);
+            $('#roleModal').modal('show');
+        }
+        function delRole() {
+            var selectedItem = $('#tb_role').DataTable().row('.selected').data();
+            if(selectedItem == null)
+            {
+                alert("未选中记录！");
+                return;
+            }
+            $.ajax({
+                type: "POST",
+                url: getContextPath() + "/roleController/deleteRole",
+                data: {
+                    id : selectedItem.id
+                },
+                success: function (data) {
+                    if(data.sqlresult > 0 )
+                    {
+                        alert('删除成功');
+                    }
+                    else
+                    {
+                        alert('删除失败');
+                    }
+                    table_role.api().ajax.reload();
+                }
+            });
+        }
+        function confirmInputRole()
+        {
+            if($.trim($('#roleName').val()) == '')
+            {
+                alert('角色名称不能为空！');
+                return ;
+            }
+            if($.trim($('#roleDescription').val()) == '')
+            {
+                alert('角色描述不能为空！');
+                return ;
+            }
+
+            var oper = $('#roleFlag').attr("value");
+            var url;
+            switch (oper) {
+                case "add":
+                    url = getContextPath() + "/roleController/addRole";
+                    break;
+                case "edit":
+                    url = getContextPath() + "/roleController/editRole";
+                    break;
+            }
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {
+                    id : $('#roleId').val(),
+                    name : $('#roleName').val(),
+                    description : $('#roleDescription').attr("value")
+                },
+                success: function (data) {
+                    if(data.sqlresult > 0 )
+                    {
+                        alert('修改成功');
+                        $('#roleModal').modal('hide');
+                    }
+                    else
+                    {
+                        switch (data.sqlresult)
+                        {
+                            case -1:
+                                alert('sql语句错误');
+                                break;
+                            case -2:
+                                alert('角色名称已存在');
+                                break;
+                            default :
+                                alert('修改失败');
+                                break;
+                        }
+                    }
+                    table_role.api().ajax.reload();
+                }
+            });
+        }
+        function authorizeUserUri(id)
+        {
+            //initUriListOnSelUser(id);
+            $('#uriSelId').val(id);
+            $('#uriAuthModal').modal('show');
         }
     </script>
     <title></title>
@@ -252,5 +377,72 @@
     <!-- end #content -->
 </div>
 <!-- end page container -->
+<!-- start modal -->
+<div class="modal fade" id="roleModal" tabindex="-1" role="dialog" aria-labelledby="roleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- start modal_header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="roleModalLabel">角色信息</h4>
+            </div>
+            <!-- end modal_header -->
+            <!-- start modal-body -->
+            <div class="modal-body">
+                <form class="form-horizontal" id="resForm">
+                    <input type="hidden" id="roleFlag" name="roleFlag">
+                    <input type="hidden" id="roleId" name="roleId">
+                    <div class="control-group">
+                        <label class="control-label" for="roleName">角色名称：</label>
+                        <input type="text" id="roleName" name="roleName" maxlength="30">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="roleDescription">角色描述：</label>
+                        <input type="text" id="roleDescription" name="roleDescription" maxlength="30">
+                    </div>
+                </form>
+            </div>
+            <!-- end modal-body -->
+            <!-- start modal-footer -->
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="btnSave" onclick="confirmInputRole()">确定</button>
+                <button class="btn btn-danger" data-dismiss="modal"
+                        aria-hidden="true">取消
+                </button>
+            </div>
+            <!-- end modal-footer -->
+        </div>
+    </div>
+</div>
+<!-- end modal -->
+<!-- start modal -->
+<div class="modal fade" id="uriAuthModal" tabindex="-1" role="dialog" aria-labelledby="myUriModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- start modal_header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myUriModalLabel">资源访问信息</h4>
+            </div>
+            <!-- end modal_header -->
+            <!-- start modal-body -->
+            <div id = "uriList" class="modal-body">
+                <input id="uriSelId" value = ""  style="display: none;"/>
+            </div>
+            <!-- end modal-body -->
+            <!-- start modal-footer -->
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="btnSaveAuthUri" onclick="confirmInputAuthUri()">确定</button>
+                <button class="btn btn-danger" data-dismiss="modal"
+                        aria-hidden="true">取消
+                </button>
+            </div>
+            <!-- end modal-footer -->
+        </div>
+    </div>
+</div>
+<!-- end modal -->
 </body>
 </html>

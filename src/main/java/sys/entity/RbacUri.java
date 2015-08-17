@@ -26,6 +26,49 @@ public class RbacUri
 
     private Date updateTime;
 
+    public RbacUri()
+    {
+
+    }
+
+    public RbacUri(Integer id, Integer parentId , String nodeName)
+    {
+        this.id = id;
+        this.parentId = parentId;
+        this.name = nodeName;
+    }
+
+    public RbacUri(Integer parentId, String uriName, String uriPermission, String uriLoc, String iconCls,
+                   Byte showType, String treeCode, Byte sort , Date createTime, Date updateTime)
+    {
+        this.parentId = parentId;
+        this.name = uriName;
+        this.permission = uriPermission;
+        this.uri = uriLoc;
+        this.iconcls = iconCls;
+        this.treeCode = treeCode;
+        this.showType = showType;
+        this.sort = sort;
+        this.createTime = createTime;
+        this.updateTime = updateTime;
+    }
+
+    public RbacUri(Integer id, Integer parentId, String uriName, String uriPermission, String uriLoc, String iconCls,
+                   Byte showType, String treeCode, Byte sort, Date createTime, Date updateTime)
+    {
+        this.id = id;
+        this.parentId = parentId;
+        this.name = uriName;
+        this.permission = uriPermission;
+        this.uri = uriLoc;
+        this.iconcls = iconCls;
+        this.treeCode = treeCode;
+        this.showType = showType;
+        this.sort = sort;
+        this.createTime = createTime;
+        this.updateTime = updateTime;
+    }
+
     public Integer getId()
     {
         return id;
@@ -136,14 +179,4 @@ public class RbacUri
         this.updateTime = updateTime;
     }
 
-    public RbacUri()
-    {
-
-    }
-    public RbacUri(Integer id, Integer parentId , String nodeName)
-    {
-        this.id = id;
-        this.parentId = parentId;
-        this.name = nodeName;
-    }
 }
