@@ -6,10 +6,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import sys.entity.RbacRole;
 
+import sys.entity.RbacUri;
+import sys.entity.zTreeNode;
 import sys.service.RoleService;
-import sys.service.UserRoleService;
+import sys.service.RoleUriService;
+import sys.service.UriService;
+import sys.service.UserUriService;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -21,7 +26,10 @@ public class RoleController
     private RoleService roleService;
 
     @Resource
-    private UserRoleService userRoleService;
+    private UriService uriService;
+
+    @Resource
+    private RoleUriService roleUriService;
 
     @RequestMapping("/selectAllRoles")
     public ModelAndView selectAllRoles(Integer draw)
@@ -44,6 +52,44 @@ public class RoleController
         {
             ModelAndView mav = new ModelAndView("JsonView");
             mav.addObject("result" , -1);
+            return mav;
+        }
+    }
+
+    @RequestMapping("/selectTreeRolesById")
+    public ModelAndView selectTreeRolesById(@RequestParam("id")Integer id)
+    {
+        try
+        {
+            // 获取所有权限
+            ModelAndView mav = new ModelAndView("JsonView");
+            List<RbacUri> uriList = uriService.selectUriList();
+
+            List<RbacUri> idUriList = roleUriService.selectUriListByRoleId(id);
+
+            List<zTreeNode> zTreeNodes = new ArrayList<zTreeNode>();
+            for(RbacUri rbacUri : uriList)
+            {
+                if(idUriList.contains(rbacUri))
+                {
+                    zTreeNode node = new zTreeNode(rbacUri.getId() ,rbacUri.getParentId() , rbacUri.getName() ,true ,true );
+                    zTreeNodes.add(node);
+                }
+                else
+                {
+                    zTreeNode node = new zTreeNode(rbacUri.getId() ,rbacUri.getParentId() , rbacUri.getName() ,true ,false );
+                    zTreeNodes.add(node);
+                }
+            }
+
+            mav.addObject("zNodes", zTreeNodes);
+            mav.addObject("sqlRes", 1);
+            return mav;
+        }
+        catch (Exception ex)
+        {
+            ModelAndView mav = new ModelAndView("JsonView");
+            mav.addObject("sqlRes" , -1);
             return mav;
         }
     }
@@ -112,6 +158,23 @@ public class RoleController
             int res = roleService.deleteUserRoleById(id);
 
             mav.addObject("sqlresult" ,res);
+            return mav;
+        }
+        catch (Exception ex)
+        {
+            ModelAndView mav = new ModelAndView("JsonView");
+            mav.addObject("sqlresult" ,-1);
+            return mav;
+        }
+    }
+
+    @RequestMapping("/authorizeRoleUris")
+    public ModelAndView authorizeRoleUris(@RequestParam("id")Integer id ,@RequestParam("nodes[]")Integer[] nodes)
+    {
+        try
+        {
+            ModelAndView mav = new ModelAndView("JsonView");
+
             return mav;
         }
         catch (Exception ex)

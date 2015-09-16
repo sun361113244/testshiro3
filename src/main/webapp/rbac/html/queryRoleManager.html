@@ -13,7 +13,7 @@
 
     <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
     <link href="../../static/jslib/dataTables-1.10.7/css/jquery.dataTables.min.css" rel="stylesheet"/>
-    <link href="../../static/jslib/zTree_v3/css/zTreeStyle/zTreeStyle.css"/>
+    <link href="../../static/jslib/zTree_v3/css/zTreeStyle/zTreeStyle.css" rel="stylesheet"/>
     <link href="../../static/css/ExBootstrap.css" rel="stylesheet"/>
     <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
 
@@ -265,9 +265,60 @@
         }
         function authorizeUserUri(id)
         {
-            //initUriListOnSelUser(id);
+            initUriListOnSelUser(id);
             $('#uriSelId').val(id);
             $('#uriAuthModal').modal('show');
+        }
+
+        function initUriListOnSelUser(id)
+        {
+            var setting = {
+                check: {
+                    enable: true
+                },
+                data: {
+                    simpleData: {
+                        enable: true
+                    }
+                }
+            };
+            $.ajax({
+                type: "POST",
+                url: getContextPath() + "/roleController/selectTreeRolesById",
+                data: {
+                    id : id
+                },
+                success: function (data) {
+                    if(data.sqlRes > 0)
+                    {
+                        $.fn.zTree.init($("#treeDemo"), setting, data.zNodes);
+                    }
+                    else
+                    {
+                        alert('加载权限列表失败！');
+                    }
+                }
+            });
+        }
+        function confirmInputAuthUri()
+        {
+            var treeObj = $.fn.zTree.getZTreeObj("treeDemo");
+            var treeNodes = treeObj.getCheckedNodes(true);
+            var id = $('#uriSelId').val();
+
+            var nodes = new Array();
+            for(var i = 0;i<treeNodes.length;i++)
+            {
+                nodes[i] = treeNodes[i].id;
+            }
+            $.ajax({
+                type: "POST",
+                url: getContextPath() + "/roleController/authorizeRoleUris",
+                data: {
+                    id : id,
+                    nodes : nodes
+                }
+            });
         }
     </script>
     <title></title>
@@ -430,6 +481,7 @@
             <!-- start modal-body -->
             <div id = "uriList" class="modal-body">
                 <input id="uriSelId" value = ""  style="display: none;"/>
+                <ul id="treeDemo" class="ztree"></ul>
             </div>
             <!-- end modal-body -->
             <!-- start modal-footer -->

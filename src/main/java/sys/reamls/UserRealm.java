@@ -57,9 +57,11 @@ public class UserRealm extends AuthorizingRealm
         }
 
         List<RbacUri> menus = null;
+        List<RbacUri> permisstions = null;
         try
         {
             menus = userUriService.selectMenuListByUserId(rbacUser.getId());
+            permisstions = userUriService.selectUriListByUserId(rbacUser.getId());
         }
         catch (Exception ex)
         {
@@ -81,6 +83,7 @@ public class UserRealm extends AuthorizingRealm
         activeUser.setUsercode(rbacUser.getUserName());
         activeUser.setUsername(rbacUser.getGivenName());
         activeUser.setMenus(menus);
+        activeUser.setPermissions(permisstions);
         activeUser.setDepartments(departments);
 
         SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(activeUser, rbacUser.getUserPasswrod(),this.getName());

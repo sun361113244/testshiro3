@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sys.mapper.RbacRoleUriMapper">
+    <select id="selectUriListByRoleId" resultMap="sys.mapper.RbacUriMapper.UriResultMap">
+        SELECT
+        <include refid="sys.mapper.RbacUriMapper.Uri_Column_List"/>
+        FROM rbac_uri,rbac_role ,rbac_role_uri_mapping
+        WHERE rbac_role_uri_mapping.role_id = rbac_role.id
+        AND rbac_role_uri_mapping.uri_id = rbac_uri.id
+        AND rbac_role.id = #{id ,jdbcType=INTEGER}
+    </select>
+</mapper>

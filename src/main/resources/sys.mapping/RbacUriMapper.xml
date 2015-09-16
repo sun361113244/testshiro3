@@ -15,8 +15,8 @@
         <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
     </resultMap>
     <sql id="Uri_Column_List">
-        id, parent_id, name, permission, uri, iconCls, tree_code, show_type, sort, create_time,
-        update_time
+        rbac_uri.id, rbac_uri.parent_id, rbac_uri.name, rbac_uri.permission, rbac_uri.uri, rbac_uri.iconCls, rbac_uri.tree_code,
+        rbac_uri.show_type, rbac_uri.sort, rbac_uri.create_time,rbac_uri.update_time
     </sql>
     <select id="selectUriList" resultMap="UriResultMap">
         SELECT

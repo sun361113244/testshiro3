@@ -11,4 +11,13 @@
         (SELECT role_id FROM rbac_role_user_mapping WHERE user_id = #{id ,jdbcType=INTEGER}))
         order by id
     </select>
+    <select id="selectUriListByUserId" resultMap="sys.mapper.RbacUriMapper.UriResultMap">
+        SELECT
+        <include refid="sys.mapper.RbacUriMapper.Uri_Column_List"/>
+        FROM rbac_uri
+        WHERE id IN
+        (SELECT uri_id FROM rbac_role_uri_mapping WHERE role_id IN
+        (SELECT role_id FROM rbac_role_user_mapping WHERE user_id = #{id ,jdbcType=INTEGER}))
+        order by id
+    </select>
 </mapper>

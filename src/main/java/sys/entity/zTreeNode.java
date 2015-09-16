@@ -4,7 +4,7 @@ public class zTreeNode
 {
     private Integer id;
 
-    private Integer pid;
+    private Integer pId;
 
     private String name;
 
@@ -15,7 +15,7 @@ public class zTreeNode
     public zTreeNode(Integer node_id , Integer node_pid, String node_name, Boolean node_open, Boolean node_checked)
     {
         this.id = node_id;
-        this.pid = node_pid;
+        this.pId = node_pid;
         this.name = node_name;
         this.open = node_open;
         this.checked = node_checked;
@@ -31,24 +31,14 @@ public class zTreeNode
         this.id = id;
     }
 
-    public Integer getPid()
+    public Integer getPId()
     {
-        return pid;
+        return pId;
     }
 
-    public void setPid(Integer pid)
+    public void setPId(Integer pId)
     {
-        this.pid = pid;
-    }
-
-    public Boolean getOpen()
-    {
-        return open;
-    }
-
-    public void setOpen(Boolean open)
-    {
-        this.open = open;
+        this.pId = pId;
     }
 
     public String getName()
@@ -59,6 +49,16 @@ public class zTreeNode
     public void setName(String name)
     {
         this.name = name;
+    }
+
+    public Boolean getOpen()
+    {
+        return open;
+    }
+
+    public void setOpen(Boolean open)
+    {
+        this.open = open;
     }
 
     public Boolean getChecked()

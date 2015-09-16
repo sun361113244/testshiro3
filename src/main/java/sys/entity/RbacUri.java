@@ -1,6 +1,7 @@
 package sys.entity;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class RbacUri
 {
@@ -68,7 +69,15 @@ public class RbacUri
         this.createTime = createTime;
         this.updateTime = updateTime;
     }
-
+    public boolean equals(Object obj)
+    {
+        if (obj instanceof RbacUri)
+        {
+            RbacUri rbacUri = (RbacUri) obj;
+            return this.id == rbacUri.getId();
+        }
+        return super.equals(obj);
+    }
     public Integer getId()
     {
         return id;
