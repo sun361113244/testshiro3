@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import sys.entity.ActiveUser;
 import sys.entity.RbacDep;
+import sys.entity.zTreeNode;
 import sys.service.DepService;
 import sys.service.UserDepService;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -33,14 +35,16 @@ public class DepartmentController
     {
         try
         {
-            ModelAndView mav = new ModelAndView("JsonView");
-            List<RbacDep> stationList = depService.selectDepList();
+            ModelAndView mav = new ModelAndView("DataTablesAjaxView");
+            List<RbacDep> departmentList = depService.selectDepList();
 
             if(draw != null)
             {
                 mav.addObject("draw", draw);
             }
-            mav.addObject("records", stationList);
+            mav.addObject("data", departmentList);
+            mav.addObject("recordsTotal", departmentList.size());
+            mav.addObject("recordsFiltered", departmentList.size());
             return mav;
         }
         catch (Exception ex)
@@ -105,13 +109,52 @@ public class DepartmentController
         }
     }
 
+    @RequestMapping("/selectTreeDepsById")
+    public ModelAndView selectTreeDepsById(@RequestParam("id")Integer id)
+    {
+        try
+        {
+            // 获取所有权限
+            ModelAndView mav = new ModelAndView("JsonView");
+            List<RbacDep> depList = depService.selectDepList();
+
+            List<RbacDep> idDepList = userDepService.selectDepListByUserId(id);
+
+            List<zTreeNode> zTreeNodes = new ArrayList<zTreeNode>();
+            for(RbacDep dep : depList)
+            {
+                if(idDepList.contains(dep))
+                {
+                    zTreeNode node = new zTreeNode(dep.getId() ,dep.getParentId() , dep.getName() ,true ,true );
+                    zTreeNodes.add(node);
+                }
+                else
+                {
+                    zTreeNode node = new zTreeNode(dep.getId() ,dep.getParentId() , dep.getName() ,true ,false );
+                    zTreeNodes.add(node);
+                }
+            }
+
+            mav.addObject("zNodes", zTreeNodes);
+            mav.addObject("sqlRes", 1);
+            return mav;
+        }
+        catch (Exception ex)
+        {
+            ModelAndView mav = new ModelAndView("JsonView");
+            mav.addObject("sqlRes" , -1);
+            return mav;
+        }
+    }
+
     @RequestMapping("/addDepartment")
-    public ModelAndView addDepartment( @RequestParam("code")String code, @RequestParam("name")String name)
+    public ModelAndView addDepartment( @RequestParam("code")String code, @RequestParam("name")String name ,
+                                       @RequestParam("parentId")Integer parentId)
     {
         try
         {
             ModelAndView mav = new ModelAndView("JsonView");
-            RbacDep dep = new RbacDep(code , name , new Date() , new Date());
+            RbacDep dep = new RbacDep(code , parentId , name , new Date() , new Date());
 
             //站点编号存在 返回-2
             if(depService.selectIsDepCodeExist(code) > 0)
@@ -138,13 +181,13 @@ public class DepartmentController
     }
 
     @RequestMapping("/editDepartment")
-    public ModelAndView editDep(@RequestParam("id")Integer id , @RequestParam("code")String code,
-                                    @RequestParam("name")String name)
+    public ModelAndView editDep(@RequestParam("id")Integer id , @RequestParam("parentId")Integer parentId ,
+                                @RequestParam("code")String code, @RequestParam("name")String name)
     {
         try
         {
             ModelAndView mav = new ModelAndView("JsonView");
-            RbacDep dep = new RbacDep(id ,code , name , null , new Date());
+            RbacDep dep = new RbacDep(id , parentId ,code , name , null , new Date());
 
             //站点编号存在 返回-2
             if(depService.selectIsDepCodeExistExceptID(id, code) > 0)
@@ -188,6 +231,26 @@ public class DepartmentController
         {
             ModelAndView mav = new ModelAndView("JsonView");
             mav.addObject("sqlresult" ,-1);
+            return mav;
+        }
+    }
+
+    @RequestMapping("/authorizeUserDeps")
+    public ModelAndView authorizeUserDeps(@RequestParam("id")Integer id ,@RequestParam("nodes[]")Integer[] nodes)
+    {
+        try
+        {
+            ModelAndView mav = new ModelAndView("JsonView");
+
+            int res = userDepService.insertUserDeps(id, nodes);
+
+            mav.addObject("sqlRes" , 1);
+            return mav;
+        }
+        catch (Exception ex)
+        {
+            ModelAndView mav = new ModelAndView("JsonView");
+            mav.addObject("sqlRes" ,-1);
             return mav;
         }
     }

@@ -3,6 +3,7 @@
 <mapper namespace="sys.mapper.RbacDepMapper">
     <resultMap id="RbacDepResultMap" type="sys.entity.RbacDep" >
         <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="parent_id" property="parent_id" jdbcType="INTEGER" />
         <result column="code" property="code" jdbcType="VARCHAR"/>
         <result column="name" property="name" jdbcType="VARCHAR" />
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
@@ -10,7 +11,7 @@
         <result column="status" property="status" jdbcType="INTEGER" />
     </resultMap>
     <sql id="Dep_Column_List" >
-        rbac_dep.id,rbac_dep.name,rbac_dep.code,rbac_dep.create_time,rbac_dep.update_time,rbac_dep.status
+        rbac_dep.id,rbac_dep.parent_id ,rbac_dep.name,rbac_dep.code,rbac_dep.create_time,rbac_dep.update_time,rbac_dep.status
     </sql>
     <select id="selectIsDepCodeExist" resultType="java.lang.Integer" parameterType="string">
         SELECT count(*)
@@ -39,14 +40,17 @@
         WHERE rbac_dep.status = 1
     </select>
     <insert id="insertDep" parameterType="sys.entity.RbacDep">
-        insert into rbac_dep (code, name, create_time,
+        insert into rbac_dep (parent_id ,code, name, create_time,
         update_time, status)
-        values (#{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP},
-        #{updateTime,jdbcType=TIMESTAMP}, 1)
+        values ( #{parent_id ,jdbcType=INTEGER} ,#{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
+         #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 1)
     </insert>
     <update id="updateDep" parameterType="sys.entity.RbacDep">
         update rbac_dep
         <set >
+            <if test="parent_id != null" >
+                parent_id = #{parent_id,jdbcType=INTEGER},
+            </if>
             <if test="code != null" >
                 code = #{code,jdbcType=VARCHAR},
             </if>

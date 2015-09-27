@@ -9,4 +9,12 @@
         AND rbac_role_uri_mapping.uri_id = rbac_uri.id
         AND rbac_role.id = #{id ,jdbcType=INTEGER}
     </select>
+    <insert id="insertRoleUri" parameterType="map">
+        INSERT INTO rbac_role_uri_mapping(role_id ,uri_id)
+        VALUE (#{id , jdbcType=INTEGER} ,#{node , jdbcType=INTEGER})
+    </insert>
+    <delete id="deleteRoleUris" parameterType="integer">
+        DELETE FROM rbac_role_uri_mapping
+        WHERE role_id = #{id , jdbcType=INTEGER}
+    </delete>
 </mapper>

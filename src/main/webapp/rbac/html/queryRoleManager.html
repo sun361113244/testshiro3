@@ -317,6 +317,17 @@
                 data: {
                     id : id,
                     nodes : nodes
+                },
+                success: function (data) {
+                    if(data.sqlRes > 0)
+                    {
+                        alert('修改列表成功！');
+                        $('#uriAuthModal').modal('hide');
+                    }
+                    else
+                    {
+                        alert('修改列表失败！');
+                    }
                 }
             });
         }

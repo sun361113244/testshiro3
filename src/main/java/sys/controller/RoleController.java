@@ -175,12 +175,15 @@ public class RoleController
         {
             ModelAndView mav = new ModelAndView("JsonView");
 
+            int res = roleUriService.insertRoleUris(id , nodes);
+
+            mav.addObject("sqlRes" , 1);
             return mav;
         }
         catch (Exception ex)
         {
             ModelAndView mav = new ModelAndView("JsonView");
-            mav.addObject("sqlresult" ,-1);
+            mav.addObject("sqlRes" ,-1);
             return mav;
         }
     }

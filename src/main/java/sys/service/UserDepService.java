@@ -11,4 +11,6 @@ public interface UserDepService
     int deleteByUserId(Integer id);
 
     void insertUserDep(Integer id, Integer stationId);
+
+    int insertUserDeps(Integer id, Integer[] nodes);
 }

@@ -12,8 +12,9 @@
     <!-- ================== END BASE CSS STYLE ================== -->
 
     <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
-    <link href="../../static/css/ExBootstrap.css">
+    <link href="../../static/css/ExBootstrap.css"  rel="stylesheet">
     <link href="../../static/jslib/dataTables-1.10.7/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <link href="../../static/jslib/zTree_v3/css/zTreeStyle/zTreeStyle.css" rel="stylesheet"/>
     <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
 
     <!-- ================== BEGIN BASE JS ================== -->
@@ -35,6 +36,8 @@
 
     <!-- ================== BEGIN PAGE LEVEL JS ================== -->
     <script  src="../../static/jslib/dataTables-1.10.7/js/jquery.dataTables.min.js"></script>
+    <script src="../../static/jslib/zTree_v3/js/jquery.ztree.core-3.5.min.js"></script>
+    <script src="../../static/jslib/zTree_v3/js/jquery.ztree.excheck-3.5.min.js"></script>
     <!-- ================== END PAGE LEVEL JS ================== -->
 
     <script>
@@ -42,26 +45,7 @@
         $(function () {
             table_user = initUserTable();
             App.init(1);
-            initStationList();
         });
-        function initStationList()
-        {
-            $.ajax({
-                url : getContextPath() + "/stationController/selectAllStation",
-                dataType : "json" ,
-                async : true ,
-                success : function(data)
-                {
-                    var stationList = data.records;
-
-                    for(var elem in stationList)
-                    {
-                        var str = '<label><input name=\"stationsInput\" id=\"' + 'station' +  stationList[elem].id + '\" type=\"checkbox\" value = ' + stationList[elem].id + ' />' + stationList[elem].name + '</label>';
-                        $('#stationList').append(str);
-                    }
-                }
-            });
-        }
         /**
          * 表格初始化
          * @returns {*|jQuery}
@@ -172,7 +156,7 @@
                         defaultContent: '<a href="#">Edit</a> / <a href="#">Delete</a>',
                         "render": function (data, type, row) {
                             var resStr = "<a href='javascript:void(0);' " +
-                            "onclick='authorizeUserStation(\"" + data.id + "\")'>站点授权</a>";
+                                    "onclick='authorizeDep(\"" + data.id + "\")'><i class='fa fa-bank (alias) fa-lg' data-toggle='tooltip' data-placement='bottom' title='站点授权'></i></a>";
                             return resStr;
                         }
                     }
@@ -307,68 +291,73 @@
                 }
             });
         }
-    function authorizeUserStation(id)
-    {
-        initStationListOnSelUser(id);
-        $('#stationSelId').val(id);
-        $('#stationAuthModal').modal('show');
-    }
-    function initStationListOnSelUser(id)
-    {
-        $.ajax({
-            url : getContextPath() + "/stationController/selectAllStationOnSelUser",
-            dataType : "json" ,
-            async : true ,
-            data : { id : id },
-            success : function(data)
+        function authorizeDep(id)
+        {
+            initDepListOnSelUser(id);
+            $('#depSelId').val(id);
+            $('#depAuthModal').modal('show');
+        }
+        function initDepListOnSelUser(id)
+        {
+            var setting = {
+                check: {
+                    enable: true
+                },
+                data: {
+                    simpleData: {
+                        enable: true
+                    }
+                }
+            };
+            $.ajax({
+                type: "POST",
+                url: getContextPath() + "/departmentController/selectTreeDepsById",
+                data: {
+                    id : id
+                },
+                success: function (data) {
+                    if(data.sqlRes > 0)
+                    {
+                        $.fn.zTree.init($("#depTreeDemo"), setting, data.zNodes);
+                    }
+                    else
+                    {
+                        alert('加载站点列表失败！');
+                    }
+                }
+            });
+        }
+        function confirmInputAuthDep()
+        {
+            var treeObj = $.fn.zTree.getZTreeObj("depTreeDemo");
+            var treeNodes = treeObj.getCheckedNodes(true);
+            var id = $('#depSelId').val();
+
+            var nodes = new Array();
+            for(var i = 0;i<treeNodes.length;i++)
             {
-                var stationList = data.stationList;
-                var userStationList = data.userStationList;
-
-                for(var elem in stationList)
-                {
-                    $("#station" + stationList[elem].id ).attr("checked" , false);
-                }
-                for(var elem in userStationList)
-                {
-                    $("#station" + userStationList[elem].id ).attr("checked" , true);
-                }
+                nodes[i] = treeNodes[i].id;
             }
-        });
-    }
-    function confirmInputAuthStation()
-    {
-        var id = $('#stationSelId').val();
-        var arrayStations = new Array();
-        $("input[name='stationsInput']:checkbox").each(function()
-        { //由于复选框一般选中的是多个,所以可以循环输出
-            if($(this).attr("checked"))
-                arrayStations.push($(this).val());
-        });
-
-        $.ajax({
-            url : getContextPath() + "/sysController/authorizeDep",
-            dataType : "json" ,
-            async : false ,
-            data : {
-                id : id ,
-                arrayStations : arrayStations
-            },
-            success : function(data)
-            {
-                if(data.sqlresult >= 0)
-                {
-                    alert("授权成功");
+            $.ajax({
+                type: "POST",
+                url: getContextPath() + "/departmentController/authorizeUserDeps",
+                data: {
+                    id : id,
+                    nodes : nodes
+                },
+                success: function (data) {
+                    if(data.sqlRes > 0)
+                    {
+                        alert('修改列表成功！');
+                        $('#depAuthModal').modal('hide');
+                    }
+                    else
+                    {
+                        alert('修改列表失败！');
+                    }
                 }
-                else
-                {
-                    alert("授权失败");
-                }
-            }
-        });
-        $('#stationAuthModal').modal('hide');
-
-    }
+            });
+        }
     </script>
     <title></title>
 </head>
@@ -532,24 +521,25 @@
 </div>
 <!-- end modal -->
 <!-- start modal -->
-<div class="modal fade" id="stationAuthModal" tabindex="-1" role="dialog" aria-labelledby="myStationModalLabel" aria-hidden="true">
+<div class="modal fade" id="depAuthModal" tabindex="-1" role="dialog" aria-labelledby="myDepModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <!-- start modal_header -->
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myStationModalLabel">站点访问信息</h4>
+                <h4 class="modal-title" id="myUriModalLabel">部门访问信息</h4>
             </div>
             <!-- end modal_header -->
             <!-- start modal-body -->
-            <div id = "stationList" class="modal-body">
-                <input id="stationSelId" value = "" style="display: none;" />
+            <div id = "depList" class="modal-body">
+                <input id="depSelId" value = ""  style="display: none;"/>
+                <ul id="depTreeDemo" class="ztree"></ul>
             </div>
             <!-- end modal-body -->
             <!-- start modal-footer -->
             <div class="modal-footer">
-                <button class="btn btn-primary" id="btnSaveAuthStation" onclick="confirmInputAuthStation()">确定</button>
+                <button class="btn btn-primary" id="btnSaveAuthDep" onclick="confirmInputAuthDep()">确定</button>
                 <button class="btn btn-danger" data-dismiss="modal"
                         aria-hidden="true">取消
                 </button>

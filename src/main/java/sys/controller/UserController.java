@@ -31,7 +31,7 @@ public class UserController
             {
                 mav.addObject("draw", draw);
             }
-            mav.addObject("records", userList);
+            mav.addObject("data", userList);
             mav.addObject("recordsTotal", userList.size());
             mav.addObject("recordsFiltered", userList.size());
             return mav;

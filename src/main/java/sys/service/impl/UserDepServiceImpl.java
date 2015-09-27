@@ -1,6 +1,7 @@
 package sys.service.impl;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import sys.entity.RbacDep;
 import sys.mapper.RbacUserDepMapper;
 import sys.service.UserDepService;
@@ -27,5 +28,17 @@ public class UserDepServiceImpl implements UserDepService
     public void insertUserDep(Integer id, Integer stationId)
     {
         rbacUserDepMapper.insertUserDep(id , stationId);
+    }
+
+    @Transactional
+    @Override
+    public int insertUserDeps(Integer id, Integer[] nodes)
+    {
+        rbacUserDepMapper.deleteByUserId(id);
+        for(int i = 0; i<nodes.length;i++)
+        {
+            rbacUserDepMapper.insertUserDep(id, nodes[i]);
+        }
+        return 1;
     }
 }
