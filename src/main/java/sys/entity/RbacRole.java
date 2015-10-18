@@ -30,6 +30,16 @@ public class RbacRole {
         this.status = status;
     }
 
+    public boolean equals(Object obj)
+    {
+        if (obj instanceof RbacRole)
+        {
+            RbacRole rbacRole = (RbacRole) obj;
+            return this.id == rbacRole.getId();
+        }
+        return super.equals(obj);
+    }
+
     public Integer getId() {
         return id;
     }

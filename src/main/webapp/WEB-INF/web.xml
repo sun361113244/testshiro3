@@ -12,6 +12,12 @@
         </param-value>
     </context-param>
 
+    <!--&lt;!&ndash; 监控filter &ndash;&gt;-->
+    <!--<filter>-->
+        <!--<filter-name>monitoring</filter-name>-->
+        <!--<filter-class>net.bull.javamelody.MonitoringFilter</filter-class>-->
+    <!--</filter>-->
+
     <!-- shiro过虑器，DelegatingFilterProxy通过代理模式将spring容器中的bean和filter关联起来 -->
     <filter>
         <filter-name>ShiroFilter</filter-name>
@@ -42,6 +48,10 @@
     </filter>
     <!-- 字符过滤器 end -->
 
+    <!--<filter-mapping>-->
+        <!--<filter-name>monitoring</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
     <filter-mapping>
         <filter-name>ShiroFilter</filter-name>
         <url-pattern>/*</url-pattern>
@@ -52,6 +62,11 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <!--<listener>-->
+        <!--<listener-class>net.bull.javamelody.SessionListener</listener-class>-->
+    <!--</listener>-->
+
+    <!-- spring listener -->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>

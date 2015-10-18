@@ -70,11 +70,11 @@
          */
         function initDepartmentTable() {
             var table = $("#tb_department").dataTable({
-                "deferRender": true,                //延迟渲染
-                "info": true,                        //是否显示左下信息
-                "processing": true,                 // 是否显示处理状态
+                "deferRender": true,                            //延迟渲染
+                "info": true,                                    //是否显示左下信息
+                "processing": true,                             // 是否显示处理状态
                 "retrieve": true,
-                "scrollY": "350px",                 // 垂直滚动
+                "scrollY": DATATABLEHEIGHT,                     // 垂直滚动
                 "ajax": {
                     "url": getContextPath() + "/departmentController/selectAllStation",
 //                    "url": "../../static/json/stations.json",
@@ -211,14 +211,22 @@
                     id : selectedItem.id
                 },
                 success: function (data) {
-                    if(data.sqlresult > 0 )
+                    switch (data.result)
                     {
-                        alert('删除成功');
+                        case RES_UNAUTHORIZED:
+                            alert('无权限！');
+                            break;
+                        case RES_SUCCESS:
+                            alert('删除成功！');
+                            break;
+                        case -1:
+                            alert('sql失败！');
+                            break;
+                        default :
+                            alert('异常错误！');
+                            break;
                     }
-                    else
-                    {
-                        alert('删除失败');
-                    }
+
                     table_department.api().ajax.reload();
                 }
             });
@@ -256,28 +264,27 @@
                     code : $('#departmentCode').attr("value")
                 },
                 success: function (data) {
-                    if(data.sqlresult > 0 )
+                    switch (data.result)
                     {
-                        alert('修改成功');
-                        $('#departmentModal').modal('hide');
-                    }
-                    else
-                    {
-                        switch (data.sqlresult)
-                        {
-                            case -1:
-                                alert('sql语句错误');
-                                break;
-                            case -2:
-                                alert('站点编号已存在');
-                                break;
-                            case -3:
-                                alert('站点名称已存在');
-                                break;
-                            default :
-                                alert('修改失败');
-                                break;
-                        }
+                        case RES_UNAUTHORIZED:
+                            alert('无权限！');
+                            break;
+                        case RES_SUCCESS:
+                            alert('修改成功！');
+                            $('#departmentModal').modal('hide');
+                            break;
+                        case -1:
+                            alert('sql语句错误！');
+                            break;
+                        case -2:
+                            alert('站点编号已存在！');
+                            break;
+                        case -3:
+                            alert('站点名称已存在！');
+                            break;
+                        default :
+                            alert('未知错误！');
+                            break;
                     }
                     table_department.api().ajax.reload();
                 }

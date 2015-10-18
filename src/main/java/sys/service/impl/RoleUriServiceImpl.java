@@ -16,14 +16,12 @@ public class RoleUriServiceImpl implements RoleUriService
     @Resource
     private RbacRoleUriMapper rbacRoleUriMapper;
 
-    @Override
     public List<RbacUri> selectUriListByRoleId(Integer id)
     {
         return rbacRoleUriMapper.selectUriListByRoleId(id);
     }
 
     @Transactional
-    @Override
     public int insertRoleUris(Integer id, Integer[] nodes)
     {
         rbacRoleUriMapper.deleteRoleUris(id);

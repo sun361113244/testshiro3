@@ -1,5 +1,6 @@
 package sys.controller;
 
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,97 +19,76 @@ public class UriController
     @Resource
     private UriService uriService;
 
-    /**
-     * 根据当前用户从数据库加载部门
-     */
     @RequestMapping("/selectAllUris")
+    @RequiresPermissions("system:uri:view")
     public ModelAndView selectAllUris(Integer draw)
     {
-        try
+        ModelAndView mav = new ModelAndView("JsonView");
+        List<RbacUri> uriList = uriService.selectUriList();
+        if(draw != null)
         {
-            ModelAndView mav = new ModelAndView("JsonView");
-            List<RbacUri> uriList = uriService.selectUriList();
-
-            if(draw != null)
-            {
-                mav.addObject("draw", draw);
-            }
-
-            mav.addObject("data", uriList);
-            mav.addObject("recordsTotal", uriList.size());
-            mav.addObject("recordsFiltered", uriList.size());
-            return mav;
+            mav.addObject("draw", draw);
         }
-        catch (Exception ex)
-        {
-            System.out.println(ex.getMessage());
-            ModelAndView mav = new ModelAndView("JsonView");
-            mav.addObject("result" , -1);
-            return mav;
-        }
+        mav.addObject("data", uriList);
+        mav.addObject("recordsTotal", uriList.size());
+        mav.addObject("recordsFiltered", uriList.size());
+        return mav;
     }
 
     @RequestMapping("/addUri")
+    @RequiresPermissions("system:uri:add")
     public ModelAndView addDepartment( @RequestParam("parentId")Integer parentId, @RequestParam("uriName")String uriName, @RequestParam("uriPermission")String uriPermission,
-                                       @RequestParam("uriLoc")String uriLoc, @RequestParam("iconCls")String iconCls, @RequestParam("showType")Byte showType,
-                                       @RequestParam("treeCode")String treeCode, @RequestParam("sort")Byte sort)
+                                       @RequestParam("uriLoc")String uriLoc, @RequestParam("iconCls")String iconCls, @RequestParam("showType")Byte showType)
     {
-        try
+        ModelAndView mav = new ModelAndView("JsonView");
+        RbacUri rbacUri = new RbacUri(parentId, uriName, uriPermission, uriLoc, iconCls, showType, "#", (byte)0, new Date() , new Date());
+        int result = uriService.insertUri(rbacUri);
+        if(result == 1)
         {
-            ModelAndView mav = new ModelAndView("JsonView");
-            RbacUri rbacUri = new RbacUri(parentId, uriName, uriPermission, uriLoc, iconCls, showType, treeCode, sort, new Date() , new Date());
-
-            int res = uriService.insertUri(rbacUri);
-            mav.addObject("sqlresult" ,res);
-            return mav;
+            mav.addObject("result" ,1);
         }
-        catch (Exception ex)
+        else
         {
-            ModelAndView mav = new ModelAndView("JsonView");
-            mav.addObject("sqlresult" ,-1);
-            return mav;
+            mav.addObject("result" ,result);
         }
+        return mav;
     }
 
     @RequestMapping("/editUri")
+    @RequiresPermissions("system:uri:edit")
     public ModelAndView editUri(@RequestParam("id")Integer id , @RequestParam("parentId")Integer parentId, @RequestParam("uriName")String uriName,
                                 @RequestParam("uriPermission")String uriPermission, @RequestParam("uriLoc")String uriLoc, @RequestParam("iconCls")String iconCls,
-                                @RequestParam("showType")Byte showType, @RequestParam("treeCode")String treeCode, @RequestParam("sort")Byte sort)
+                                @RequestParam("showType")Byte showType)
     {
-        try
+        ModelAndView mav = new ModelAndView("JsonView");
+        RbacUri rbacUri = new RbacUri(id ,parentId, uriName, uriPermission, uriLoc, iconCls, showType, "#", (byte)0, null , new Date());
+        int result = uriService.updateUri(rbacUri);
+        if(result == 1)
         {
-            ModelAndView mav = new ModelAndView("JsonView");
-            RbacUri rbacUri = new RbacUri(id ,parentId, uriName, uriPermission, uriLoc, iconCls, showType, treeCode, sort, null , new Date());
-
-            int res = uriService.updateUri(rbacUri);
-            mav.addObject("sqlresult" ,res);
-            return mav;
+            mav.addObject("result" ,1);
         }
-        catch (Exception ex)
+        else
         {
-            ModelAndView mav = new ModelAndView("JsonView");
-            mav.addObject("sqlresult" ,-1);
-            return mav;
+            mav.addObject("result" ,result);
         }
+        return mav;
     }
 
     @RequestMapping("/deleteUri")
+    @RequiresPermissions("system:uri:delete")
     public ModelAndView deleteUri(@RequestParam("id")Integer id)
     {
-        try
+        ModelAndView mav = new ModelAndView("JsonView");
+        int result = uriService.deleteUriById(id);
+        if(result == 1)
         {
-            ModelAndView mav = new ModelAndView("JsonView");
-            int res = uriService.deleteUriById(id);
-
-            mav.addObject("sqlresult" ,res);
-            return mav;
+            mav.addObject("result" ,1);
         }
-        catch (Exception ex)
+        else
         {
-            ModelAndView mav = new ModelAndView("JsonView");
-            mav.addObject("sqlresult" ,-1);
-            return mav;
+            mav.addObject("result" ,result);
         }
+            return mav;
     }
 
 }

@@ -55,7 +55,7 @@
                 "info": true,                        //是否显示左下信息
                 "processing": true,                 // 是否显示处理状态
                 "retrieve": true,
-                "scrollY": "350px",                 // 垂直滚动
+                "scrollY": DATATABLEHEIGHT,        // 垂直滚动
                 "ajax": {
                     "url": getContextPath() + "/roleController/selectAllRoles",
 //                    "url": "../../static/json/stations.json",
@@ -195,13 +195,20 @@
                     id : selectedItem.id
                 },
                 success: function (data) {
-                    if(data.sqlresult > 0 )
+                    switch (data.result)
                     {
-                        alert('删除成功');
-                    }
-                    else
-                    {
-                        alert('删除失败');
+                        case RES_UNAUTHORIZED:
+                            alert('无权限！');
+                            break;
+                        case RES_SUCCESS:
+                            alert('删除成功！');
+                            break;
+                        case -1:
+                            alert('sql失败！');
+                            break;
+                        default :
+                            alert('未知错误！');
+                            break;
                     }
                     table_role.api().ajax.reload();
                 }
@@ -239,26 +246,26 @@
                     description : $('#roleDescription').attr("value")
                 },
                 success: function (data) {
-                    if(data.sqlresult > 0 )
+                    switch (data.result)
                     {
-                        alert('修改成功');
-                        $('#roleModal').modal('hide');
+                        case RES_UNAUTHORIZED:
+                            alert('无权限！');
+                            break;
+                        case RES_SUCCESS:
+                            alert('修改成功！');
+                            $('#roleModal').modal('hide');
+                            break;
+                        case -1:
+                            alert('sql语句错误！');
+                            break;
+                        case -2:
+                            alert('角色名称已存在！');
+                            break;
+                        default :
+                            alert('未知错误！');
+                            break;
                     }
-                    else
-                    {
-                        switch (data.sqlresult)
-                        {
-                            case -1:
-                                alert('sql语句错误');
-                                break;
-                            case -2:
-                                alert('角色名称已存在');
-                                break;
-                            default :
-                                alert('修改失败');
-                                break;
-                        }
-                    }
+
                     table_role.api().ajax.reload();
                 }
             });
@@ -284,18 +291,25 @@
             };
             $.ajax({
                 type: "POST",
-                url: getContextPath() + "/roleController/selectTreeRolesById",
+                url: getContextPath() + "/roleController/selectTreeUrisByRoleId",
                 data: {
                     id : id
                 },
                 success: function (data) {
-                    if(data.sqlRes > 0)
+                    switch (data.result)
                     {
-                        $.fn.zTree.init($("#treeDemo"), setting, data.zNodes);
-                    }
-                    else
-                    {
-                        alert('加载权限列表失败！');
+                        case RES_SUCCESS:
+                            $.fn.zTree.init($("#treeDemo"), setting, data.treeNodes);
+                            break;
+                        case RES_UNAUTHORIZED:
+                            alert('无权限！');
+                            break;
+                        case -1:
+                            alert('SQL错误！');
+                            break;
+                        default :
+                            alert('加载权限列表失败！未知异常');
+                            break;
                     }
                 }
             });
@@ -319,14 +333,21 @@
                     nodes : nodes
                 },
                 success: function (data) {
-                    if(data.sqlRes > 0)
+                    switch (data.result)
                     {
-                        alert('修改列表成功！');
-                        $('#uriAuthModal').modal('hide');
-                    }
-                    else
-                    {
-                        alert('修改列表失败！');
+                        case RES_UNAUTHORIZED:
+                            alert('无权限！');
+                            break;
+                        case RES_SUCCESS:
+                            alert('修改列表成功！');
+                            $('#uriAuthModal').modal('hide');
+                            break;
+                        case -1:
+                            alert('修改列表失败！');
+                            break;
+                        default :
+                            alert('未知情况！');
+                            break;
                     }
                 }
             });

@@ -18,4 +18,8 @@ public class UserRoleServiceImpl implements UserRoleService
     @Resource
     private RbacUserRoleMapper rbacUserRoleMapper;
 
+    public List<RbacRole> selectRolesById(Integer id)
+    {
+        return rbacUserRoleMapper.selectRoleListByUserId(id);
+    }
 }

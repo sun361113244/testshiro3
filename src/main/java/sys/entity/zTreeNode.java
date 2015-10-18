@@ -20,7 +20,15 @@ public class zTreeNode
         this.open = node_open;
         this.checked = node_checked;
     }
-
+    public boolean equals(Object obj)
+    {
+        if (obj instanceof zTreeNode)
+        {
+            zTreeNode treeNode = (zTreeNode) obj;
+            return this.id.equals(treeNode.getId());
+        }
+        return super.equals(obj);
+    }
     public Integer getId()
     {
         return id;

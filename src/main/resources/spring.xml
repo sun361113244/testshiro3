@@ -12,17 +12,14 @@
       http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <!-- 引入jdbc配置文件 -->
+    <context:property-placeholder location="classpath:jdbc.properties" />
+
     <!-- 注解支持 -->
     <context:annotation-config/>
 
-    <!-- 扫描文件（自动将controller层注入） -->
-    <context:component-scan base-package="sys.controller"/>
-
     <!-- 扫描文件（自动将service层注入） -->
     <context:component-scan base-package="sys.service.impl"/>
-
-    <!-- 引入jdbc配置文件 -->
-    <context:property-placeholder location="classpath:jdbc.properties" />
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
           init-method="init" destroy-method="close" p:maxActive="20">
@@ -45,12 +42,14 @@
         <property name="connectionProperties" value="clientEncoding=UTF-8"/>
     </bean>
 
+    <bean id = "UnauthorizedExceptionHandler" class="sys.exception.UnauthorizedExceptionHandler"></bean>
+
     <!-- 事务管理器 -->
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
     </bean>
 
     <!-- 事务注解驱动，标注@Transactional的类和方法将具有事务性 -->
-    <tx:annotation-driven transaction-manager="txManager" />
+    <tx:annotation-driven transaction-manager="txManager" proxy-target-class="true"/>
 
 </beans>

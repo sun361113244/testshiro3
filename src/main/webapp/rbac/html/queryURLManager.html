@@ -52,7 +52,7 @@
                 "info": true,                        //是否显示左下信息
                 "processing": true,                 // 是否显示处理状态
                 "retrieve": true,
-                "scrollY": "350px",                 // 垂直滚动
+                "scrollY": DATATABLEHEIGHT,                 // 垂直滚动
                 "ajax": {
                     "url": getContextPath() + "/uriController/selectAllUris",
 //                    "url": "../../static/json/stations.json",
@@ -135,11 +135,6 @@
                         }
                     },
                     {
-                        "data": "sort",
-                        "title": "权重",
-                        "orderable": false
-                    },
-                    {
                         "data": "createTime",
                         "title": "创建时间",
                         "width": "150px",
@@ -189,14 +184,12 @@
             $('#uriFlag').attr("value", "add");
 
             $('#uriId').val("");
-            $('#parentId').val("");
+            $('#parentId').val("0");
             $('#uriName').val("");
             $('#uriPermission').val("");
-            $('#uriLoc').val("");
-            $('#iconCls').val("");
+            $('#uriLoc').val("#");
+            $('#iconCls').val("#");
             $('#showType').val(0);
-            $('#treeCode').val("");
-            $('#sort').val("");
 
             $('#uriModal').modal('show');
         }
@@ -216,8 +209,6 @@
             $('#uriLoc').val(selectedItem.uri);
             $('#iconCls').val(selectedItem.iconcls);
             $('#showType').val(selectedItem.showType);
-            $('#treeCode').val(selectedItem.treeCode);
-            $('#sort').val(selectedItem.sort);
             $('#uriModal').modal('show');
         }
         function delUri() {
@@ -234,13 +225,20 @@
                     id : selectedItem.id
                 },
                 success: function (data) {
-                    if(data.sqlresult > 0 )
+                    switch (data.result)
                     {
-                        alert('删除成功');
-                    }
-                    else
-                    {
-                        alert('删除失败');
+                        case RES_SUCCESS:
+                            alert('删除成功！');
+                            break;
+                        case RES_UNAUTHORIZED:
+                            alert('无权限！');
+                            break;
+                        case -1:
+                            alert('删除失败！');
+                            break;
+                        default :
+                            alert('删除失败,未知异常！');
+                            break;
                     }
                     table_uri.api().ajax.reload();
                 }
@@ -273,17 +271,6 @@
                 alert('图标不能为空！');
                 return ;
             }
-            if($.trim($('#treeCode').val()) == '')
-            {
-                alert('子节点不能为空！');
-                return ;
-            }
-            if($.trim($('#sort').val()) == '')
-            {
-                alert('权重不能为空！');
-                return ;
-            }
-
             var oper = $('#uriFlag').attr("value");
             var url;
             switch (oper) {
@@ -304,29 +291,29 @@
                     uriPermission : $('#uriPermission').val(),
                     uriLoc : $('#uriLoc').val(),
                     iconCls : $('#iconCls').val(),
-                    showType : $('#showType').val(),
-                    treeCode : $('#treeCode').val(),
-                    sort : $('#sort').val()
+                    showType : $('#showType').val()
                 },
                 success: function (data) {
-                    if(data.sqlresult > 0 )
+                    switch (data.result)
                     {
-                        alert('修改成功');
-                        $('#uriModal').modal('hide');
+                        case RES_SUCCESS:
+                            alert('修改成功！');
+                            $('#uriModal').modal('hide');
+                            table_uri.api().ajax.reload();
+                            break;
+                        case RES_UNAUTHORIZED:
+                            alert('无权限！');
+                            break;
+                        case -1:
+                            alert('sql语句错误！');
+                            break;
+                        case -2:
+                            alert('用户名称已存在！');
+                            break;
+                        default :
+                            alert('未知错误！');
+                            break;
                     }
-                    else
-                    {
-                        switch (data.sqlresult)
-                        {
-                            case -1:
-                                alert('sql语句错误');
-                                break;
-                            default :
-                                alert('修改失败');
-                                break;
-                        }
-                    }
-                    table_uri.api().ajax.reload();
                 }
             });
         }
@@ -487,24 +474,12 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-4 control-label" for="treeCode">子节点：</label>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text" id="treeCode" name="treeCode" maxlength="30">
-                                </div>
-                            </div>
-                            <div class="form-group">
                                 <label class="col-md-4 control-label">显示类型：</label>
                                 <div class="col-md-8">
                                     <select id = "showType" class="form-control">
                                         <option value="0">菜单</option>
                                         <option value="2">功能</option>
                                     </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label" for="sort">权重：</label>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text" id="sort" name="sort" maxlength="30">
                                 </div>
                             </div>
                         </fieldset>

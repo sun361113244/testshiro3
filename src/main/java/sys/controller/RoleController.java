@@ -1,5 +1,6 @@
 package sys.controller;
 
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -8,10 +9,7 @@ import sys.entity.RbacRole;
 
 import sys.entity.RbacUri;
 import sys.entity.zTreeNode;
-import sys.service.RoleService;
-import sys.service.RoleUriService;
-import sys.service.UriService;
-import sys.service.UserUriService;
+import sys.service.*;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -32,159 +30,124 @@ public class RoleController
     private RoleUriService roleUriService;
 
     @RequestMapping("/selectAllRoles")
+    @RequiresPermissions("system:role:view")
     public ModelAndView selectAllRoles(Integer draw)
     {
-        try
+        ModelAndView mav = new ModelAndView("DataTablesAjaxView");
+        List<RbacRole> roleList = roleService.selectAllRoles();
+        if(draw != null)
         {
-            ModelAndView mav = new ModelAndView("DataTablesAjaxView");
-            List<RbacRole> roleList = roleService.selectAllRoles();
-
-            if(draw != null)
-            {
-                mav.addObject("draw", draw);
-            }
-            mav.addObject("data", roleList);
-            mav.addObject("recordsTotal", roleList.size());
-            mav.addObject("recordsFiltered", roleList.size());
-            return mav;
+            mav.addObject("draw", draw);
         }
-        catch (Exception ex)
-        {
-            ModelAndView mav = new ModelAndView("JsonView");
-            mav.addObject("result" , -1);
-            return mav;
-        }
+        mav.addObject("data", roleList);
+        mav.addObject("recordsTotal", roleList.size());
+        mav.addObject("recordsFiltered", roleList.size());
+        return mav;
     }
 
-    @RequestMapping("/selectTreeRolesById")
-    public ModelAndView selectTreeRolesById(@RequestParam("id")Integer id)
+    @RequestMapping("/selectTreeUrisByRoleId")
+    @RequiresPermissions("system:role:authorizeroleuris")
+    public ModelAndView selectTreeUrisByRoleId(@RequestParam("id")Integer id)
     {
-        try
+        ModelAndView mav = new ModelAndView("zTreeView");
+        List<RbacUri> uriList = uriService.selectUriList();
+        List<RbacUri> idUriList = roleUriService.selectUriListByRoleId(id);
+
+        List<zTreeNode> zTreeAllNodes  = new ArrayList<zTreeNode>();
+        List<zTreeNode> zTreeCheckedNodes  = new ArrayList<zTreeNode>();
+        for(RbacUri rbacUri : uriList)
         {
-            // 获取所有权限
-            ModelAndView mav = new ModelAndView("JsonView");
-            List<RbacUri> uriList = uriService.selectUriList();
-
-            List<RbacUri> idUriList = roleUriService.selectUriListByRoleId(id);
-
-            List<zTreeNode> zTreeNodes = new ArrayList<zTreeNode>();
-            for(RbacUri rbacUri : uriList)
-            {
-                if(idUriList.contains(rbacUri))
-                {
-                    zTreeNode node = new zTreeNode(rbacUri.getId() ,rbacUri.getParentId() , rbacUri.getName() ,true ,true );
-                    zTreeNodes.add(node);
-                }
-                else
-                {
-                    zTreeNode node = new zTreeNode(rbacUri.getId() ,rbacUri.getParentId() , rbacUri.getName() ,true ,false );
-                    zTreeNodes.add(node);
-                }
-            }
-
-            mav.addObject("zNodes", zTreeNodes);
-            mav.addObject("sqlRes", 1);
-            return mav;
+            zTreeNode node = new zTreeNode(rbacUri.getId() ,rbacUri.getParentId() , rbacUri.getName() ,true ,false );
+            zTreeAllNodes.add(node);
         }
-        catch (Exception ex)
+        for(RbacUri rbacUri : idUriList)
         {
-            ModelAndView mav = new ModelAndView("JsonView");
-            mav.addObject("sqlRes" , -1);
-            return mav;
+            zTreeNode node = new zTreeNode(rbacUri.getId() ,rbacUri.getParentId() , rbacUri.getName() ,true ,true );
+            zTreeCheckedNodes.add(node);
         }
+        mav.addObject("zTreeAllNodes" , zTreeAllNodes);
+        mav.addObject("zTreeCheckedNodes" , zTreeCheckedNodes);
+        mav.addObject("result" , 1);
+        return mav;
     }
 
     @RequestMapping("/addRole")
+    @RequiresPermissions("system:role:add")
     public ModelAndView addRole( @RequestParam("name")String name, @RequestParam("description")String description)
     {
-        try
-        {
-            ModelAndView mav = new ModelAndView("JsonView");
-            RbacRole role = new RbacRole(null , name , description , new Date() , new Date(), 1);
+        ModelAndView mav = new ModelAndView("JsonView");
+        RbacRole role = new RbacRole(null , name , description , new Date() , new Date(), 1);
 
-            //角色名称存在 返回-2
-            if(roleService.selectIsRoleNameExist(name) > 0)
-            {
-                mav.addObject("sqlresult" , -2);
-                return mav;
-            }
-            int res = roleService.insertRole(role);
-            mav.addObject("sqlresult" ,res);
-            return mav;
-        }
-        catch (Exception ex)
+        //角色名称存在 返回-2
+        if(roleService.selectIsRoleNameExist(name) > 0)
         {
-            ModelAndView mav = new ModelAndView("JsonView");
-            mav.addObject("sqlresult" ,-1);
+            mav.addObject("result" , -2);
             return mav;
         }
+        int result = roleService.insertRole(role);
+        if(result == 1)
+        {
+            mav.addObject("result" ,1);
+        }
+        else
+        {
+            mav.addObject("result" ,result);
+        }
+        return mav;
     }
 
     @RequestMapping("/editRole")
+    @RequiresPermissions("system:role:edit")
     public ModelAndView editRole(@RequestParam("id")Integer id , @RequestParam("name")String name,
                                 @RequestParam("description")String description)
     {
-        try
-        {
-            ModelAndView mav = new ModelAndView("JsonView");
-            RbacRole role = new RbacRole(id , name , description , null , new Date(), null);
+        ModelAndView mav = new ModelAndView("JsonView");
+        RbacRole role = new RbacRole(id , name , description , null , new Date(), 1);
 
-            //站点编号存在 返回-2
-            if(roleService.selectIsRoleNameExistExceptID(id, name) > 0)
-            {
-                mav.addObject("sqlresult" , -2);
-                return mav;
-            }
-
-            int res = roleService.updateRoleById(role);
-            mav.addObject("sqlresult" ,res);
-            return mav;
-        }
-        catch (Exception ex)
+        //角色名称以存在 返回-2
+        if(roleService.selectIsRoleNameExistExceptID(id, name) > 0)
         {
-            ModelAndView mav = new ModelAndView("JsonView");
-            mav.addObject("sqlresult" ,-1);
+            mav.addObject("result" , -2);
             return mav;
         }
 
+        int result = roleService.updateRoleById(role);
+        if(result == 1)
+        {
+            mav.addObject("result" ,1);
+        }
+        else
+        {
+            mav.addObject("result" ,result);
+        }
+        return mav;
     }
 
     @RequestMapping("/deleteRole")
+    @RequiresPermissions("system:role:delete")
     public ModelAndView deleteRole(@RequestParam("id")Integer id)
     {
-        try
-        {
-            ModelAndView mav = new ModelAndView("JsonView");
-            int res = roleService.deleteUserRoleById(id);
+        ModelAndView mav = new ModelAndView("JsonView");
+        int result = roleService.deleteUserRoleById(id);
 
-            mav.addObject("sqlresult" ,res);
-            return mav;
-        }
-        catch (Exception ex)
+        if(result == 1)
         {
-            ModelAndView mav = new ModelAndView("JsonView");
-            mav.addObject("sqlresult" ,-1);
-            return mav;
+            mav.addObject("result" ,1);
         }
+        else
+        {
+            mav.addObject("result" ,result);
+        }
+        return mav;
     }
 
     @RequestMapping("/authorizeRoleUris")
+    @RequiresPermissions("system:role:authorizeroleuris")
     public ModelAndView authorizeRoleUris(@RequestParam("id")Integer id ,@RequestParam("nodes[]")Integer[] nodes)
     {
-        try
-        {
-            ModelAndView mav = new ModelAndView("JsonView");
-
-            int res = roleUriService.insertRoleUris(id , nodes);
-
-            mav.addObject("sqlRes" , 1);
-            return mav;
-        }
-        catch (Exception ex)
-        {
-            ModelAndView mav = new ModelAndView("JsonView");
-            mav.addObject("sqlRes" ,-1);
-            return mav;
-        }
+        ModelAndView mav = new ModelAndView("JsonView");
+        roleUriService.insertRoleUris(id , nodes);
+        mav.addObject("result" , 1);
+        return mav;
     }
 }

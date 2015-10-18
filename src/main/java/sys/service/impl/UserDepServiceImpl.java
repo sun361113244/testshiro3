@@ -31,7 +31,6 @@ public class UserDepServiceImpl implements UserDepService
     }
 
     @Transactional
-    @Override
     public int insertUserDeps(Integer id, Integer[] nodes)
     {
         rbacUserDepMapper.deleteByUserId(id);

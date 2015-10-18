@@ -2,6 +2,7 @@ package sys.reamls;
 
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import sys.entity.ActiveUser;
@@ -13,6 +14,7 @@ import sys.service.UserService;
 import sys.service.UserUriService;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserRealm extends AuthorizingRealm
@@ -29,7 +31,27 @@ public class UserRealm extends AuthorizingRealm
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals)
     {
-        return null;
+        ActiveUser activeUser = (ActiveUser)principals.getPrimaryPrincipal();
+
+        List<RbacUri> permisstionList = null;
+        List<String> permissions = new ArrayList<String>();
+        try
+        {
+            permisstionList = userUriService.selectUriListByUserId(activeUser.getUserid());
+        }
+        catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
+        for(int i=0;i<permisstionList.size();i++)
+        {
+
+            permissions.add(permisstionList.get(i).getPermission());
+        }
+
+        SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
+        simpleAuthorizationInfo.addStringPermissions(permissions);
+        return simpleAuthorizationInfo;
     }
 
     @Override
