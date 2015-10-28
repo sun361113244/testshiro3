@@ -330,9 +330,10 @@
                     <span class="hidden-xs activeUserName">Admin</span> <b class="caret"></b></a>
                     <ul class="dropdown-menu animated fadeInLeft">
                         <li class="arrow"></li>
-                        <li><a href="javascript;">设置</a></li>
+                        <li><a href="javascript:setUserInfo()">用户设置</a></li>
+                        <li><a href="javascript:changeUserPwd()">更改密码</a></li>
                         <li class="divider"></li>
-                        <li><a href="../../logout" >注销</a></li>
+                        <li><a href="../logout" >注销</a></li>
                     </ul>
                 </li>
             </ul>
@@ -442,6 +443,79 @@
                 <button class="btn btn-danger" data-dismiss="modal"
                         aria-hidden="true">取消
                 </button>
+            </div>
+            <!-- end modal-footer -->
+        </div>
+    </div>
+</div>
+<!-- end modal -->
+<!-- start modal -->
+<div class="modal fade" id="set_UserInfoModal" tabindex="-1" role="dialog" aria-labelledby="set_UserInfoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- start modal_header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span  aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="set_UserInfoModalLabel">个人信息设置</h4>
+            </div>
+            <!-- end modal_header -->
+            <!-- start modal-body -->
+            <div class="modal-body">
+                <form class="form-horizontal" id="set_UserInfoForm">
+                    <div class="control-group">
+                        <label class="control-label" for="set_UserName">&nbsp;&nbsp;&nbsp;&nbsp;用户名称：</label>
+                        <input type="text" id="set_UserName" name="set_UserName" maxlength="30">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="set_GivenName">用户中文名：</label>
+                        <input type="text" id="set_GivenName" name="set_GivenName" maxlength="30">
+                    </div>
+                </form>
+            </div>
+            <!-- end modal-body -->
+            <!-- start modal-footer -->
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="btnSaveUserInfo" onclick="confirmInputSetUserInfo()">确定</button>
+                <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">取消</button>
+            </div>
+            <!-- end modal-footer -->
+        </div>
+    </div>
+</div>
+<!-- end modal -->
+<!-- start modal -->
+<div class="modal fade" id="set_PwdModal" tabindex="-1" role="dialog" aria-labelledby="set_PwdModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- start modal_header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span  aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="set_PwdModalLabel">修改密码</h4>
+            </div>
+            <!-- end modal_header -->
+            <!-- start modal-body -->
+            <div class="modal-body">
+                <form class="form-horizontal" id="set_PwdForm">
+                    <div class="control-group">
+                        <label class="control-label" for="set_CurUserPasswrod">&nbsp;&nbsp;&nbsp;&nbsp;当前密码：</label>
+                        <input type="text" id="set_CurUserPasswrod" name="set_CurUserPasswrod" maxlength="30">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="set_SetUserPasswrod">&nbsp;&nbsp;&nbsp;&nbsp;设置密码：</label>
+                        <input type="text" id="set_SetUserPasswrod" name="set_SetUserPasswrod" maxlength="30">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="set_SetConfirmUserPasswrod">&nbsp;&nbsp;&nbsp;&nbsp;确认密码：</label>
+                        <input type="text" id="set_SetConfirmUserPasswrod" name="set_SetConfirmUserPasswrod" maxlength="30">
+                    </div>
+                </form>
+            </div>
+            <!-- end modal-body -->
+            <!-- start modal-footer -->
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="confirmInputSetUserPwd()">确定</button>
+                <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">取消</button>
             </div>
             <!-- end modal-footer -->
         </div>

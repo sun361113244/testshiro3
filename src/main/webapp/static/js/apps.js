@@ -261,6 +261,21 @@ var handleInitRespondInfo = function(index){
         }
     });
 };
+var handleSetInfo = function(){
+    "use strict";
+    var contextPath = getContextPath();
+    // 加载用户个人信息
+    $.ajax({
+        url : contextPath + "/sysController/selectActiveInfo",
+        dataType : "json" ,
+        async : false ,
+        success : function(data)
+        {
+            $('#set_UserName').val(data.activeUserCode);
+            $('#set_GivenName').val(data.activeUserName);
+        }
+    });
+};
 var App = function() {
     "use strict";
     return {
@@ -273,3 +288,124 @@ var App = function() {
         }
     }
 } ()
+var setUserInfo = function(){
+    "use strict";
+    handleSetInfo();
+    $('#set_UserInfoModal').modal('show');
+};
+var changeUserPwd = function(){
+    "use strict";
+    $('#set_CurUserPasswrod').html();
+    $('#set_SetUserPasswrod').html();
+    $('#set_SetConfirmUserPasswrod').html();
+    $('#set_PwdModal').modal('show');
+    $('#set_CurUserPasswrod').focus();
+}
+var confirmInputSetUserInfo = function(){
+    "use strict";
+    var userName = $('#set_UserName').val();
+    var givenName = $('#set_GivenName').val();
+    if($.trim(userName) == '')
+    {
+        alert('用户名称不能为空！');
+        $('#set_UserName').focus();
+        return ;
+    }
+    if($.trim(givenName) == '')
+    {
+        alert('用户中文名不能为空！');
+        $('#set_GivenName').focus();
+        return ;
+    }
+    $.ajax({
+        url : getContextPath() + "/userController/UpdateCurrentUserInfo",
+        dataType : "json" ,
+        async : false ,
+        data: {
+            userName : userName ,
+            givenName : givenName
+        },
+        success : function(data)
+        {
+            switch (data.result)
+            {
+                case RES_SUCCESS:
+                    alert('用户信息修改成功！');
+                    $('#set_UserInfoModal').modal('hide');
+                    break;
+                case RES_UNAUTHORIZED:
+                    alert('无权限！');
+                    break;
+                case -1:
+                    alert('SQL语句错误！');
+                    break;
+                case -2:
+                    alert('用户名称已存在！');
+                    break;
+                default :
+                    alert('未知错误！');
+                    break;
+            }
+        }
+    });
+}
+
+var confirmInputSetUserPwd = function(){
+    "use strict";
+    var curPwd = $('#set_CurUserPasswrod').val();
+    var pwdSet = $('#set_SetUserPasswrod').val();
+    var pwdConfirm = $('#set_SetConfirmUserPasswrod').val();
+    if($.trim(curPwd) == '')
+    {
+        alert('当前密码不能为空！');
+        $('#set_CurUserPasswrod').focus();
+        return ;
+    }
+    if($.trim(pwdSet) == '')
+    {
+        alert('设置密码不能为空！');
+        $('#set_SetUserPasswrod').focus();
+        return ;
+    }
+    if($.trim(pwdConfirm) == '')
+    {
+        alert('确认密码不能为空！');
+        $('#set_SetConfirmUserPasswrod').focus();
+        return ;
+    }
+    if($.trim(pwdSet) != $.trim(pwdConfirm))
+    {
+        alert('两次密码不相同！');
+        return;
+    }
+    $.ajax({
+        type: "POST",
+        url : getContextPath() + "/userController/UpdateCurrentUserPassword",
+        data: {
+            curPwd : curPwd ,
+            setPwd : pwdSet
+        },
+        success : function(data)
+        {
+            switch (data.result)
+            {
+                case RES_SUCCESS:
+                    alert('密码修改成功！');
+                    $('#set_PwdModal').modal('hide');
+                    break;
+                case RES_UNAUTHORIZED:
+                    alert('无权限！');
+                    break;
+                case -1:
+                    alert('SQL语句错误！');
+                    break;
+                case -2:
+                    alert('密码错误！');
+                    break;
+                default :
+                    alert('未知错误！');
+                    break;
+            }
+        }
+    });
+}

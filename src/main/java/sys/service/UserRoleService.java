@@ -10,4 +10,6 @@ import java.util.List;
 public interface UserRoleService
 {
     List<RbacRole> selectRolesById(Integer id);
+
+    int insertUserRoles(Integer id, Integer[] nodes);
 }

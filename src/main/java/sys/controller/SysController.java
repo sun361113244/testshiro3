@@ -19,9 +19,6 @@ public class SysController
     @Resource
     private MenuService menuService;
 
-    @Resource
-    private UserDepService userDepService;
-
     @RequestMapping("/selectActiveInfo")
     public ModelAndView selectActiveInfo(Integer index)
     {
@@ -31,33 +28,8 @@ public class SysController
         String menuList = menuService.getMenuStr(activeUser.getMenus() ,index);
 
         mav.addObject("activeUserName", activeUser.getUsername());
+        mav.addObject("activeUserCode" , activeUser.getUsercode());
         mav.addObject("menuStr", menuList);
         return mav;
-    }
-
-    @RequestMapping("/authorizeDep")
-    public ModelAndView authorizeDep(@RequestParam("id")Integer id , @RequestParam("arrayStations[]")Integer[] arrayStations)
-    {
-        try
-        {
-            ModelAndView mav = new ModelAndView("JsonView");
-
-            int delRes = userDepService.deleteByUserId(id);
-
-            for(int i = 0 ; i <arrayStations.length ; i++)
-            {
-                userDepService.insertUserDep( id , arrayStations[i]);
-            }
-
-            mav.addObject("sqlresult" ,delRes);
-            return mav;
-        }
-        catch (Exception ex)
-        {
-            System.out.println(ex.getMessage());
-            ModelAndView mav = new ModelAndView("JsonView");
-            mav.addObject("sqlresult" ,-1);
-            return mav;
-        }
     }
 }

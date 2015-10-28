@@ -22,4 +22,14 @@ public class UserRoleServiceImpl implements UserRoleService
     {
         return rbacUserRoleMapper.selectRoleListByUserId(id);
     }
+
+    public int insertUserRoles(Integer id, Integer[] nodes)
+    {
+        rbacUserRoleMapper.deleteByUserId(id);
+        for (int i = 0; i<nodes.length;i++)
+        {
+            rbacUserRoleMapper.insertUserRoles(id, nodes[i]);
+        }
+        return 1;
+    }
 }

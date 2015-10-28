@@ -3,6 +3,7 @@ package sys.mapper;
 import org.apache.ibatis.annotations.Param;
 import sys.entity.RbacUser;
 
+import java.util.Date;
 import java.util.List;
 
 public interface RbacUserMapper
@@ -15,6 +16,8 @@ public interface RbacUserMapper
 
     int selectIsUserCodeExistExceptId(@Param("id")Integer id, @Param("name")String name);
 
+    int isPasswordCorrect(@Param("userid") Integer userid, @Param("curPwd") String curPwd);
+
     int insertRabUser(RbacUser rbacUser);
 
     int deleteUserById(Integer id);
@@ -23,4 +26,7 @@ public interface RbacUserMapper
 
     int updateUserStatusById(@Param("id")Integer id, @Param("status")Integer status);
 
+    int updateCurrentUserPwd(@Param("userid") Integer userid, @Param("pwd") String pwd, @Param("now") Date now);
+
+    int updateCurrentUserInfo(@Param("userid") Integer userid, @Param("userName") String userName, @Param("givenName") String givenName, @Param("now") Date now);
 }

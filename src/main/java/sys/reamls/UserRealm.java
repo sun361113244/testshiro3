@@ -1,5 +1,6 @@
 package sys.reamls;
 
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -111,5 +112,11 @@ public class UserRealm extends AuthorizingRealm
         SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(activeUser, rbacUser.getUserPasswrod(),this.getName());
 
         return simpleAuthenticationInfo;
+    }
+
+    public void clearCached()
+    {
+        PrincipalCollection principals = SecurityUtils.getSubject().getPrincipals();
+        super.clearCache(principals);
     }
 }

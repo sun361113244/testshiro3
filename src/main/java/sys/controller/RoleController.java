@@ -9,6 +9,7 @@ import sys.entity.RbacRole;
 
 import sys.entity.RbacUri;
 import sys.entity.zTreeNode;
+import sys.reamls.UserRealm;
 import sys.service.*;
 
 import javax.annotation.Resource;
@@ -20,6 +21,9 @@ import java.util.List;
 @RequestMapping("/roleController")
 public class RoleController
 {
+    @Resource
+    private UserRealm userRealm;
+
     @Resource
     private RoleService roleService;
 
@@ -85,6 +89,7 @@ public class RoleController
             return mav;
         }
         int result = roleService.insertRole(role);
+        userRealm.clearCached();
         if(result == 1)
         {
             mav.addObject("result" ,1);
@@ -112,6 +117,7 @@ public class RoleController
         }
 
         int result = roleService.updateRoleById(role);
+        userRealm.clearCached();
         if(result == 1)
         {
             mav.addObject("result" ,1);
@@ -129,6 +135,7 @@ public class RoleController
     {
         ModelAndView mav = new ModelAndView("JsonView");
         int result = roleService.deleteUserRoleById(id);
+        userRealm.clearCached();
 
         if(result == 1)
         {
@@ -147,6 +154,7 @@ public class RoleController
     {
         ModelAndView mav = new ModelAndView("JsonView");
         roleUriService.insertRoleUris(id , nodes);
+        userRealm.clearCached();
         mav.addObject("result" , 1);
         return mav;
     }

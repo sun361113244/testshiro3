@@ -1,18 +1,18 @@
 package sys.controller;
 
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.crypto.hash.Md5Hash;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import sys.entity.RbacDep;
-import sys.entity.RbacRole;
-import sys.entity.RbacUser;
-import sys.entity.zTreeNode;
+import sys.entity.*;
 import sys.service.*;
 
 import javax.annotation.Resource;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -181,7 +181,7 @@ public class UserController
     public ModelAndView authorizeUserRoles(@RequestParam("id")Integer id ,@RequestParam("nodes[]")Integer[] nodes)
     {
         ModelAndView mav = new ModelAndView("JsonView");
-        userDepService.insertUserDeps(id , nodes);
+        userRoleService.insertUserRoles(id , nodes);
         mav.addObject("result" , 1);
         return mav;
     }
@@ -193,6 +193,57 @@ public class UserController
         ModelAndView mav = new ModelAndView("JsonView");
         userDepService.insertUserDeps(id, nodes);
         mav.addObject("result" , 1);
+        return mav;
+    }
+
+    @RequestMapping("/UpdateCurrentUserPassword")
+    @RequiresPermissions("system:user:updatePassword")
+    public ModelAndView UpdateCurrentUserPassword(@RequestParam("curPwd")String curPwd, @RequestParam("setPwd")String setPwd)
+    {
+        Subject currentUser = SecurityUtils.getSubject();
+        ActiveUser activeUser = (ActiveUser) currentUser.getPrincipal();
+        Md5Hash md5HashCurPwd = new Md5Hash(curPwd );
+        Md5Hash md5HashSetPwd = new Md5Hash(setPwd );
+
+        ModelAndView mav = new ModelAndView("JsonView");
+        int res = userService.isPasswordCorrect(activeUser.getUserid(), md5HashCurPwd.toString());
+        if(res ==  0)
+        {
+            mav.addObject("result" , -2);
+            return mav;
+        }
+        res = userService.updateCurrentUserPwd(activeUser.getUserid() , md5HashSetPwd.toString() , new Date());
+        mav.addObject("result" , res);
+        return mav;
+    }
+
+    @RequestMapping(value =  "/UpdateCurrentUserInfo" )
+    @RequiresPermissions("system:user:updateInfo")
+    public ModelAndView UpdateCurrentUserInfo(@RequestParam("userName")String userName, @RequestParam("givenName")String givenName)
+    {
+        String user_Name = null;
+        String given_Name = null;
+        try
+        {
+            user_Name = new String(userName.getBytes("iso-8859-1"),"utf-8");
+            given_Name = new String(givenName.getBytes("iso-8859-1"),"utf-8");
+        } catch (UnsupportedEncodingException e)
+        {
+            e.printStackTrace();
+        }
+
+        Subject currentUser = SecurityUtils.getSubject();
+        ActiveUser activeUser = (ActiveUser) currentUser.getPrincipal();
+        ModelAndView mav = new ModelAndView("JsonView");
+
+        if(userService.selectIsUserCodeExistExceptId(activeUser.getUserid(), user_Name) > 0)
+        {
+            mav.addObject("result" , -2);
+            return mav;
+        }
+
+        int res = userService.updateCurrentUserInfo(activeUser.getUserid(), user_Name, given_Name ,new Date());
+        mav.addObject("result" , res);
         return mav;
     }
 }

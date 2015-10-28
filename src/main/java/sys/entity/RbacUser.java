@@ -26,12 +26,12 @@ public class RbacUser implements java.io.Serializable
     {
 
     }
-    public RbacUser(Integer user_id, String user_name , String user_pawd , String given_name , Byte status , Date create_time ,
+    public RbacUser(Integer user_id, String user_name , String user_pwd , String given_name , Byte status , Date create_time ,
                     Date update_time , Date login_time , Integer login_count)
     {
         this.id = user_id;
         this.userName = user_name;
-        this.userPasswrod = user_pawd;
+        this.userPasswrod = user_pwd;
         this.givenName = given_name;
         this.status = status;
         this.createTime = create_time;

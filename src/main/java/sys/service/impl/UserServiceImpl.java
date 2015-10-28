@@ -6,6 +6,7 @@ import sys.entity.RbacUser;
 import sys.service.UserService;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -34,6 +35,11 @@ public class UserServiceImpl implements UserService
         return rbacUserMapper.selectIsUserCodeExistExceptId( id , name);
     }
 
+    public int isPasswordCorrect(Integer userid, String curPwd)
+    {
+        return rbacUserMapper.isPasswordCorrect(userid ,curPwd );
+    }
+
     public int insertRabUser(RbacUser rbacUser)
     {
         return rbacUserMapper.insertRabUser(rbacUser);
@@ -52,6 +58,16 @@ public class UserServiceImpl implements UserService
     public int updateUserStatusById(Integer id, Integer status)
     {
         return rbacUserMapper.updateUserStatusById( id , status);
+    }
+
+    public int updateCurrentUserPwd(Integer userid, String pwd, Date now)
+    {
+        return rbacUserMapper.updateCurrentUserPwd(userid , pwd , now);
+    }
+
+    public int updateCurrentUserInfo(Integer userid, String userName, String givenName, Date now)
+    {
+        return rbacUserMapper.updateCurrentUserInfo(userid ,userName , givenName , now);
     }
 
 }

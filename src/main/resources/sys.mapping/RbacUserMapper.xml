@@ -41,6 +41,11 @@
         and status = 1
         and id != #{id ,jdbcType=INTEGER}
     </select>
+    <select id="isPasswordCorrect" resultType="java.lang.Integer" parameterType="map">
+        SELECT COUNT(*)
+        FROM rbac_user
+        WHERE id = #{userid  ,jdbcType=INTEGER} and user_passwrod = #{curPwd ,jdbcType=VARCHAR}
+    </select>
     <insert id="insertRabUser" parameterType="sys.entity.RbacUser">
         INSERT
         INTO rbac_user(user_name, user_passwrod, given_name, status, create_time, update_time, login_time, login_count)
@@ -86,5 +91,16 @@
         UPDATE rbac_user
         SET status = #{status ,jdbcType=TINYINT}
         where id = #{id , jdbcType=INTEGER}
+    </update>
+    <update id="updateCurrentUserPwd" parameterType="map">
+        UPDATE  rbac_user
+        SET user_passwrod = #{pwd , jdbcType=VARCHAR} , update_time = #{now }
+        where id = #{userid , jdbcType=INTEGER}
+    </update>
+    <update id="updateCurrentUserInfo" parameterType="map">
+        UPDATE  rbac_user
+        SET user_name = #{userName , jdbcType=VARCHAR} ,
+        given_name = #{givenName ,  jdbcType=VARCHAR} , update_time = #{now }
+        where id = #{userid , jdbcType=INTEGER}
     </update>
 </mapper>
