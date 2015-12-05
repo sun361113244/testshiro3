@@ -50,6 +50,9 @@
                 <!-- 删除session -->
                 /logout = logout
 
+                <!-- 非登录uri -->
+                /loginController/submitRegUserInfo = anon
+
                 <!-- /** 需要认证 -->
                 /** = authc
             </value>
@@ -58,4 +61,5 @@
 
     <!-- Shiro生命周期处理器-->
     <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
 </beans>

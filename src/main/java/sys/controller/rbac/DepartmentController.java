@@ -1,4 +1,4 @@
-package sys.controller;
+package sys.controller.rbac;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
@@ -6,12 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import sys.entity.RbacDep;
-import sys.entity.zTreeNode;
 import sys.service.DepService;
 import sys.service.UserDepService;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -21,10 +19,6 @@ public class DepartmentController
 {
     @Resource
     private DepService depService;
-
-    @Resource
-    private UserDepService userDepService;
-
     /**
      * 根据当前用户从数据库加载部门
      */

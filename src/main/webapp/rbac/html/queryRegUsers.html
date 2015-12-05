@@ -13,7 +13,6 @@
 
     <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
     <link href="../../static/jslib/dataTables-1.10.7/css/jquery.dataTables.min.css" rel="stylesheet"/>
-    <link href="../../static/jslib/zTree_v3/css/zTreeStyle/zTreeStyle.css" rel="stylesheet"/>
     <link href="../../static/css/ExBootstrap.css" rel="stylesheet"/>
     <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
 
@@ -36,28 +35,27 @@
 
     <!-- ================== BEGIN PAGE LEVEL JS ================== -->
     <script  src="../../static/jslib/dataTables-1.10.7/js/jquery.dataTables.min.js"></script>
-    <script src="../../static/jslib/zTree_v3/js/jquery.ztree.core-3.5.min.js"></script>
-    <script src="../../static/jslib/zTree_v3/js/jquery.ztree.excheck-3.5.min.js"></script>
     <!-- ================== END PAGE LEVEL JS ================== -->
+
     <script>
-        var table_role;
-        $(function(){
-            table_role = initRoleTable();
+        var table_reg_user;
+        $(function () {
+            table_reg_user = initRegUserTable();
             App.init(1);
         });
         /**
          * 表格初始化
          * @returns {*|jQuery}
          */
-        function initRoleTable() {
-            var table = $("#tb_role").dataTable({
-                "deferRender": true,                //延迟渲染
-                "info": true,                        //是否显示左下信息
-                "processing": true,                 // 是否显示处理状态
+        function initRegUserTable() {
+            var table = $("#tb_reg_user").dataTable({
+                "deferRender": true,                            //延迟渲染
+                "info": true,                                    //是否显示左下信息
+                "processing": true,                             // 是否显示处理状态
                 "retrieve": true,
-                "scrollY": DATATABLEHEIGHT,        // 垂直滚动
+                "scrollY": DATATABLEHEIGHT,                     // 垂直滚动
                 "ajax": {
-                    "url": getContextPath() + "/roleController/selectAllRoles",
+                    "url": getContextPath() + "/regUserController/selectAllRegUsers",
 //                    "url": "../../static/json/stations.json",
                     "type": "POST",
                     "async": true
@@ -88,32 +86,22 @@
                 "columns": [
                     {
                         "data": "id",
-                        "title": "角色ID",
+                        "title": "ID",
                         "orderable": false
                     },
                     {
-                        "data": "name",
-                        "title": "角色名称",
+                        "data": "reg_code",
+                        "title": "登录名称",
                         "orderable": false
                     },
                     {
-                        "data": "description",
-                        "title": "角色描述",
+                        "data": "reg_name",
+                        "title": "注册姓名",
                         "orderable": false
                     },
                     {
-                        "data": "createTime",
-                        "title": "创建时间",
-                        "width": "150px",
-                        "orderable": false,
-                        "render": function (data, type, row) {
-                            var date = new Date(data);
-                            return date.toLocaleString();
-                        }
-                    },
-                    {
-                        "data": "updateTime",
-                        "title": "修改时间",
+                        "data": "reg_time",
+                        "title": "注册时间",
                         "width": "150px",
                         "orderable": false,
                         "render": function (data, type, row) {
@@ -125,10 +113,12 @@
                         data: null,
                         "title": "操作",
                         className: "center",
-                        defaultContent: '<a href="#">授权</a>',
+                        defaultContent: '<a href="#">通过</a> / <a href="#">拒绝</a>',
                         "render": function (data, type, row) {
                             var resStr = "<a href='javascript:void(0);' " +
-                                    "onclick='authorizeUserUri(\"" + data.id + "\")'><i class='fa fa-wrench fa-lg' data-toggle='tooltip' data-placement='bottom' title='授权'></i></a>";
+                                    "onclick='regPass(\"" + data.id + "\")'><i class='fa fa-check fa-lg' data-toggle='tooltip' data-placement='bottom' title='通过'></i></a>" +
+                                    "<a href='javascript:void(0);' " +
+                                    "onclick='regRefuse(\"" + data.id + "\")'><i class='fa fa-times fa-lg' data-toggle='tooltip' data-placement='bottom' title='拒绝'></i></a>";
                             return resStr;
                         }
                     }
@@ -136,162 +126,33 @@
             });
 
             // 单行选中变色
-            $('#tb_role tbody').on('click', 'tr', function () {
+            $('#tb_reg_user tbody').on('click', 'tr', function () {
                 if ($(this).hasClass('selected')) {
                     $(this).removeClass('selected');
                 }
                 else {
-                    table_role.$('tr.selected').removeClass('selected');
+                    table_reg_user.$('tr.selected').removeClass('selected');
                     $(this).addClass('selected');
                 }
             });
 
             // 双击弹出modual
-            $('#tb_role tbody').on('dblclick', 'tr', function () {
+            $('#tb_reg_user tbody').on('dblclick', 'tr', function () {
                 if ($(this).hasClass('selected')) {
                     $(this).removeClass('selected');
                 }
                 else {
-                    table_role.$('tr.selected').removeClass('selected');
+                    table_reg_user.$('tr.selected').removeClass('selected');
                     $(this).addClass('selected');
                 }
             });
             return table;
         }
-
-        function addRole() {
-            $('#roleFlag').attr("value", "add");
-
-            $('#roleId').val("");
-            $('#roleName').val("");
-            $('#roleDescription').val("");
-            $('#roleModal').modal('show');
-        }
-        function editRole() {
-            $('#roleFlag').attr("value", "edit");
-
-            var selectedItem = $('#tb_role').DataTable().row('.selected').data();
-            if(selectedItem == null)
-            {
-                alert("未选中记录！");
-                return;
-            }
-            $('#roleId').attr("value", selectedItem.id);
-            $('#roleName').attr("value", selectedItem.name);
-            $('#roleDescription').attr("value", selectedItem.description);
-            $('#roleModal').modal('show');
-        }
-        function delRole() {
-            var selectedItem = $('#tb_role').DataTable().row('.selected').data();
-            if(selectedItem == null)
-            {
-                alert("未选中记录！");
-                return;
-            }
+        function regPass(id)
+        {
             $.ajax({
                 type: "POST",
-                url: getContextPath() + "/roleController/deleteRole",
-                data: {
-                    id : selectedItem.id
-                },
-                success: function (data) {
-                    switch (data.result)
-                    {
-                        case RES_UNAUTHORIZED:
-                            alert('无权限！');
-                            break;
-                        case RES_SUCCESS:
-                            alert('删除成功！');
-                            break;
-                        case -1:
-                            alert('sql失败！');
-                            break;
-                        default :
-                            alert('未知错误！');
-                            break;
-                    }
-                    table_role.api().ajax.reload();
-                }
-            });
-        }
-        function confirmInputRole()
-        {
-            if($.trim($('#roleName').val()) == '')
-            {
-                alert('角色名称不能为空！');
-                return ;
-            }
-            if($.trim($('#roleDescription').val()) == '')
-            {
-                alert('角色描述不能为空！');
-                return ;
-            }
-
-            var oper = $('#roleFlag').attr("value");
-            var url;
-            switch (oper) {
-                case "add":
-                    url = getContextPath() + "/roleController/addRole";
-                    break;
-                case "edit":
-                    url = getContextPath() + "/roleController/editRole";
-                    break;
-            }
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: {
-                    id : $('#roleId').val(),
-                    name : $('#roleName').val(),
-                    description : $('#roleDescription').attr("value")
-                },
-                success: function (data) {
-                    switch (data.result)
-                    {
-                        case RES_UNAUTHORIZED:
-                            alert('无权限！');
-                            break;
-                        case RES_SUCCESS:
-                            alert('修改成功！');
-                            $('#roleModal').modal('hide');
-                            break;
-                        case -1:
-                            alert('sql语句错误！');
-                            break;
-                        case -2:
-                            alert('角色名称已存在！');
-                            break;
-                        default :
-                            alert('未知错误！');
-                            break;
-                    }
-
-                    table_role.api().ajax.reload();
-                }
-            });
-        }
-        function authorizeUserUri(id)
-        {
-            initUriListOnSelUser(id);
-            $('#uriSelId').val(id);
-            $('#uriAuthModal').modal('show');
-        }
-
-        function initUriListOnSelUser(id)
-        {
-            var setting = {
-                check: {
-                    enable: true
-                },
-                data: {
-                    simpleData: {
-                        enable: true
-                    }
-                }
-            };
-            $.ajax({
-                type: "POST",
-                url: getContextPath() + "/roleController/selectTreeUrisByRoleId",
+                url: getContextPath() + "/regUserController/AddRegUser",
                 data: {
                     id : id
                 },
@@ -299,54 +160,43 @@
                     switch (data.result)
                     {
                         case RES_SUCCESS:
-                            $.fn.zTree.init($("#treeDemo"), setting, data.treeNodes);
+                            table_reg_user.api().ajax.reload();
                             break;
                         case RES_UNAUTHORIZED:
                             alert('无权限！');
                             break;
                         case -1:
-                            alert('SQL错误！');
+                            alert('SQL失败！');
                             break;
                         default :
-                            alert('加载权限列表失败！未知异常');
+                            alert('加载角色列表失败！未知错误');
                             break;
                     }
                 }
             });
         }
-        function confirmInputAuthUri()
+        function regRefuse(id)
         {
-            var treeObj = $.fn.zTree.getZTreeObj("treeDemo");
-            var treeNodes = treeObj.getCheckedNodes(true);
-            var id = $('#uriSelId').val();
-
-            var nodes = new Array();
-            for(var i = 0;i<treeNodes.length;i++)
-            {
-                nodes[i] = treeNodes[i].id;
-            }
             $.ajax({
                 type: "POST",
-                url: getContextPath() + "/roleController/authorizeRoleUris",
+                url: getContextPath() + "/regUserController/RemoveRegUser",
                 data: {
-                    id : id,
-                    nodes : nodes
+                    id : id
                 },
                 success: function (data) {
                     switch (data.result)
                     {
+                        case RES_SUCCESS:
+                            table_reg_user.api().ajax.reload();
+                            break;
                         case RES_UNAUTHORIZED:
                             alert('无权限！');
                             break;
-                        case RES_SUCCESS:
-                            alert('修改列表成功！');
-                            $('#uriAuthModal').modal('hide');
-                            break;
                         case -1:
-                            alert('修改列表失败！');
+                            alert('SQL失败！');
                             break;
                         default :
-                            alert('未知情况！');
+                            alert('加载角色列表失败！未知错误');
                             break;
                     }
                 }
@@ -438,16 +288,11 @@
                 <!-- begin panel -->
                 <div class="panel panel-inverse">
                     <div class="panel-heading">
-                        <h4 class="panel-title">角色信息</h4>
+                        <h4 class="panel-title">注册用户审核</h4>
                     </div>
                     <div class="panel-body">
-                        <div style="margin-bottom: 20px">
-                            <button type="button" class="btn btn-primary" style="margin-left: 20px" onclick="addRole()">添&nbsp;&nbsp;加</button>
-                            <button type="button" class="btn btn-success" style="margin-left: 20px" onclick="editRole()">修&nbsp;&nbsp;改</button>
-                            <button type="button" class="btn btn-danger" style="margin-left: 20px" onclick="delRole()">删&nbsp;&nbsp;除</button>
-                        </div>
                         <div class="table-responsive">
-                            <table id="tb_role" cellpadding="0" cellspacing="0" class = "display">
+                            <table id="tb_reg_user" cellpadding="0" cellspacing="0" class = "display">
                             </table>
                         </div>
                     </div>
@@ -461,74 +306,6 @@
     <!-- end #content -->
 </div>
 <!-- end page container -->
-<!-- start modal -->
-<div class="modal fade" id="roleModal" tabindex="-1" role="dialog" aria-labelledby="roleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- start modal_header -->
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="roleModalLabel">角色信息</h4>
-            </div>
-            <!-- end modal_header -->
-            <!-- start modal-body -->
-            <div class="modal-body">
-                <form class="form-horizontal" id="resForm">
-                    <input type="hidden" id="roleFlag" name="roleFlag">
-                    <input type="hidden" id="roleId" name="roleId">
-                    <div class="control-group">
-                        <label class="control-label" for="roleName">角色名称：</label>
-                        <input type="text" id="roleName" name="roleName" maxlength="30">
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="roleDescription">角色描述：</label>
-                        <input type="text" id="roleDescription" name="roleDescription" maxlength="30">
-                    </div>
-                </form>
-            </div>
-            <!-- end modal-body -->
-            <!-- start modal-footer -->
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="btnSave" onclick="confirmInputRole()">确定</button>
-                <button class="btn btn-danger" data-dismiss="modal"
-                        aria-hidden="true">取消
-                </button>
-            </div>
-            <!-- end modal-footer -->
-        </div>
-    </div>
-</div>
-<!-- end modal -->
-<!-- start modal -->
-<div class="modal fade" id="uriAuthModal" tabindex="-1" role="dialog" aria-labelledby="myUriModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- start modal_header -->
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myUriModalLabel">资源访问信息</h4>
-            </div>
-            <!-- end modal_header -->
-            <!-- start modal-body -->
-            <div id = "uriList" class="modal-body">
-                <input id="uriSelId" value = ""  style="display: none;"/>
-                <ul id="treeDemo" class="ztree"></ul>
-            </div>
-            <!-- end modal-body -->
-            <!-- start modal-footer -->
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="btnSaveAuthUri" onclick="confirmInputAuthUri()">确定</button>
-                <button class="btn btn-danger" data-dismiss="modal"
-                        aria-hidden="true">取消
-                </button>
-            </div>
-            <!-- end modal-footer -->
-        </div>
-    </div>
-</div>
-<!-- end modal -->
 <!-- start modal -->
 <div class="modal fade" id="set_UserInfoModal" tabindex="-1" role="dialog" aria-labelledby="set_UserInfoModalLabel" aria-hidden="true">
     <div class="modal-dialog">

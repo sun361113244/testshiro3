@@ -25,6 +25,10 @@
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.1.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-test:4.1.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.8.6" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.6" />
+          <element id="library" level="project" name="Maven: cglib:cglib:3.1" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm:4.2" />
           <element id="library" level="project" name="Maven: org.apache.shiro:shiro-core:1.2.3" />
           <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.8.3" />
           <element id="library" level="project" name="Maven: org.apache.shiro:shiro-web:1.2.3" />

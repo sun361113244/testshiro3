@@ -70,4 +70,10 @@ public class UserServiceImpl implements UserService
         return rbacUserMapper.updateCurrentUserInfo(userid ,userName , givenName , now);
     }
 
+    public int updateLoginTime(String loginName, Date now)
+    {
+        rbacUserMapper.updateLoginTime(loginName, now);
+        return 1;
+    }
+
 }

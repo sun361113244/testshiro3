@@ -29,4 +29,6 @@ public interface RbacUserMapper
     int updateCurrentUserPwd(@Param("userid") Integer userid, @Param("pwd") String pwd, @Param("now") Date now);
 
     int updateCurrentUserInfo(@Param("userid") Integer userid, @Param("userName") String userName, @Param("givenName") String givenName, @Param("now") Date now);
+
+    int updateLoginTime(@Param("loginName") String loginName, @Param("now") Date now);
 }

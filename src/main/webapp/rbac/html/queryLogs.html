@@ -36,25 +36,26 @@
     <!-- ================== BEGIN PAGE LEVEL JS ================== -->
     <script  src="../../static/jslib/dataTables-1.10.7/js/jquery.dataTables.min.js"></script>
     <!-- ================== END PAGE LEVEL JS ================== -->
+
     <script>
-        var table_uri;
-        $(function(){
-            table_uri = initUriTable();
-            App.init(1);
-        })
+        var table_log;
+        $(function () {
+            table_log = initLogTable();
+            App.init(2);
+        });
         /**
          * 表格初始化
          * @returns {*|jQuery}
          */
-        function initUriTable() {
-            var table = $("#tb_uri").dataTable({
-                "deferRender": true,                //延迟渲染
-                "info": true,                        //是否显示左下信息
-                "processing": true,                 // 是否显示处理状态
+        function initLogTable() {
+            var table = $("#tb_log").dataTable({
+                "deferRender": true,                            //延迟渲染
+                "info": true,                                    //是否显示左下信息
+                "processing": true,                             // 是否显示处理状态
                 "retrieve": true,
-                "scrollY": DATATABLEHEIGHT,                 // 垂直滚动
+                "scrollY": DATATABLEHEIGHT,                     // 垂直滚动
                 "ajax": {
-                    "url": getContextPath() + "/uriController/selectAllUris",
+                    "url": getContextPath() + "/logController/selectAllLogs",
 //                    "url": "../../static/json/stations.json",
                     "type": "POST",
                     "async": true
@@ -89,54 +90,23 @@
                         "orderable": false
                     },
                     {
-                        "data": "parentId",
-                        "title": "父ID",
+                        "data": "op_userid",
+                        "title": "操作用户ID",
                         "orderable": false
                     },
                     {
-                        "data": "name",
-                        "title": "资源名称",
+                        "data": "op_ip",
+                        "title": "操作用户IP",
                         "orderable": false
                     },
                     {
-                        "data": "permission",
-                        "title": "权限",
+                        "data": "op_uri",
+                        "title": "操作uri",
                         "orderable": false
                     },
                     {
-                        "data": "uri",
-                        "title": "uri",
-                        "orderable": false
-                    },
-                    {
-                        "data": "iconcls",
-                        "title": "图标",
-                        "orderable": false
-                    },
-                    {
-                        "data": "treeCode",
-                        "title": "树列表",
-                        "orderable": false
-                    },
-                    {
-                        "data": "showType",
-                        "title": "资源类型",
-                        "orderable": false,
-                        "render": function (data, type, row) {
-                            switch(data)
-                            {
-                                case 0:
-                                    return '菜单';
-                                case 2:
-                                    return '功能';
-                                default:
-                                    return '未知';
-                            }
-                        }
-                    },
-                    {
-                        "data": "createTime",
-                        "title": "创建时间",
+                        "data": "op_excu_time",
+                        "title": "操作执行时间",
                         "width": "150px",
                         "orderable": false,
                         "render": function (data, type, row) {
@@ -145,177 +115,50 @@
                         }
                     },
                     {
-                        "data": "updateTime",
-                        "title": "修改时间",
-                        "width": "150px",
-                        "orderable": false,
-                        "render": function (data, type, row) {
-                            var date = new Date(data);
-                            return date.toLocaleString();
-                        }
+                        "data": "op_consume_time",
+                        "title": "操作消耗时间(ms)",
+                        "orderable": false
+                    },
+                    {
+                        "data": "op_params",
+                        "title": "操作参数",
+                        "orderable": false
+                    },
+                    {
+                        "data": "op_res",
+                        "title": "操作返回值",
+                        "orderable": false
+                    },
+                    {
+                        "data": "op_exception",
+                        "title": "操作异常",
+                        "orderable": false
                     }
                 ]
             });
 
             // 单行选中变色
-            $('#tb_uri tbody').on('click', 'tr', function () {
+            $('#tb_log tbody').on('click', 'tr', function () {
                 if ($(this).hasClass('selected')) {
                     $(this).removeClass('selected');
                 }
                 else {
-                    table_uri.$('tr.selected').removeClass('selected');
+                    table_log.$('tr.selected').removeClass('selected');
                     $(this).addClass('selected');
                 }
             });
 
             // 双击弹出modual
-            $('#tb_uri tbody').on('dblclick', 'tr', function () {
+            $('#tb_log tbody').on('dblclick', 'tr', function () {
                 if ($(this).hasClass('selected')) {
                     $(this).removeClass('selected');
                 }
                 else {
-                    table_uri.$('tr.selected').removeClass('selected');
+                    table_log.$('tr.selected').removeClass('selected');
                     $(this).addClass('selected');
                 }
             });
             return table;
-        }
-        function addUri() {
-            $('#uriFlag').attr("value", "add");
-
-            $('#uriId').val("");
-            $('#parentId').val("0");
-            $('#uriName').val("");
-            $('#uriPermission').val("");
-            $('#uriLoc').val("#");
-            $('#iconCls').val("#");
-            $('#showType').val(0);
-
-            $('#uriModal').modal('show');
-        }
-        function editUri() {
-            $('#uriFlag').attr("value", "edit");
-
-            var selectedItem = $('#tb_uri').DataTable().row('.selected').data();
-            if(selectedItem == null)
-            {
-                alert("未选中记录！");
-                return;
-            }
-            $('#uriId').attr("value", selectedItem.id);
-            $('#parentId').val(selectedItem.parentId);
-            $('#uriName').val(selectedItem.name);
-            $('#uriPermission').val(selectedItem.permission);
-            $('#uriLoc').val(selectedItem.uri);
-            $('#iconCls').val(selectedItem.iconcls);
-            $('#showType').val(selectedItem.showType);
-            $('#uriModal').modal('show');
-        }
-        function delUri() {
-            var selectedItem = $('#tb_uri').DataTable().row('.selected').data();
-            if(selectedItem == null)
-            {
-                alert("未选中记录！");
-                return;
-            }
-            $.ajax({
-                type: "POST",
-                url: getContextPath() + "/uriController/deleteUri",
-                data: {
-                    id : selectedItem.id
-                },
-                success: function (data) {
-                    switch (data.result)
-                    {
-                        case RES_SUCCESS:
-                            alert('删除成功！');
-                            break;
-                        case RES_UNAUTHORIZED:
-                            alert('无权限！');
-                            break;
-                        case -1:
-                            alert('删除失败！');
-                            break;
-                        default :
-                            alert('删除失败,未知异常！');
-                            break;
-                    }
-                    table_uri.api().ajax.reload();
-                }
-            });
-        }
-        function confirmInputUri()
-        {
-            if($.trim($('#parentId').val()) == '')
-            {
-                alert('父ID不能为空！');
-                return ;
-            }
-            if($.trim($('#uriName').val()) == '')
-            {
-                alert('资源名称不能为空！');
-                return ;
-            }
-            if($.trim($('#uriPermission').val()) == '')
-            {
-                alert('权限不能为空！');
-                return ;
-            }
-            if($.trim($('#uriLoc').val()) == '')
-            {
-                alert('uri地址不能为空！');
-                return ;
-            }
-            if($.trim($('#iconCls').val()) == '')
-            {
-                alert('图标不能为空！');
-                return ;
-            }
-            var oper = $('#uriFlag').attr("value");
-            var url;
-            switch (oper) {
-                case "add":
-                    url = getContextPath() + "/uriController/addUri";
-                    break;
-                case "edit":
-                    url = getContextPath() + "/uriController/editUri";
-                    break;
-            }
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: {
-                    id : $('#uriId').val(),
-                    parentId : $('#parentId').val(),
-                    uriName : $('#uriName').val(),
-                    uriPermission : $('#uriPermission').val(),
-                    uriLoc : $('#uriLoc').val(),
-                    iconCls : $('#iconCls').val(),
-                    showType : $('#showType').val()
-                },
-                success: function (data) {
-                    switch (data.result)
-                    {
-                        case RES_SUCCESS:
-                            alert('修改成功！');
-                            $('#uriModal').modal('hide');
-                            table_uri.api().ajax.reload();
-                            break;
-                        case RES_UNAUTHORIZED:
-                            alert('无权限！');
-                            break;
-                        case -1:
-                            alert('sql语句错误！');
-                            break;
-                        case -2:
-                            alert('用户名称已存在！');
-                            break;
-                        default :
-                            alert('未知错误！');
-                            break;
-                    }
-                }
-            });
         }
     </script>
     <title></title>
@@ -403,16 +246,11 @@
                 <!-- begin panel -->
                 <div class="panel panel-inverse">
                     <div class="panel-heading">
-                        <h4 class="panel-title">资源信息</h4>
+                        <h4 class="panel-title">操作日志</h4>
                     </div>
                     <div class="panel-body">
-                        <div style="margin-bottom: 20px">
-                            <button type="button" class="btn btn-primary" style="margin-left: 20px" onclick="addUri()">添&nbsp;&nbsp;加</button>
-                            <button type="button" class="btn btn-success" style="margin-left: 20px" onclick="editUri()">修&nbsp;&nbsp;改</button>
-                            <button type="button" class="btn btn-danger" style="margin-left: 20px" onclick="delUri()">删&nbsp;&nbsp;除</button>
-                        </div>
                         <div class="table-responsive">
-                            <table id="tb_uri" cellpadding="0" cellspacing="0" class = "display">
+                            <table id="tb_log" cellpadding="0" cellspacing="0" class = "display">
                             </table>
                         </div>
                     </div>
@@ -426,80 +264,6 @@
     <!-- end #content -->
 </div>
 <!-- end page container -->
-<!-- start modal -->
-<div class="modal fade" id="uriModal" tabindex="-1" role="dialog" aria-labelledby="uriModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- start modal_header -->
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="uriModalLabel">资源信息</h4>
-            </div>
-            <!-- end modal_header -->
-            <!-- start modal-body -->
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <form class="form-horizontal" action="/" method="POST">
-                        <fieldset>
-                            <input type="hidden" id="uriFlag" name="uriFlag">
-                            <input type="hidden" id="uriId" name="uriId">
-                            <div class="form-group">
-                                <label class="col-md-4 control-label" for="parentId">父ID：</label>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text" id="parentId" name="parentId" maxlength="30">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label" for="uriName">资源名称：</label>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text" id="uriName" name="uriName" maxlength="30">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label" for="uriPermission">权限：</label>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text" id="uriPermission" name="uriPermission" maxlength="50">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label" for="uriLoc">uri地址：</label>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text" id="uriLoc" name="uriLoc" maxlength="50">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label" for="iconCls">图标：</label>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text" id="iconCls" name="iconCls" maxlength="30">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">显示类型：</label>
-                                <div class="col-md-8">
-                                    <select id = "showType" class="form-control">
-                                        <option value="0">菜单</option>
-                                        <option value="2">功能</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-            <!-- end modal-body -->
-            <!-- start modal-footer -->
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="btnSave" onclick="confirmInputUri()">确定</button>
-                <button class="btn btn-danger" data-dismiss="modal"
-                        aria-hidden="true">取消
-                </button>
-            </div>
-            <!-- end modal-footer -->
-        </div>
-    </div>
-</div>
-<!-- end modal -->
 <!-- start modal -->
 <div class="modal fade" id="set_UserInfoModal" tabindex="-1" role="dialog" aria-labelledby="set_UserInfoModalLabel" aria-hidden="true">
     <div class="modal-dialog">

@@ -1,4 +1,4 @@
-package sys.controller;
+package sys.controller.rbac;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
@@ -37,7 +37,7 @@ public class UriController
 
     @RequestMapping("/addUri")
     @RequiresPermissions("system:uri:add")
-    public ModelAndView addDepartment( @RequestParam("parentId")Integer parentId, @RequestParam("uriName")String uriName, @RequestParam("uriPermission")String uriPermission,
+    public ModelAndView addUri( @RequestParam("parentId")Integer parentId, @RequestParam("uriName")String uriName, @RequestParam("uriPermission")String uriPermission,
                                        @RequestParam("uriLoc")String uriLoc, @RequestParam("iconCls")String iconCls, @RequestParam("showType")Byte showType)
     {
         ModelAndView mav = new ModelAndView("JsonView");
@@ -55,7 +55,7 @@ public class UriController
     }
 
     @RequestMapping("/editUri")
-    @RequiresPermissions("system:uri:edit")
+    @RequiresPermissions("system:uri:update")
     public ModelAndView editUri(@RequestParam("id")Integer id , @RequestParam("parentId")Integer parentId, @RequestParam("uriName")String uriName,
                                 @RequestParam("uriPermission")String uriPermission, @RequestParam("uriLoc")String uriLoc, @RequestParam("iconCls")String iconCls,
                                 @RequestParam("showType")Byte showType)

@@ -1,4 +1,4 @@
-package sys.controller;
+package sys.controller.rbac;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;

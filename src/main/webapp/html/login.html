@@ -19,6 +19,10 @@
     <link href="../static/css/theme/default.css" rel="stylesheet">
     <!-- ================== END BASE CSS STYLE ================== -->
 
+    <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+    <link href="../../static/css/ExBootstrap.css" rel="stylesheet"/>
+    <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+
     <!-- ================== BEGIN BASE JS ================== -->
     <script src="../static/jslib/jquery/jquery-1.11.2.min.js"></script>
     <script src="../static/jslib/jquery/jquery-migrate-1.1.0.min.js"></script>
@@ -43,6 +47,74 @@
             LoginV2.init();
             $('#loginName').focus();
         });
+        function showRegistModal()
+        {
+            $('#registerModal').modal('show');
+        }
+        function submitRegInfo()
+        {
+            if($.trim($('#reg_user_name').val()) == '')
+            {
+                alert('用户姓名不能为空！');
+                return ;
+            }
+            if($.trim($('#reg_user_code').val()) == '')
+            {
+                alert('用户名不能为空！');
+                return ;
+            }
+            if($.trim($('#reg_user_pwd').val()) == '')
+            {
+                alert('密码不能为空！');
+                return ;
+            }
+            if($.trim($('#reg_user_confirmpwd').val()) == '')
+            {
+                alert('确认密码不能为空！');
+                return ;
+            }
+            var userName = $.trim($('#reg_user_name').val());
+            var userCode = $.trim($('#reg_user_code').val())
+            var pwd = $.trim($('#reg_user_pwd').val())
+            var confirmPwd = $.trim($('#reg_user_confirmpwd').val())
+            if( pwd != confirmPwd)
+            {
+                alert('两次密码不同！');
+                return ;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: getContextPath() + "/loginController/submitRegUserInfo",
+                data: {
+                    userName : userName ,
+                    userCode : userCode ,
+                    pwd : pwd ,
+                    confirmPwd : confirmPwd
+                },
+                success: function (data) {
+                    switch (data.result)
+                    {
+                        case RES_UNAUTHORIZED:
+                            alert('无权限！');
+                            break;
+                        case RES_SUCCESS:
+                            alert('提交信息成功，等待审核！');
+                            $('#registerModal').modal('hide');
+                            break;
+                        case -1:
+                            alert('sql失败！');
+                            break;
+                        case -2:
+                            alert('两次密码不同！');
+                            break;
+                        default :
+                            alert('异常错误！');
+                            break;
+                    }
+                }
+            });
+        }
     </script>
 </head>
 <body>
@@ -74,6 +146,9 @@
                 <div class="form-group m-b-10">
                     <input id="loginPwd" name="loginPwd" type="password" class="form-control input-lg" placeholder="请输入密码" maxlength="30" value="" />
                 </div>
+                <div class="checkbox m-b-10" style="display:none;">
+                    <div id="resLogin"></div>
+                </div>
                 <div class="checkbox m-b-10">
                     <label>
                         <input type="checkbox" /> 记住我
@@ -81,6 +156,7 @@
                 </div>
                 <div class="login-buttons">
                     <button type="submit" class="btn btn-success btn-block btn-lg">登录</button>
+                    <button type="button" class="btn btn-success btn-block btn-lg" onclick="showRegistModal()">注册</button>
                 </div>
             </form>
         </div>
@@ -97,6 +173,49 @@
     </ul>
 </div>
 <!-- end page container -->
-
+<!-- begin modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">用户注册</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal form-bordered" data-parsley-validate="true">
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4">用户姓名* :</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="text" id="reg_user_name"  />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4">用户名* :</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="text" id="reg_user_code" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4">密码* :</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="text" id="reg_user_pwd"  />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 col-sm-4">确认密码* :</label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" type="text" id="reg_user_confirmpwd" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="submitRegInfo()">提交申请</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modal -->
 </body>
 </html>

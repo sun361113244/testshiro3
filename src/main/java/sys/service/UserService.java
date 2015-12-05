@@ -28,4 +28,6 @@ public interface UserService
     int updateCurrentUserPwd(Integer userid, String pwd  , Date now);
 
     int updateCurrentUserInfo(Integer userid, String userName, String givenName, Date now);
+
+    int updateLoginTime(String loginName, Date date);
 }
