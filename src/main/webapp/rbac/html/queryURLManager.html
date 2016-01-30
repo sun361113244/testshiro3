@@ -35,13 +35,14 @@
 
     <!-- ================== BEGIN PAGE LEVEL JS ================== -->
     <script  src="../../static/jslib/dataTables-1.10.7/js/jquery.dataTables.min.js"></script>
+    <script src="../../static/js/ExDatatables.js"></script>
     <!-- ================== END PAGE LEVEL JS ================== -->
     <script>
         var table_uri;
         $(function(){
             table_uri = initUriTable();
             App.init(1);
-        })
+        });
         /**
          * 表格初始化
          * @returns {*|jQuery}

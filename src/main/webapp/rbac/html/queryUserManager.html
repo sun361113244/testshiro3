@@ -35,7 +35,8 @@
     <!-- ================== END BASE JS ================== -->
 
     <!-- ================== BEGIN PAGE LEVEL JS ================== -->
-    <script  src="../../static/jslib/dataTables-1.10.7/js/jquery.dataTables.min.js"></script>
+    <script src="../../static/jslib/dataTables-1.10.7/js/jquery.dataTables.min.js"></script>
+    <script src="../../static/js/ExDatatables.js"></script>
     <script src="../../static/jslib/zTree_v3/js/jquery.ztree.core-3.5.min.js"></script>
     <script src="../../static/jslib/zTree_v3/js/jquery.ztree.excheck-3.5.min.js"></script>
     <!-- ================== END PAGE LEVEL JS ================== -->
@@ -391,7 +392,7 @@
             var treeNodes = treeObj.getCheckedNodes(true);
             var id = $('#depSelId').val();
 
-            var nodes = new Array();
+            var nodes = [];
             for(var i = 0;i<treeNodes.length;i++)
             {
                 nodes[i] = treeNodes[i].id;
@@ -415,7 +416,7 @@
                             break;
                         case -1:
                             alert('修改列表失败！');
-                            break
+                            break;
                         default :
                             alert('修改列表失败！未知错误');
                             break;
@@ -429,7 +430,7 @@
             var treeNodes = treeObj.getCheckedNodes(true);
             var id = $('#roleSelId').val();
 
-            var nodes = new Array();
+            var nodes = [];
             for(var i = 0;i<treeNodes.length;i++)
             {
                 nodes[i] = treeNodes[i].id;
@@ -453,7 +454,7 @@
                             break;
                         case -1:
                             alert('修改列表失败！');
-                            break
+                            break;
                         default :
                             alert('修改列表失败！未知错误');
                             break;

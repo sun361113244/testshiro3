@@ -725,7 +725,7 @@ define('echarts/chart/line', [
             } else {
                 require('zrender/shape/Polygon').prototype.buildPath(ctx, style);
             }
-            return;
+
         }
     };
     zrUtil.inherits(HalfSmoothPolygon, Base);

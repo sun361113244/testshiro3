@@ -44,7 +44,7 @@
 						'aria-label': op.playText
 					});
 				}
-			};
+			}
 			togglePlayPause('pse');
 
 

@@ -64,12 +64,10 @@ public class HLSMediaElement extends Sprite implements IMediaElement {
       _isEnded = true;
       _isPaused = false;
       sendEvent(HtmlMediaEvent.ENDED);
-    };
-
-    private function _errorHandler(event:HLSEvent):void {
-    };
-
-    private function _manifestHandler(event:HLSEvent):void {
+    }
+  private function _errorHandler(event:HLSEvent):void {
+    }
+  private function _manifestHandler(event:HLSEvent):void {
       _duration = event.levels[0].duration;
       _videoWidth = event.levels[0].width;
       _videoHeight = event.levels[0].height;
@@ -81,17 +79,15 @@ public class HLSMediaElement extends Sprite implements IMediaElement {
         _playqueued = false;
         _hls.stream.play();
       }
-    };
-
-    private function _mediaTimeHandler(event:HLSEvent):void {
+    }
+  private function _mediaTimeHandler(event:HLSEvent):void {
       _position = event.mediatime.position;
       _duration = event.mediatime.duration;
       _bufferedTime = event.mediatime.buffer+event.mediatime.position;
       sendEvent(HtmlMediaEvent.PROGRESS);
       sendEvent(HtmlMediaEvent.TIMEUPDATE);
-    };
-
-    private function _stateHandler(event:HLSEvent):void {
+    }
+  private function _stateHandler(event:HLSEvent):void {
       _hlsState = event.state;
       //Log.txt("state:"+ _hlsState);
       switch(event.state) {
@@ -115,8 +111,7 @@ public class HLSMediaElement extends Sprite implements IMediaElement {
             sendEvent(HtmlMediaEvent.CANPLAY);
             break;
       }
-    };
-
+    }
   public function get video():Video {
     return _video;
   }

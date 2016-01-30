@@ -256,7 +256,7 @@ var handleInitRespondInfo = function(index){
         {
             $('.activeUserName').html(data.activeUserName);
             var menulistHtml = "<li class='nav-header'>导航栏</li>" + data.menuStr
-                +"<li><a href='javascript;' class='sidebar-minify-btn' data-click='sidebar-minify'><i class='fa fa-angle-double-left'></i></a></li>"
+                +"<li><a href='javascript;' class='sidebar-minify-btn' data-click='sidebar-minify'><i class='fa fa-angle-double-left'></i></a></li>";
             $('#menuList').html(menulistHtml);
         }
     });
@@ -287,7 +287,7 @@ var App = function() {
             handlePageContentView();
         }
     }
-} ()
+} ();
 var setUserInfo = function(){
     "use strict";
     handleSetInfo();
@@ -300,7 +300,7 @@ var changeUserPwd = function(){
     $('#set_SetConfirmUserPasswrod').html();
     $('#set_PwdModal').modal('show');
     $('#set_CurUserPasswrod').focus();
-}
+};
 var confirmInputSetUserInfo = function(){
     "use strict";
     var userName = $('#set_UserName').val();
@@ -348,7 +348,7 @@ var confirmInputSetUserInfo = function(){
             }
         }
     });
-}
+};
 
 var confirmInputSetUserPwd = function(){
     "use strict";
@@ -408,4 +408,4 @@ var confirmInputSetUserPwd = function(){
             }
         }
     });
-}
+};

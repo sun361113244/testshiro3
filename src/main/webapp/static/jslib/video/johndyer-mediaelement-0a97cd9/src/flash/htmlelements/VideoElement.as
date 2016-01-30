@@ -322,7 +322,7 @@ public class VideoElement extends Sprite implements IMediaElement
     _stream.addEventListener(NetStatusEvent.NET_STATUS, netStatusHandler); // same event as connection
     _stream.addEventListener(AsyncErrorEvent.ASYNC_ERROR, asyncErrorHandler);
 
-    var customClient:Object = new Object();
+    var customClient:Object = {};
     customClient.onMetaData = onMetaDataHandler;
     _stream.client = customClient;
 

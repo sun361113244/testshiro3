@@ -20,7 +20,7 @@
     <!-- ================== END BASE CSS STYLE ================== -->
 
     <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
-    <link href="../../static/css/ExBootstrap.css" rel="stylesheet"/>
+    <link href="../static/css/ExBootstrap.css" rel="stylesheet"/>
     <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
 
     <!-- ================== BEGIN BASE JS ================== -->
@@ -74,9 +74,9 @@
                 return ;
             }
             var userName = $.trim($('#reg_user_name').val());
-            var userCode = $.trim($('#reg_user_code').val())
-            var pwd = $.trim($('#reg_user_pwd').val())
-            var confirmPwd = $.trim($('#reg_user_confirmpwd').val())
+            var userCode = $.trim($('#reg_user_code').val());
+            var pwd = $.trim($('#reg_user_pwd').val());
+            var confirmPwd = $.trim($('#reg_user_confirmpwd').val());
             if( pwd != confirmPwd)
             {
                 alert('两次密码不同！');
@@ -146,8 +146,8 @@
                 <div class="form-group m-b-10">
                     <input id="loginPwd" name="loginPwd" type="password" class="form-control input-lg" placeholder="请输入密码" maxlength="30" value="" />
                 </div>
-                <div class="checkbox m-b-10" style="display:none;">
-                    <div id="resLogin"></div>
+                <div class="checkbox m-b-10" >
+                    <div id="resLogin" style="color: red"></div>
                 </div>
                 <div class="checkbox m-b-10">
                     <label>

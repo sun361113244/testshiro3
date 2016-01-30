@@ -327,7 +327,7 @@ define('echarts/chart/scatter', [
                 this.refresh();
                 status.needRefresh = true;
             }
-            return;
+
         }
     };
     zrUtil.inherits(Scatter, ChartBase);
@@ -1225,7 +1225,7 @@ define('echarts/chart/scatter', [
             }
             status.needRefresh = false;
             this.isDragend = false;
-            return;
+
         },
         _syncShapeFromRange: function () {
             var range = this.dataRangeOption.range || {};
@@ -1370,7 +1370,7 @@ define('echarts/chart/scatter', [
                 valueMin: valueMin,
                 valueMax: valueMax
             }, this.myChart);
-            return;
+
         },
         __onhoverlink: function (param) {
             if (this.dataRangeOption.show && this.dataRangeOption.hoverLink && this._indicatorShape && param && param.seriesIndex != null && param.dataIndex != null) {

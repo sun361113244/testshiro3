@@ -151,8 +151,7 @@
 }(document, mejs));
 
 // i18n fixes for compatibility with WordPress
-;(function(exports, undefined) {
-
+(function (exports, undefined) {
     "use strict";
 
     if ( typeof mejsL10n != 'undefined' ) {

@@ -74,8 +74,7 @@ var require, define;
                 callback = callback || function () {};
                 callback.apply(this, getModsExports(id, callback, baseId));
             }
-        };
-
+        }
         return localRequire;
     }
 
@@ -487,7 +486,7 @@ define('echarts/echarts', [
                     special: ecData.get(target, 'special')
                 };
             }
-            return;
+
         },
         _render: function (magicOption) {
             this._mergeGlobalConifg(magicOption);
@@ -2823,7 +2822,7 @@ define('zrender/zrender', [
             this.zr.modShape(target.id);
             status.dragIn = true;
             this.isDrop = false;
-            return;
+
         },
         ondragend: function (param, status) {
             var target = param.target;
@@ -2841,7 +2840,7 @@ define('zrender/zrender', [
                 }
             }
             this.isDragend = false;
-            return;
+
         }
     };
     zrUtil.inherits(Island, ChartBase);
@@ -3500,7 +3499,7 @@ define('zrender/zrender', [
                     _d = null;
                 }
             }, 500);
-            return;
+
         },
         __onMagicType: function (param) {
             this._resetMark();
@@ -5309,7 +5308,7 @@ define('zrender/zrender', [
                     curLineIndex++;
                 }
                 if (lineOffsetArray[curLineIndex] === 0) {
-                    continue;
+
                 } else {
                     this.shapeList[i].style.x += lineOffsetArray[curLineIndex];
                 }
@@ -5545,7 +5544,7 @@ define('zrender/zrender', [
         },
         __dispatchHoverLink: function (param) {
             this.messageCenter.dispatch(ecConfig.EVENT.LEGEND_HOVERLINK, param.event, { target: param.target._name }, this.myChart);
-            return;
+
         },
         refresh: function (newOption) {
             if (newOption) {
@@ -5697,7 +5696,7 @@ define('zrender/zrender', [
                 }
                 this._selectedMap[itemName] = legendSelected[itemName];
             }
-            return;
+
         }
     };
     var legendIcon = {
@@ -7199,7 +7198,7 @@ define('zrender/zrender', [
             status.needRefresh = false;
             this.isDragend = false;
             this._syncHandleShape();
-            return;
+
         },
         last: function () {
             this.timelineOption.autoPlay && this.stop();
@@ -7478,7 +7477,7 @@ define('zrender/zrender', [
             addShapeHandle(barShape);
             addShapeHandle(textShape);
             refreshHandle();
-            return;
+
         } else {
             barShape.highlightStyle.width = 0;
             return setInterval(function () {
@@ -8759,7 +8758,6 @@ define('zrender/zrender', [
                     y: Z * (aX * m[0][1] + aY * m[1][1] + m[2][1]) - Z2
                 };
             }
-            ;
             contextPrototype.save = function () {
                 var o = {};
                 copyState(this, o);
@@ -9199,7 +9197,7 @@ define('zrender/zrender', [
     var config = require('../config');
     return function () {
         if (config.debugMode === 0) {
-            return;
+
         } else if (config.debugMode == 1) {
             for (var k in arguments) {
                 throw new Error(arguments[k]);
@@ -11486,7 +11484,7 @@ define('zrender/zrender', [
                 y += lineHeight;
             }
             ctx.restore();
-            return;
+
         },
         getRect: function (style) {
             if (style.__rect) {
@@ -11603,7 +11601,7 @@ define('zrender/zrender', [
                 this._buildRadiusPath(ctx, style);
             }
             ctx.closePath();
-            return;
+
         },
         getRect: function (style) {
             if (style.__rect) {
@@ -13540,7 +13538,7 @@ define('zrender/zrender', [
             setTimeout(function () {
                 self.zr.trigger('mousemove', param.event);
             }, 300);
-            return;
+
         },
         ondragend: function (param, status) {
             if (!this.isDragend || !param.target || status.dragOut) {
@@ -13562,7 +13560,7 @@ define('zrender/zrender', [
             status.dragOut = true;
             status.needRefresh = true;
             this.isDragend = false;
-            return;
+
         },
         onlegendSelected: function (param, status) {
             var legendSelected = param.selected;
@@ -13572,7 +13570,7 @@ define('zrender/zrender', [
                 }
                 this.selectedMap[itemName] = legendSelected[itemName];
             }
-            return;
+
         },
         _bulidPosition: function () {
             this._symbol = this.option.symbolList;
@@ -14504,7 +14502,7 @@ define('zrender/zrender', [
         type: 'circle',
         buildPath: function (ctx, style) {
             ctx.arc(style.x, style.y, style.r, 0, Math.PI * 2, true);
-            return;
+
         },
         getRect: function (style) {
             if (style.__rect) {
@@ -15136,7 +15134,7 @@ define('zrender/zrender', [
                 ctx.lineTo(style.x, style.y);
                 ctx.closePath();
             }
-            return;
+
         },
         getRect: function (style) {
             if (style.__rect) {
@@ -16127,7 +16125,7 @@ define('zrender/zrender', [
                 ctx.lineTo(pointList[i][0], pointList[i][1]);
             }
             ctx.closePath();
-            return;
+
         },
         getRect: function (style) {
             if (style.__rect) {
@@ -16174,7 +16172,7 @@ define('zrender/zrender', [
             path.bezierCurveTo(style.x + style.a / 2, style.y - style.b * 2 / 3, style.x + style.a * 2, style.y + style.b / 3, style.x, style.y + style.b);
             path.bezierCurveTo(style.x - style.a * 2, style.y + style.b / 3, style.x - style.a / 2, style.y - style.b * 2 / 3, style.x, style.y);
             path.closePath();
-            return;
+
         },
         getRect: function (style) {
             if (style.__rect) {
@@ -16517,7 +16515,7 @@ define('zrender/zrender', [
                     }
                 }
             }
-            return;
+
         },
         getRect: function (style) {
             return require('./Polygon').prototype.getRect(style);
@@ -16726,7 +16724,7 @@ define('zrender/zrender', [
             }
             this.drawText(ctx, style, this.style);
             ctx.restore();
-            return;
+
         },
         buildPath: function (ctx, style) {
             var pointList = style.pointList;
@@ -16766,7 +16764,7 @@ define('zrender/zrender', [
                     dashedLineTo(ctx, pointList[pointList.length - 1][0], pointList[pointList.length - 1][1], pointList[0][0], pointList[0][1], dashLength);
                 }
             }
-            return;
+
         },
         getRect: function (style) {
             if (style.__rect) {
@@ -17211,7 +17209,7 @@ define('zrender/zrender', [
                 ctx.arc(x, y, r0, endAngle, startAngle, clockWise);
             }
             ctx.closePath();
-            return;
+
         },
         getRect: function (style) {
             if (style.__rect) {
@@ -17440,7 +17438,7 @@ define('zrender/zrender', [
             ctx.restore();
             this.brushSymbol(ctx, style);
             ctx.restore();
-            return;
+
         },
         buildLinePath: function (ctx, style) {
             var x = style.x;
@@ -17547,7 +17545,7 @@ define('zrender/zrender', [
             ctx.arc(style.x, style.y, style.r, 0, Math.PI * 2, false);
             ctx.moveTo(style.x + style.r0, style.y);
             ctx.arc(style.x, style.y, style.r0, 0, Math.PI * 2, true);
-            return;
+
         },
         getRect: function (style) {
             if (style.__rect) {
@@ -18352,7 +18350,7 @@ define('zrender/zrender', [
             this._endFrameShape = new RectangleShape(this._endFrameShape);
             this.shapeList.push(this._startFrameShape);
             this.shapeList.push(this._endFrameShape);
-            return;
+
         },
         _syncHandleShape: function () {
             if (this.zoomOption.orient == 'horizontal') {
@@ -18616,11 +18614,11 @@ define('zrender/zrender', [
             }
             status.needRefresh = false;
             this.isDragend = false;
-            return;
+
         },
         ondataZoom: function (param, status) {
             status.needRefresh = true;
-            return;
+
         },
         absoluteZoom: function (param) {
             this._zoom.start = param.start;
@@ -18629,7 +18627,7 @@ define('zrender/zrender', [
             this._zoom.end2 = param.end2;
             this._syncShape();
             this._syncData(true);
-            return;
+
         },
         rectZoom: function (param) {
             if (!param) {
@@ -21130,7 +21128,7 @@ define('zrender/zrender', [
             } else {
                 require('zrender/shape/Polygon').prototype.buildPath(ctx, style);
             }
-            return;
+
         }
     };
     zrUtil.inherits(HalfSmoothPolygon, Base);
@@ -22063,7 +22061,7 @@ define('zrender/zrender', [
                 this.refresh();
                 status.needRefresh = true;
             }
-            return;
+
         }
     };
     zrUtil.inherits(Scatter, ChartBase);
@@ -22961,7 +22959,7 @@ define('zrender/zrender', [
             }
             status.needRefresh = false;
             this.isDragend = false;
-            return;
+
         },
         _syncShapeFromRange: function () {
             var range = this.dataRangeOption.range || {};
@@ -23106,7 +23104,7 @@ define('zrender/zrender', [
                 valueMin: valueMin,
                 valueMax: valueMax
             }, this.myChart);
-            return;
+
         },
         __onhoverlink: function (param) {
             if (this.dataRangeOption.show && this.dataRangeOption.hoverLink && this._indicatorShape && param && param.seriesIndex != null && param.dataIndex != null) {
@@ -23946,7 +23944,7 @@ define('zrender/zrender', [
                     _dataIndex: dataIndex
                 });
             } else {
-                return;
+
             }
         },
         _needLabel: function (serie, data, isEmphasis) {
@@ -24405,7 +24403,7 @@ define('zrender/zrender', [
             status.dragOut = true;
             status.needRefresh = true;
             this.isDragend = false;
-            return;
+
         },
         ondrop: function (param, status) {
             var series = this.series;
@@ -24439,7 +24437,7 @@ define('zrender/zrender', [
             }
             status.dragIn = status.dragIn || true;
             this.isDrop = false;
-            return;
+
         },
         refresh: function (newOption) {
             if (newOption) {
@@ -28359,7 +28357,7 @@ define('zrender/zrender', [
                     return mapType;
                 }
             }
-            return;
+
         },
         __onmousewheel: function (params) {
             if (this.shapeList.length <= 0) {
@@ -28666,7 +28664,7 @@ define('zrender/zrender', [
                 this.refresh();
                 status.needRefresh = true;
             }
-            return;
+
         },
         pos2geo: function (mapType, p) {
             if (!this._mapDataMap[mapType].transform) {
@@ -29100,7 +29098,7 @@ define('zrender/zrender', [
                     break;
                 }
             }
-            return;
+
         },
         getRect: function (style) {
             if (style.__rect) {
@@ -44360,7 +44358,7 @@ define('zrender/zrender', [
             ctx.lineTo(style.x + Math.cos(style.angle) * r, style.y - Math.sin(style.angle) * r);
             ctx.lineTo(style.x - Math.cos(angle) * width, style.y + Math.sin(angle) * width);
             ctx.lineTo(x, y);
-            return;
+
         },
         getRect: function (style) {
             if (style.__rect) {
@@ -45255,7 +45253,7 @@ define('zrender/zrender', [
         var mid = Math.round((root.left + root.right) / 2);
         root.maxValue = root.maxValue > value ? root.maxValue : value;
         if (Math.floor(left * 10) == Math.floor(root.left * 10) && Math.floor(right * 10) == Math.floor(root.right * 10)) {
-            return;
+
         } else if (right <= mid) {
             segmentTreeInsert(root.leftChild, left, right, value);
         } else if (left >= mid) {
@@ -45275,20 +45273,20 @@ zrender.tool = {
     vector : require('zrender/tool/vector'),
     area : require('zrender/tool/area'),
     event : require('zrender/tool/event')
-}
+};
 
 zrender.animation = {
     Animation : require('zrender/animation/Animation'),
     Cip : require('zrender/animation/Clip'),
     easing : require('zrender/animation/easing')
-}
+};
 var echarts = require('echarts');
 echarts.config = require('echarts/config');
 echarts.util = {
     mapData : {
         params : require('echarts/util/mapData/params')
     }
-}
+};
 
 require("echarts/chart/gauge");
 require("echarts/chart/funnel");

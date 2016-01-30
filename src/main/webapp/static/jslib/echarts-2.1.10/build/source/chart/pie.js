@@ -392,7 +392,7 @@ define('echarts/chart/pie', [
                     _dataIndex: dataIndex
                 });
             } else {
-                return;
+
             }
         },
         _needLabel: function (serie, data, isEmphasis) {

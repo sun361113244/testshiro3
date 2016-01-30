@@ -94,7 +94,7 @@ mejs.MediaFeatures = {
 				} else if (t.hasMsNativeFullScreen) {
 					return d.msFullscreenElement !== null;
 				}
-			}
+			};
 					
 			t.requestFullScreen = function(el) {
 		
@@ -108,7 +108,7 @@ mejs.MediaFeatures = {
 					el.msRequestFullscreen();
 
 				}
-			}
+			};
 			
 			t.cancelFullScreen = function() {				
 				if (t.hasWebkitNativeFullScreen) {

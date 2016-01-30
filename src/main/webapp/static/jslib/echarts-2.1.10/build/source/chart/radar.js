@@ -182,7 +182,7 @@ define('echarts/chart/radar', [
             status.dragOut = true;
             status.needRefresh = true;
             this.isDragend = false;
-            return;
+
         },
         ondrop: function (param, status) {
             var series = this.series;
@@ -216,7 +216,7 @@ define('echarts/chart/radar', [
             }
             status.dragIn = status.dragIn || true;
             this.isDrop = false;
-            return;
+
         },
         refresh: function (newOption) {
             if (newOption) {

@@ -1540,9 +1540,9 @@
         td: 'tr',
         fieldset: 'form',
         option: 'select'
-      }
+      };
   function create(node, root) {
-    var tag = /^<([^\s>]+)/.exec(node)[1]
+    var tag = /^<([^\s>]+)/.exec(node)[1];
     var el = (root || doc).createElement(nodeMap[tag] || 'div'), els = [];
     el.innerHTML = node;
     var nodes = el.childNodes;

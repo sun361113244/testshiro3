@@ -453,7 +453,7 @@ define('echarts/chart/gauge', [
             ctx.lineTo(style.x + Math.cos(style.angle) * r, style.y - Math.sin(style.angle) * r);
             ctx.lineTo(style.x - Math.cos(angle) * width, style.y + Math.sin(angle) * width);
             ctx.lineTo(x, y);
-            return;
+
         },
         getRect: function (style) {
             if (style.__rect) {

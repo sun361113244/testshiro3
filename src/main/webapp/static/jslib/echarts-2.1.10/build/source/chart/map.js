@@ -667,7 +667,7 @@ define('echarts/chart/map', [
                     return mapType;
                 }
             }
-            return;
+
         },
         __onmousewheel: function (params) {
             if (this.shapeList.length <= 0) {
@@ -974,7 +974,7 @@ define('echarts/chart/map', [
                 this.refresh();
                 status.needRefresh = true;
             }
-            return;
+
         },
         pos2geo: function (mapType, p) {
             if (!this._mapDataMap[mapType].transform) {
@@ -1408,7 +1408,7 @@ define('echarts/chart/map', [
                     break;
                 }
             }
-            return;
+
         },
         getRect: function (style) {
             if (style.__rect) {
@@ -2407,7 +2407,7 @@ define('echarts/chart/map', [
             }
             status.needRefresh = false;
             this.isDragend = false;
-            return;
+
         },
         _syncShapeFromRange: function () {
             var range = this.dataRangeOption.range || {};
@@ -2552,7 +2552,7 @@ define('echarts/chart/map', [
                 valueMin: valueMin,
                 valueMax: valueMax
             }, this.myChart);
-            return;
+
         },
         __onhoverlink: function (param) {
             if (this.dataRangeOption.show && this.dataRangeOption.hoverLink && this._indicatorShape && param && param.seriesIndex != null && param.dataIndex != null) {

@@ -42,24 +42,24 @@ public class LoginController
             currentUser.login(token);
         } catch (UnknownAccountException e)
         {
-            error = "用户名未知";
+            error = "UnknownUserAccount";
         } catch (IncorrectCredentialsException e)
         {
-            error = "密码错误";
+            error = "PasswordError";
         } catch (LockedAccountException e)
         {
-            error = "用户被锁定";
+            error = "LockedAccount";
         } catch (ExcessiveAttemptsException e)
         {
-            error = "尝试次数超限";
+            error = "ExcessiveAttempts";
         } catch (AuthenticationException e)
         {
-            error = "其它错误:" + e.getMessage();
+            error = "AuthenticationError:" + e.getMessage();
         }
 
         if (error != null)
         {
-            return "redirect:/html/login.html";
+            return "redirect:/html/login.html?loginStatus=" + error;
         }
         else
         {

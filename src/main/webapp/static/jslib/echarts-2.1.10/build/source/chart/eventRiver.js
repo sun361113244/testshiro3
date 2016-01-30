@@ -350,7 +350,7 @@ define('echarts/chart/eventRiver', [
         var mid = Math.round((root.left + root.right) / 2);
         root.maxValue = root.maxValue > value ? root.maxValue : value;
         if (Math.floor(left * 10) == Math.floor(root.left * 10) && Math.floor(right * 10) == Math.floor(root.right * 10)) {
-            return;
+
         } else if (right <= mid) {
             segmentTreeInsert(root.leftChild, left, right, value);
         } else if (left >= mid) {

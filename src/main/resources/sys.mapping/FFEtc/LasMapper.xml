@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="FFEtc.mapper.LasMapper">
+    <select id="selectUnChkNum_ByTime" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM transdata WHERE DetectTime &gt;= #{dtfrom} and DetectTime &lt; #{dtto} and LaserID = 0
+    </select>
+    <select id="selectLackLasLnNum_ByTime" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM transdata WHERE DetectTime &gt;= #{dtfrom} and DetectTime &lt; #{dtto} and PicPath5 = ''
+    </select>
+</mapper>

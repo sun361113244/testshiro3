@@ -251,7 +251,7 @@ package htmlelements
 			_timer.stop();
 			_currentTime = pos;
 			_soundChannel.stop();
-			_sound.length
+			_sound.length;
 			_soundChannel = _sound.play(_currentTime * 1000, 0, _soundTransform);
 			sendEvent(HtmlMediaEvent.SEEKED);
 

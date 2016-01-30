@@ -1414,7 +1414,7 @@ if (typeof jQuery != 'undefined') {
 						'aria-label': op.playText
 					});
 				}
-			};
+			}
 			togglePlayPause('pse');
 
 

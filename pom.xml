@@ -23,6 +23,11 @@
     <log4j.version>1.2.17</log4j.version>
     <!-- 日志版本 End -->
     <dom4j.version>1.6.1</dom4j.version>
+    <!-- aspectj -->
+    <org.aspectj.version>1.8.6</org.aspectj.version>
+    <!-- aspectj End-->
+    <org.apache.cxf.version>3.0.1</org.apache.cxf.version>
+    <javax.comm.version>2.0.3</javax.comm.version>
   </properties>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -115,12 +120,12 @@
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjrt</artifactId>
-      <version>1.8.6</version>
+      <version>${org.aspectj.version}</version>
     </dependency>
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
-      <version>1.8.6</version>
+      <version>${org.aspectj.version}</version>
     </dependency>
     <dependency>
       <groupId>cglib</groupId>
@@ -167,7 +172,7 @@
       <artifactId>fastjson</artifactId>
       <version>1.1.41</version>
     </dependency>
-    <!-- mybatis jar -->
+    <!-- mybatis jar start-->
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
@@ -189,11 +194,28 @@
       <artifactId>ehcache</artifactId>
       <version>2.9.0</version>
     </dependency>
+    <!--<dependency>-->
+      <!--<groupId>net.bull.javamelody</groupId>-->
+      <!--<artifactId>javamelody-core</artifactId>-->
+      <!--<version>1.56.0</version>-->
+    <!--</dependency>-->
+
+    <!-- CXF依赖包 -->
     <dependency>
-      <groupId>net.bull.javamelody</groupId>
-      <artifactId>javamelody-core</artifactId>
-      <version>1.56.0</version>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-frontend-jaxws</artifactId>
+      <version>${org.apache.cxf.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-transports-http</artifactId>
+      <version>${org.apache.cxf.version}</version>
+    </dependency>
+    <!-- CXF依赖包结束 -->
+
+    <!-- 串口操作 -->
+
+    <!-- 串口操作 End -->
 
   </dependencies>
   <build>

@@ -19,7 +19,7 @@
     <context:annotation-config/>
 
     <!-- 扫描文件（自动将service层注入） -->
-    <context:component-scan base-package="sys.service.impl"/>
+    <context:component-scan base-package="sys.service.impl ,FFEtc.service.impl"/>
 
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
           init-method="init" destroy-method="close" p:maxActive="20">
@@ -40,6 +40,8 @@
         <property name="removeAbandonedTimeout" value="180"/>
         <!-- 连接属性 -->
         <property name="connectionProperties" value="clientEncoding=UTF-8"/>
+        <!-- 监控过滤器 -->
+        <property name="filters" value="stat,wall"/>
     </bean>
 
     <bean id = "UnauthorizedExceptionHandler" class="sys.exception.UnauthorizedExceptionHandler"></bean>

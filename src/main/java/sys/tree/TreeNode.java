@@ -32,13 +32,7 @@ public class TreeNode implements Serializable
             return true;
         } else
         {
-            if (childList.isEmpty())
-            {
-                return true;
-            } else
-            {
-                return false;
-            }
+            return childList.isEmpty();
         }
     }
 

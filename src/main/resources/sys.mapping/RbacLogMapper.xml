@@ -18,7 +18,7 @@
     <select id="selectLogList" resultType="sys.entity.RbacLog">
         SELECT
         <include refid="sys.mapper.RbacLogMapper.log_Column_List"/>
-        FROM rbac_log order by id DESC
+        FROM rbac_log
     </select>
     <insert id="insertLog" parameterType="sys.entity.RbacLog">
         INSERT INTO rbac_log(op_userid,op_ip,op_uri,op_excu_time,op_params,op_res,op_exception,op_consume_time)

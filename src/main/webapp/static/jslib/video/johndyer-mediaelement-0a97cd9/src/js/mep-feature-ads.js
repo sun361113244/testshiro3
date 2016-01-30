@@ -144,7 +144,7 @@
 			
 			t.media.addEventListener('loadedmetadata', 		t.adsPrerollMetaProxy );	
 			t.media.addEventListener('playing', 			t.adsPrerollStartedProxy );
-			t.media.addEventListener('ended', 				t.adsPrerollEndedProxy )
+			t.media.addEventListener('ended', 				t.adsPrerollEndedProxy );
 			t.media.addEventListener('timeupdate', 			t.adsPrerollUpdateProxy );
 			
 			// change URLs to the preroll ad

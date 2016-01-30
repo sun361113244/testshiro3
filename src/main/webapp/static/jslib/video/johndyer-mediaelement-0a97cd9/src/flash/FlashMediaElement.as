@@ -92,7 +92,7 @@ package
 		private var _inactiveTime:int;
         private var _timer:Timer;
         private var _idleTime:int;
-        private var _isMouseActive:Boolean
+        private var _isMouseActive:Boolean;
 		private var _isOverStage:Boolean = false;
 
 		// security checkes
@@ -279,7 +279,7 @@ package
 			_scrubLoaded = _controlBar.getChildByName("scrubLoaded") as MovieClip;
 
 			_scrubOverlay.buttonMode = true;
-			_scrubOverlay.useHandCursor = true
+			_scrubOverlay.useHandCursor = true;
 
 			applyColor(_scrubTrack, _scrubTrackColor);
 			applyColor(_scrubBar, _scrubBarColor);
@@ -329,7 +329,7 @@ package
 				stage.addEventListener(Event.MOUSE_LEAVE, mouseActivityLeave);
 				stage.addEventListener(MouseEvent.MOUSE_MOVE, mouseActivityMove);
 				_inactiveTime = 2500;
-				_timer = new Timer(_inactiveTime)
+				_timer = new Timer(_inactiveTime);
 				_timer.addEventListener(TimerEvent.TIMER, idleTimer);
 				_timer.start();
 				// set
@@ -635,7 +635,7 @@ package
 				_pauseButton.scaleY= _playButton.scaleY=3.5;
 				// center the play button and make it big and at the top
 				_pauseButton.x = _playButton.x = (_controlBarBg.width/2)-(_playButton.width/2)+7;
-				_pauseButton.y = _playButton.y = _controlBarBg.height-_playButton.height-(14)
+				_pauseButton.y = _playButton.y = _controlBarBg.height-_playButton.height-(14);
 
 				_controlBar.x = (stage.stageWidth/2) -150;
 				_controlBar.y = stage.stageHeight - _controlBar.height-100;
@@ -646,7 +646,7 @@ package
 				_duration.x = _controlBarBg.width - _duration.width - 10;
 				_duration.y = _controlBarBg.height - _duration.height -7;
 				//_currentTime.x = _controlBarBg.width - _duration.width - 10 - _currentTime.width - 10;
-				_currentTime.x = 5
+				_currentTime.x = 5;
 				_currentTime.y= _controlBarBg.height - _currentTime.height-7;
 
 				_fullscreenIcon.x = _controlBarBg.width - _fullscreenIcon.width - 7;
@@ -810,7 +810,7 @@ package
 		// special floating fullscreen icon
 		public function fullscreenClick(e:MouseEvent):void {
 			//_fullscreenButton.visible = false;
-			_fullscreenButton.alpha = 0
+			_fullscreenButton.alpha = 0;
 
 			try {
 				_controlBar.visible = true;
