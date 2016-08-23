@@ -1,0 +1,31 @@
+2015-12-28 14:16:12  [ main:0 ] - [ WARN ]  shiro.ini found at the root of the classpath, but it did not contain any data.
+2015-12-28 14:18:48  [ main:0 ] - [ INFO ]  Enabling session validation scheduler...
+2016-08-18 17:55:03  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-18 17:55:03  [ main:23 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2d0a238e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@74a456bb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@513a4ad0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4a05c759, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4162ca06]
+2016-08-18 17:55:03  [ main:121 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-08-18 17:55:03  [ main:388 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-08-18 17:55:03  [ main:425 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@40800a9e: startup date [Thu Aug 18 17:55:03 CST 2016]; root of context hierarchy
+2016-08-18 17:55:03  [ main:655 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-08-18 17:55:04  [ main:1219 ] - [ INFO ]  {dataSource-1} inited
+2016-08-18 17:55:04  [ Thread-1:1821 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@40800a9e: startup date [Thu Aug 18 17:55:03 CST 2016]; root of context hierarchy
+2016-08-18 17:55:04  [ Thread-1:1828 ] - [ INFO ]  {dataSource-1} closed
+2016-08-18 17:56:58  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-18 17:56:58  [ main:13 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3963542c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@282b3223, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2be8ac6f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3890c1ee, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@27ac0d45]
+2016-08-18 17:56:58  [ main:100 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-08-18 17:56:58  [ main:277 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-08-18 17:56:58  [ main:300 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@2e64e02: startup date [Thu Aug 18 17:56:58 CST 2016]; root of context hierarchy
+2016-08-18 17:56:58  [ main:432 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-08-18 17:56:59  [ main:905 ] - [ INFO ]  {dataSource-1} inited
+2016-08-18 17:56:59  [ main:1530 ] - [ INFO ]  Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2016-08-18 17:56:59  [ main:1557 ] - [ INFO ]  SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2016-08-18 17:56:59  [ Thread-1:1569 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@2e64e02: startup date [Thu Aug 18 17:56:58 CST 2016]; root of context hierarchy
+2016-08-18 17:56:59  [ Thread-1:1574 ] - [ INFO ]  {dataSource-1} closed
+2016-08-18 17:57:45  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-18 17:57:45  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3cbd7173, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3963542c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@282b3223, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2be8ac6f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3890c1ee]
+2016-08-18 17:57:45  [ main:114 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-08-18 17:57:46  [ main:301 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-08-18 17:57:46  [ main:324 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@6b37695c: startup date [Thu Aug 18 17:57:46 CST 2016]; root of context hierarchy
+2016-08-18 17:57:46  [ main:456 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-08-18 17:57:46  [ main:924 ] - [ INFO ]  {dataSource-1} inited
+2016-08-18 17:57:47  [ Thread-1:1558 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@6b37695c: startup date [Thu Aug 18 17:57:46 CST 2016]; root of context hierarchy
+2016-08-18 17:57:47  [ Thread-1:1562 ] - [ INFO ]  {dataSource-1} closed

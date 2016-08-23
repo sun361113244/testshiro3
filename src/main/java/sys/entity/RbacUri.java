@@ -3,14 +3,8 @@ package sys.entity;
 import java.util.Date;
 import java.util.Objects;
 
-public class RbacUri
+public class RbacUri extends TreeNodeStruc
 {
-    private Integer id;
-
-    private Integer parentId;
-
-    private String name;
-
     private String permission;
 
     private String uri;
@@ -29,21 +23,20 @@ public class RbacUri
 
     public RbacUri()
     {
+        super();
 
     }
 
     public RbacUri(Integer id, Integer parentId , String nodeName)
     {
-        this.id = id;
-        this.parentId = parentId;
-        this.name = nodeName;
+        super(id , parentId , nodeName);
     }
 
     public RbacUri(Integer parentId, String uriName, String uriPermission, String uriLoc, String iconCls,
                    Byte showType, String treeCode, Byte sort , Date createTime, Date updateTime)
     {
-        this.parentId = parentId;
-        this.name = uriName;
+        setParentId(parentId);
+        setName(uriName);
         this.permission = uriPermission;
         this.uri = uriLoc;
         this.iconcls = iconCls;
@@ -57,9 +50,7 @@ public class RbacUri
     public RbacUri(Integer id, Integer parentId, String uriName, String uriPermission, String uriLoc, String iconCls,
                    Byte showType, String treeCode, Byte sort, Date createTime, Date updateTime)
     {
-        this.id = id;
-        this.parentId = parentId;
-        this.name = uriName;
+        super(id , parentId , uriName);
         this.permission = uriPermission;
         this.uri = uriLoc;
         this.iconcls = iconCls;
@@ -74,38 +65,9 @@ public class RbacUri
         if (obj instanceof RbacUri)
         {
             RbacUri rbacUri = (RbacUri) obj;
-            return this.id == rbacUri.getId();
+            return this.getId() == rbacUri.getId();
         }
         return super.equals(obj);
-    }
-    public Integer getId()
-    {
-        return id;
-    }
-
-    public void setId(Integer id)
-    {
-        this.id = id;
-    }
-
-    public Integer getParentId()
-    {
-        return parentId;
-    }
-
-    public void setParentId(Integer parentId)
-    {
-        this.parentId = parentId;
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-
-    public void setName(String name)
-    {
-        this.name = name == null ? null : name.trim();
     }
 
     public String getPermission()

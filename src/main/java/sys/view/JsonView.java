@@ -20,7 +20,8 @@ public class JsonView extends AbstractView
     }
 
     @Override
-    protected void renderMergedOutputModel(Map<String, Object> model, HttpServletRequest request, HttpServletResponse response) throws Exception
+    protected void renderMergedOutputModel(Map<String, Object> model, HttpServletRequest request,
+                                           HttpServletResponse response) throws Exception
     {
         response.setContentType(CONTENT_TYPE);
         response.setCharacterEncoding(CharacterEncoding);

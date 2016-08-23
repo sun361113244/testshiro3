@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sys.mapper.CityMapper" >
+    <resultMap id="BaseResultMap" type="sys.entity.City" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="cityID" property="cityid" jdbcType="VARCHAR" />
+        <result column="city" property="city" jdbcType="VARCHAR" />
+        <result column="fatherID" property="father" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="getCityByProvinceId" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select * from city where fatherID = #{id,jdbcType=VARCHAR}
+    </select>
+</mapper>

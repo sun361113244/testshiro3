@@ -1,6 +1,6 @@
 package sys.tree;
 
-import sys.entity.RbacUri;
+import sys.entity.TreeNodeStruc;
 
 import java.util.*;
 
@@ -134,14 +134,13 @@ public class TreeHelper
      */
     public static List<TreeNode> changeEnititiesToTreeNodes(List entityList)
     {
-        RbacUri orgEntity = new RbacUri();
         List<TreeNode> tempNodeList = new ArrayList<TreeNode>();
         TreeNode treeNode;
 
         Iterator it = entityList.iterator();
         while (it.hasNext())
         {
-            orgEntity = (RbacUri) it.next();
+            TreeNodeStruc orgEntity = (TreeNodeStruc) it.next();
             treeNode = new TreeNode();
             treeNode.setObj(orgEntity);
             treeNode.setParentId(orgEntity.getParentId());

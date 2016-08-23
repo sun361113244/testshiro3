@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sys.mapper.AreaMapper" >
+    <resultMap id="BaseResultMap" type="sys.entity.Area" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="areaID" property="areaid" jdbcType="VARCHAR" />
+        <result column="area" property="area" jdbcType="VARCHAR" />
+        <result column="fatherID" property="father" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="getAreaByCityId" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select * from area where fatherID = #{id,jdbcType=VARCHAR}
+    </select>
+
+</mapper>
