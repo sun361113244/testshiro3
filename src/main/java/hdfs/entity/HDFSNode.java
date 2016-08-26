@@ -5,21 +5,22 @@ import sys.entity.TreeNodeStruc;
 public class HDFSNode extends TreeNodeStruc
 {
     private String path;
-    private boolean isDirectory;
     private int blockSize;
     private String owner;
     private String permission;
     private int fileLength;
     private int replicationNum;
+    private boolean isDirectory;
 
     public HDFSNode()
     {
         super();
     }
 
-    public HDFSNode(Integer id, Integer parentId , String nodeName)
+    public HDFSNode(Integer id, Integer parentId , String nodeName , String path)
     {
         super(id , parentId , nodeName);
+        this.path = path;
     }
 
     public String getPath()
@@ -30,16 +31,6 @@ public class HDFSNode extends TreeNodeStruc
     public void setPath(String path)
     {
         this.path = path;
-    }
-
-    public boolean isDirectory()
-    {
-        return isDirectory;
-    }
-
-    public void setDirectory(boolean directory)
-    {
-        isDirectory = directory;
     }
 
     public int getBlockSize()
@@ -91,4 +82,16 @@ public class HDFSNode extends TreeNodeStruc
     {
         this.replicationNum = replicationNum;
     }
+
+    public boolean isDirectory()
+    {
+        return isDirectory;
+    }
+
+    public void setDirectory(boolean directory)
+    {
+        isDirectory = directory;
+    }
+
+
 }

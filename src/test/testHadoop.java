@@ -1,7 +1,6 @@
 import hdfs.util.HDFSUtil;
 import org.apache.hadoop.fs.LocatedFileStatus;
 import org.apache.hadoop.fs.RemoteIterator;
-import org.apache.mahout.common.HadoopUtil;
 import org.junit.Test;
 
 import java.io.IOException;

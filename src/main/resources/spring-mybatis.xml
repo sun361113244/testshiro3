@@ -13,7 +13,7 @@
 
     <!-- spring与mybatis整合配置，扫描所有Mapper -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="sys.mapper ,FFEtc.mapper"/>
+        <property name="basePackage" value="sys.mapper ,spider.dao"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 

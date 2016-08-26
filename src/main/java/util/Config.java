@@ -20,4 +20,8 @@ public class Config {
 
     public static final String HADOOP_HDFS_URI = bundle.getString("hadoop.hdfs.uri");
 
+    // --------------------------------------------------------------------------------------------
+
+    public static final String TOOLS_AREA_BIGDATA_URL = bundle.getString("tools_area_bigdata_url");
+
 }

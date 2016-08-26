@@ -190,7 +190,6 @@ public class HDFSUtil
      */
     public static FileStatus[] listStatus(String dirPath) throws IOException
     {
-        System.out.println(conf.get("fs.defaultFS"));
         FileSystem fs = FileSystem.get(conf);
         FileStatus[] fileStatuses = fs.listStatus(new Path(dirPath));
         fs.close();

@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface HDFSService
 {
-    ETreeNode listDirectoryStructs() throws IOException;
+    ETreeNode listDirectoryStructs(String path) throws IOException;
 }

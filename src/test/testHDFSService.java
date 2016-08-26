@@ -19,7 +19,7 @@ public class testHDFSService
     @Test
     public void testlistDirectoryStructs() throws IOException
     {
-        ETreeNode node = hdfsService.listDirectoryStructs();
+        ETreeNode node = hdfsService.listDirectoryStructs("/");
         System.out.println(JSON.toJSONString(node));
     }
 }

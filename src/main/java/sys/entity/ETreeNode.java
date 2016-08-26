@@ -6,6 +6,7 @@ public class ETreeNode
     private String text;
     private String state;
     private String iconCls;
+    private ETreeNodeAttribute attributes;
     private ETreeNode[] children;
 
     public String getId()
@@ -46,6 +47,16 @@ public class ETreeNode
     public void setIconCls(String iconCls)
     {
         this.iconCls = iconCls;
+    }
+
+    public ETreeNodeAttribute getAttributes()
+    {
+        return attributes;
+    }
+
+    public void setAttributes(ETreeNodeAttribute attributes)
+    {
+        this.attributes = attributes;
     }
 
     public ETreeNode[] getChildren()

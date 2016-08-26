@@ -3,10 +3,11 @@ package hdfs.service.impl;
 import hdfs.entity.HDFSNode;
 import hdfs.service.HDFSService;
 import hdfs.util.HDFSUtil;
+import org.apache.cxf.common.i18n.Exception;
 import org.apache.hadoop.fs.FileStatus;
-import org.apache.mahout.common.HadoopUtil;
 import org.springframework.stereotype.Service;
 import sys.entity.ETreeNode;
+import sys.entity.ETreeNodeAttribute;
 import sys.tree.TreeHelper;
 import sys.tree.TreeNode;
 import util.Config;
@@ -20,24 +21,29 @@ import java.util.Queue;
 @Service
 public class HDFSServiceImpl implements HDFSService
 {
-    public ETreeNode listDirectoryStructs() throws IOException
+    public ETreeNode listDirectoryStructs(String path) throws IOException
     {
-        List<HDFSNode> hdfsNodes = listHDFSDirectory("/");
+        List<HDFSNode> hdfsNodes = listHDFSDirectory(path);
         List<TreeNode> fileTree = TreeHelper.changeEnititiesToTreeNodes(hdfsNodes);
-        AddRootNode(fileTree);
+        AddRootNode(fileTree , hdfsNodes);
         TreeHelper treeHelper = new TreeHelper(fileTree);
 
         ETreeNode eTreeNodes = new ETreeNode();
-        CopyTree(eTreeNodes ,treeHelper.getRoot());
+        CopyTree(eTreeNodes ,treeHelper.getRoot() , hdfsNodes);
 
         return eTreeNodes;
     }
 
-    private void CopyTree(ETreeNode eTreeNode, TreeNode node)
+    private void CopyTree(ETreeNode eTreeNode, TreeNode node, List<HDFSNode> hdfsNodes)
     {
-        eTreeNode.setId(String.valueOf(node.getSelfId()));
-        eTreeNode.setText(node.getNodeName());
-//                eTreeNode.setState("closed");
+        HDFSNode hdfsNode = getHDFSNodeById(node.getSelfId() , hdfsNodes);
+
+        if(hdfsNode == null)
+        {
+            throw new NullPointerException("hdfsNode is null!!");
+        }
+
+        GenerateEtreeNode(eTreeNode ,hdfsNode);
 
         if(!node.isLeaf())
         {
@@ -51,20 +57,50 @@ public class HDFSServiceImpl implements HDFSService
             int index = 0;
             for(TreeNode treeNode : node.getChildList())
             {
-                CopyTree(eTreeNodes[index++] , treeNode);
+                CopyTree(eTreeNodes[index++] , treeNode, hdfsNodes);
             }
         }
     }
 
-    private void AddRootNode(List<TreeNode> menuTree)
+    private void GenerateEtreeNode(ETreeNode eTreeNode, HDFSNode hdfsNode)
     {
-        HDFSNode rootUri = new HDFSNode(0, -1 ,"root");
+        eTreeNode.setId(String.valueOf(hdfsNode.getId()));
+        eTreeNode.setText(hdfsNode.getName());
+        ETreeNodeAttribute nodeAttribute = new ETreeNodeAttribute();
+        nodeAttribute.setAbsPath(hdfsNode.getPath());
+        eTreeNode.setAttributes(nodeAttribute);
+        if(hdfsNode.isDirectory())
+        {
+            eTreeNode.setIconCls("icon-folder");
+
+            if(!hdfsNode.isLeaf())
+            {
+                eTreeNode.setState("closed");
+            }
+        }
+    }
+
+    private HDFSNode getHDFSNodeById(int id, List<HDFSNode> hdfsNodes)
+    {
+        for(HDFSNode hdfsnode : hdfsNodes)
+        {
+            if(hdfsnode.getId() == id )
+                return hdfsnode;
+        }
+        return null;
+    }
+
+    private void AddRootNode(List<TreeNode> menuTree, List<HDFSNode> hdfsNodes)
+    {
+        HDFSNode rootUri = new HDFSNode(0, -1 ,"根目录" ,"/");
         TreeNode treeNode = new TreeNode();
         treeNode.setObj(rootUri);
         treeNode.setParentId(rootUri.getParentId());
         treeNode.setSelfId(rootUri.getId());
         treeNode.setNodeName(rootUri.getName());
+
         menuTree.add(treeNode);
+        hdfsNodes.add(rootUri);
     }
 
     private List<HDFSNode> listHDFSDirectory(String path) throws IOException
@@ -98,7 +134,7 @@ public class HDFSServiceImpl implements HDFSService
                     node.setId(id++);
                     node.setParentId(dirRoot.getId());
                     node.setName(status.getPath().getName());
-                    node.setPath(status.getPath().toString());
+                    node.setPath(status.getPath().toString().replaceAll(Config.HADOOP_HDFS_URI, ""));
                     node.setDirectory(status.isDirectory());
 
                     queue.offer(node);

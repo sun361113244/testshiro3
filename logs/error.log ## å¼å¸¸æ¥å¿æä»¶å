@@ -1,250 +1,906 @@
-2016-08-23 02:04:34  [ main:0 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 02:04:35  [ main:251 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 02:04:45  [ main:0 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 02:04:46  [ main:593 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 02:05:04  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 02:05:04  [ main:25 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@573d59d4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7cd49a0a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@69cd468c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@23d2c798, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@632dde87]
-2016-08-23 02:05:04  [ main:204 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 02:05:04  [ main:893 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 02:05:04  [ main:915 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@24c67c0f: startup date [Tue Aug 23 02:05:04 CST 2016]; root of context hierarchy
-2016-08-23 02:05:05  [ main:1073 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 02:05:05  [ main:1673 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 02:05:08  [ main:4820 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 02:05:08  [ main:4953 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 02:07:27  [ Thread-1:143943 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@24c67c0f: startup date [Tue Aug 23 02:05:04 CST 2016]; root of context hierarchy
-2016-08-23 02:07:27  [ Thread-1:143950 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 09:54:23  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 09:54:23  [ main:27 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@69cd468c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@23d2c798, org.springframework.test.context.support.DirtiesContextTestExecutionListener@632dde87, org.springframework.test.context.transaction.TransactionalTestExecutionListener@586ca3ef, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@447ecd43]
-2016-08-23 09:54:23  [ main:151 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 09:54:23  [ main:649 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 09:54:23  [ main:686 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@40568c67: startup date [Tue Aug 23 09:54:23 CST 2016]; root of context hierarchy
-2016-08-23 09:54:24  [ main:885 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 09:54:24  [ main:1469 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 09:54:28  [ main:5076 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 09:54:28  [ main:5262 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 09:55:37  [ Thread-1:74091 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@40568c67: startup date [Tue Aug 23 09:54:23 CST 2016]; root of context hierarchy
-2016-08-23 09:55:37  [ Thread-1:74098 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 09:55:49  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 09:55:49  [ main:15 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7cd49a0a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@69cd468c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@23d2c798, org.springframework.test.context.transaction.TransactionalTestExecutionListener@632dde87, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@586ca3ef]
-2016-08-23 09:55:49  [ main:113 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 09:55:49  [ main:526 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 09:55:49  [ main:547 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@40568c67: startup date [Tue Aug 23 09:55:49 CST 2016]; root of context hierarchy
-2016-08-23 09:55:49  [ main:672 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 09:55:50  [ main:1092 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 09:56:00  [ main:11086 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 09:56:00  [ main:11202 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 09:56:43  [ Thread-1:54634 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@40568c67: startup date [Tue Aug 23 09:55:49 CST 2016]; root of context hierarchy
-2016-08-23 09:56:43  [ Thread-1:54640 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 09:59:19  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 09:59:19  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@573d59d4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7cd49a0a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@69cd468c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@23d2c798, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@632dde87]
-2016-08-23 09:59:19  [ main:101 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 09:59:19  [ main:497 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 09:59:19  [ main:518 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@62facfa5: startup date [Tue Aug 23 09:59:19 CST 2016]; root of context hierarchy
-2016-08-23 09:59:20  [ main:643 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 09:59:20  [ main:1089 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 09:59:23  [ main:3788 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 09:59:23  [ main:3908 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 10:00:01  [ Thread-1:41733 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@62facfa5: startup date [Tue Aug 23 09:59:19 CST 2016]; root of context hierarchy
-2016-08-23 10:00:01  [ Thread-1:41739 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 10:02:31  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 10:02:31  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@23d2c798, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@632dde87, org.springframework.test.context.support.DirtiesContextTestExecutionListener@586ca3ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@447ecd43, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@60d60cd6]
-2016-08-23 10:02:32  [ main:110 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 10:02:32  [ main:513 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 10:02:32  [ main:533 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@721bdf30: startup date [Tue Aug 23 10:02:32 CST 2016]; root of context hierarchy
-2016-08-23 10:02:32  [ main:658 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 10:02:32  [ main:1071 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 10:02:36  [ main:4150 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 10:02:36  [ main:4269 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 10:03:20  [ Thread-1:48138 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@721bdf30: startup date [Tue Aug 23 10:02:32 CST 2016]; root of context hierarchy
-2016-08-23 10:03:20  [ Thread-1:48144 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 10:10:58  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 10:10:58  [ main:19 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@11c7f55b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5ebd327b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@573d59d4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7cd49a0a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@69cd468c]
-2016-08-23 10:10:58  [ main:126 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 10:10:58  [ main:534 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 10:10:58  [ main:555 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@70c722ad: startup date [Tue Aug 23 10:10:58 CST 2016]; root of context hierarchy
-2016-08-23 10:10:59  [ main:679 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 10:10:59  [ main:1105 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 10:11:00  [ main:1714 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 10:11:00  [ main:1836 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 10:15:20  [ Thread-1:261866 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@70c722ad: startup date [Tue Aug 23 10:10:58 CST 2016]; root of context hierarchy
-2016-08-23 10:15:20  [ Thread-1:261872 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 10:18:03  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 10:18:03  [ main:16 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@573d59d4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7cd49a0a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@69cd468c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@23d2c798, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@632dde87]
-2016-08-23 10:18:03  [ main:109 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 10:18:04  [ main:503 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 10:18:04  [ main:523 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@62facfa5: startup date [Tue Aug 23 10:18:04 CST 2016]; root of context hierarchy
-2016-08-23 10:18:04  [ main:651 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 10:18:04  [ main:1074 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 10:18:05  [ main:1683 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 10:18:05  [ main:1799 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 10:18:41  [ Thread-1:37593 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@62facfa5: startup date [Tue Aug 23 10:18:04 CST 2016]; root of context hierarchy
-2016-08-23 10:18:41  [ Thread-1:37599 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 10:18:57  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 10:18:57  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5ebd327b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@573d59d4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7cd49a0a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@69cd468c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@23d2c798]
-2016-08-23 10:18:57  [ main:101 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 10:18:58  [ main:495 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 10:18:58  [ main:518 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@21b5c5b3: startup date [Tue Aug 23 10:18:58 CST 2016]; root of context hierarchy
-2016-08-23 10:18:58  [ main:643 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 10:18:58  [ main:1067 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 10:18:59  [ main:1669 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 10:18:59  [ main:1789 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 10:20:13  [ Thread-1:75382 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@21b5c5b3: startup date [Tue Aug 23 10:18:58 CST 2016]; root of context hierarchy
-2016-08-23 10:20:13  [ Thread-1:75388 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 13:09:41  [ main:0 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 13:09:42  [ main:1347 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 13:10:03  [ main:22198 ] - [ INFO ]  Retrying connect to server: 172.16.174.133/172.16.174.133:9000. Already tried 0 time(s); maxRetries=45
-2016-08-23 13:10:16  [ main:0 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 13:10:16  [ main:197 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 13:10:37  [ main:21075 ] - [ INFO ]  Retrying connect to server: 172.16.174.133/172.16.174.133:9000. Already tried 0 time(s); maxRetries=45
-2016-08-23 13:18:52  [ main:0 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 13:18:54  [ main:1264 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 15:13:55  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 15:13:55  [ main:22 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@59ea632e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2b158f20, org.springframework.test.context.support.DirtiesContextTestExecutionListener@146793f9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c23cae6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@71ddd078]
-2016-08-23 15:13:55  [ main:128 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 15:13:55  [ main:585 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 15:13:55  [ main:611 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@52bc3811: startup date [Tue Aug 23 15:13:55 CST 2016]; root of context hierarchy
-2016-08-23 15:13:55  [ main:774 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 15:13:56  [ main:1282 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 15:13:57  [ main:1997 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 15:13:58  [ main:3172 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 15:14:03  [ Thread-1:8631 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@52bc3811: startup date [Tue Aug 23 15:13:55 CST 2016]; root of context hierarchy
-2016-08-23 15:14:03  [ Thread-1:8637 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 15:14:15  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 15:14:15  [ main:16 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@11c7f55b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5ebd327b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@573d59d4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7cd49a0a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@69cd468c]
-2016-08-23 15:14:15  [ main:110 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 15:14:16  [ main:559 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 15:14:16  [ main:585 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@70c722ad: startup date [Tue Aug 23 15:14:16 CST 2016]; root of context hierarchy
-2016-08-23 15:14:16  [ main:741 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 15:14:16  [ main:1220 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 15:14:17  [ main:1840 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 15:14:17  [ main:1962 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 15:14:51  [ Thread-1:36046 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@70c722ad: startup date [Tue Aug 23 15:14:16 CST 2016]; root of context hierarchy
-2016-08-23 15:14:51  [ Thread-1:36051 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 15:16:11  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 15:16:11  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7cd49a0a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@69cd468c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@23d2c798, org.springframework.test.context.transaction.TransactionalTestExecutionListener@632dde87, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@586ca3ef]
-2016-08-23 15:16:11  [ main:105 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 15:16:12  [ main:499 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 15:16:12  [ main:520 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@62facfa5: startup date [Tue Aug 23 15:16:12 CST 2016]; root of context hierarchy
-2016-08-23 15:16:12  [ main:645 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 15:16:12  [ main:1067 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 15:16:13  [ main:1656 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 15:16:13  [ main:1769 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 15:16:55  [ Thread-1:43870 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@62facfa5: startup date [Tue Aug 23 15:16:12 CST 2016]; root of context hierarchy
-2016-08-23 15:16:55  [ Thread-1:43875 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 15:17:55  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 15:17:56  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7cd49a0a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@69cd468c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@23d2c798, org.springframework.test.context.transaction.TransactionalTestExecutionListener@632dde87, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@586ca3ef]
-2016-08-23 15:17:56  [ main:104 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 15:17:56  [ main:491 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 15:17:56  [ main:512 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@62facfa5: startup date [Tue Aug 23 15:17:56 CST 2016]; root of context hierarchy
-2016-08-23 15:17:56  [ main:636 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 15:17:57  [ main:1046 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 15:17:57  [ main:1644 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 15:17:57  [ main:1763 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 15:19:52  [ Thread-1:117006 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@62facfa5: startup date [Tue Aug 23 15:17:56 CST 2016]; root of context hierarchy
-2016-08-23 15:19:52  [ Thread-1:117012 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 15:20:55  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 15:20:55  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@573d59d4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7cd49a0a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@69cd468c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@23d2c798, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@632dde87]
-2016-08-23 15:20:55  [ main:101 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 15:20:56  [ main:485 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 15:20:56  [ main:507 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@24c67c0f: startup date [Tue Aug 23 15:20:56 CST 2016]; root of context hierarchy
-2016-08-23 15:20:56  [ main:633 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 15:20:56  [ main:1068 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 15:20:57  [ main:1663 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 15:20:57  [ main:1784 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 15:21:14  [ Thread-1:18474 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@24c67c0f: startup date [Tue Aug 23 15:20:56 CST 2016]; root of context hierarchy
-2016-08-23 15:21:14  [ Thread-1:18480 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 15:21:32  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 15:21:32  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5ebd327b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@573d59d4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7cd49a0a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@69cd468c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@23d2c798]
-2016-08-23 15:21:32  [ main:106 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 15:21:33  [ main:538 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 15:21:33  [ main:564 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@21b5c5b3: startup date [Tue Aug 23 15:21:33 CST 2016]; root of context hierarchy
-2016-08-23 15:21:33  [ main:714 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 15:21:34  [ main:1190 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 15:21:34  [ main:1789 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 15:21:34  [ main:1904 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 15:21:45  [ Thread-1:12952 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@21b5c5b3: startup date [Tue Aug 23 15:21:33 CST 2016]; root of context hierarchy
-2016-08-23 15:21:45  [ Thread-1:12957 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 15:23:33  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 15:23:33  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4640e152, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4d88f286, org.springframework.test.context.support.DirtiesContextTestExecutionListener@59ea632e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2b158f20, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@146793f9]
-2016-08-23 15:23:33  [ main:99 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 15:23:33  [ main:486 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 15:23:33  [ main:509 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@5302f26d: startup date [Tue Aug 23 15:23:33 CST 2016]; root of context hierarchy
-2016-08-23 15:23:33  [ main:644 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 15:23:34  [ main:1091 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 15:23:34  [ main:1704 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 15:23:36  [ main:2901 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 15:23:41  [ Thread-1:8360 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@5302f26d: startup date [Tue Aug 23 15:23:33 CST 2016]; root of context hierarchy
-2016-08-23 15:23:41  [ Thread-1:8366 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 15:25:08  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 15:25:08  [ main:13 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2b158f20, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@146793f9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1c23cae6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@71ddd078, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@19a1b0af]
-2016-08-23 15:25:08  [ main:97 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 15:25:08  [ main:481 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 15:25:08  [ main:506 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@43050e86: startup date [Tue Aug 23 15:25:08 CST 2016]; root of context hierarchy
-2016-08-23 15:25:08  [ main:636 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 15:25:09  [ main:1073 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 15:25:09  [ main:1627 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 15:25:10  [ main:2830 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 15:25:16  [ Thread-1:8293 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@43050e86: startup date [Tue Aug 23 15:25:08 CST 2016]; root of context hierarchy
-2016-08-23 15:25:16  [ Thread-1:8298 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 15:25:22  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 15:25:22  [ main:17 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@573d59d4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7cd49a0a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@69cd468c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@23d2c798, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@632dde87]
-2016-08-23 15:25:23  [ main:124 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 15:25:23  [ main:585 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 15:25:23  [ main:610 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@24c67c0f: startup date [Tue Aug 23 15:25:23 CST 2016]; root of context hierarchy
-2016-08-23 15:25:23  [ main:759 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 15:25:24  [ main:1246 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 15:25:24  [ main:1850 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 15:25:24  [ main:1975 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 15:26:18  [ Thread-1:55782 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@24c67c0f: startup date [Tue Aug 23 15:25:23 CST 2016]; root of context hierarchy
-2016-08-23 15:26:18  [ Thread-1:55788 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 15:47:27  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 15:47:27  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1c23cae6, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@71ddd078, org.springframework.test.context.support.DirtiesContextTestExecutionListener@19a1b0af, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4656be4e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@68e816f5]
-2016-08-23 15:47:27  [ main:99 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 15:47:27  [ main:490 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 15:47:27  [ main:514 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@49e1d547: startup date [Tue Aug 23 15:47:27 CST 2016]; root of context hierarchy
-2016-08-23 15:47:28  [ main:657 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 15:47:28  [ main:1106 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 15:47:29  [ main:1676 ] - [ INFO ]  fs.default.name is deprecated. Instead, use fs.defaultFS
-2016-08-23 15:47:30  [ main:2880 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 15:47:36  [ Thread-1:9167 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@49e1d547: startup date [Tue Aug 23 15:47:27 CST 2016]; root of context hierarchy
-2016-08-23 15:47:36  [ Thread-1:9171 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 15:57:22  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 15:57:22  [ main:18 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2b158f20, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@146793f9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1c23cae6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@71ddd078, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@19a1b0af]
-2016-08-23 15:57:22  [ main:104 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 15:57:22  [ main:492 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 15:57:22  [ main:518 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@43050e86: startup date [Tue Aug 23 15:57:22 CST 2016]; root of context hierarchy
-2016-08-23 15:57:22  [ main:650 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 15:57:23  [ main:1096 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 15:57:24  [ main:2865 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 15:57:30  [ Thread-1:8532 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@43050e86: startup date [Tue Aug 23 15:57:22 CST 2016]; root of context hierarchy
-2016-08-23 15:57:30  [ Thread-1:8537 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 16:13:23  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 16:13:23  [ main:15 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@71ddd078, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@19a1b0af, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4656be4e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@68e816f5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5d3b64a1]
-2016-08-23 16:13:23  [ main:99 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 16:13:23  [ main:502 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 16:13:23  [ main:528 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@9794e36: startup date [Tue Aug 23 16:13:23 CST 2016]; root of context hierarchy
-2016-08-23 16:13:23  [ main:682 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 16:13:24  [ main:1125 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 16:13:26  [ main:2960 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 16:13:33  [ Thread-1:10519 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@9794e36: startup date [Tue Aug 23 16:13:23 CST 2016]; root of context hierarchy
-2016-08-23 16:13:33  [ Thread-1:10524 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 16:14:02  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 16:14:02  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@146793f9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1c23cae6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@71ddd078, org.springframework.test.context.transaction.TransactionalTestExecutionListener@19a1b0af, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4656be4e]
-2016-08-23 16:14:02  [ main:109 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 16:14:02  [ main:510 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 16:14:03  [ main:532 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@fca1ca: startup date [Tue Aug 23 16:14:03 CST 2016]; root of context hierarchy
-2016-08-23 16:14:03  [ main:657 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 16:14:03  [ main:1095 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 16:14:04  [ main:1750 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 16:14:09  [ Thread-1:7334 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@fca1ca: startup date [Tue Aug 23 16:14:03 CST 2016]; root of context hierarchy
-2016-08-23 16:14:09  [ Thread-1:7339 ] - [ INFO ]  {dataSource-1} closed
-2016-08-23 16:14:24  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2016-08-23 16:14:24  [ main:16 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@632dde87, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@586ca3ef, org.springframework.test.context.support.DirtiesContextTestExecutionListener@447ecd43, org.springframework.test.context.transaction.TransactionalTestExecutionListener@60d60cd6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4e4e745]
-2016-08-23 16:14:24  [ main:115 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
-2016-08-23 16:14:24  [ main:517 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
-2016-08-23 16:14:24  [ main:537 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@3da02d7: startup date [Tue Aug 23 16:14:24 CST 2016]; root of context hierarchy
-2016-08-23 16:14:25  [ main:667 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
-2016-08-23 16:14:25  [ main:1086 ] - [ INFO ]  {dataSource-1} inited
-2016-08-23 16:14:26  [ main:1787 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-08-23 16:14:30  [ Thread-1:5713 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@3da02d7: startup date [Tue Aug 23 16:14:24 CST 2016]; root of context hierarchy
-2016-08-23 16:14:30  [ Thread-1:5717 ] - [ INFO ]  {dataSource-1} closed
+2016-08-25 01:07:38  [ main:0 ] - [ INFO ]  Obtained 6791 TLD from packaged file tld-names.txt
+2016-08-25 01:07:38  [ main:51 ] - [ INFO ]  Deleted contents of: ./crawl_storage/frontier ( as you have configured resumable crawling to false )
+2016-08-25 01:07:38  [ main:578 ] - [ INFO ]  Crawler 1 started
+2016-08-25 01:07:39  [ Crawler 1:1015 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/: null
+2016-08-25 01:07:39  [ Crawler 1:1016 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:51)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:43)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:07:44  [ Crawler 1:6766 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/admin/index.php?action=index%2FtoolSubmit: null
+2016-08-25 01:07:44  [ Crawler 1:6766 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:51)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:43)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:07:58  [ Thread-1:20581 ] - [ INFO ]  It looks like no thread is working, waiting for 10 seconds to make sure...
+2016-08-25 01:08:08  [ Thread-1:30590 ] - [ INFO ]  No thread is working and no more URLs are in queue waiting for another 10 seconds to make sure...
+2016-08-25 01:08:18  [ Thread-1:40595 ] - [ INFO ]  All of the crawlers are stopped. Finishing the process...
+2016-08-25 01:08:18  [ Thread-1:40596 ] - [ INFO ]  Waiting for 10 seconds before final clean up...
+2016-08-25 01:13:30  [ main:0 ] - [ INFO ]  Obtained 6791 TLD from packaged file tld-names.txt
+2016-08-25 01:13:30  [ main:29 ] - [ INFO ]  Deleted contents of: ./crawl_storage/frontier ( as you have configured resumable crawling to false )
+2016-08-25 01:13:31  [ main:836 ] - [ INFO ]  Crawler 1 started
+2016-08-25 01:13:31  [ Crawler 1:1188 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/: null
+2016-08-25 01:13:31  [ Crawler 1:1188 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:54)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:44)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:13:37  [ Crawler 1:6949 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/admin/index.php?action=index%2FtoolSubmit: null
+2016-08-25 01:13:37  [ Crawler 1:6950 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:54)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:44)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:13:51  [ Thread-1:20840 ] - [ INFO ]  It looks like no thread is working, waiting for 10 seconds to make sure...
+2016-08-25 01:14:01  [ Thread-1:30847 ] - [ INFO ]  No thread is working and no more URLs are in queue waiting for another 10 seconds to make sure...
+2016-08-25 01:14:11  [ Thread-1:40852 ] - [ INFO ]  All of the crawlers are stopped. Finishing the process...
+2016-08-25 01:14:11  [ Thread-1:40852 ] - [ INFO ]  Waiting for 10 seconds before final clean up...
+2016-08-25 01:39:32  [ main:0 ] - [ INFO ]  Obtained 6791 TLD from packaged file tld-names.txt
+2016-08-25 01:39:32  [ main:33 ] - [ INFO ]  Deleted contents of: ./crawl_storage/frontier ( as you have configured resumable crawling to false )
+2016-08-25 01:39:33  [ main:981 ] - [ INFO ]  Crawler 1 started
+2016-08-25 01:39:33  [ Crawler 1:1336 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/: null
+2016-08-25 01:39:33  [ Crawler 1:1337 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:56)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:47)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:39:39  [ Crawler 1:7061 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/admin/index.php?action=index%2FtoolSubmit: null
+2016-08-25 01:39:39  [ Crawler 1:7061 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:56)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:47)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:39:53  [ Thread-1:20990 ] - [ INFO ]  It looks like no thread is working, waiting for 10 seconds to make sure...
+2016-08-25 01:40:03  [ Thread-1:31004 ] - [ INFO ]  No thread is working and no more URLs are in queue waiting for another 10 seconds to make sure...
+2016-08-25 01:40:13  [ Thread-1:41006 ] - [ INFO ]  All of the crawlers are stopped. Finishing the process...
+2016-08-25 01:40:13  [ Thread-1:41006 ] - [ INFO ]  Waiting for 10 seconds before final clean up...
+2016-08-25 01:45:42  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-25 01:45:42  [ main:21 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7f387985, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@54b24c03, org.springframework.test.context.support.DirtiesContextTestExecutionListener@59c8466, org.springframework.test.context.transaction.TransactionalTestExecutionListener@66b8476a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4c58b4d5]
+2016-08-25 01:45:42  [ main:135 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-08-25 01:45:43  [ main:657 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-08-25 01:45:43  [ main:682 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@72e797db: startup date [Thu Aug 25 01:45:43 CST 2016]; root of context hierarchy
+2016-08-25 01:45:43  [ main:835 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-08-25 01:45:44  [ main:1380 ] - [ INFO ]  {dataSource-1} inited
+2016-08-25 01:45:44  [ main:2016 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fetchedToolsServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [spider.dao.FetchedToolsDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(mappedName=, shareable=true, description=, name=, type=class java.lang.Object, lookup=, authenticationType=CONTAINER)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:260)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:63)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:83)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:74)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:116)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [spider.dao.FetchedToolsDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(mappedName=, shareable=true, description=, name=, type=class java.lang.Object, lookup=, authenticationType=CONTAINER)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:442)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:420)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:545)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:305)
+	... 44 more
+2016-08-25 01:45:44  [ main:2024 ] - [ INFO ]  {dataSource-1} closed
+2016-08-25 01:45:44  [ main:2024 ] - [ ERROR ]  Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@54b24c03] to prepare test instance [spider.testSpiderToolsScheduler@724d05fa]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:91)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:74)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:116)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fetchedToolsServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [spider.dao.FetchedToolsDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(mappedName=, shareable=true, description=, name=, type=class java.lang.Object, lookup=, authenticationType=CONTAINER)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:260)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:63)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:83)
+	... 28 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [spider.dao.FetchedToolsDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(mappedName=, shareable=true, description=, name=, type=class java.lang.Object, lookup=, authenticationType=CONTAINER)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:442)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:420)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:545)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:305)
+	... 44 more
+2016-08-25 01:46:28  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-25 01:46:28  [ main:15 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@54b24c03, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@59c8466, org.springframework.test.context.support.DirtiesContextTestExecutionListener@66b8476a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4c58b4d5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@53c8331b]
+2016-08-25 01:46:28  [ main:119 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-08-25 01:46:28  [ main:549 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-08-25 01:46:28  [ main:573 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@42a2e5cc: startup date [Thu Aug 25 01:46:28 CST 2016]; root of context hierarchy
+2016-08-25 01:46:29  [ main:728 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-08-25 01:46:29  [ main:1188 ] - [ INFO ]  {dataSource-1} inited
+2016-08-25 01:46:30  [ main:1971 ] - [ INFO ]  Obtained 6791 TLD from packaged file tld-names.txt
+2016-08-25 01:46:30  [ main:1997 ] - [ INFO ]  Deleted contents of: ./crawl_storage/frontier ( as you have configured resumable crawling to false )
+2016-08-25 01:46:31  [ main:2747 ] - [ INFO ]  Crawler 1 started
+2016-08-25 01:46:31  [ Crawler 1:3087 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/: null
+2016-08-25 01:46:31  [ Crawler 1:3088 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:59)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:31  [ Crawler 1:3189 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/yxgj.html: null
+2016-08-25 01:46:31  [ Crawler 1:3189 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:31  [ Crawler 1:3336 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/wlqs.html: null
+2016-08-25 01:46:31  [ Crawler 1:3336 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:31  [ Crawler 1:3556 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/ncee.html: null
+2016-08-25 01:46:31  [ Crawler 1:3556 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:32  [ Crawler 1:3746 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/wzpm.html: null
+2016-08-25 01:46:32  [ Crawler 1:3746 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:32  [ Crawler 1:3942 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/p2p.html: null
+2016-08-25 01:46:32  [ Crawler 1:3942 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:32  [ Crawler 1:4152 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/ypsj.html: null
+2016-08-25 01:46:32  [ Crawler 1:4152 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:32  [ Crawler 1:4359 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/yhsj.html: null
+2016-08-25 01:46:32  [ Crawler 1:4359 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:32  [ Crawler 1:4563 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/zxdc.html: null
+2016-08-25 01:46:32  [ Crawler 1:4563 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:33  [ Crawler 1:4757 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/topindex.html: null
+2016-08-25 01:46:33  [ Crawler 1:4757 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:33  [ Crawler 1:4959 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/aso.html: null
+2016-08-25 01:46:33  [ Crawler 1:4959 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:33  [ Crawler 1:5160 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/brand.html: null
+2016-08-25 01:46:33  [ Crawler 1:5160 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:33  [ Crawler 1:5377 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/social.html: null
+2016-08-25 01:46:33  [ Crawler 1:5377 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:33  [ Crawler 1:5567 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/ydpm.html: null
+2016-08-25 01:46:33  [ Crawler 1:5567 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:34  [ Crawler 1:5772 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/wzxn.html: null
+2016-08-25 01:46:34  [ Crawler 1:5772 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:34  [ Crawler 1:5970 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/dxpm.html: null
+2016-08-25 01:46:34  [ Crawler 1:5970 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:34  [ Crawler 1:6181 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/ylsj.html: null
+2016-08-25 01:46:34  [ Crawler 1:6181 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:34  [ Crawler 1:6376 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/sssj.html: null
+2016-08-25 01:46:34  [ Crawler 1:6376 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:34  [ Crawler 1:6579 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/jrsj.html: null
+2016-08-25 01:46:34  [ Crawler 1:6579 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:35  [ Crawler 1:6785 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/ydcs.html: null
+2016-08-25 01:46:35  [ Crawler 1:6785 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:35  [ Crawler 1:7000 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/ydyy.html: null
+2016-08-25 01:46:35  [ Crawler 1:7000 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:35  [ Crawler 1:7187 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/top.html: null
+2016-08-25 01:46:35  [ Crawler 1:7187 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:35  [ Crawler 1:7388 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/dssj.html: null
+2016-08-25 01:46:35  [ Crawler 1:7388 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:35  [ Crawler 1:7589 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/tv.html: null
+2016-08-25 01:46:35  [ Crawler 1:7589 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:36  [ Crawler 1:7795 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/tzsj.html: null
+2016-08-25 01:46:36  [ Crawler 1:7795 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:36  [ Crawler 1:7998 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/medicaldata.html: null
+2016-08-25 01:46:36  [ Crawler 1:7998 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:36  [ Crawler 1:8206 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/lysj.html: null
+2016-08-25 01:46:36  [ Crawler 1:8206 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:36  [ Crawler 1:8403 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/sjjc.html: null
+2016-08-25 01:46:36  [ Crawler 1:8403 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:36  [ Crawler 1:8608 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/database.html: null
+2016-08-25 01:46:36  [ Crawler 1:8608 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:37  [ Crawler 1:8811 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/admin/index.php?action=index%2FtoolSubmit: null
+2016-08-25 01:46:37  [ Crawler 1:8812 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:59)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:37  [ Crawler 1:9013 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/auto.html: null
+2016-08-25 01:46:37  [ Crawler 1:9014 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:37  [ Crawler 1:9217 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/yhty.html: null
+2016-08-25 01:46:37  [ Crawler 1:9217 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:37  [ Crawler 1:9439 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/sjks.html: null
+2016-08-25 01:46:37  [ Crawler 1:9439 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:37  [ Crawler 1:9625 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/ggjc.html: null
+2016-08-25 01:46:37  [ Crawler 1:9625 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:38  [ Crawler 1:9831 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/knowledge.html: null
+2016-08-25 01:46:38  [ Crawler 1:9832 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:38  [ Crawler 1:10032 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/dsjc.html: null
+2016-08-25 01:46:38  [ Crawler 1:10032 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:38  [ Crawler 1:10239 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/hadoop.html: null
+2016-08-25 01:46:38  [ Crawler 1:10239 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:38  [ Crawler 1:10443 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/edudata.html: null
+2016-08-25 01:46:38  [ Crawler 1:10443 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:38  [ Crawler 1:10648 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/hgjj.html: null
+2016-08-25 01:46:38  [ Crawler 1:10648 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:39  [ Crawler 1:10847 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/ydxn.html: null
+2016-08-25 01:46:39  [ Crawler 1:10847 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:39  [ Crawler 1:11045 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/wlsc.html: null
+2016-08-25 01:46:39  [ Crawler 1:11045 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:39  [ Crawler 1:11248 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/opendata.html: null
+2016-08-25 01:46:39  [ Crawler 1:11248 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:39  [ Crawler 1:11448 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/textanalysis.html: null
+2016-08-25 01:46:39  [ Crawler 1:11448 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:40  [ Crawler 1:11654 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/ydgg.html: null
+2016-08-25 01:46:40  [ Crawler 1:11654 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:40  [ Crawler 1:11848 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/mooc.html: null
+2016-08-25 01:46:40  [ Crawler 1:11849 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:40  [ Crawler 1:12051 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/dmp.html: null
+2016-08-25 01:46:40  [ Crawler 1:12051 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:40  [ Crawler 1:12255 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/shdc.html: null
+2016-08-25 01:46:40  [ Crawler 1:12255 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:40  [ Crawler 1:12454 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/seotools.html: null
+2016-08-25 01:46:40  [ Crawler 1:12454 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:41  [ Crawler 1:12658 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/abtest.html: null
+2016-08-25 01:46:41  [ Crawler 1:12658 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:41  [ Crawler 1:12861 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/jiaoyi.html: null
+2016-08-25 01:46:41  [ Crawler 1:12861 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:46:41  [ Thread-1:12929 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@42a2e5cc: startup date [Thu Aug 25 01:46:28 CST 2016]; root of context hierarchy
+2016-08-25 01:46:41  [ Thread-1:12934 ] - [ INFO ]  {dataSource-1} closed
+2016-08-25 01:47:29  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-25 01:47:29  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@54c8d4b4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4d04a0e8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6ae006d8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@19e185b9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@251241f5]
+2016-08-25 01:47:29  [ main:125 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-08-25 01:47:29  [ main:718 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-08-25 01:47:29  [ main:744 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@380a81fd: startup date [Thu Aug 25 01:47:29 CST 2016]; root of context hierarchy
+2016-08-25 01:47:30  [ main:915 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-08-25 01:47:30  [ main:1442 ] - [ INFO ]  {dataSource-1} inited
+2016-08-25 01:47:31  [ main:2242 ] - [ INFO ]  Obtained 6791 TLD from packaged file tld-names.txt
+2016-08-25 01:47:31  [ main:2270 ] - [ INFO ]  Deleted contents of: ./crawl_storage/frontier ( as you have configured resumable crawling to false )
+2016-08-25 01:47:31  [ main:2622 ] - [ INFO ]  Crawler 1 started
+2016-08-25 01:47:32  [ Crawler 1:3077 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/: null
+2016-08-25 01:47:32  [ Crawler 1:3078 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:59)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:47:37  [ Crawler 1:8071 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/yxgj.html: null
+2016-08-25 01:47:37  [ Crawler 1:8072 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:89)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:50)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 01:47:37  [ Thread-1:8091 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@380a81fd: startup date [Thu Aug 25 01:47:29 CST 2016]; root of context hierarchy
+2016-08-25 01:47:37  [ Thread-1:8096 ] - [ INFO ]  {dataSource-1} closed
+2016-08-25 10:19:12  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-25 10:19:12  [ main:27 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@54c8d4b4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4d04a0e8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6ae006d8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@19e185b9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@251241f5]
+2016-08-25 10:19:12  [ main:170 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-08-25 10:19:13  [ main:890 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-08-25 10:19:13  [ main:911 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@380a81fd: startup date [Thu Aug 25 10:19:13 CST 2016]; root of context hierarchy
+2016-08-25 10:19:13  [ main:1070 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-08-25 10:19:13  [ main:1650 ] - [ INFO ]  {dataSource-1} inited
+2016-08-25 10:19:14  [ main:2664 ] - [ INFO ]  Obtained 6791 TLD from packaged file tld-names.txt
+2016-08-25 10:19:14  [ main:2710 ] - [ INFO ]  Deleted contents of: ./crawl_storage/frontier ( as you have configured resumable crawling to false )
+2016-08-25 10:19:15  [ main:3186 ] - [ INFO ]  Crawler 1 started
+2016-08-25 10:19:15  [ Crawler 1:3621 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/: null
+2016-08-25 10:19:15  [ Crawler 1:3622 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:61)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:52)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 10:19:27  [ Crawler 1:15056 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/yxgj.html: null
+2016-08-25 10:19:27  [ Crawler 1:15057 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:91)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:52)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 10:19:27  [ Thread-1:15081 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@380a81fd: startup date [Thu Aug 25 10:19:13 CST 2016]; root of context hierarchy
+2016-08-25 10:19:27  [ Thread-1:15087 ] - [ INFO ]  {dataSource-1} closed
+2016-08-25 10:24:45  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-25 10:24:45  [ main:16 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6ae006d8, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@19e185b9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@251241f5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51a84ed6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cfed7c]
+2016-08-25 10:24:45  [ main:131 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-08-25 10:24:46  [ main:649 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-08-25 10:24:46  [ main:671 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@2434cccc: startup date [Thu Aug 25 10:24:46 CST 2016]; root of context hierarchy
+2016-08-25 10:24:46  [ main:806 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-08-25 10:24:46  [ main:1271 ] - [ INFO ]  {dataSource-1} inited
+2016-08-25 10:24:47  [ main:2049 ] - [ INFO ]  Obtained 6791 TLD from packaged file tld-names.txt
+2016-08-25 10:24:47  [ main:2077 ] - [ INFO ]  Deleted contents of: ./crawl_storage/frontier ( as you have configured resumable crawling to false )
+2016-08-25 10:24:47  [ main:2456 ] - [ ERROR ]  Error happened
+java.lang.NullPointerException
+	at util.SpringContextUtil.getBean(SpringContextUtil.java:38)
+	at spider.ToolsCrawler.BigDataToolsCrawler.<init>(BigDataToolsCrawler.java:39)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at java.lang.Class.newInstance(Class.java:379)
+	at edu.uci.ics.crawler4j.crawler.CrawlController$DefaultWebCrawlerFactory.newInstance(CrawlController.java:150)
+	at edu.uci.ics.crawler4j.crawler.CrawlController.start(CrawlController.java:223)
+	at edu.uci.ics.crawler4j.crawler.CrawlController.start(CrawlController.java:169)
+	at spider.scheduler.SpiderToolsScheduler.start(SpiderToolsScheduler.java:31)
+	at spider.testSpiderToolsScheduler.test1(testSpiderToolsScheduler.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74)
+2016-08-25 10:24:47  [ Thread-1:2460 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@2434cccc: startup date [Thu Aug 25 10:24:46 CST 2016]; root of context hierarchy
+2016-08-25 10:24:47  [ Thread-1:2466 ] - [ INFO ]  {dataSource-1} closed
+2016-08-25 10:25:35  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-25 10:25:35  [ main:16 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6ae006d8, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@19e185b9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@251241f5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@51a84ed6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@cfed7c]
+2016-08-25 10:25:35  [ main:116 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-08-25 10:25:36  [ main:615 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-08-25 10:25:36  [ main:637 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@2434cccc: startup date [Thu Aug 25 10:25:36 CST 2016]; root of context hierarchy
+2016-08-25 10:25:36  [ main:776 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-08-25 10:25:36  [ main:1223 ] - [ INFO ]  {dataSource-1} inited
+2016-08-25 10:25:37  [ main:2007 ] - [ INFO ]  Obtained 6791 TLD from packaged file tld-names.txt
+2016-08-25 10:25:37  [ main:2041 ] - [ INFO ]  Deleted contents of: ./crawl_storage/frontier ( as you have configured resumable crawling to false )
+2016-08-25 10:25:38  [ main:2426 ] - [ ERROR ]  Error happened
+java.lang.NullPointerException
+	at util.SpringContextUtil.getBean(SpringContextUtil.java:38)
+	at spider.ToolsCrawler.BigDataToolsCrawler.<init>(BigDataToolsCrawler.java:39)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at java.lang.Class.newInstance(Class.java:379)
+	at edu.uci.ics.crawler4j.crawler.CrawlController$DefaultWebCrawlerFactory.newInstance(CrawlController.java:150)
+	at edu.uci.ics.crawler4j.crawler.CrawlController.start(CrawlController.java:223)
+	at edu.uci.ics.crawler4j.crawler.CrawlController.start(CrawlController.java:169)
+	at spider.scheduler.SpiderToolsScheduler.start(SpiderToolsScheduler.java:31)
+	at spider.testSpiderToolsScheduler.test1(testSpiderToolsScheduler.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74)
+2016-08-25 10:25:38  [ Thread-1:2430 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@2434cccc: startup date [Thu Aug 25 10:25:36 CST 2016]; root of context hierarchy
+2016-08-25 10:25:38  [ Thread-1:2437 ] - [ INFO ]  {dataSource-1} closed
+2016-08-25 10:34:45  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-25 10:34:45  [ main:18 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@54b24c03, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@59c8466, org.springframework.test.context.support.DirtiesContextTestExecutionListener@66b8476a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4c58b4d5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@53c8331b]
+2016-08-25 10:34:45  [ main:111 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-08-25 10:34:45  [ main:593 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-08-25 10:34:45  [ main:629 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@42a2e5cc: startup date [Thu Aug 25 10:34:45 CST 2016]; root of context hierarchy
+2016-08-25 10:34:45  [ main:773 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-08-25 10:34:46  [ main:1264 ] - [ INFO ]  {dataSource-1} inited
+2016-08-25 10:34:47  [ main:2046 ] - [ INFO ]  Obtained 6791 TLD from packaged file tld-names.txt
+2016-08-25 10:34:47  [ main:2073 ] - [ INFO ]  Deleted contents of: ./crawl_storage/frontier ( as you have configured resumable crawling to false )
+2016-08-25 10:34:52  [ main:7427 ] - [ ERROR ]  Error happened
+java.lang.NullPointerException
+	at util.SpringContextUtil.getBean(SpringContextUtil.java:38)
+	at spider.ToolsCrawler.BigDataToolsCrawler.<init>(BigDataToolsCrawler.java:39)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at java.lang.Class.newInstance(Class.java:379)
+	at edu.uci.ics.crawler4j.crawler.CrawlController$DefaultWebCrawlerFactory.newInstance(CrawlController.java:150)
+	at edu.uci.ics.crawler4j.crawler.CrawlController.start(CrawlController.java:223)
+	at edu.uci.ics.crawler4j.crawler.CrawlController.start(CrawlController.java:169)
+	at spider.scheduler.SpiderToolsScheduler.start(SpiderToolsScheduler.java:31)
+	at spider.testSpiderToolsScheduler.test1(testSpiderToolsScheduler.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:234)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+2016-08-25 10:34:52  [ Thread-1:7432 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@42a2e5cc: startup date [Thu Aug 25 10:34:45 CST 2016]; root of context hierarchy
+2016-08-25 10:34:52  [ Thread-1:7437 ] - [ INFO ]  {dataSource-1} closed
+2016-08-25 10:35:01  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-25 10:35:01  [ main:13 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@54b24c03, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@59c8466, org.springframework.test.context.support.DirtiesContextTestExecutionListener@66b8476a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4c58b4d5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@53c8331b]
+2016-08-25 10:35:01  [ main:98 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-08-25 10:35:01  [ main:542 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-08-25 10:35:01  [ main:570 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@42a2e5cc: startup date [Thu Aug 25 10:35:01 CST 2016]; root of context hierarchy
+2016-08-25 10:35:01  [ main:728 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-08-25 10:35:02  [ main:1192 ] - [ INFO ]  {dataSource-1} inited
+2016-08-25 10:35:03  [ main:2009 ] - [ INFO ]  Obtained 6791 TLD from packaged file tld-names.txt
+2016-08-25 10:35:03  [ main:2034 ] - [ INFO ]  Deleted contents of: ./crawl_storage/frontier ( as you have configured resumable crawling to false )
+2016-08-25 10:35:08  [ main:6940 ] - [ INFO ]  Crawler 1 started
+2016-08-25 10:35:08  [ Crawler 1:7306 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/: null
+2016-08-25 10:35:08  [ Crawler 1:7307 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:61)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:52)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 10:35:14  [ Crawler 1:13027 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/admin/index.php?action=index%2FtoolSubmit: null
+2016-08-25 10:35:14  [ Crawler 1:13027 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:61)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:52)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 10:35:28  [ Thread-2:26944 ] - [ INFO ]  It looks like no thread is working, waiting for 10 seconds to make sure...
+2016-08-25 10:35:35  [ Thread-1:34432 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@42a2e5cc: startup date [Thu Aug 25 10:35:01 CST 2016]; root of context hierarchy
+2016-08-25 10:35:35  [ Thread-1:34437 ] - [ INFO ]  {dataSource-1} closed
+2016-08-25 10:35:44  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-25 10:35:44  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@19e185b9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@251241f5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@51a84ed6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@cfed7c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@52f0684e]
+2016-08-25 10:35:45  [ main:126 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-08-25 10:35:45  [ main:651 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-08-25 10:35:45  [ main:680 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@67177a6: startup date [Thu Aug 25 10:35:45 CST 2016]; root of context hierarchy
+2016-08-25 10:35:45  [ main:810 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-08-25 10:35:46  [ main:1273 ] - [ INFO ]  {dataSource-1} inited
+2016-08-25 10:35:47  [ main:2062 ] - [ INFO ]  Obtained 6791 TLD from packaged file tld-names.txt
+2016-08-25 10:35:47  [ main:2090 ] - [ INFO ]  Deleted contents of: ./crawl_storage/frontier ( as you have configured resumable crawling to false )
+2016-08-25 10:35:47  [ main:2448 ] - [ INFO ]  Crawler 1 started
+2016-08-25 10:35:47  [ Crawler 1:2903 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/: null
+2016-08-25 10:35:47  [ Crawler 1:2903 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:61)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:52)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 10:35:59  [ Thread-1:14549 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@67177a6: startup date [Thu Aug 25 10:35:45 CST 2016]; root of context hierarchy
+2016-08-25 10:35:59  [ Thread-1:14555 ] - [ INFO ]  {dataSource-1} closed
+2016-08-25 10:36:33  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-08-25 10:36:33  [ main:13 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@54b24c03, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@59c8466, org.springframework.test.context.support.DirtiesContextTestExecutionListener@66b8476a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4c58b4d5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@53c8331b]
+2016-08-25 10:36:33  [ main:101 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-08-25 10:36:34  [ main:625 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-08-25 10:36:34  [ main:662 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@42a2e5cc: startup date [Thu Aug 25 10:36:34 CST 2016]; root of context hierarchy
+2016-08-25 10:36:34  [ main:819 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-08-25 10:36:34  [ main:1292 ] - [ INFO ]  {dataSource-1} inited
+2016-08-25 10:36:35  [ main:2088 ] - [ INFO ]  Obtained 6791 TLD from packaged file tld-names.txt
+2016-08-25 10:36:35  [ main:2117 ] - [ INFO ]  Deleted contents of: ./crawl_storage/frontier ( as you have configured resumable crawling to false )
+2016-08-25 10:36:36  [ main:2634 ] - [ INFO ]  Crawler 1 started
+2016-08-25 10:36:36  [ Crawler 1:3087 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/: null
+2016-08-25 10:36:36  [ Crawler 1:3087 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:61)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:52)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 10:36:42  [ Crawler 1:9352 ] - [ WARN ]  Unhandled exception while fetching http://hao.199it.com/admin/index.php?action=index%2FtoolSubmit: null
+2016-08-25 10:36:42  [ Crawler 1:9352 ] - [ INFO ]  Stacktrace: 
+java.lang.NullPointerException
+	at spider.ToolsCrawler.BigDataToolsCrawler.fetchToolsInfo(BigDataToolsCrawler.java:61)
+	at spider.ToolsCrawler.BigDataToolsCrawler.visit(BigDataToolsCrawler.java:52)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.processPage(WebCrawler.java:421)
+	at edu.uci.ics.crawler4j.crawler.WebCrawler.run(WebCrawler.java:274)
+	at java.lang.Thread.run(Thread.java:745)
+2016-08-25 10:36:56  [ Thread-2:22641 ] - [ INFO ]  It looks like no thread is working, waiting for 10 seconds to make sure...
+2016-08-25 10:37:06  [ Thread-2:32647 ] - [ INFO ]  No thread is working and no more URLs are in queue waiting for another 10 seconds to make sure...
+2016-08-25 10:37:16  [ Thread-2:42651 ] - [ INFO ]  All of the crawlers are stopped. Finishing the process...
+2016-08-25 10:37:16  [ Thread-2:42651 ] - [ INFO ]  Waiting for 10 seconds before final clean up...
+2016-08-25 10:37:26  [ Thread-1:52672 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@42a2e5cc: startup date [Thu Aug 25 10:36:34 CST 2016]; root of context hierarchy
+2016-08-25 10:37:26  [ Thread-1:52677 ] - [ INFO ]  {dataSource-1} closed

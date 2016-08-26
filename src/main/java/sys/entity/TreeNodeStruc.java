@@ -8,6 +8,8 @@ public abstract class TreeNodeStruc
 
     private String name;
 
+    private boolean isLeaf;
+
     public TreeNodeStruc()
     {
 
@@ -48,5 +50,15 @@ public abstract class TreeNodeStruc
     public void setName(String name)
     {
         this.name = name == null ? null : name.trim();
+    }
+
+    public boolean isLeaf()
+    {
+        return isLeaf;
+    }
+
+    public void setLeaf(boolean leaf)
+    {
+        isLeaf = leaf;
     }
 }

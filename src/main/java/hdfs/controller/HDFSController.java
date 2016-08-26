@@ -21,9 +21,19 @@ public class HDFSController
     @RequestMapping("/listDirectoryStructs")
     public ModelAndView listDirectoryStructs() throws IOException
     {
-        ModelAndView mav = new ModelAndView("JsonView");
-        ETreeNode eTreeNodes = hdfsService.listDirectoryStructs();
-        mav.addObject(eTreeNodes);
+        ModelAndView mav = new ModelAndView("ETreeView");
+        ETreeNode eTreeNodes = hdfsService.listDirectoryStructs("/");
+        mav.addObject("root" ,eTreeNodes);
+        return mav;
+    }
+
+    @RequestMapping("/addNewFolder")
+    public ModelAndView addNewFolder(String path , String newFolderName) throws IOException
+    {
+        ModelAndView mav = new ModelAndView("ETreeView");
+
+//        ETreeNode eTreeNodes = hdfsService.listDirectoryStructs("/");
+//        mav.addObject("root" ,eTreeNodes);
         return mav;
     }
 }
