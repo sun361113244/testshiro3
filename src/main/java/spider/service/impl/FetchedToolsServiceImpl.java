@@ -1,7 +1,7 @@
 package spider.service.impl;
 
 import org.springframework.stereotype.Service;
-import spider.dao.FetchedToolsDao;
+import spider.mapper.FetchedToolsMapper;
 import spider.entity.FetchedTools;
 import spider.service.FetchedToolsService;
 
@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 public class FetchedToolsServiceImpl implements FetchedToolsService
 {
     @Resource
-    private FetchedToolsDao fetchedToolsDao;
+    private FetchedToolsMapper fetchedToolsDao;
 
     public int insertFetchedTools(FetchedTools fetchedTools)
     {

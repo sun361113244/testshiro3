@@ -22,6 +22,12 @@ public class Config {
 
     // --------------------------------------------------------------------------------------------
 
-    public static final String TOOLS_AREA_BIGDATA_URL = bundle.getString("tools_area_bigdata_url");
+    public static final String TOOLS_AREA_BIGDATA_URL = bundle.getString("tools.area.bigdata.url");
+
+    public static final String CRAWL_STORAGE_FOLDER = bundle.getString("crawl.storage.folder");
+
+    public static final int SPIDER_MAX_DEPTH = Integer.parseInt(bundle.getString("spider.max.depth"));
+
+    public static final int SPIDER_THREAD_NUM = Integer.parseInt(bundle.getString("spider.thread.num"));
 
 }

@@ -12,11 +12,11 @@ public class FetchedTools
 
     private String toolType;
 
-    private Boolean isfree;
+    private Integer isfree;
 
-    private Boolean isNew;
+    private Integer isNew;
 
-    private Boolean isExist;
+    private Integer isExist;
 
     private Date createTime;
 
@@ -62,34 +62,34 @@ public class FetchedTools
         this.toolName = toolName;
     }
 
-    public Boolean getIsfree()
+    public Integer getIsfree()
     {
         return isfree;
     }
 
-    public void setIsfree(Boolean isfree)
+    public void setIsfree(Integer isfree)
     {
         this.isfree = isfree;
     }
 
-    public Boolean getNew()
+    public Integer getIsNew()
     {
         return isNew;
     }
 
-    public void setNew(Boolean aNew)
+    public void setIsNew(Integer isNew)
     {
-        isNew = aNew;
+        this.isNew = isNew;
     }
 
-    public Boolean getExist()
+    public Integer getIsExist()
     {
         return isExist;
     }
 
-    public void setExist(Boolean exist)
+    public void setIsExist(Integer isExist)
     {
-        isExist = exist;
+        this.isExist = isExist;
     }
 
     public Date getUpdateTime()

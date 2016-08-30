@@ -28,7 +28,7 @@
         <!-- aspectj End-->
         <org.apache.cxf.version>3.0.1</org.apache.cxf.version>
         <javax.comm.version>2.0.3</javax.comm.version>
-        <mahout.version>0.9</mahout.version>
+        <mahout.version>0.12.2</mahout.version>
         <hadoop.version>2.7.2</hadoop.version>
         <crawler4j.version>4.2</crawler4j.version>
     </properties>
@@ -219,6 +219,38 @@
         <!-- 串口操作 -->
 
         <!-- 串口操作 End -->
+
+        <!-- mahout 依赖包 -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>3.6.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.mahout</groupId>
+            <artifactId>mahout-hdfs</artifactId>
+            <version>${mahout.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.mahout</groupId>
+            <artifactId>mahout-math</artifactId>
+            <version>${mahout.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.mahout</groupId>
+            <artifactId>mahout-integration</artifactId>
+            <version>${mahout.version}</version>
+        </dependency>
+
+
+        <!--mahout 依赖包End-->
+
         <!-- hadoop 依赖包 -->
         <dependency>
             <groupId>org.apache.hadoop</groupId>
@@ -236,18 +268,6 @@
             <version>${hadoop.version}</version>
         </dependency>
          <!--hadoop 依赖包End-->
-        <!-- mahout 依赖包 -->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.mahout</groupId>-->
-            <!--<artifactId>mahout-core</artifactId>-->
-            <!--<version>${mahout.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.mahout</groupId>-->
-            <!--<artifactId>mahout-math</artifactId>-->
-            <!--<version>${mahout.version}</version>-->
-        <!--</dependency>-->
-        <!-- mahout 依赖包End -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>

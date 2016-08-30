@@ -21,7 +21,7 @@ import spider.service.FetchedToolsService;
 import spider.service.impl.FetchedToolsServiceImpl;
 import spider.util.HTMLParseUtil;
 import util.Config;
-import util.SpringContextUtil;
+import util.SpringContextHolder;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -32,8 +32,6 @@ import java.util.regex.Pattern;
 
 public class BigDataToolsCrawler extends WebCrawler
 {
-    private FetchedToolsService fetchedToolsService;
-
     private final static Pattern FILTERS = Pattern.compile(".*(\\.(css|js|gif|jpg"
             + "|png|mp3|mp3|zip|gz))$");
 
@@ -55,7 +53,7 @@ public class BigDataToolsCrawler extends WebCrawler
 
     public void fetchToolsInfo(String htmlParseData)
     {
-
+        FetchedToolsService fetchedToolsService = SpringContextHolder.getBean("FetchedToolsService");
 
         String content = htmlParseData;
         String toolType = StringUtils.substringBetween(content, "<a href=\"javascript:location.reload();\">", "</a>").trim();
@@ -82,14 +80,14 @@ public class BigDataToolsCrawler extends WebCrawler
                 fetchedTools.setToolArea("数据分析/BI");
                 fetchedTools.setToolType(toolType);
                 fetchedTools.setToolName(elem.toPlainTextString());
-                fetchedTools.setExist(true);
-                fetchedTools.setIsfree(true);
-                fetchedTools.setNew(false);
+                fetchedTools.setIsExist(1);
+                fetchedTools.setIsfree(1);
+                fetchedTools.setIsNew(2);
                 fetchedTools.setCreateTime(new Date());
                 fetchedTools.setUpdateTime(new Date());
 
                 System.out.println(fetchedTools);
-//                fetchedToolsService.insertFetchedTools(fetchedTools);
+                fetchedToolsService.insertFetchedTools(fetchedTools);
             }
 
             parser.setInputHTML(content);
@@ -107,14 +105,14 @@ public class BigDataToolsCrawler extends WebCrawler
                 fetchedTools.setToolArea("数据分析/BI");
                 fetchedTools.setToolType(toolType);
                 fetchedTools.setToolName(elem.toPlainTextString());
-                fetchedTools.setExist(true);
-                fetchedTools.setIsfree(false);
-                fetchedTools.setNew(false);
+                fetchedTools.setIsExist(1);
+                fetchedTools.setIsfree(2);
+                fetchedTools.setIsNew(2);
                 fetchedTools.setCreateTime(new Date());
                 fetchedTools.setUpdateTime(new Date());
 
                 System.out.println(fetchedTools);
-                //                fetchedToolsService.insertFetchedTools(fetchedTools);
+                                fetchedToolsService.insertFetchedTools(fetchedTools);
             }
         } catch (ParserException e)
         {

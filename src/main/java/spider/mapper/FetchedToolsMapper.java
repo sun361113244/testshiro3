@@ -1,8 +1,8 @@
-package spider.dao;
+package spider.mapper;
 
 import spider.entity.FetchedTools;
 
-public interface FetchedToolsDao
+public interface FetchedToolsMapper
 {
     int insertFetchedTools(FetchedTools fetchedTools);
 }

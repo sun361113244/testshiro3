@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="spider.mapper.FetchedToolsMapper">
+    <insert id="insertFetchedTools" parameterType="spider.entity.FetchedTools" >
+      insert into tools(tool_area , tool_type , tool_name ,tool_isfree , tool_isnew , tool_isexist , create_time , update_time)
+      values(#{toolArea , jdbcType=VARCHAR} , #{toolType , jdbcType=VARCHAR} , #{toolName , jdbcType=VARCHAR} ,
+      #{isfree ,jdbcType=INTEGER} , #{isNew ,jdbcType=INTEGER} ,#{isExist ,jdbcType=INTEGER} ,#{createTime} ,#{updateTime} )
+    </insert>
+</mapper>

@@ -1393,7 +1393,7 @@ var esl;
             }
         );
 
-        // 根据config中的map配置进行module id mapping
+        // 根据config中的map配置进行module id mapper
         indexRetrieve(
             baseId,
             mappingIdIndex,
