@@ -186,6 +186,7 @@
             <artifactId>mybatis-spring</artifactId>
             <version>${org.mybatis-spring.version}</version>
         </dependency>
+
         <!-- mybatis jar end-->
         <dependency>
             <groupId>dom4j</groupId>
@@ -284,6 +285,14 @@
             <artifactId>crawler4j</artifactId>
             <version>${crawler4j.version}</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.quartz-scheduler/quartz -->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.2.3</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>testshiro3</finalName>

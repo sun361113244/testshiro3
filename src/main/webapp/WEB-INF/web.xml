@@ -9,7 +9,8 @@
         <param-value>classpath:spring.xml,
             classpath:spring-mybatis.xml,
             classpath:spring-shiro.xml,
-            classpath:spring-cxf.xml
+            classpath:spring-cxf.xml ,
+            classpath:spring-quartz.xml
         </param-value>
     </context-param>
 

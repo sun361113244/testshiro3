@@ -14,6 +14,7 @@ import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 import org.apache.mahout.cf.taste.recommender.Recommender;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 import org.apache.mahout.common.RandomUtils;
+import org.apache.mahout.math.hadoop.similarity.cooccurrence.measures.CosineSimilarity;
 import org.junit.Test;
 
 import java.io.File;
@@ -36,10 +37,11 @@ public class RecommenderTest
     {
         DataModel dataModel = new FileDataModel(new File(test_file_path));
         UserSimilarity userSimilarity = new PearsonCorrelationSimilarity(dataModel);
+
         UserNeighborhood userNeighborhood = new NearestNUserNeighborhood( 2, userSimilarity , dataModel);
 
         Recommender recommender = new GenericUserBasedRecommender(dataModel , userNeighborhood , userSimilarity);
-        List<RecommendedItem> recommendedItems = recommender.recommend(1 , 1);
+        List<RecommendedItem> recommendedItems = recommender.recommend(1 , 2);
         for(RecommendedItem recommendedItem : recommendedItems)
         {
             System.out.println(recommendedItem);
