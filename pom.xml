@@ -29,7 +29,7 @@
         <org.apache.cxf.version>3.0.1</org.apache.cxf.version>
         <javax.comm.version>2.0.3</javax.comm.version>
         <mahout.version>0.12.2</mahout.version>
-        <hadoop.version>2.7.2</hadoop.version>
+        <hadoop.version>2.7.3</hadoop.version>
         <crawler4j.version>4.2</crawler4j.version>
     </properties>
     <url>http://maven.apache.org</url>

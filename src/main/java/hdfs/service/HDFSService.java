@@ -7,5 +7,7 @@ import java.util.List;
 
 public interface HDFSService
 {
+    int isHadoopClusterEnabled(String url);
+
     ETreeNode listDirectoryStructs(String path) throws IOException;
 }

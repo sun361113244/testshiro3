@@ -1,35 +1,14 @@
-package hdfs.util;
+package util;
 
-import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
 import org.apache.hadoop.io.IOUtils;
-import util.Config;
 
-import java.io.*;
-import java.net.URI;
-import java.net.URISyntaxException;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class HDFSUtil
 {
-    private static boolean HDFS_ENABLED = Config.HADOOP_ENABLE == 1;
-
-    private static String HDFS_URI = Config.HADOOP_HDFS_URI;
-
-    private static String HADOOP_USER_NAME = Config.HADOOP_USER_NAME;
-
-    private static Configuration conf;
-
-    static
-    {
-        if (HDFS_ENABLED)
-        {
-            System.setProperty("HADOOP_USER_NAME", HADOOP_USER_NAME);
-
-            conf = new Configuration();
-            conf.set("fs.defaultFS" , HDFS_URI);
-        }
-    }
-
     /**
      * 判断路径是否存在
      *
@@ -39,7 +18,7 @@ public class HDFSUtil
      */
     public static boolean exits(String path) throws IOException
     {
-        FileSystem fs = FileSystem.get(conf);
+        FileSystem fs = FileSystem.get(HadoopCommonUtil.getConf());
         return fs.exists(new Path(path));
     }
 
@@ -52,7 +31,7 @@ public class HDFSUtil
      */
     public static void createFile(String filePath, byte[] contents) throws IOException
     {
-        FileSystem fs = FileSystem.get(conf);
+        FileSystem fs = FileSystem.get(HadoopCommonUtil.getConf());
         Path path = new Path(filePath);
         FSDataOutputStream outputStream = fs.create(path);
         outputStream.write(contents);
@@ -82,7 +61,7 @@ public class HDFSUtil
     public static void copyFromLocalFile(boolean delSrc, boolean overwrite,
                                          String localFilePath, String remoteFilePath) throws IOException
     {
-        FileSystem fs = FileSystem.get(conf);
+        FileSystem fs = FileSystem.get(HadoopCommonUtil.getConf());
         Path localPath = new Path(localFilePath);
         Path remotePath = new Path(remoteFilePath);
         fs.copyFromLocalFile(delSrc, overwrite, localPath, remotePath);
@@ -99,7 +78,7 @@ public class HDFSUtil
      */
     public static boolean deleteFile(String remoteFilePath, boolean recursive) throws IOException
     {
-        FileSystem fs = FileSystem.get(conf);
+        FileSystem fs = FileSystem.get(HadoopCommonUtil.getConf());
         boolean result = fs.delete(new Path(remoteFilePath), recursive);
         fs.close();
         return result;
@@ -128,7 +107,7 @@ public class HDFSUtil
      */
     public static boolean renameFile(String oldFileName, String newFileName) throws IOException
     {
-        FileSystem fs = FileSystem.get(conf);
+        FileSystem fs = FileSystem.get(HadoopCommonUtil.getConf());
         Path oldPath = new Path(oldFileName);
         Path newPath = new Path(newFileName);
         boolean result = fs.rename(oldPath, newPath);
@@ -145,7 +124,7 @@ public class HDFSUtil
      */
     public static boolean createDirectory(String dirName) throws IOException
     {
-        FileSystem fs = FileSystem.get(conf);
+        FileSystem fs = FileSystem.get(HadoopCommonUtil.getConf());
         Path dir = new Path(dirName);
         boolean result = fs.mkdirs(dir);
         fs.close();
@@ -160,7 +139,7 @@ public class HDFSUtil
      */
     public static RemoteIterator<LocatedFileStatus> listFiles(String basePath, boolean recursive) throws IOException
     {
-        FileSystem fs = FileSystem.get(conf);
+        FileSystem fs = FileSystem.get(HadoopCommonUtil.getConf());
         RemoteIterator<LocatedFileStatus> fileStatusRemoteIterator = fs.listFiles(new Path(basePath), recursive);
 
         return fileStatusRemoteIterator;
@@ -175,7 +154,7 @@ public class HDFSUtil
      */
     public static RemoteIterator<LocatedFileStatus> listFiles( String basePath) throws IOException
     {
-        FileSystem fs = FileSystem.get(conf);
+        FileSystem fs = FileSystem.get(HadoopCommonUtil.getConf());
         RemoteIterator<LocatedFileStatus> remoteIterator = fs.listFiles(new Path(basePath), false);
         fs.close();
         return remoteIterator;
@@ -190,7 +169,7 @@ public class HDFSUtil
      */
     public static FileStatus[] listStatus(String dirPath) throws IOException
     {
-        FileSystem fs = FileSystem.get(conf);
+        FileSystem fs = FileSystem.get(HadoopCommonUtil.getConf());
         FileStatus[] fileStatuses = fs.listStatus(new Path(dirPath));
         fs.close();
         return fileStatuses;
@@ -206,7 +185,7 @@ public class HDFSUtil
      */
     public static String readFile(String filePath) throws IOException
     {
-        FileSystem fs = FileSystem.get(conf);
+        FileSystem fs = FileSystem.get(HadoopCommonUtil.getConf());
         String fileContent = null;
         Path path = new Path(filePath);
         InputStream inputStream = null;
@@ -215,7 +194,7 @@ public class HDFSUtil
         {
             inputStream = fs.open(path);
             outputStream = new ByteArrayOutputStream(inputStream.available());
-            IOUtils.copyBytes(inputStream, outputStream, conf);
+            IOUtils.copyBytes(inputStream, outputStream, HadoopCommonUtil.getConf());
             fileContent = outputStream.toString();
         } finally
         {

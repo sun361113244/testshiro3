@@ -1,0 +1,22 @@
+[{
+    "id":1,
+    "text":"目录",
+    "children":[{
+        "id":14,
+        "text":"参数输入" ,
+        "url": "item_cf_input.html"
+    },{
+        "id":15,
+        "text":"用户推荐" ,
+        "url":"#" ,
+        "children":[{
+            "id":111,
+            "text":"登录用户推荐" ,
+            "url": "#"
+        },{
+            "id":112,
+            "text":"Top10推荐" ,
+            "url": "#"
+        }]
+    }]
+}]

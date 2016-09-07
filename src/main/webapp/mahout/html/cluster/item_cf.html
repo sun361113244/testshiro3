@@ -10,169 +10,70 @@
     <meta content="" name="description" />
     <meta content="" name="author" />
     <!-- ================== BEGIN BASE CSS STYLE ================== -->
-    <link href="../static/jslib/jquery-ui/jquery-ui.css"  rel="stylesheet"/>
-    <link href="../static/jslib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../static/jslib/fontawesome4.2/css/font-awesome.css" rel="stylesheet">
-    <link href="../static/jslib/animate/animate.css" rel="stylesheet">
-    <link href="../static/css/style.css" rel="stylesheet">
-    <link href="../static/css/theme/default.css" rel="stylesheet">
+    <link href="../../../static/jslib/jquery-ui/jquery-ui.css"  rel="stylesheet"/>
+    <link href="../../../static/jslib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../static/jslib/fontawesome4.2/css/font-awesome.css" rel="stylesheet">
+    <link href="../../../static/jslib/animate/animate.css" rel="stylesheet">
+    <link href="../../../static/css/style.css" rel="stylesheet">
+    <link href="../../../static/css/theme/default.css" rel="stylesheet">
     <!-- ================== END BASE CSS STYLE ================== -->
 
     <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
-    <link href="../static/css/ExBootstrap.css"  rel="stylesheet">
-    <link href="../static/jslib/jquery-easyui-1.5/themes/default/easyui.css" rel="stylesheet">
-    <link href="../static/jslib/jquery-easyui-1.5/themes/icon.css" rel="stylesheet">
+    <link href="../../../static/css/ExBootstrap.css"  rel="stylesheet">
+    <link href="../../../static/jslib/jquery-easyui-1.5/themes/default/easyui.css" rel="stylesheet">
+    <link href="../../../static/jslib/jquery-easyui-1.5/themes/icon.css" rel="stylesheet">
     <!-- ================== END PAGE LEVEL CSS STYLE ================== -->
 
     <!-- ================== BEGIN BASE JS ================== -->
-    <script src="../static/jslib/jquery/jquery-1.11.2.min.js"></script>
-    <script src="../static/jslib/jquery/jquery-migrate-1.1.0.min.js"></script>
-    <script src="../static/jslib/jquery-ui/jquery-ui.js"></script>
-    <script src="../static/jslib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../static/jslib/holder/holder.js"></script>
-    <script src="../static/jslib/jquery-slimscroll/jquery.slimscroll.js"></script>
-    <script src="../static/jslib/jquery-cookie/jquery.cookie.js"></script>
+    <script src="../../../static/jslib/jquery/jquery-1.11.2.min.js"></script>
+    <script src="../../../static/jslib/jquery/jquery-migrate-1.1.0.min.js"></script>
+    <script src="../../../static/jslib/jquery-ui/jquery-ui.js"></script>
+    <script src="../../../static/jslib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../static/jslib/holder/holder.js"></script>
+    <script src="../../../static/jslib/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <script src="../../../static/jslib/jquery-cookie/jquery.cookie.js"></script>
     <!--[if lt IE 9]> -->
-    <script src="../static/jslib/crossbrowserjs/html5shiv.js"></script>
-    <script src="../static/jslib/crossbrowserjs/respond.min.js"></script>
-    <script src="../static/jslib/crossbrowserjs/excanvas.min.js"></script>
+    <script src="../../../static/jslib/crossbrowserjs/html5shiv.js"></script>
+    <script src="../../../static/jslib/crossbrowserjs/respond.min.js"></script>
+    <script src="../../../static/jslib/crossbrowserjs/excanvas.min.js"></script>
     <!-- <![endif] -->
-    <script src = "../static/js/util.js"></script>
-    <script src="../static/js/apps.js"></script>
+    <script src = "../../../static/js/util.js"></script>
+    <script src="../../../static/js/apps.js"></script>
     <!-- ================== END BASE JS ================== -->
 
     <!-- ================== BEGIN PAGE LEVEL JS ================== -->
-    <script src="../static/jslib/jquery-easyui-1.5/jquery.easyui.min.js"></script>
+    <script src="../../../static/jslib/jquery-easyui-1.5/jquery.easyui.min.js"></script>
     <!-- ================== END PAGE LEVEL JS ================== -->
+
 
     <script>
         $(function(){
             initComponent();
-
-            App.init(6);
+            App.init(7);
         });
-
         function initComponent()
         {
-            initHDFSExplore();
-            initMenu();
+            initItemCFMenu();
         }
-        function initHDFSExplore()
+        function initItemCFMenu()
         {
-            $('#hdfs_explore').tree({
-                url: getContextPath() + "/hdfsController/listDirectoryStructs"
-            });
-        }
-        function initMenu()
-        {
-            $('#hdfs_explore').bind('contextmenu',function(e){
-                e.preventDefault();
-                $('#hdfs_oper_menu').menu('show', {
-                    left: e.pageX,
-                    top: e.pageY
-                });
-            });
-        }
-        function hdfs_menuHandler(item)
-        {
-            var nodes = $('#hdfs_explore').tree('getSelected');
-            switch (item.name)
-            {
-                case 'hdfs_new_folder':
-                    hdfsNewFolder(nodes.attributes.absPath);
-                    break;
-                case 'hdfs_edit':
-                    hdfsEdit(nodes.attributes.absPath);
-                    break;
-                case 'hdfs_del':
-                    hdfsDel(nodes.attributes.absPath);
-                    break;
-                case 'hdfs_new_doc':
-                    hdfsNewDoc(nodes.attributes.absPath);
-                    break;
-                default:
-                    alert('未知操作!');
-            }
-        }
-
-        function hdfsNewFolder(path)
-        {
-            $.messager.prompt('添加文件夹', '文件夹名称',
-                function(newFolderName){
-                    if (newFolderName)
-                    {
-                        $.ajax({
-                            type: "POST",
-                            url: getContextPath() + "/hdfsController/addNewFolder" ,
-                            data: {
-                                path : path ,
-                                newFolderName : newFolderName
-                            },
-                            success: function (records) {
-
-                            }
-                        });
-                    }
-                });
-        }
-        function hdfsEdit(path)
-        {
-            $.messager.prompt('编辑名称', '新名称',
-                function(newName){
-                    if (newName)
-                    {
-                        $.ajax({
-                            type: "POST",
-                            url: getContextPath() + "/hdfsController/editName" ,
-                            data: {
-                                path : path ,
-                                newName : newName
-                            },
-                            success: function (records) {
-
-                            }
-                        });
-                    }
-                });
-        }
-        function hdfsDel(path)
-        {
-            $.messager.confirm('删除', '确认删除?', function(r)
-            {
-                if (r)
-                {
-                    $.ajax({
-                        type: "POST",
-                        url: getContextPath() + "/hdfsController/hdfsDel" ,
-                        data: {
-                            path : path
-                        },
-                        success: function (records) {
-
-                        }
-                    });
+            $('#item_cf_menu').tree({
+                onClick: function(node){
+                    addTab(node.text,node.url)
                 }
             });
         }
-        function hdfsNewDoc(path)
-        {
-            $.messager.prompt('添加文件', '文件名称',
-                function(newFileName){
-                    if (newFileName)
-                    {
-                        $.ajax({
-                            type: "POST",
-                            url: getContextPath() + "/hdfsController/addNewFile" ,
-                            data: {
-                                path : path ,
-                                newFileName : newFileName
-                            },
-                            success: function (records) {
-
-                            }
-                        });
-                    }
+        function addTab(title, url){
+            if ($('#item_cf_tab').tabs('exists', title)){
+                $('#item_cf_tab').tabs('select', title);
+            } else {
+                var content = '<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:600px;"></iframe>';
+                $('#item_cf_tab').tabs('add',{
+                    title:title,
+                    content:content,
+                    closable:true
                 });
+            }
         }
     </script>
 </head>
@@ -255,19 +156,17 @@
         <!-- begin row -->
         <div class="row">
             <div class="easyui-layout" style="width:100%;height:650px;">
-                <div id="paaaaa" data-options="region:'west',split:true" title="文件目录" style="width:30%;padding:10px">
-                    <ul id="hdfs_explore"></ul>
+                <div data-options="region:'west',split:true" title="选项" style="width:20%;padding:10px">
+                    <ul id="item_cf_menu" class="easyui-tree" data-options="url:'json/item_cf_menu.json',method:'get',animate:true,lines:true"></ul>
                 </div>
-                <div data-options="region:'center'" title="内容">
-                    <p>hello world</p>
+                <div data-options="region:'center'" >
+                    <div id="item_cf_tab" class="easyui-tabs">
+
+                    </div>
                 </div>
-            </div>
-            <div id="hdfs_oper_menu" class="easyui-menu" data-options="onClick:hdfs_menuHandler ,animate:true" style="width:200px;">
-                <div data-options="name:'hdfs_new_folder'">新建文件夹</div>
-                <div data-options="name:'hdfs_edit'">编辑</div>
-                <div data-options="name:'hdfs_del'">删除</div>
-                <div class="menu-sep"></div>
-                <div data-options="name:'hdfs_new_doc'">新建文件</div>
+                <div data-options="region:'east',split:true,collapsed:true" title="帮助" style="width:20%;padding:10px">
+                    <p>help</p>
+                </div>
             </div>
         </div>
         <!-- end row -->
@@ -278,7 +177,7 @@
 <!-- start modal -->
 <div class="modal fade" id="set_UserInfoModal" tabindex="-1" role="dialog" aria-labelledby="set_UserInfoModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-  div   <div class="modal-content">
+        <div class="modal-content">
             <!-- start modal_header -->
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

@@ -2,15 +2,21 @@ package hdfs.service.impl;
 
 import hdfs.entity.HDFSNode;
 import hdfs.service.HDFSService;
-import hdfs.util.HDFSUtil;
-import org.apache.cxf.common.i18n.Exception;
 import org.apache.hadoop.fs.FileStatus;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.mapred.ClusterStatus;
+import org.apache.hadoop.mapred.JobClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import sys.entity.ETreeNode;
 import sys.entity.ETreeNodeAttribute;
 import sys.tree.TreeHelper;
 import sys.tree.TreeNode;
 import util.Config;
+import util.HDFSUtil;
+import util.HadoopCommonUtil;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -21,6 +27,31 @@ import java.util.Queue;
 @Service
 public class HDFSServiceImpl implements HDFSService
 {
+    private static final Logger logger = LoggerFactory.getLogger(HDFSServiceImpl.class);
+
+    public int isHadoopClusterEnabled(String url)
+    {
+        try
+        {
+            FileSystem fs = FileSystem.get(HadoopCommonUtil.getConf());
+            boolean fsOnline=fs.exists(new Path("/"));
+            if(!fsOnline)
+            {
+                return -1;
+            }
+            JobClient jc = new JobClient(HadoopCommonUtil.getConf());
+            ClusterStatus cs = jc.getClusterStatus();
+            if(!"RUNNING".equals(cs.getJobTrackerStatus().toString()))
+            {
+                return -2;
+            }
+        } catch (IOException e)
+        {
+            logger.error("HDFSServiceImpl 异常:" + e.getMessage());
+        }
+        return 1;
+    }
+
     public ETreeNode listDirectoryStructs(String path) throws IOException
     {
         List<HDFSNode> hdfsNodes = listHDFSDirectory(path);
