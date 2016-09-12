@@ -1,4 +1,21 @@
-2016-09-06 11:12:13  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/练习/item.csv
-2016-09-06 11:12:13  [ main:51 ] - [ INFO ]  Reading file info...
-2016-09-06 11:12:13  [ main:59 ] - [ INFO ]  Read lines: 21
-2016-09-06 11:12:13  [ main:80 ] - [ INFO ]  Processed 5 users
+2016-09-09 10:48:56  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-09 10:50:47  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/weights/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-09 10:50:48  [ main:1267 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-09 10:55:39  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/pairwiseSimilarity/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-09 10:55:40  [ main:1270 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-09 10:58:58  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/weights/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-09 10:58:59  [ main:1285 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-09 11:01:33  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/similarityMatrix/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-09 11:01:34  [ main:1276 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-09 14:22:29  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/练习/item.csv
+2016-09-09 14:22:29  [ main:30 ] - [ INFO ]  Reading file info...
+2016-09-09 14:22:29  [ main:36 ] - [ INFO ]  Read lines: 21
+2016-09-09 14:22:29  [ main:50 ] - [ INFO ]  Processed 5 users
+2016-09-09 14:22:29  [ main:62 ] - [ INFO ]  Beginning evaluation using 0.9 of FileDataModel[dataFile:/Users/charles/Desktop/乐享天下资料/练习/item.csv]
+2016-09-09 14:22:29  [ main:63 ] - [ INFO ]  Processed 5 users
+2016-09-09 14:22:29  [ main:72 ] - [ INFO ]  Beginning evaluation of 3 users
+2016-09-09 14:22:29  [ main:75 ] - [ INFO ]  Starting timing of 3 tasks in 8 threads
+2016-09-09 14:22:29  [ pool-1-thread-1:79 ] - [ INFO ]  Average time per recommendation: 3ms
+2016-09-09 14:22:29  [ pool-1-thread-1:79 ] - [ INFO ]  Approximate memory used: 31MB / 257MB
+2016-09-09 14:22:29  [ pool-1-thread-1:79 ] - [ INFO ]  Unable to recommend in 2 cases
+2016-09-09 14:22:29  [ main:79 ] - [ INFO ]  Evaluation result: 1.0

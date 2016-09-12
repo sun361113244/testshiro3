@@ -26,7 +26,7 @@ public class RecommenderTest
     final static int NEIGHBORHOOD_NUM = 2;
     final static int RECOMMENDER_NUM = 3;
 
-    final static String test_file_path = "/Users/charles/Desktop/乐享天下资料/练习/item.csv";
+    final static String test_file_path = "hdfs://172.16.174.139:9000/itemcf/input/itemcf.txt";
 
     public static void userCF(DataModel dataModel) throws TasteException{}
     public static void itemCF(DataModel dataModel) throws TasteException{}
@@ -61,6 +61,8 @@ public class RecommenderTest
             public Recommender buildRecommender(DataModel dataModel) throws TasteException
             {
                 UserSimilarity userSimilarity = new PearsonCorrelationSimilarity(dataModel);
+
+
                 UserNeighborhood userNeighborhood = new NearestNUserNeighborhood( 2, userSimilarity , dataModel);
                 return new GenericUserBasedRecommender(dataModel , userNeighborhood , userSimilarity);
             }

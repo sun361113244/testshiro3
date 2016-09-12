@@ -1,0 +1,41 @@
+2016-09-08 11:15:38  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/preparePreferenceMatrix/itemIDIndex/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 11:15:40  [ main:1595 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 11:18:22  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/preparePreferenceMatrix/userVectors/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 11:18:23  [ main:1271 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 11:20:08  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/preparePreferenceMatrix/ratingMatrix/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 11:20:09  [ main:1271 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 11:23:53  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/preparePreferenceMatrix/itemIDIndex/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 11:23:55  [ main:1297 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 11:23:56  [ main:2214 ] - [ INFO ]  mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+2016-09-08 11:23:56  [ main:2253 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/preparePreferenceMatrix/userVectors/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 11:23:56  [ main:2346 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/preparePreferenceMatrix/ratingMatrix/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 11:23:56  [ main:2422 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/preparePreferenceMatrix/ratingMatrix/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 11:24:25  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/preparePreferenceMatrix/itemIDIndex/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 11:24:25  [ main:212 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 11:24:26  [ main:1266 ] - [ INFO ]  mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+2016-09-08 11:24:26  [ main:1315 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/preparePreferenceMatrix/userVectors/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 11:24:27  [ main:1437 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/preparePreferenceMatrix/ratingMatrix/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 11:24:27  [ main:1533 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/preparePreferenceMatrix/numUsers.bin], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 13:53:34  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 13:53:46  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 13:59:39  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 14:30:28  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 14:42:26  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 16:07:22  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 16:08:22  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/notUsed/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 16:08:23  [ main:1267 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 16:14:39  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/observationsPerColumn.bin], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 16:14:40  [ main:1261 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 16:17:50  [ main:1 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/observationsPerColumn.bin], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 16:17:51  [ main:1246 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 16:18:17  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/user/hadoop/temp/observationsPerColumn.bin], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 16:18:17  [ main:172 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 16:18:18  [ main:1052 ] - [ INFO ]  Sort? false
+2016-09-08 16:32:00  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 16:40:55  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/norms.bin], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 16:40:57  [ main:1282 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 16:41:09  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 16:52:50  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/weights/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 16:52:51  [ main:1193 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-08 17:10:07  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/user/hadoop/temp/similarityMatrix/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-08 17:10:09  [ main:1267 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
