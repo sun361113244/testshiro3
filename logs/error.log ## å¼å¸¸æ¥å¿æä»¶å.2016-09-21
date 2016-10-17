@@ -1,0 +1,13 @@
+2016-09-21 16:51:25  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-21 16:51:25  [ main:21 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-21 16:51:25  [ main:124 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-21 16:51:26  [ main:718 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-21 16:51:26  [ main:745 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Wed Sep 21 16:51:26 CST 2016]; root of context hierarchy
+2016-09-21 16:51:26  [ main:952 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-21 16:51:27  [ main:1457 ] - [ INFO ]  {dataSource-1} inited
+2016-09-21 16:51:28  [ main:2180 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-21 16:51:29  [ main:4034 ] - [ INFO ]  Command line arguments: {--charset=[UTF-8], --chunkSize=[64], --endPhase=[2147483647], --fileFilterClass=[org.apache.mahout.text.PrefixAdditionFilter], --input=[/naivebayes/input], --keyPrefix=[], --method=[sequential], --output=[/naivebayes/output], --startPhase=[0], --tempDir=[temp]}
+2016-09-21 16:57:01  [ Thread-1:335514 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Wed Sep 21 16:51:26 CST 2016]; root of context hierarchy
+2016-09-21 16:57:01  [ Thread-1:335519 ] - [ INFO ]  {dataSource-1} closed
+2016-09-21 17:01:47  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/naivebayes/output/chunk-0], --startPhase=[0], --tempDir=[temp]}
+2016-09-21 17:01:47  [ main:178 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable

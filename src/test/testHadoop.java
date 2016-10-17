@@ -2,6 +2,7 @@ import org.apache.hadoop.fs.LocatedFileStatus;
 import org.apache.hadoop.fs.RemoteIterator;
 import org.junit.Test;
 import util.HDFSUtil;
+import util.HadoopCommonUtil;
 
 import java.io.IOException;
 
@@ -63,5 +64,11 @@ public class testHadoop
     {
         String content = HDFSUtil.readFile("/aa.txt");
         System.out.println(content);
+    }
+
+    @Test
+    public void testSequenceFile() throws IOException
+    {
+        HadoopCommonUtil.SequenceFiles("/naivebayes/input/zhaopin.txt" , "/naivebayes/output/chunk-0" , true , false);
     }
 }

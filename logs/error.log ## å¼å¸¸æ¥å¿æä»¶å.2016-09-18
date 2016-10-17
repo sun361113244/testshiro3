@@ -1,0 +1,1596 @@
+2016-09-18 10:51:53  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/fresh_comp_offline/tianchi_fresh_comp_train_user_itemcf.txt
+2016-09-18 10:51:53  [ main:46 ] - [ INFO ]  Reading file info...
+2016-09-18 10:51:53  [ main:210 ] - [ INFO ]  Processed 100000 lines
+2016-09-18 10:51:53  [ main:282 ] - [ INFO ]  Processed 200000 lines
+2016-09-18 10:51:53  [ main:293 ] - [ INFO ]  Read lines: 232579
+2016-09-18 10:52:42  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/fresh_comp_offline/tianchi_fresh_comp_train_user_itemcf.txt
+2016-09-18 10:52:42  [ main:27 ] - [ INFO ]  Reading file info...
+2016-09-18 10:52:42  [ main:171 ] - [ INFO ]  Processed 100000 lines
+2016-09-18 10:52:42  [ main:222 ] - [ INFO ]  Processed 200000 lines
+2016-09-18 10:52:42  [ main:233 ] - [ INFO ]  Read lines: 232579
+2016-09-18 10:52:47  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/fresh_comp_offline/tianchi_fresh_comp_train_user_itemcf.txt
+2016-09-18 10:52:47  [ main:32 ] - [ INFO ]  Reading file info...
+2016-09-18 10:52:47  [ main:180 ] - [ INFO ]  Processed 100000 lines
+2016-09-18 10:52:47  [ main:229 ] - [ INFO ]  Processed 200000 lines
+2016-09-18 10:52:47  [ main:241 ] - [ INFO ]  Read lines: 232579
+2016-09-18 10:53:40  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/fresh_comp_offline/tianchi_fresh_comp_train_user_itemcf.txt
+2016-09-18 10:53:40  [ main:31 ] - [ INFO ]  Reading file info...
+2016-09-18 10:53:40  [ main:169 ] - [ INFO ]  Processed 100000 lines
+2016-09-18 10:53:40  [ main:214 ] - [ INFO ]  Processed 200000 lines
+2016-09-18 10:53:40  [ main:226 ] - [ INFO ]  Read lines: 232579
+2016-09-18 10:54:41  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/fresh_comp_offline/tianchi_fresh_comp_train_user_itemcf.txt
+2016-09-18 10:54:41  [ main:28 ] - [ INFO ]  Reading file info...
+2016-09-18 10:54:41  [ main:171 ] - [ INFO ]  Processed 100000 lines
+2016-09-18 10:54:41  [ main:219 ] - [ INFO ]  Processed 200000 lines
+2016-09-18 10:54:41  [ main:232 ] - [ INFO ]  Read lines: 232579
+2016-09-18 10:55:06  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/itemcf.txt
+2016-09-18 10:55:06  [ main:58 ] - [ INFO ]  Reading file info...
+2016-09-18 10:55:06  [ main:66 ] - [ INFO ]  Read lines: 21
+2016-09-18 10:55:06  [ main:99 ] - [ INFO ]  Processed 5 users
+2016-09-18 10:55:41  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/itemcf.txt
+2016-09-18 10:55:41  [ main:28 ] - [ INFO ]  Reading file info...
+2016-09-18 10:55:41  [ main:32 ] - [ INFO ]  Read lines: 21
+2016-09-18 10:55:41  [ main:45 ] - [ INFO ]  Processed 5 users
+2016-09-18 10:55:56  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/itemcf.txt
+2016-09-18 10:55:56  [ main:33 ] - [ INFO ]  Reading file info...
+2016-09-18 10:55:56  [ main:37 ] - [ INFO ]  Read lines: 21
+2016-09-18 10:55:56  [ main:52 ] - [ INFO ]  Processed 5 users
+2016-09-18 10:56:35  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/itemcf.txt
+2016-09-18 10:56:35  [ main:28 ] - [ INFO ]  Reading file info...
+2016-09-18 10:56:35  [ main:33 ] - [ INFO ]  Read lines: 21
+2016-09-18 10:56:35  [ main:46 ] - [ INFO ]  Processed 5 users
+2016-09-18 17:29:08  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-18 17:29:10  [ main:2300 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:29:11  [ main:2967 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:29:14  [ main:5821 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:29:14  [ main:6179 ] - [ INFO ]  number of splits:1
+2016-09-18 17:29:14  [ main:6685 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0072
+2016-09-18 17:29:15  [ main:7177 ] - [ INFO ]  Submitted application application_1473744425337_0072
+2016-09-18 17:29:15  [ main:7300 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0072/
+2016-09-18 17:29:15  [ main:7301 ] - [ INFO ]  Running job: job_1473744425337_0072
+2016-09-18 17:29:33  [ main:24931 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=FAILED. Redirecting to job history server
+2016-09-18 17:29:33  [ main:25354 ] - [ INFO ]  Job job_1473744425337_0072 running in uber mode : false
+2016-09-18 17:29:33  [ main:25357 ] - [ INFO ]   map 0% reduce 100%
+2016-09-18 17:29:33  [ main:25470 ] - [ INFO ]  Task Id : attempt_1473744425337_0072_m_000000_0, Status : FAILED
+2016-09-18 17:29:33  [ main:25568 ] - [ INFO ]  Task Id : attempt_1473744425337_0072_m_000000_1, Status : FAILED
+2016-09-18 17:29:33  [ main:25629 ] - [ INFO ]  Task Id : attempt_1473744425337_0072_m_000000_2, Status : FAILED
+2016-09-18 17:29:33  [ main:25705 ] - [ INFO ]  Task Id : attempt_1473744425337_0072_m_000000_3, Status : FAILED
+2016-09-18 17:29:34  [ main:25900 ] - [ INFO ]  Job job_1473744425337_0072 failed with state FAILED due to: 
+2016-09-18 17:53:20  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-18 17:53:22  [ main:2368 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:53:23  [ main:3130 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:53:25  [ main:4789 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:53:25  [ main:5310 ] - [ INFO ]  number of splits:1
+2016-09-18 17:53:26  [ main:5761 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0073
+2016-09-18 17:53:26  [ main:6193 ] - [ INFO ]  Submitted application application_1473744425337_0073
+2016-09-18 17:53:26  [ main:6276 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0073/
+2016-09-18 17:53:26  [ main:6277 ] - [ INFO ]  Running job: job_1473744425337_0073
+2016-09-18 17:53:35  [ main:14585 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:53:35  [ main:14648 ] - [ INFO ]  Job job_1473744425337_0073 running in uber mode : false
+2016-09-18 17:53:35  [ main:14649 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:53:35  [ main:14712 ] - [ INFO ]  Job job_1473744425337_0073 completed successfully
+2016-09-18 17:53:35  [ main:14803 ] - [ INFO ]  Counters: 29
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=118252
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2664
+		HDFS: Number of bytes written=7500
+		HDFS: Number of read operations=5
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1870
+		Total time spent by all map tasks (ms)=1870
+		Total vcore-milliseconds taken by all map tasks=1870
+		Total megabyte-milliseconds taken by all map tasks=1914880
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=150
+		Input split bytes=114
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=38
+		CPU time spent (ms)=740
+		Physical memory (bytes) snapshot=175894528
+		Virtual memory (bytes) snapshot=2176352256
+		Total committed heap usage (bytes)=148373504
+	File Input Format Counters 
+		Bytes Read=2550
+	File Output Format Counters 
+		Bytes Written=7500
+2016-09-18 17:53:35  [ main:15290 ] - [ INFO ]  Got brand-new compressor [.deflate]
+2016-09-18 17:53:35  [ main:15315 ] - [ INFO ]  Wrote 10 Klusters to /kmeans/input/initialPoints/part-randomSeed
+2016-09-18 17:53:35  [ main:15374 ] - [ INFO ]  Input: /kmeans/input/seqfile Clusters In: /kmeans/input/initialPoints Out: /kmeans/output
+2016-09-18 17:53:35  [ main:15375 ] - [ INFO ]  convergence: 0.01 max Iterations: 10
+2016-09-18 17:53:36  [ main:15421 ] - [ INFO ]  Got brand-new decompressor [.deflate]
+2016-09-18 17:53:37  [ main:16664 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:53:37  [ main:16706 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:53:44  [ main:24054 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:53:44  [ main:24297 ] - [ INFO ]  number of splits:1
+2016-09-18 17:53:45  [ main:24488 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0074
+2016-09-18 17:53:45  [ main:24713 ] - [ INFO ]  Submitted application application_1473744425337_0074
+2016-09-18 17:53:45  [ main:24737 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0074/
+2016-09-18 17:53:45  [ main:24737 ] - [ INFO ]  Running job: job_1473744425337_0074
+2016-09-18 17:53:58  [ main:38328 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:53:59  [ main:38709 ] - [ INFO ]  Job job_1473744425337_0074 running in uber mode : false
+2016-09-18 17:53:59  [ main:38710 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:53:59  [ main:38946 ] - [ INFO ]  Job job_1473744425337_0074 completed successfully
+2016-09-18 17:53:59  [ main:39006 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2616
+		FILE: Number of bytes written=243589
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=15585
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=53
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2037
+		Total time spent by all reduces in occupied slots (ms)=2307
+		Total time spent by all map tasks (ms)=2037
+		Total time spent by all reduce tasks (ms)=2307
+		Total vcore-milliseconds taken by all map tasks=2037
+		Total vcore-milliseconds taken by all reduce tasks=2307
+		Total megabyte-milliseconds taken by all map tasks=2085888
+		Total megabyte-milliseconds taken by all reduce tasks=2362368
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2580
+		Map output materialized bytes=2616
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2616
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=106
+		CPU time spent (ms)=3190
+		Physical memory (bytes) snapshot=478871552
+		Virtual memory (bytes) snapshot=4362739712
+		Total committed heap usage (bytes)=344981504
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 17:54:00  [ main:39687 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:54:00  [ main:39785 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:54:02  [ main:42016 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:54:03  [ main:42421 ] - [ INFO ]  number of splits:1
+2016-09-18 17:54:03  [ main:42823 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0075
+2016-09-18 17:54:03  [ main:43301 ] - [ INFO ]  Submitted application application_1473744425337_0075
+2016-09-18 17:54:04  [ main:43422 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0075/
+2016-09-18 17:54:04  [ main:43422 ] - [ INFO ]  Running job: job_1473744425337_0075
+2016-09-18 17:54:18  [ main:57689 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:54:18  [ main:57793 ] - [ INFO ]  Job job_1473744425337_0075 running in uber mode : false
+2016-09-18 17:54:18  [ main:57793 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:54:18  [ main:57869 ] - [ INFO ]  Job job_1473744425337_0075 completed successfully
+2016-09-18 17:54:18  [ main:57933 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2047
+		Total time spent by all reduces in occupied slots (ms)=2165
+		Total time spent by all map tasks (ms)=2047
+		Total time spent by all reduce tasks (ms)=2165
+		Total vcore-milliseconds taken by all map tasks=2047
+		Total vcore-milliseconds taken by all reduce tasks=2165
+		Total megabyte-milliseconds taken by all map tasks=2096128
+		Total megabyte-milliseconds taken by all reduce tasks=2216960
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=113
+		CPU time spent (ms)=2780
+		Physical memory (bytes) snapshot=474857472
+		Virtual memory (bytes) snapshot=4363300864
+		Total committed heap usage (bytes)=345505792
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 17:54:19  [ main:58964 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:54:21  [ main:60730 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:54:23  [ main:63208 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:54:24  [ main:64104 ] - [ INFO ]  number of splits:1
+2016-09-18 17:54:25  [ main:65060 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0076
+2016-09-18 17:54:26  [ main:65515 ] - [ INFO ]  Submitted application application_1473744425337_0076
+2016-09-18 17:54:26  [ main:65578 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0076/
+2016-09-18 17:54:26  [ main:65578 ] - [ INFO ]  Running job: job_1473744425337_0076
+2016-09-18 17:54:38  [ main:78167 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:54:39  [ main:78459 ] - [ INFO ]  Job job_1473744425337_0076 running in uber mode : false
+2016-09-18 17:54:39  [ main:78459 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:54:39  [ main:78638 ] - [ INFO ]  Job job_1473744425337_0076 completed successfully
+2016-09-18 17:54:39  [ main:78702 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2070
+		Total time spent by all reduces in occupied slots (ms)=2229
+		Total time spent by all map tasks (ms)=2070
+		Total time spent by all reduce tasks (ms)=2229
+		Total vcore-milliseconds taken by all map tasks=2070
+		Total vcore-milliseconds taken by all reduce tasks=2229
+		Total megabyte-milliseconds taken by all map tasks=2119680
+		Total megabyte-milliseconds taken by all reduce tasks=2282496
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=114
+		CPU time spent (ms)=2830
+		Physical memory (bytes) snapshot=476213248
+		Virtual memory (bytes) snapshot=4356190208
+		Total committed heap usage (bytes)=346554368
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 17:54:41  [ main:80744 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:54:41  [ main:81052 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:54:43  [ main:82995 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:54:44  [ main:84281 ] - [ INFO ]  number of splits:1
+2016-09-18 17:54:45  [ main:85322 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0077
+2016-09-18 17:54:46  [ main:86034 ] - [ INFO ]  Submitted application application_1473744425337_0077
+2016-09-18 17:54:46  [ main:86197 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0077/
+2016-09-18 17:54:46  [ main:86197 ] - [ INFO ]  Running job: job_1473744425337_0077
+2016-09-18 17:54:59  [ main:98804 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:54:59  [ main:99152 ] - [ INFO ]  Job job_1473744425337_0077 running in uber mode : false
+2016-09-18 17:54:59  [ main:99153 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:55:00  [ main:99658 ] - [ INFO ]  Job job_1473744425337_0077 completed successfully
+2016-09-18 17:55:00  [ main:99751 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2038
+		Total time spent by all reduces in occupied slots (ms)=2241
+		Total time spent by all map tasks (ms)=2038
+		Total time spent by all reduce tasks (ms)=2241
+		Total vcore-milliseconds taken by all map tasks=2038
+		Total vcore-milliseconds taken by all reduce tasks=2241
+		Total megabyte-milliseconds taken by all map tasks=2086912
+		Total megabyte-milliseconds taken by all reduce tasks=2294784
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=104
+		CPU time spent (ms)=2920
+		Physical memory (bytes) snapshot=479428608
+		Virtual memory (bytes) snapshot=4363366400
+		Total committed heap usage (bytes)=344981504
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 17:55:01  [ main:100752 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:55:01  [ main:101101 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:55:04  [ main:103426 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:55:05  [ main:104447 ] - [ INFO ]  number of splits:1
+2016-09-18 17:55:05  [ main:105237 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0078
+2016-09-18 17:55:06  [ main:106014 ] - [ INFO ]  Submitted application application_1473744425337_0078
+2016-09-18 17:55:06  [ main:106141 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0078/
+2016-09-18 17:55:06  [ main:106142 ] - [ INFO ]  Running job: job_1473744425337_0078
+2016-09-18 17:55:19  [ main:119243 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:55:19  [ main:119373 ] - [ INFO ]  Job job_1473744425337_0078 running in uber mode : false
+2016-09-18 17:55:19  [ main:119373 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:55:20  [ main:119465 ] - [ INFO ]  Job job_1473744425337_0078 completed successfully
+2016-09-18 17:55:20  [ main:119504 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2076
+		Total time spent by all reduces in occupied slots (ms)=2279
+		Total time spent by all map tasks (ms)=2076
+		Total time spent by all reduce tasks (ms)=2279
+		Total vcore-milliseconds taken by all map tasks=2076
+		Total vcore-milliseconds taken by all reduce tasks=2279
+		Total megabyte-milliseconds taken by all map tasks=2125824
+		Total megabyte-milliseconds taken by all reduce tasks=2333696
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=107
+		CPU time spent (ms)=3120
+		Physical memory (bytes) snapshot=480444416
+		Virtual memory (bytes) snapshot=4365074432
+		Total committed heap usage (bytes)=340787200
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 17:55:20  [ main:119988 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:55:21  [ main:121161 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:55:22  [ main:122168 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:55:23  [ main:122491 ] - [ INFO ]  number of splits:1
+2016-09-18 17:55:23  [ main:122665 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0079
+2016-09-18 17:55:23  [ main:122919 ] - [ INFO ]  Submitted application application_1473744425337_0079
+2016-09-18 17:55:23  [ main:122988 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0079/
+2016-09-18 17:55:23  [ main:122988 ] - [ INFO ]  Running job: job_1473744425337_0079
+2016-09-18 17:55:39  [ main:138800 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:55:39  [ main:139152 ] - [ INFO ]  Job job_1473744425337_0079 running in uber mode : false
+2016-09-18 17:55:39  [ main:139152 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:55:39  [ main:139304 ] - [ INFO ]  Job job_1473744425337_0079 completed successfully
+2016-09-18 17:55:39  [ main:139414 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1985
+		Total time spent by all reduces in occupied slots (ms)=2164
+		Total time spent by all map tasks (ms)=1985
+		Total time spent by all reduce tasks (ms)=2164
+		Total vcore-milliseconds taken by all map tasks=1985
+		Total vcore-milliseconds taken by all reduce tasks=2164
+		Total megabyte-milliseconds taken by all map tasks=2032640
+		Total megabyte-milliseconds taken by all reduce tasks=2215936
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=98
+		CPU time spent (ms)=2820
+		Physical memory (bytes) snapshot=475377664
+		Virtual memory (bytes) snapshot=4359933952
+		Total committed heap usage (bytes)=344457216
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 17:55:40  [ main:140074 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:55:40  [ main:140124 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:55:43  [ main:143409 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:55:45  [ main:144852 ] - [ INFO ]  number of splits:1
+2016-09-18 17:55:46  [ main:145569 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0080
+2016-09-18 17:55:46  [ main:146193 ] - [ INFO ]  Submitted application application_1473744425337_0080
+2016-09-18 17:55:46  [ main:146302 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0080/
+2016-09-18 17:55:46  [ main:146302 ] - [ INFO ]  Running job: job_1473744425337_0080
+2016-09-18 17:55:59  [ main:159208 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:55:59  [ main:159296 ] - [ INFO ]  Job job_1473744425337_0080 running in uber mode : false
+2016-09-18 17:55:59  [ main:159297 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:55:59  [ main:159403 ] - [ INFO ]  Job job_1473744425337_0080 completed successfully
+2016-09-18 17:56:00  [ main:159458 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2078
+		Total time spent by all reduces in occupied slots (ms)=2252
+		Total time spent by all map tasks (ms)=2078
+		Total time spent by all reduce tasks (ms)=2252
+		Total vcore-milliseconds taken by all map tasks=2078
+		Total vcore-milliseconds taken by all reduce tasks=2252
+		Total megabyte-milliseconds taken by all map tasks=2127872
+		Total megabyte-milliseconds taken by all reduce tasks=2306048
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=106
+		CPU time spent (ms)=2890
+		Physical memory (bytes) snapshot=475365376
+		Virtual memory (bytes) snapshot=4361732096
+		Total committed heap usage (bytes)=347078656
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 17:56:01  [ main:161343 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:56:02  [ main:161574 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:56:03  [ main:163381 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:56:04  [ main:163703 ] - [ INFO ]  number of splits:1
+2016-09-18 17:56:04  [ main:164032 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0081
+2016-09-18 17:56:05  [ main:164459 ] - [ INFO ]  Submitted application application_1473744425337_0081
+2016-09-18 17:56:05  [ main:164480 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0081/
+2016-09-18 17:56:05  [ main:164480 ] - [ INFO ]  Running job: job_1473744425337_0081
+2016-09-18 17:56:19  [ main:178634 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:56:19  [ main:178716 ] - [ INFO ]  Job job_1473744425337_0081 running in uber mode : false
+2016-09-18 17:56:19  [ main:178716 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:56:19  [ main:178758 ] - [ INFO ]  Job job_1473744425337_0081 completed successfully
+2016-09-18 17:56:19  [ main:178774 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1983
+		Total time spent by all reduces in occupied slots (ms)=2205
+		Total time spent by all map tasks (ms)=1983
+		Total time spent by all reduce tasks (ms)=2205
+		Total vcore-milliseconds taken by all map tasks=1983
+		Total vcore-milliseconds taken by all reduce tasks=2205
+		Total megabyte-milliseconds taken by all map tasks=2030592
+		Total megabyte-milliseconds taken by all reduce tasks=2257920
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=97
+		CPU time spent (ms)=2900
+		Physical memory (bytes) snapshot=481013760
+		Virtual memory (bytes) snapshot=4357488640
+		Total committed heap usage (bytes)=344457216
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 17:56:19  [ main:179120 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:56:20  [ main:180366 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:56:23  [ main:182753 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:56:23  [ main:183129 ] - [ INFO ]  number of splits:1
+2016-09-18 17:56:25  [ main:184484 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0082
+2016-09-18 17:56:25  [ main:184823 ] - [ INFO ]  Submitted application application_1473744425337_0082
+2016-09-18 17:56:25  [ main:184840 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0082/
+2016-09-18 17:56:25  [ main:184840 ] - [ INFO ]  Running job: job_1473744425337_0082
+2016-09-18 17:56:38  [ main:198173 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:56:38  [ main:198221 ] - [ INFO ]  Job job_1473744425337_0082 running in uber mode : false
+2016-09-18 17:56:38  [ main:198222 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:56:38  [ main:198252 ] - [ INFO ]  Job job_1473744425337_0082 completed successfully
+2016-09-18 17:56:38  [ main:198267 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2117
+		Total time spent by all reduces in occupied slots (ms)=2262
+		Total time spent by all map tasks (ms)=2117
+		Total time spent by all reduce tasks (ms)=2262
+		Total vcore-milliseconds taken by all map tasks=2117
+		Total vcore-milliseconds taken by all reduce tasks=2262
+		Total megabyte-milliseconds taken by all map tasks=2167808
+		Total megabyte-milliseconds taken by all reduce tasks=2316288
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=107
+		CPU time spent (ms)=3250
+		Physical memory (bytes) snapshot=492978176
+		Virtual memory (bytes) snapshot=4364554240
+		Total committed heap usage (bytes)=344457216
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 17:56:39  [ main:198434 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:56:39  [ main:198475 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:56:39  [ main:198874 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:56:39  [ main:199060 ] - [ INFO ]  number of splits:1
+2016-09-18 17:56:39  [ main:199270 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0083
+2016-09-18 17:56:39  [ main:199413 ] - [ INFO ]  Submitted application application_1473744425337_0083
+2016-09-18 17:56:40  [ main:199447 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0083/
+2016-09-18 17:56:40  [ main:199447 ] - [ INFO ]  Running job: job_1473744425337_0083
+2016-09-18 17:56:58  [ main:217952 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:56:58  [ main:218188 ] - [ INFO ]  Job job_1473744425337_0083 running in uber mode : false
+2016-09-18 17:56:58  [ main:218189 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:56:58  [ main:218302 ] - [ INFO ]  Job job_1473744425337_0083 completed successfully
+2016-09-18 17:56:58  [ main:218351 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244333
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2106
+		Total time spent by all reduces in occupied slots (ms)=2274
+		Total time spent by all map tasks (ms)=2106
+		Total time spent by all reduce tasks (ms)=2274
+		Total vcore-milliseconds taken by all map tasks=2106
+		Total vcore-milliseconds taken by all reduce tasks=2274
+		Total megabyte-milliseconds taken by all map tasks=2156544
+		Total megabyte-milliseconds taken by all reduce tasks=2328576
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=109
+		CPU time spent (ms)=2810
+		Physical memory (bytes) snapshot=475611136
+		Virtual memory (bytes) snapshot=4360409088
+		Total committed heap usage (bytes)=344981504
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 17:56:59  [ main:219372 ] - [ INFO ]  Clustering data
+2016-09-18 17:56:59  [ main:219372 ] - [ INFO ]  Running Clustering
+2016-09-18 17:56:59  [ main:219372 ] - [ INFO ]  Input: /kmeans/input/seqfile Clusters In: /kmeans/output Out: /kmeans/output
+2016-09-18 17:57:00  [ main:219585 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:57:00  [ main:219656 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:57:04  [ main:223466 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:57:05  [ main:224537 ] - [ INFO ]  number of splits:1
+2016-09-18 17:57:05  [ main:224797 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0084
+2016-09-18 17:57:05  [ main:224943 ] - [ INFO ]  Submitted application application_1473744425337_0084
+2016-09-18 17:57:05  [ main:224965 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0084/
+2016-09-18 17:57:05  [ main:224965 ] - [ INFO ]  Running job: job_1473744425337_0084
+2016-09-18 17:57:13  [ main:233395 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:57:14  [ main:233486 ] - [ INFO ]  Job job_1473744425337_0084 running in uber mode : false
+2016-09-18 17:57:14  [ main:233486 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:57:14  [ main:233524 ] - [ INFO ]  Job job_1473744425337_0084 completed successfully
+2016-09-18 17:57:14  [ main:233563 ] - [ INFO ]  Counters: 29
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=118912
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=10244
+		HDFS: Number of bytes written=14723
+		HDFS: Number of read operations=13
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2111
+		Total time spent by all map tasks (ms)=2111
+		Total vcore-milliseconds taken by all map tasks=2111
+		Total megabyte-milliseconds taken by all map tasks=2161664
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=150
+		Input split bytes=117
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=54
+		CPU time spent (ms)=1310
+		Physical memory (bytes) snapshot=187183104
+		Virtual memory (bytes) snapshot=2182418432
+		Total committed heap usage (bytes)=146276352
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=14723
+2016-09-18 17:57:28  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-18 17:57:30  [ main:2308 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:57:31  [ main:2925 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:57:32  [ main:4405 ] - [ INFO ]  Total input paths to process : 2
+2016-09-18 17:57:33  [ main:5170 ] - [ INFO ]  number of splits:2
+2016-09-18 17:57:33  [ main:5414 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0085
+2016-09-18 17:57:33  [ main:5669 ] - [ INFO ]  Submitted application application_1473744425337_0085
+2016-09-18 17:57:33  [ main:5716 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0085/
+2016-09-18 17:57:33  [ main:5717 ] - [ INFO ]  Running job: job_1473744425337_0085
+2016-09-18 17:57:52  [ main:24041 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=FAILED. Redirecting to job history server
+2016-09-18 17:57:52  [ main:24432 ] - [ INFO ]  Job job_1473744425337_0085 running in uber mode : false
+2016-09-18 17:57:52  [ main:24434 ] - [ INFO ]   map 50% reduce 100%
+2016-09-18 17:57:52  [ main:24524 ] - [ INFO ]  Task Id : attempt_1473744425337_0085_m_000001_0, Status : FAILED
+2016-09-18 17:57:52  [ main:24614 ] - [ INFO ]  Task Id : attempt_1473744425337_0085_m_000001_1, Status : FAILED
+2016-09-18 17:57:52  [ main:24689 ] - [ INFO ]  Task Id : attempt_1473744425337_0085_m_000001_2, Status : FAILED
+2016-09-18 17:57:52  [ main:24758 ] - [ INFO ]  Task Id : attempt_1473744425337_0085_m_000001_3, Status : FAILED
+2016-09-18 17:57:52  [ main:24878 ] - [ INFO ]  Job job_1473744425337_0085 failed with state FAILED due to: 
+2016-09-18 17:59:13  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-18 17:59:15  [ main:2134 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:59:15  [ main:2554 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:59:16  [ main:3206 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:59:17  [ main:3881 ] - [ INFO ]  number of splits:1
+2016-09-18 17:59:18  [ main:4737 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0086
+2016-09-18 17:59:18  [ main:5119 ] - [ INFO ]  Submitted application application_1473744425337_0086
+2016-09-18 17:59:18  [ main:5168 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0086/
+2016-09-18 17:59:18  [ main:5169 ] - [ INFO ]  Running job: job_1473744425337_0086
+2016-09-18 17:59:26  [ main:13082 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:59:26  [ main:13133 ] - [ INFO ]  Job job_1473744425337_0086 running in uber mode : false
+2016-09-18 17:59:26  [ main:13134 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:59:26  [ main:13182 ] - [ INFO ]  Job job_1473744425337_0086 completed successfully
+2016-09-18 17:59:26  [ main:13252 ] - [ INFO ]  Counters: 29
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=118252
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2664
+		HDFS: Number of bytes written=7500
+		HDFS: Number of read operations=5
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1935
+		Total time spent by all map tasks (ms)=1935
+		Total vcore-milliseconds taken by all map tasks=1935
+		Total megabyte-milliseconds taken by all map tasks=1981440
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=150
+		Input split bytes=114
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=52
+		CPU time spent (ms)=860
+		Physical memory (bytes) snapshot=174182400
+		Virtual memory (bytes) snapshot=2178142208
+		Total committed heap usage (bytes)=149946368
+	File Input Format Counters 
+		Bytes Read=2550
+	File Output Format Counters 
+		Bytes Written=7500
+2016-09-18 17:59:27  [ main:13783 ] - [ INFO ]  Got brand-new compressor [.deflate]
+2016-09-18 17:59:27  [ main:13802 ] - [ INFO ]  Wrote 10 Klusters to /kmeans/input/initialPoints/part-randomSeed
+2016-09-18 17:59:27  [ main:13922 ] - [ INFO ]  Input: /kmeans/input/seqfile Clusters In: /kmeans/input/initialPoints Out: /kmeans/output
+2016-09-18 17:59:27  [ main:13923 ] - [ INFO ]  convergence: 0.01 max Iterations: 10
+2016-09-18 17:59:27  [ main:14009 ] - [ INFO ]  Got brand-new decompressor [.deflate]
+2016-09-18 17:59:28  [ main:15416 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:59:28  [ main:15491 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:59:29  [ main:16341 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:59:29  [ main:16622 ] - [ INFO ]  number of splits:1
+2016-09-18 17:59:30  [ main:16912 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0087
+2016-09-18 17:59:30  [ main:17130 ] - [ INFO ]  Submitted application application_1473744425337_0087
+2016-09-18 17:59:30  [ main:17162 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0087/
+2016-09-18 17:59:30  [ main:17162 ] - [ INFO ]  Running job: job_1473744425337_0087
+2016-09-18 17:59:45  [ main:32595 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 17:59:46  [ main:32697 ] - [ INFO ]  Job job_1473744425337_0087 running in uber mode : false
+2016-09-18 17:59:46  [ main:32698 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 17:59:46  [ main:32744 ] - [ INFO ]  Job job_1473744425337_0087 completed successfully
+2016-09-18 17:59:46  [ main:32772 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2616
+		FILE: Number of bytes written=243589
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=15585
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=53
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2005
+		Total time spent by all reduces in occupied slots (ms)=2229
+		Total time spent by all map tasks (ms)=2005
+		Total time spent by all reduce tasks (ms)=2229
+		Total vcore-milliseconds taken by all map tasks=2005
+		Total vcore-milliseconds taken by all reduce tasks=2229
+		Total megabyte-milliseconds taken by all map tasks=2053120
+		Total megabyte-milliseconds taken by all reduce tasks=2282496
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2580
+		Map output materialized bytes=2616
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2616
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=104
+		CPU time spent (ms)=3090
+		Physical memory (bytes) snapshot=482525184
+		Virtual memory (bytes) snapshot=4358979584
+		Total committed heap usage (bytes)=344981504
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 17:59:46  [ main:32965 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 17:59:46  [ main:33019 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 17:59:46  [ main:33576 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 17:59:47  [ main:34015 ] - [ INFO ]  number of splits:1
+2016-09-18 17:59:47  [ main:34344 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0088
+2016-09-18 17:59:47  [ main:34554 ] - [ INFO ]  Submitted application application_1473744425337_0088
+2016-09-18 17:59:47  [ main:34646 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0088/
+2016-09-18 17:59:47  [ main:34646 ] - [ INFO ]  Running job: job_1473744425337_0088
+2016-09-18 18:00:05  [ main:52394 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 18:00:05  [ main:52607 ] - [ INFO ]  Job job_1473744425337_0088 running in uber mode : false
+2016-09-18 18:00:05  [ main:52608 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 18:00:06  [ main:52659 ] - [ INFO ]  Job job_1473744425337_0088 completed successfully
+2016-09-18 18:00:06  [ main:52689 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2121
+		Total time spent by all reduces in occupied slots (ms)=2139
+		Total time spent by all map tasks (ms)=2121
+		Total time spent by all reduce tasks (ms)=2139
+		Total vcore-milliseconds taken by all map tasks=2121
+		Total vcore-milliseconds taken by all reduce tasks=2139
+		Total megabyte-milliseconds taken by all map tasks=2171904
+		Total megabyte-milliseconds taken by all reduce tasks=2190336
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=99
+		CPU time spent (ms)=2830
+		Physical memory (bytes) snapshot=482533376
+		Virtual memory (bytes) snapshot=4356243456
+		Total committed heap usage (bytes)=342360064
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 18:00:07  [ main:53720 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 18:00:08  [ main:54868 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 18:00:08  [ main:55457 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 18:00:08  [ main:55642 ] - [ INFO ]  number of splits:1
+2016-09-18 18:00:09  [ main:55958 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0089
+2016-09-18 18:00:09  [ main:56100 ] - [ INFO ]  Submitted application application_1473744425337_0089
+2016-09-18 18:00:09  [ main:56121 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0089/
+2016-09-18 18:00:09  [ main:56121 ] - [ INFO ]  Running job: job_1473744425337_0089
+2016-09-18 18:00:24  [ main:71562 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 18:00:25  [ main:72091 ] - [ INFO ]  Job job_1473744425337_0089 running in uber mode : false
+2016-09-18 18:00:25  [ main:72091 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 18:00:25  [ main:72298 ] - [ INFO ]  Job job_1473744425337_0089 completed successfully
+2016-09-18 18:00:25  [ main:72365 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2018
+		Total time spent by all reduces in occupied slots (ms)=2206
+		Total time spent by all map tasks (ms)=2018
+		Total time spent by all reduce tasks (ms)=2206
+		Total vcore-milliseconds taken by all map tasks=2018
+		Total vcore-milliseconds taken by all reduce tasks=2206
+		Total megabyte-milliseconds taken by all map tasks=2066432
+		Total megabyte-milliseconds taken by all reduce tasks=2258944
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=105
+		CPU time spent (ms)=3180
+		Physical memory (bytes) snapshot=506949632
+		Virtual memory (bytes) snapshot=4373991424
+		Total committed heap usage (bytes)=346030080
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 18:00:28  [ main:74721 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 18:00:28  [ main:74981 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 18:00:30  [ main:77564 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 18:00:32  [ main:79254 ] - [ INFO ]  number of splits:1
+2016-09-18 18:00:33  [ main:80262 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0090
+2016-09-18 18:00:34  [ main:81237 ] - [ INFO ]  Submitted application application_1473744425337_0090
+2016-09-18 18:00:34  [ main:81377 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0090/
+2016-09-18 18:00:34  [ main:81378 ] - [ INFO ]  Running job: job_1473744425337_0090
+2016-09-18 18:00:47  [ main:93979 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 18:00:47  [ main:94358 ] - [ INFO ]  Job job_1473744425337_0090 running in uber mode : false
+2016-09-18 18:00:47  [ main:94359 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 18:00:48  [ main:94660 ] - [ INFO ]  Job job_1473744425337_0090 completed successfully
+2016-09-18 18:00:48  [ main:94773 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2014
+		Total time spent by all reduces in occupied slots (ms)=2203
+		Total time spent by all map tasks (ms)=2014
+		Total time spent by all reduce tasks (ms)=2203
+		Total vcore-milliseconds taken by all map tasks=2014
+		Total vcore-milliseconds taken by all reduce tasks=2203
+		Total megabyte-milliseconds taken by all map tasks=2062336
+		Total megabyte-milliseconds taken by all reduce tasks=2255872
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=111
+		CPU time spent (ms)=3030
+		Physical memory (bytes) snapshot=477081600
+		Virtual memory (bytes) snapshot=4360040448
+		Total committed heap usage (bytes)=344457216
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 18:00:49  [ main:96201 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 18:00:49  [ main:96599 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 18:00:52  [ main:99548 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 18:00:54  [ main:101122 ] - [ INFO ]  number of splits:1
+2016-09-18 18:00:55  [ main:102279 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0091
+2016-09-18 18:00:56  [ main:103557 ] - [ INFO ]  Submitted application application_1473744425337_0091
+2016-09-18 18:00:57  [ main:103720 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0091/
+2016-09-18 18:00:57  [ main:103720 ] - [ INFO ]  Running job: job_1473744425337_0091
+2016-09-18 18:01:09  [ main:116464 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 18:01:10  [ main:116786 ] - [ INFO ]  Job job_1473744425337_0091 running in uber mode : false
+2016-09-18 18:01:10  [ main:116786 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 18:01:10  [ main:116978 ] - [ INFO ]  Job job_1473744425337_0091 completed successfully
+2016-09-18 18:01:10  [ main:117074 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2009
+		Total time spent by all reduces in occupied slots (ms)=2233
+		Total time spent by all map tasks (ms)=2009
+		Total time spent by all reduce tasks (ms)=2233
+		Total vcore-milliseconds taken by all map tasks=2009
+		Total vcore-milliseconds taken by all reduce tasks=2233
+		Total megabyte-milliseconds taken by all map tasks=2057216
+		Total megabyte-milliseconds taken by all reduce tasks=2286592
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=99
+		CPU time spent (ms)=3070
+		Physical memory (bytes) snapshot=479891456
+		Virtual memory (bytes) snapshot=4360564736
+		Total committed heap usage (bytes)=344981504
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 18:01:11  [ main:118555 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 18:01:13  [ main:119994 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 18:01:16  [ main:123072 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 18:01:17  [ main:124630 ] - [ INFO ]  number of splits:1
+2016-09-18 18:01:19  [ main:125885 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0092
+2016-09-18 18:01:20  [ main:126975 ] - [ INFO ]  Submitted application application_1473744425337_0092
+2016-09-18 18:01:20  [ main:127176 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0092/
+2016-09-18 18:01:20  [ main:127176 ] - [ INFO ]  Running job: job_1473744425337_0092
+2016-09-18 18:01:33  [ main:139894 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 18:01:33  [ main:140251 ] - [ INFO ]  Job job_1473744425337_0092 running in uber mode : false
+2016-09-18 18:01:33  [ main:140251 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 18:01:33  [ main:140496 ] - [ INFO ]  Job job_1473744425337_0092 completed successfully
+2016-09-18 18:01:33  [ main:140583 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2035
+		Total time spent by all reduces in occupied slots (ms)=2185
+		Total time spent by all map tasks (ms)=2035
+		Total time spent by all reduce tasks (ms)=2185
+		Total vcore-milliseconds taken by all map tasks=2035
+		Total vcore-milliseconds taken by all reduce tasks=2185
+		Total megabyte-milliseconds taken by all map tasks=2083840
+		Total megabyte-milliseconds taken by all reduce tasks=2237440
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=98
+		CPU time spent (ms)=3000
+		Physical memory (bytes) snapshot=479838208
+		Virtual memory (bytes) snapshot=4362928128
+		Total committed heap usage (bytes)=343408640
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 18:01:35  [ main:141945 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 18:01:35  [ main:142581 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 18:01:39  [ main:145917 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 18:01:40  [ main:147462 ] - [ INFO ]  number of splits:1
+2016-09-18 18:01:41  [ main:148588 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0093
+2016-09-18 18:01:43  [ main:150607 ] - [ INFO ]  Submitted application application_1473744425337_0093
+2016-09-18 18:01:44  [ main:150714 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0093/
+2016-09-18 18:01:44  [ main:150714 ] - [ INFO ]  Running job: job_1473744425337_0093
+2016-09-18 18:01:56  [ main:163430 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 18:01:57  [ main:163814 ] - [ INFO ]  Job job_1473744425337_0093 running in uber mode : false
+2016-09-18 18:01:57  [ main:163814 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 18:01:57  [ main:164068 ] - [ INFO ]  Job job_1473744425337_0093 completed successfully
+2016-09-18 18:01:57  [ main:164178 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1976
+		Total time spent by all reduces in occupied slots (ms)=2183
+		Total time spent by all map tasks (ms)=1976
+		Total time spent by all reduce tasks (ms)=2183
+		Total vcore-milliseconds taken by all map tasks=1976
+		Total vcore-milliseconds taken by all reduce tasks=2183
+		Total megabyte-milliseconds taken by all map tasks=2023424
+		Total megabyte-milliseconds taken by all reduce tasks=2235392
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=109
+		CPU time spent (ms)=2880
+		Physical memory (bytes) snapshot=475586560
+		Virtual memory (bytes) snapshot=4358025216
+		Total committed heap usage (bytes)=344981504
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 18:01:58  [ main:165399 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 18:01:59  [ main:165796 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 18:02:01  [ main:168540 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 18:02:03  [ main:170070 ] - [ INFO ]  number of splits:1
+2016-09-18 18:02:04  [ main:171447 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0094
+2016-09-18 18:02:05  [ main:172320 ] - [ INFO ]  Submitted application application_1473744425337_0094
+2016-09-18 18:02:05  [ main:172528 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0094/
+2016-09-18 18:02:05  [ main:172528 ] - [ INFO ]  Running job: job_1473744425337_0094
+2016-09-18 18:02:18  [ main:184986 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 18:02:18  [ main:185334 ] - [ INFO ]  Job job_1473744425337_0094 running in uber mode : false
+2016-09-18 18:02:18  [ main:185334 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 18:02:18  [ main:185573 ] - [ INFO ]  Job job_1473744425337_0094 completed successfully
+2016-09-18 18:02:19  [ main:185904 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2075
+		Total time spent by all reduces in occupied slots (ms)=2193
+		Total time spent by all map tasks (ms)=2075
+		Total time spent by all reduce tasks (ms)=2193
+		Total vcore-milliseconds taken by all map tasks=2075
+		Total vcore-milliseconds taken by all reduce tasks=2193
+		Total megabyte-milliseconds taken by all map tasks=2124800
+		Total megabyte-milliseconds taken by all reduce tasks=2245632
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=111
+		CPU time spent (ms)=2690
+		Physical memory (bytes) snapshot=478195712
+		Virtual memory (bytes) snapshot=4361289728
+		Total committed heap usage (bytes)=346554368
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 18:02:19  [ main:186579 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 18:02:21  [ main:187883 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 18:02:25  [ main:192256 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 18:02:27  [ main:194505 ] - [ INFO ]  number of splits:1
+2016-09-18 18:02:29  [ main:195773 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0095
+2016-09-18 18:02:30  [ main:196674 ] - [ INFO ]  Submitted application application_1473744425337_0095
+2016-09-18 18:02:30  [ main:196698 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0095/
+2016-09-18 18:02:30  [ main:196698 ] - [ INFO ]  Running job: job_1473744425337_0095
+2016-09-18 18:02:42  [ main:209395 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 18:02:43  [ main:209688 ] - [ INFO ]  Job job_1473744425337_0095 running in uber mode : false
+2016-09-18 18:02:43  [ main:209688 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 18:02:43  [ main:209938 ] - [ INFO ]  Job job_1473744425337_0095 completed successfully
+2016-09-18 18:02:43  [ main:210052 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244329
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1964
+		Total time spent by all reduces in occupied slots (ms)=2217
+		Total time spent by all map tasks (ms)=1964
+		Total time spent by all reduce tasks (ms)=2217
+		Total vcore-milliseconds taken by all map tasks=1964
+		Total vcore-milliseconds taken by all reduce tasks=2217
+		Total megabyte-milliseconds taken by all map tasks=2011136
+		Total megabyte-milliseconds taken by all reduce tasks=2270208
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=103
+		CPU time spent (ms)=3010
+		Physical memory (bytes) snapshot=478208000
+		Virtual memory (bytes) snapshot=4367179776
+		Total committed heap usage (bytes)=344981504
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 18:02:44  [ main:211152 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-18 18:02:44  [ main:211400 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-18 18:02:47  [ main:213911 ] - [ INFO ]  Total input paths to process : 1
+2016-09-18 18:02:48  [ main:215510 ] - [ INFO ]  number of splits:1
+2016-09-18 18:02:49  [ main:216471 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0096
+2016-09-18 18:02:51  [ main:218274 ] - [ INFO ]  Submitted application application_1473744425337_0096
+2016-09-18 18:02:51  [ main:218315 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0096/
+2016-09-18 18:02:51  [ main:218315 ] - [ INFO ]  Running job: job_1473744425337_0096
+2016-09-18 18:03:05  [ main:231788 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-18 18:03:05  [ main:232036 ] - [ INFO ]  Job job_1473744425337_0096 running in uber mode : false
+2016-09-18 18:03:05  [ main:232037 ] - [ INFO ]   map 100% reduce 100%
+2016-09-18 18:03:05  [ main:232210 ] - [ INFO ]  Job job_1473744425337_0096 completed successfully
+2016-09-18 18:03:05  [ main:232274 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=2986
+		FILE: Number of bytes written=244333
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=12871
+		HDFS: Number of bytes written=2433
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2031
+		Total time spent by all reduces in occupied slots (ms)=2165
+		Total time spent by all map tasks (ms)=2031
+		Total time spent by all reduce tasks (ms)=2165
+		Total vcore-milliseconds taken by all map tasks=2031
+		Total vcore-milliseconds taken by all reduce tasks=2165
+		Total megabyte-milliseconds taken by all map tasks=2079744
+		Total megabyte-milliseconds taken by all reduce tasks=2216960
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=10
+		Map output bytes=2940
+		Map output materialized bytes=2986
+		Input split bytes=117
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=10
+		Reduce shuffle bytes=2986
+		Reduce input records=10
+		Reduce output records=10
+		Spilled Records=20
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=105
+		CPU time spent (ms)=2540
+		Physical memory (bytes) snapshot=462848000
+		Virtual memory (bytes) snapshot=4359098368
+		Total committed heap usage (bytes)=344457216
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=7500
+	File Output Format Counters 
+		Bytes Written=2433
+2016-09-18 18:20:06  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-18 18:20:49  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-18 18:21:31  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-18 18:46:17  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-18 18:50:14  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable

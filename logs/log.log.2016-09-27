@@ -1,0 +1,48 @@
+2016-09-27 17:38:12  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-27 17:38:12  [ main:21 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@30b8a058, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7494e528, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4bbfb90a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7c29daf3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@9660f4e]
+2016-09-27 17:38:13  [ main:130 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-27 17:38:13  [ main:732 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-27 17:38:13  [ main:758 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7e2d773b: startup date [Tue Sep 27 17:38:13 CST 2016]; root of context hierarchy
+2016-09-27 17:38:13  [ main:949 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-27 17:38:14  [ main:1469 ] - [ INFO ]  {dataSource-1} inited
+2016-09-27 17:38:15  [ main:2128 ] - [ ERROR ]  Unexpected true while processing Job-Specific Options:
+2016-09-27 17:38:15  [ Thread-1:2145 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7e2d773b: startup date [Tue Sep 27 17:38:13 CST 2016]; root of context hierarchy
+2016-09-27 17:38:15  [ Thread-1:2150 ] - [ INFO ]  {dataSource-1} closed
+2016-09-27 17:38:56  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-27 17:38:56  [ main:11 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@30b8a058, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7494e528, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4bbfb90a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7c29daf3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@9660f4e]
+2016-09-27 17:38:56  [ main:83 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-27 17:38:56  [ main:449 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-27 17:38:56  [ main:474 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7e2d773b: startup date [Tue Sep 27 17:38:56 CST 2016]; root of context hierarchy
+2016-09-27 17:38:56  [ main:634 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-27 17:38:57  [ main:1065 ] - [ INFO ]  {dataSource-1} inited
+2016-09-27 17:38:57  [ main:1606 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[/naivebayes/vectors/tfidf-vectors], --method=[sequential], --overwrite=null, --randomSelectionPct=[20], --sequenceFiles=null, --startPhase=[0], --tempDir=[temp], --testOutput=[/naivebayes/testOutput], --trainingOutput=[/naivebayes/trainingOutput]}
+2016-09-27 17:39:10  [ main:14141 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-27 17:39:12  [ main:16647 ] - [ INFO ]  part-r-00000 has 5262 lines
+2016-09-27 17:39:12  [ main:16647 ] - [ INFO ]  part-r-00000 test split size is 1052 based on random selection percentage 20
+2016-09-27 17:39:13  [ main:17157 ] - [ INFO ]  Got brand-new compressor [.deflate]
+2016-09-27 17:39:13  [ main:17442 ] - [ INFO ]  Got brand-new compressor [.deflate]
+2016-09-27 17:39:14  [ main:18360 ] - [ INFO ]  file: part-r-00000, input: 5262 train: 620, test: 150 starting at 0
+2016-09-27 17:39:14  [ Thread-1:18363 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7e2d773b: startup date [Tue Sep 27 17:38:56 CST 2016]; root of context hierarchy
+2016-09-27 17:39:14  [ Thread-1:18367 ] - [ INFO ]  {dataSource-1} closed
+2016-09-27 17:40:53  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/naivebayes/vectors/tfidf-vectors/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-27 17:40:55  [ main:1282 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-27 17:41:45  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/naivebayes/vectors/tfidf-vectors/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-27 17:41:46  [ main:1267 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-27 17:42:02  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-27 17:42:02  [ main:23 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@30b8a058, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7494e528, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4bbfb90a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7c29daf3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@9660f4e]
+2016-09-27 17:42:02  [ main:151 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-27 17:42:02  [ main:549 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-27 17:42:02  [ main:569 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7e2d773b: startup date [Tue Sep 27 17:42:02 CST 2016]; root of context hierarchy
+2016-09-27 17:42:03  [ main:709 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-27 17:42:03  [ main:1138 ] - [ INFO ]  {dataSource-1} inited
+2016-09-27 17:42:04  [ main:1699 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[/naivebayes/vectors/tfidf-vectors], --method=[sequential], --overwrite=null, --randomSelectionPct=[20], --sequenceFiles=null, --startPhase=[0], --tempDir=[temp], --testOutput=[/naivebayes/testOutput], --trainingOutput=[/naivebayes/trainingOutput]}
+2016-09-27 17:42:04  [ main:1776 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-27 17:42:04  [ main:2279 ] - [ INFO ]  Deleting /naivebayes/trainingOutput
+2016-09-27 17:42:04  [ main:2301 ] - [ INFO ]  Deleting /naivebayes/testOutput
+2016-09-27 17:42:05  [ main:3683 ] - [ INFO ]  part-r-00000 has 5262 lines
+2016-09-27 17:42:05  [ main:3683 ] - [ INFO ]  part-r-00000 test split size is 1052 based on random selection percentage 20
+2016-09-27 17:42:06  [ main:4092 ] - [ INFO ]  Got brand-new compressor [.deflate]
+2016-09-27 17:42:06  [ main:4373 ] - [ INFO ]  Got brand-new compressor [.deflate]
+2016-09-27 17:42:07  [ main:5421 ] - [ INFO ]  file: part-r-00000, input: 5262 train: 621, test: 149 starting at 0
+2016-09-27 17:42:07  [ Thread-1:5424 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7e2d773b: startup date [Tue Sep 27 17:42:02 CST 2016]; root of context hierarchy
+2016-09-27 17:42:07  [ Thread-1:5429 ] - [ INFO ]  {dataSource-1} closed

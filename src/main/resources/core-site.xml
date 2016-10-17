@@ -22,4 +22,8 @@
         <name>fs.defaultFS</name>
         <value>hdfs://master:9000/</value>
     </property>
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/home/zhichaos/app/hadoop2.7.2/data</value>
+    </property>
 </configuration>

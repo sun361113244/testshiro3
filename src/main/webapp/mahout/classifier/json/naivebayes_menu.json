@@ -1,0 +1,17 @@
+[{
+  "id":1,
+  "text":"目录",
+  "children":[{
+    "id":11,
+    "text":"参数输入" ,
+    "url": "naivebayes_input.html"
+  }, {
+    "id":12,
+    "text":"任务监控" ,
+    "url": "naivebayes_monitor.html"
+  },{
+    "id":13,
+    "text":"算法效果验证" ,
+    "url":"naivebayes_evaluate.html"
+  }]
+}]

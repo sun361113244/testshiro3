@@ -1,0 +1,53 @@
+<link href="../../../static/jslib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../../static/jslib/fontawesome4.2/css/font-awesome.css" rel="stylesheet">
+<script src="../../../static/jslib/jquery/jquery-1.11.2.min.js"></script>
+<script src="../../../static/jslib/bootstrap/js/bootstrap.min.js"></script>
+<script src = "../../../static/js/util.js"></script>
+
+<script>
+    function runnaivebayes(onCluster)
+    {
+        $.ajax({
+            type: "POST",
+            url: getContextPath() + "/naivebayesController/runnaivebayes",
+            data: {
+                onCluster : onCluster ,
+                isOverWrite : true ,
+                input : $('#input').val() ,
+                output : $('#output').val()
+            },
+            success: function (data) {
+                alert(data.result);
+            }
+        });
+    }
+</script>
+<style>
+    .naivebayes_input_path
+    {
+        width: 500px;
+        height: 25px;
+        padding-bottom: 5px;
+    }
+    .naivebayes_input_num
+    {
+        width: 500px;
+        height: 25px;
+    }
+</style>
+<div style="padding: 10px 0px 0px 10px">
+    <legend>必须输入选项</legend>
+    <table>
+        <tr>
+            <td><label class="control-label" for="input">input(path):</label></td>
+            <td><input type="text" id="input" class="naivebayes_input_path" maxlength="200" value="/naivebayes/input/irisNoLabel1.data" placeholder="输入数据的目录"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="output">output(path):</label></td>
+            <td><input type="text" id="output" class="naivebayes_input_path" maxlength="200" value="/naivebayes/output/" placeholder="结算结果的输出目录"></td>
+        </tr>
+    </table>
+
+    <button class="btn btn-primary" onclick="runnaivebayes(true)">提交集群运行</button>
+    <button class="btn btn-success" style="padding-left: 20px" onclick="runnaivebayes(false)">本地模式运行</button>
+</div>

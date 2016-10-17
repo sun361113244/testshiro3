@@ -1,0 +1,1306 @@
+2016-09-19 11:21:23  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 11:24:49  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 11:26:25  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 11:32:24  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 11:35:05  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 11:37:21  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 11:39:27  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 11:43:30  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 11:43:55  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 12:00:56  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:01:55  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:01:55  [ main:20 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-19 15:01:55  [ main:116 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:01:56  [ main:679 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:01:56  [ main:705 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:01:56 CST 2016]; root of context hierarchy
+2016-09-19 15:01:56  [ main:883 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:01:56  [ main:1323 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:01:57  [ main:1981 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:01:59  [ main:3604 ] - [ INFO ]  Deleting /kmeans/output
+2016-09-19 15:01:59  [ main:3706 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:01:59  [ main:4069 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:02:00  [ main:5577 ] - [ INFO ]  Total input paths to process : 3
+2016-09-19 15:02:01  [ main:5784 ] - [ INFO ]  number of splits:3
+2016-09-19 15:02:01  [ main:6021 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0097
+2016-09-19 15:02:01  [ main:6313 ] - [ INFO ]  Submitted application application_1473744425337_0097
+2016-09-19 15:02:01  [ main:6371 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0097/
+2016-09-19 15:02:01  [ main:6372 ] - [ INFO ]  Running job: job_1473744425337_0097
+2016-09-19 15:02:18  [ main:22765 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=FAILED. Redirecting to job history server
+2016-09-19 15:02:18  [ main:22830 ] - [ INFO ]  Job job_1473744425337_0097 running in uber mode : false
+2016-09-19 15:02:18  [ main:22832 ] - [ INFO ]   map 33% reduce 100%
+2016-09-19 15:02:18  [ main:22861 ] - [ INFO ]  Task Id : attempt_1473744425337_0097_m_000001_0, Status : FAILED
+2016-09-19 15:02:18  [ main:22879 ] - [ INFO ]  Task Id : attempt_1473744425337_0097_m_000002_0, Status : FAILED
+2016-09-19 15:02:18  [ main:22909 ] - [ INFO ]  Task Id : attempt_1473744425337_0097_m_000001_1, Status : FAILED
+2016-09-19 15:02:18  [ main:22923 ] - [ INFO ]  Task Id : attempt_1473744425337_0097_m_000002_1, Status : FAILED
+2016-09-19 15:02:18  [ main:22934 ] - [ INFO ]  Task Id : attempt_1473744425337_0097_m_000001_2, Status : FAILED
+2016-09-19 15:02:18  [ main:22944 ] - [ INFO ]  Task Id : attempt_1473744425337_0097_m_000002_2, Status : FAILED
+2016-09-19 15:02:18  [ main:22955 ] - [ INFO ]  Task Id : attempt_1473744425337_0097_m_000001_3, Status : FAILED
+2016-09-19 15:02:18  [ main:22984 ] - [ INFO ]  Job job_1473744425337_0097 failed with state FAILED due to: 
+2016-09-19 15:02:18  [ Thread-1:23027 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:01:56 CST 2016]; root of context hierarchy
+2016-09-19 15:02:18  [ Thread-1:23030 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:05:48  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:05:48  [ main:15 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5223e5ee, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@bef2d72, org.springframework.test.context.support.DirtiesContextTestExecutionListener@69b2283a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@22a637e7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6fe7aac8]
+2016-09-19 15:05:48  [ main:93 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:05:48  [ main:512 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:05:48  [ main:543 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@f5ac9e4: startup date [Mon Sep 19 15:05:48 CST 2016]; root of context hierarchy
+2016-09-19 15:05:48  [ main:747 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:05:49  [ main:1176 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:05:50  [ main:1840 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:06:00  [ main:12011 ] - [ INFO ]  Deleting /seqfile
+2016-09-19 15:06:16  [ Thread-1:28628 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@f5ac9e4: startup date [Mon Sep 19 15:05:48 CST 2016]; root of context hierarchy
+2016-09-19 15:06:16  [ Thread-1:28634 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:06:32  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:06:32  [ main:20 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5223e5ee, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@bef2d72, org.springframework.test.context.support.DirtiesContextTestExecutionListener@69b2283a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@22a637e7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6fe7aac8]
+2016-09-19 15:06:32  [ main:117 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:06:33  [ main:682 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:06:33  [ main:711 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@f5ac9e4: startup date [Mon Sep 19 15:06:33 CST 2016]; root of context hierarchy
+2016-09-19 15:06:33  [ main:880 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:06:34  [ main:1371 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:06:34  [ main:2093 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:07:03  [ Thread-1:31162 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@f5ac9e4: startup date [Mon Sep 19 15:06:33 CST 2016]; root of context hierarchy
+2016-09-19 15:07:03  [ Thread-1:31168 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:08:02  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:08:02  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5223e5ee, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@bef2d72, org.springframework.test.context.support.DirtiesContextTestExecutionListener@69b2283a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@22a637e7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6fe7aac8]
+2016-09-19 15:08:02  [ main:95 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:08:02  [ main:505 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:08:02  [ main:535 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@f5ac9e4: startup date [Mon Sep 19 15:08:02 CST 2016]; root of context hierarchy
+2016-09-19 15:08:03  [ main:797 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:08:03  [ main:1221 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:08:04  [ main:1875 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:08:31  [ Thread-1:29196 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@f5ac9e4: startup date [Mon Sep 19 15:08:02 CST 2016]; root of context hierarchy
+2016-09-19 15:08:31  [ Thread-1:29201 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:09:01  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:09:01  [ main:12 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5223e5ee, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@bef2d72, org.springframework.test.context.support.DirtiesContextTestExecutionListener@69b2283a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@22a637e7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6fe7aac8]
+2016-09-19 15:09:01  [ main:92 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:09:02  [ main:496 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:09:02  [ main:527 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@f5ac9e4: startup date [Mon Sep 19 15:09:02 CST 2016]; root of context hierarchy
+2016-09-19 15:09:02  [ main:786 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:09:02  [ main:1196 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:09:03  [ main:1866 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:09:23  [ Thread-1:21619 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@f5ac9e4: startup date [Mon Sep 19 15:09:02 CST 2016]; root of context hierarchy
+2016-09-19 15:09:23  [ Thread-1:21625 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:09:36  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:09:36  [ main:12 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-19 15:09:36  [ main:94 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:09:36  [ main:558 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:09:36  [ main:597 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:09:36 CST 2016]; root of context hierarchy
+2016-09-19 15:09:37  [ main:797 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:09:37  [ main:1234 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:09:38  [ main:1872 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:09:38  [ main:2465 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:09:39  [ main:2772 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:09:40  [ main:3613 ] - [ INFO ]  Total input paths to process : 3
+2016-09-19 15:09:40  [ main:3861 ] - [ INFO ]  number of splits:3
+2016-09-19 15:09:40  [ main:4086 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0098
+2016-09-19 15:09:40  [ main:4348 ] - [ INFO ]  Submitted application application_1473744425337_0098
+2016-09-19 15:09:40  [ main:4391 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0098/
+2016-09-19 15:09:40  [ main:4391 ] - [ INFO ]  Running job: job_1473744425337_0098
+2016-09-19 15:09:57  [ main:21313 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=FAILED. Redirecting to job history server
+2016-09-19 15:09:57  [ main:21365 ] - [ INFO ]  Job job_1473744425337_0098 running in uber mode : false
+2016-09-19 15:09:57  [ main:21366 ] - [ INFO ]   map 33% reduce 100%
+2016-09-19 15:09:57  [ main:21387 ] - [ INFO ]  Task Id : attempt_1473744425337_0098_m_000001_0, Status : FAILED
+2016-09-19 15:09:57  [ main:21411 ] - [ INFO ]  Task Id : attempt_1473744425337_0098_m_000002_0, Status : FAILED
+2016-09-19 15:09:57  [ main:21426 ] - [ INFO ]  Task Id : attempt_1473744425337_0098_m_000001_1, Status : FAILED
+2016-09-19 15:09:57  [ main:21436 ] - [ INFO ]  Task Id : attempt_1473744425337_0098_m_000002_1, Status : FAILED
+2016-09-19 15:09:57  [ main:21447 ] - [ INFO ]  Task Id : attempt_1473744425337_0098_m_000001_2, Status : FAILED
+2016-09-19 15:09:57  [ main:21471 ] - [ INFO ]  Task Id : attempt_1473744425337_0098_m_000002_2, Status : FAILED
+2016-09-19 15:09:57  [ main:21480 ] - [ INFO ]  Task Id : attempt_1473744425337_0098_m_000001_3, Status : FAILED
+2016-09-19 15:09:57  [ main:21532 ] - [ INFO ]  Job job_1473744425337_0098 failed with state FAILED due to: 
+2016-09-19 15:09:57  [ Thread-1:21566 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:09:36 CST 2016]; root of context hierarchy
+2016-09-19 15:09:57  [ Thread-1:21570 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:11:15  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:11:15  [ main:13 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5223e5ee, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@bef2d72, org.springframework.test.context.support.DirtiesContextTestExecutionListener@69b2283a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@22a637e7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6fe7aac8]
+2016-09-19 15:11:15  [ main:107 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:11:16  [ main:530 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:11:16  [ main:564 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@f5ac9e4: startup date [Mon Sep 19 15:11:16 CST 2016]; root of context hierarchy
+2016-09-19 15:11:16  [ main:733 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:11:16  [ main:1165 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:11:17  [ main:1891 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:11:19  [ main:3552 ] - [ INFO ]  Deleting /kmeans/output
+2016-09-19 15:11:23  [ main:8379 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:11:29  [ main:13771 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:11:30  [ main:15212 ] - [ INFO ]  Total input paths to process : 3
+2016-09-19 15:11:30  [ main:15498 ] - [ INFO ]  number of splits:3
+2016-09-19 15:11:31  [ main:16382 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0099
+2016-09-19 15:11:32  [ main:17326 ] - [ INFO ]  Submitted application application_1473744425337_0099
+2016-09-19 15:11:32  [ main:17513 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0099/
+2016-09-19 15:11:33  [ main:17517 ] - [ INFO ]  Running job: job_1473744425337_0099
+2016-09-19 15:11:50  [ main:34552 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=FAILED. Redirecting to job history server
+2016-09-19 15:11:50  [ main:34618 ] - [ INFO ]  Job job_1473744425337_0099 running in uber mode : false
+2016-09-19 15:11:50  [ main:34620 ] - [ INFO ]   map 33% reduce 100%
+2016-09-19 15:11:50  [ main:34718 ] - [ INFO ]  Task Id : attempt_1473744425337_0099_m_000001_0, Status : FAILED
+2016-09-19 15:11:50  [ main:34772 ] - [ INFO ]  Task Id : attempt_1473744425337_0099_m_000002_0, Status : FAILED
+2016-09-19 15:11:50  [ main:34798 ] - [ INFO ]  Task Id : attempt_1473744425337_0099_m_000001_1, Status : FAILED
+2016-09-19 15:11:50  [ main:34814 ] - [ INFO ]  Task Id : attempt_1473744425337_0099_m_000002_1, Status : FAILED
+2016-09-19 15:11:50  [ main:34828 ] - [ INFO ]  Task Id : attempt_1473744425337_0099_m_000001_2, Status : FAILED
+2016-09-19 15:11:50  [ main:34841 ] - [ INFO ]  Task Id : attempt_1473744425337_0099_m_000002_2, Status : FAILED
+2016-09-19 15:11:50  [ main:34865 ] - [ INFO ]  Task Id : attempt_1473744425337_0099_m_000001_3, Status : FAILED
+2016-09-19 15:11:50  [ main:34903 ] - [ INFO ]  Job job_1473744425337_0099 failed with state FAILED due to: 
+2016-09-19 15:12:15  [ Thread-1:60411 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@f5ac9e4: startup date [Mon Sep 19 15:11:16 CST 2016]; root of context hierarchy
+2016-09-19 15:12:15  [ Thread-1:60416 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:13:53  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:13:53  [ main:14 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-19 15:13:53  [ main:97 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:13:54  [ main:578 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:13:54  [ main:617 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:13:54 CST 2016]; root of context hierarchy
+2016-09-19 15:13:54  [ main:810 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:13:54  [ main:1242 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:13:55  [ main:1892 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:13:57  [ main:3922 ] - [ INFO ]  Deleting /kmeans/output
+2016-09-19 15:13:57  [ main:4210 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:13:58  [ main:4926 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:14:22  [ main:29490 ] - [ INFO ]  Total input paths to process : 3
+2016-09-19 15:14:24  [ main:31332 ] - [ INFO ]  number of splits:3
+2016-09-19 15:14:28  [ main:35489 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0100
+2016-09-19 15:14:30  [ main:36897 ] - [ INFO ]  Submitted application application_1473744425337_0100
+2016-09-19 15:14:30  [ main:37098 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0100/
+2016-09-19 15:14:30  [ main:37099 ] - [ INFO ]  Running job: job_1473744425337_0100
+2016-09-19 15:14:47  [ main:53737 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=FAILED. Redirecting to job history server
+2016-09-19 15:14:47  [ main:53933 ] - [ INFO ]  Job job_1473744425337_0100 running in uber mode : false
+2016-09-19 15:14:47  [ main:53936 ] - [ INFO ]   map 33% reduce 100%
+2016-09-19 15:14:47  [ main:53995 ] - [ INFO ]  Task Id : attempt_1473744425337_0100_m_000001_0, Status : FAILED
+2016-09-19 15:14:47  [ main:54133 ] - [ INFO ]  Task Id : attempt_1473744425337_0100_m_000002_0, Status : FAILED
+2016-09-19 15:14:47  [ main:54233 ] - [ INFO ]  Task Id : attempt_1473744425337_0100_m_000001_1, Status : FAILED
+2016-09-19 15:14:47  [ main:54431 ] - [ INFO ]  Task Id : attempt_1473744425337_0100_m_000002_1, Status : FAILED
+2016-09-19 15:14:48  [ main:54681 ] - [ INFO ]  Task Id : attempt_1473744425337_0100_m_000001_2, Status : FAILED
+2016-09-19 15:14:48  [ main:54788 ] - [ INFO ]  Task Id : attempt_1473744425337_0100_m_000002_2, Status : FAILED
+2016-09-19 15:14:48  [ main:54838 ] - [ INFO ]  Task Id : attempt_1473744425337_0100_m_000001_3, Status : FAILED
+2016-09-19 15:14:48  [ main:54984 ] - [ INFO ]  Job job_1473744425337_0100 failed with state FAILED due to: 
+2016-09-19 15:14:48  [ Thread-1:55089 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:13:54 CST 2016]; root of context hierarchy
+2016-09-19 15:14:48  [ Thread-1:55094 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:16:07  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:16:07  [ main:11 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-19 15:16:08  [ main:104 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:16:08  [ main:572 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:16:08  [ main:612 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:16:08 CST 2016]; root of context hierarchy
+2016-09-19 15:16:08  [ main:818 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:16:09  [ main:1259 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:16:09  [ main:1915 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:16:11  [ main:3510 ] - [ INFO ]  Deleting /kmeans/output
+2016-09-19 15:16:11  [ Thread-1:3535 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:16:08 CST 2016]; root of context hierarchy
+2016-09-19 15:16:11  [ Thread-1:3542 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:23:18  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:23:18  [ main:17 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-19 15:23:18  [ main:127 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:23:19  [ main:706 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:23:19  [ main:735 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:23:19 CST 2016]; root of context hierarchy
+2016-09-19 15:23:19  [ main:961 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:23:20  [ main:1556 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:23:20  [ main:2178 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:23:22  [ main:3942 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:23:22  [ main:4285 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:23:24  [ main:6319 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:23:25  [ main:6530 ] - [ INFO ]  number of splits:1
+2016-09-19 15:23:25  [ main:6748 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0101
+2016-09-19 15:23:25  [ main:7037 ] - [ INFO ]  Submitted application application_1473744425337_0101
+2016-09-19 15:23:25  [ main:7085 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0101/
+2016-09-19 15:23:25  [ main:7086 ] - [ INFO ]  Running job: job_1473744425337_0101
+2016-09-19 15:23:33  [ main:15349 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:23:34  [ main:16292 ] - [ INFO ]  Job job_1473744425337_0101 running in uber mode : false
+2016-09-19 15:23:34  [ main:16294 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:23:34  [ main:16353 ] - [ INFO ]  Job job_1473744425337_0101 completed successfully
+2016-09-19 15:23:35  [ main:16431 ] - [ INFO ]  Counters: 29
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=118277
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2664
+		HDFS: Number of bytes written=6750
+		HDFS: Number of read operations=5
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1990
+		Total time spent by all map tasks (ms)=1990
+		Total vcore-milliseconds taken by all map tasks=1990
+		Total megabyte-milliseconds taken by all map tasks=2037760
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=150
+		Input split bytes=114
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=55
+		CPU time spent (ms)=770
+		Physical memory (bytes) snapshot=175603712
+		Virtual memory (bytes) snapshot=2175754240
+		Total committed heap usage (bytes)=149946368
+	File Input Format Counters 
+		Bytes Read=2550
+	File Output Format Counters 
+		Bytes Written=6750
+2016-09-19 15:23:35  [ Thread-1:16445 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:23:19 CST 2016]; root of context hierarchy
+2016-09-19 15:23:35  [ Thread-1:16450 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:23:46  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:23:46  [ main:13 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-19 15:23:46  [ main:90 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:23:46  [ main:557 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:23:47  [ main:599 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:23:47 CST 2016]; root of context hierarchy
+2016-09-19 15:23:47  [ main:771 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:23:47  [ main:1239 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:23:48  [ main:1918 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:23:48  [ main:2438 ] - [ INFO ]  Deleting /kmeans/output
+2016-09-19 15:23:48  [ main:2522 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:23:49  [ main:2812 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:23:50  [ main:3612 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:23:50  [ main:3843 ] - [ INFO ]  number of splits:1
+2016-09-19 15:23:50  [ main:4060 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0102
+2016-09-19 15:23:50  [ main:4335 ] - [ INFO ]  Submitted application application_1473744425337_0102
+2016-09-19 15:23:50  [ main:4383 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0102/
+2016-09-19 15:23:50  [ main:4384 ] - [ INFO ]  Running job: job_1473744425337_0102
+2016-09-19 15:23:58  [ main:11785 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:23:58  [ main:11847 ] - [ INFO ]  Job job_1473744425337_0102 running in uber mode : false
+2016-09-19 15:23:58  [ main:11849 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:23:58  [ main:11891 ] - [ INFO ]  Job job_1473744425337_0102 completed successfully
+2016-09-19 15:23:58  [ main:12470 ] - [ INFO ]  Counters: 29
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=118277
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2664
+		HDFS: Number of bytes written=6750
+		HDFS: Number of read operations=5
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1865
+		Total time spent by all map tasks (ms)=1865
+		Total vcore-milliseconds taken by all map tasks=1865
+		Total megabyte-milliseconds taken by all map tasks=1909760
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=150
+		Input split bytes=114
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=50
+		CPU time spent (ms)=760
+		Physical memory (bytes) snapshot=176467968
+		Virtual memory (bytes) snapshot=2176794624
+		Total committed heap usage (bytes)=149946368
+	File Input Format Counters 
+		Bytes Read=2550
+	File Output Format Counters 
+		Bytes Written=6750
+2016-09-19 15:23:59  [ main:12900 ] - [ INFO ]  Got brand-new compressor [.deflate]
+2016-09-19 15:23:59  [ main:12910 ] - [ INFO ]  Wrote 3 Klusters to /kmeans/output/initialPoints/part-randomSeed
+2016-09-19 15:23:59  [ main:12969 ] - [ INFO ]  Input: /kmeans/output/seqfile Clusters In: /kmeans/output/initialPoints Out: /kmeans/output
+2016-09-19 15:23:59  [ main:12970 ] - [ INFO ]  convergence: 0.01 max Iterations: 10
+2016-09-19 15:23:59  [ main:13015 ] - [ INFO ]  Got brand-new decompressor [.deflate]
+2016-09-19 15:24:03  [ Thread-1:17350 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:23:47 CST 2016]; root of context hierarchy
+2016-09-19 15:24:03  [ Thread-1:17355 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:30:56  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:30:56  [ main:11 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-19 15:30:57  [ main:101 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:30:57  [ main:656 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:30:57  [ main:674 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:30:57 CST 2016]; root of context hierarchy
+2016-09-19 15:30:57  [ main:819 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:30:58  [ main:1298 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:30:58  [ main:1967 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:31:00  [ main:3574 ] - [ INFO ]  Deleting /kmeans/output
+2016-09-19 15:31:00  [ main:3666 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:31:00  [ main:3937 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:31:01  [ main:5054 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:31:02  [ main:5268 ] - [ INFO ]  number of splits:1
+2016-09-19 15:31:02  [ main:5499 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0103
+2016-09-19 15:31:02  [ main:5792 ] - [ INFO ]  Submitted application application_1473744425337_0103
+2016-09-19 15:31:02  [ main:5840 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0103/
+2016-09-19 15:31:02  [ main:5840 ] - [ INFO ]  Running job: job_1473744425337_0103
+2016-09-19 15:31:10  [ main:13794 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:31:10  [ main:14017 ] - [ INFO ]  Job job_1473744425337_0103 running in uber mode : false
+2016-09-19 15:31:10  [ main:14018 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:31:11  [ main:14198 ] - [ INFO ]  Job job_1473744425337_0103 completed successfully
+2016-09-19 15:31:11  [ main:14303 ] - [ INFO ]  Counters: 29
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=118277
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2664
+		HDFS: Number of bytes written=6750
+		HDFS: Number of read operations=5
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1872
+		Total time spent by all map tasks (ms)=1872
+		Total vcore-milliseconds taken by all map tasks=1872
+		Total megabyte-milliseconds taken by all map tasks=1916928
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=150
+		Input split bytes=114
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=45
+		CPU time spent (ms)=790
+		Physical memory (bytes) snapshot=174538752
+		Virtual memory (bytes) snapshot=2180403200
+		Total committed heap usage (bytes)=150470656
+	File Input Format Counters 
+		Bytes Read=2550
+	File Output Format Counters 
+		Bytes Written=6750
+2016-09-19 15:31:11  [ main:14868 ] - [ INFO ]  Got brand-new compressor [.deflate]
+2016-09-19 15:31:11  [ main:14878 ] - [ INFO ]  Wrote 3 Klusters to /kmeans/output/initialPoints/part-randomSeed
+2016-09-19 15:31:11  [ main:14960 ] - [ INFO ]  Input: /kmeans/output/seqfile Clusters In: /kmeans/output/initialPoints Out: /kmeans/output
+2016-09-19 15:31:11  [ main:14960 ] - [ INFO ]  convergence: 0.01 max Iterations: 10
+2016-09-19 15:31:11  [ main:15001 ] - [ INFO ]  Got brand-new decompressor [.deflate]
+2016-09-19 15:31:17  [ main:20768 ] - [ INFO ]  Clustering data
+2016-09-19 15:31:17  [ main:20768 ] - [ INFO ]  Running Clustering
+2016-09-19 15:31:17  [ main:20768 ] - [ INFO ]  Input: /kmeans/output/seqfile Clusters In: /kmeans/output Out: /kmeans/output
+2016-09-19 15:31:18  [ Thread-1:21237 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:30:57 CST 2016]; root of context hierarchy
+2016-09-19 15:31:18  [ Thread-1:21242 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:39:40  [ main:1 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:39:40  [ main:12 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-19 15:39:40  [ main:89 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:39:41  [ main:629 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:39:41  [ main:650 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:39:41 CST 2016]; root of context hierarchy
+2016-09-19 15:39:41  [ main:815 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:39:41  [ main:1240 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:39:42  [ main:1877 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:39:44  [ main:3604 ] - [ INFO ]  Deleting /kmeans/output
+2016-09-19 15:39:44  [ main:3791 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:39:44  [ main:4134 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:39:45  [ main:5266 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:39:46  [ main:5554 ] - [ INFO ]  number of splits:1
+2016-09-19 15:39:46  [ main:6132 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0104
+2016-09-19 15:39:47  [ main:6389 ] - [ INFO ]  Submitted application application_1473744425337_0104
+2016-09-19 15:39:47  [ main:6429 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0104/
+2016-09-19 15:39:47  [ main:6429 ] - [ INFO ]  Running job: job_1473744425337_0104
+2016-09-19 15:39:55  [ main:14580 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:39:55  [ main:14640 ] - [ INFO ]  Job job_1473744425337_0104 running in uber mode : false
+2016-09-19 15:39:55  [ main:14642 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:39:55  [ main:14702 ] - [ INFO ]  Job job_1473744425337_0104 completed successfully
+2016-09-19 15:39:55  [ main:14759 ] - [ INFO ]  Counters: 29
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=118277
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2664
+		HDFS: Number of bytes written=6750
+		HDFS: Number of read operations=5
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1908
+		Total time spent by all map tasks (ms)=1908
+		Total vcore-milliseconds taken by all map tasks=1908
+		Total megabyte-milliseconds taken by all map tasks=1953792
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=150
+		Input split bytes=114
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=57
+		CPU time spent (ms)=800
+		Physical memory (bytes) snapshot=176226304
+		Virtual memory (bytes) snapshot=2175696896
+		Total committed heap usage (bytes)=149946368
+	File Input Format Counters 
+		Bytes Read=2550
+	File Output Format Counters 
+		Bytes Written=6750
+2016-09-19 15:39:55  [ main:15134 ] - [ INFO ]  Got brand-new compressor [.deflate]
+2016-09-19 15:39:55  [ main:15144 ] - [ INFO ]  Wrote 3 Klusters to /kmeans/output/initialPoints/part-randomSeed
+2016-09-19 15:39:55  [ main:15219 ] - [ INFO ]  Input: /kmeans/output/seqfile Clusters In: /kmeans/output/initialPoints Out: /kmeans/output
+2016-09-19 15:39:55  [ main:15219 ] - [ INFO ]  convergence: 0.01 max Iterations: 10
+2016-09-19 15:39:55  [ main:15271 ] - [ INFO ]  Got brand-new decompressor [.deflate]
+2016-09-19 15:40:01  [ main:20913 ] - [ INFO ]  Clustering data
+2016-09-19 15:40:01  [ main:20913 ] - [ INFO ]  Running Clustering
+2016-09-19 15:40:01  [ main:20913 ] - [ INFO ]  Input: /kmeans/output/seqfile Clusters In: /kmeans/output Out: /kmeans/output
+2016-09-19 15:40:02  [ Thread-1:21534 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:39:41 CST 2016]; root of context hierarchy
+2016-09-19 15:40:02  [ Thread-1:21539 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:45:47  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:45:47  [ main:18 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-19 15:45:47  [ main:102 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:45:47  [ main:688 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:45:47  [ main:715 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:45:47 CST 2016]; root of context hierarchy
+2016-09-19 15:45:48  [ main:881 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:45:48  [ main:1279 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:45:49  [ main:1919 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:45:50  [ main:3484 ] - [ INFO ]  Deleting /kmeans/output
+2016-09-19 15:45:50  [ main:3587 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:45:51  [ main:3875 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:45:52  [ main:4776 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:45:52  [ main:5018 ] - [ INFO ]  number of splits:1
+2016-09-19 15:45:52  [ main:5371 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0105
+2016-09-19 15:45:53  [ main:5757 ] - [ INFO ]  Submitted application application_1473744425337_0105
+2016-09-19 15:45:53  [ main:5802 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0105/
+2016-09-19 15:45:53  [ main:5803 ] - [ INFO ]  Running job: job_1473744425337_0105
+2016-09-19 15:46:00  [ main:13574 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:46:00  [ main:13636 ] - [ INFO ]  Job job_1473744425337_0105 running in uber mode : false
+2016-09-19 15:46:00  [ main:13639 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:46:00  [ main:13683 ] - [ INFO ]  Job job_1473744425337_0105 completed successfully
+2016-09-19 15:46:01  [ main:13743 ] - [ INFO ]  Counters: 29
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=118277
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2664
+		HDFS: Number of bytes written=6750
+		HDFS: Number of read operations=5
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1878
+		Total time spent by all map tasks (ms)=1878
+		Total vcore-milliseconds taken by all map tasks=1878
+		Total megabyte-milliseconds taken by all map tasks=1923072
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=150
+		Input split bytes=114
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=52
+		CPU time spent (ms)=790
+		Physical memory (bytes) snapshot=175812608
+		Virtual memory (bytes) snapshot=2176217088
+		Total committed heap usage (bytes)=149946368
+	File Input Format Counters 
+		Bytes Read=2550
+	File Output Format Counters 
+		Bytes Written=6750
+2016-09-19 15:46:01  [ main:14076 ] - [ INFO ]  Got brand-new compressor [.deflate]
+2016-09-19 15:46:01  [ main:14085 ] - [ INFO ]  Wrote 3 Klusters to /kmeans/output/initialPoints/part-randomSeed
+2016-09-19 15:46:01  [ main:14147 ] - [ INFO ]  Input: /kmeans/output/seqfile Clusters In: /kmeans/output/initialPoints Out: /kmeans/output
+2016-09-19 15:46:01  [ main:14147 ] - [ INFO ]  convergence: 0.01 max Iterations: 10
+2016-09-19 15:46:01  [ main:14188 ] - [ INFO ]  Got brand-new decompressor [.deflate]
+2016-09-19 15:46:01  [ main:14589 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:46:01  [ main:14630 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:46:05  [ main:18301 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:46:05  [ main:18532 ] - [ INFO ]  number of splits:1
+2016-09-19 15:46:06  [ main:18848 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0106
+2016-09-19 15:46:06  [ main:19005 ] - [ INFO ]  Submitted application application_1473744425337_0106
+2016-09-19 15:46:06  [ main:19029 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0106/
+2016-09-19 15:46:06  [ main:19029 ] - [ INFO ]  Running job: job_1473744425337_0106
+2016-09-19 15:46:20  [ main:32932 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:46:20  [ main:33116 ] - [ INFO ]  Job job_1473744425337_0106 running in uber mode : false
+2016-09-19 15:46:20  [ main:33116 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:46:20  [ main:33154 ] - [ INFO ]  Job job_1473744425337_0106 completed successfully
+2016-09-19 15:46:20  [ main:33177 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=840
+		FILE: Number of bytes written=240041
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=9626
+		HDFS: Number of bytes written=959
+		HDFS: Number of read operations=25
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2062
+		Total time spent by all reduces in occupied slots (ms)=2161
+		Total time spent by all map tasks (ms)=2062
+		Total time spent by all reduce tasks (ms)=2161
+		Total vcore-milliseconds taken by all map tasks=2062
+		Total vcore-milliseconds taken by all reduce tasks=2161
+		Total megabyte-milliseconds taken by all map tasks=2111488
+		Total megabyte-milliseconds taken by all reduce tasks=2212864
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=3
+		Map output bytes=822
+		Map output materialized bytes=840
+		Input split bytes=118
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=3
+		Reduce shuffle bytes=840
+		Reduce input records=3
+		Reduce output records=3
+		Spilled Records=6
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=108
+		CPU time spent (ms)=2820
+		Physical memory (bytes) snapshot=477581312
+		Virtual memory (bytes) snapshot=4362104832
+		Total committed heap usage (bytes)=344457216
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6750
+	File Output Format Counters 
+		Bytes Written=959
+2016-09-19 15:46:20  [ main:33363 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:46:20  [ main:33427 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:46:24  [ main:36982 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:46:24  [ main:37207 ] - [ INFO ]  number of splits:1
+2016-09-19 15:46:24  [ main:37374 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0107
+2016-09-19 15:46:24  [ main:37519 ] - [ INFO ]  Submitted application application_1473744425337_0107
+2016-09-19 15:46:24  [ main:37544 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0107/
+2016-09-19 15:46:24  [ main:37544 ] - [ INFO ]  Running job: job_1473744425337_0107
+2016-09-19 15:46:39  [ main:52499 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:46:39  [ main:52637 ] - [ INFO ]  Job job_1473744425337_0107 running in uber mode : false
+2016-09-19 15:46:39  [ main:52638 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:46:39  [ main:52685 ] - [ INFO ]  Job job_1473744425337_0107 completed successfully
+2016-09-19 15:46:39  [ main:52700 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=840
+		FILE: Number of bytes written=240041
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=9174
+		HDFS: Number of bytes written=959
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1975
+		Total time spent by all reduces in occupied slots (ms)=2206
+		Total time spent by all map tasks (ms)=1975
+		Total time spent by all reduce tasks (ms)=2206
+		Total vcore-milliseconds taken by all map tasks=1975
+		Total vcore-milliseconds taken by all reduce tasks=2206
+		Total megabyte-milliseconds taken by all map tasks=2022400
+		Total megabyte-milliseconds taken by all reduce tasks=2258944
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=3
+		Map output bytes=822
+		Map output materialized bytes=840
+		Input split bytes=118
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=3
+		Reduce shuffle bytes=840
+		Reduce input records=3
+		Reduce output records=3
+		Spilled Records=6
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=111
+		CPU time spent (ms)=2820
+		Physical memory (bytes) snapshot=471347200
+		Virtual memory (bytes) snapshot=4365479936
+		Total committed heap usage (bytes)=345505792
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6750
+	File Output Format Counters 
+		Bytes Written=959
+2016-09-19 15:46:40  [ main:52925 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:46:40  [ main:52968 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:46:43  [ main:56389 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:46:43  [ main:56597 ] - [ INFO ]  number of splits:1
+2016-09-19 15:46:44  [ main:56823 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0108
+2016-09-19 15:46:44  [ main:56938 ] - [ INFO ]  Submitted application application_1473744425337_0108
+2016-09-19 15:46:44  [ main:56958 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0108/
+2016-09-19 15:46:44  [ main:56959 ] - [ INFO ]  Running job: job_1473744425337_0108
+2016-09-19 15:46:59  [ main:71868 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:46:59  [ main:72062 ] - [ INFO ]  Job job_1473744425337_0108 running in uber mode : false
+2016-09-19 15:46:59  [ main:72062 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:46:59  [ main:72151 ] - [ INFO ]  Job job_1473744425337_0108 completed successfully
+2016-09-19 15:46:59  [ main:72192 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=840
+		FILE: Number of bytes written=240041
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=9174
+		HDFS: Number of bytes written=959
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1933
+		Total time spent by all reduces in occupied slots (ms)=2143
+		Total time spent by all map tasks (ms)=1933
+		Total time spent by all reduce tasks (ms)=2143
+		Total vcore-milliseconds taken by all map tasks=1933
+		Total vcore-milliseconds taken by all reduce tasks=2143
+		Total megabyte-milliseconds taken by all map tasks=1979392
+		Total megabyte-milliseconds taken by all reduce tasks=2194432
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=3
+		Map output bytes=822
+		Map output materialized bytes=840
+		Input split bytes=118
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=3
+		Reduce shuffle bytes=840
+		Reduce input records=3
+		Reduce output records=3
+		Spilled Records=6
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=88
+		CPU time spent (ms)=2640
+		Physical memory (bytes) snapshot=479723520
+		Virtual memory (bytes) snapshot=4362629120
+		Total committed heap usage (bytes)=342884352
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6750
+	File Output Format Counters 
+		Bytes Written=959
+2016-09-19 15:47:00  [ main:73597 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:47:00  [ main:73639 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:47:04  [ main:77321 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:47:07  [ main:79997 ] - [ INFO ]  number of splits:1
+2016-09-19 15:47:07  [ main:80326 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0109
+2016-09-19 15:47:07  [ main:80440 ] - [ INFO ]  Submitted application application_1473744425337_0109
+2016-09-19 15:47:07  [ main:80456 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0109/
+2016-09-19 15:47:07  [ main:80456 ] - [ INFO ]  Running job: job_1473744425337_0109
+2016-09-19 15:47:20  [ main:93422 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:47:20  [ main:93525 ] - [ INFO ]  Job job_1473744425337_0109 running in uber mode : false
+2016-09-19 15:47:20  [ main:93526 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:47:20  [ main:93617 ] - [ INFO ]  Job job_1473744425337_0109 completed successfully
+2016-09-19 15:47:20  [ main:93653 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=840
+		FILE: Number of bytes written=240041
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=9174
+		HDFS: Number of bytes written=959
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2081
+		Total time spent by all reduces in occupied slots (ms)=2215
+		Total time spent by all map tasks (ms)=2081
+		Total time spent by all reduce tasks (ms)=2215
+		Total vcore-milliseconds taken by all map tasks=2081
+		Total vcore-milliseconds taken by all reduce tasks=2215
+		Total megabyte-milliseconds taken by all map tasks=2130944
+		Total megabyte-milliseconds taken by all reduce tasks=2268160
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=3
+		Map output bytes=822
+		Map output materialized bytes=840
+		Input split bytes=118
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=3
+		Reduce shuffle bytes=840
+		Reduce input records=3
+		Reduce output records=3
+		Spilled Records=6
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=97
+		CPU time spent (ms)=2930
+		Physical memory (bytes) snapshot=476917760
+		Virtual memory (bytes) snapshot=4361793536
+		Total committed heap usage (bytes)=343408640
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6750
+	File Output Format Counters 
+		Bytes Written=959
+2016-09-19 15:47:21  [ main:94124 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:47:21  [ main:94215 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:47:25  [ main:97772 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:47:25  [ main:98126 ] - [ INFO ]  number of splits:1
+2016-09-19 15:47:25  [ main:98552 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0110
+2016-09-19 15:47:26  [ main:98850 ] - [ INFO ]  Submitted application application_1473744425337_0110
+2016-09-19 15:47:26  [ main:98905 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0110/
+2016-09-19 15:47:26  [ main:98906 ] - [ INFO ]  Running job: job_1473744425337_0110
+2016-09-19 15:47:40  [ main:112725 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:47:40  [ main:112771 ] - [ INFO ]  Job job_1473744425337_0110 running in uber mode : false
+2016-09-19 15:47:40  [ main:112771 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:47:40  [ main:112799 ] - [ INFO ]  Job job_1473744425337_0110 completed successfully
+2016-09-19 15:47:40  [ main:112815 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=840
+		FILE: Number of bytes written=240041
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=9174
+		HDFS: Number of bytes written=959
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2184
+		Total time spent by all reduces in occupied slots (ms)=2162
+		Total time spent by all map tasks (ms)=2184
+		Total time spent by all reduce tasks (ms)=2162
+		Total vcore-milliseconds taken by all map tasks=2184
+		Total vcore-milliseconds taken by all reduce tasks=2162
+		Total megabyte-milliseconds taken by all map tasks=2236416
+		Total megabyte-milliseconds taken by all reduce tasks=2213888
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=3
+		Map output bytes=822
+		Map output materialized bytes=840
+		Input split bytes=118
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=3
+		Reduce shuffle bytes=840
+		Reduce input records=3
+		Reduce output records=3
+		Spilled Records=6
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=112
+		CPU time spent (ms)=2840
+		Physical memory (bytes) snapshot=478543872
+		Virtual memory (bytes) snapshot=4362256384
+		Total committed heap usage (bytes)=345505792
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6750
+	File Output Format Counters 
+		Bytes Written=959
+2016-09-19 15:47:40  [ main:112982 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:47:40  [ main:113028 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:47:44  [ main:116767 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:47:44  [ main:117022 ] - [ INFO ]  number of splits:1
+2016-09-19 15:47:44  [ main:117172 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0111
+2016-09-19 15:47:44  [ main:117326 ] - [ INFO ]  Submitted application application_1473744425337_0111
+2016-09-19 15:47:44  [ main:117354 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0111/
+2016-09-19 15:47:44  [ main:117354 ] - [ INFO ]  Running job: job_1473744425337_0111
+2016-09-19 15:47:59  [ main:132231 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:47:59  [ main:132281 ] - [ INFO ]  Job job_1473744425337_0111 running in uber mode : false
+2016-09-19 15:47:59  [ main:132281 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:47:59  [ main:132310 ] - [ INFO ]  Job job_1473744425337_0111 completed successfully
+2016-09-19 15:47:59  [ main:132324 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=840
+		FILE: Number of bytes written=240041
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=9174
+		HDFS: Number of bytes written=959
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2010
+		Total time spent by all reduces in occupied slots (ms)=2186
+		Total time spent by all map tasks (ms)=2010
+		Total time spent by all reduce tasks (ms)=2186
+		Total vcore-milliseconds taken by all map tasks=2010
+		Total vcore-milliseconds taken by all reduce tasks=2186
+		Total megabyte-milliseconds taken by all map tasks=2058240
+		Total megabyte-milliseconds taken by all reduce tasks=2238464
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=3
+		Map output bytes=822
+		Map output materialized bytes=840
+		Input split bytes=118
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=3
+		Reduce shuffle bytes=840
+		Reduce input records=3
+		Reduce output records=3
+		Spilled Records=6
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=110
+		CPU time spent (ms)=2650
+		Physical memory (bytes) snapshot=476012544
+		Virtual memory (bytes) snapshot=4362186752
+		Total committed heap usage (bytes)=347078656
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6750
+	File Output Format Counters 
+		Bytes Written=959
+2016-09-19 15:48:00  [ main:132725 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:48:00  [ main:132787 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:48:03  [ main:136331 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:48:03  [ main:136547 ] - [ INFO ]  number of splits:1
+2016-09-19 15:48:04  [ main:136839 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0112
+2016-09-19 15:48:04  [ main:136950 ] - [ INFO ]  Submitted application application_1473744425337_0112
+2016-09-19 15:48:04  [ main:136966 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0112/
+2016-09-19 15:48:04  [ main:136967 ] - [ INFO ]  Running job: job_1473744425337_0112
+2016-09-19 15:48:19  [ main:151740 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:48:19  [ main:151801 ] - [ INFO ]  Job job_1473744425337_0112 running in uber mode : false
+2016-09-19 15:48:19  [ main:151801 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:48:19  [ main:151834 ] - [ INFO ]  Job job_1473744425337_0112 completed successfully
+2016-09-19 15:48:19  [ main:151857 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=840
+		FILE: Number of bytes written=240041
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=9174
+		HDFS: Number of bytes written=959
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1995
+		Total time spent by all reduces in occupied slots (ms)=2194
+		Total time spent by all map tasks (ms)=1995
+		Total time spent by all reduce tasks (ms)=2194
+		Total vcore-milliseconds taken by all map tasks=1995
+		Total vcore-milliseconds taken by all reduce tasks=2194
+		Total megabyte-milliseconds taken by all map tasks=2042880
+		Total megabyte-milliseconds taken by all reduce tasks=2246656
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=3
+		Map output bytes=822
+		Map output materialized bytes=840
+		Input split bytes=118
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=3
+		Reduce shuffle bytes=840
+		Reduce input records=3
+		Reduce output records=3
+		Spilled Records=6
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=109
+		CPU time spent (ms)=2590
+		Physical memory (bytes) snapshot=466251776
+		Virtual memory (bytes) snapshot=4357627904
+		Total committed heap usage (bytes)=346030080
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6750
+	File Output Format Counters 
+		Bytes Written=959
+2016-09-19 15:48:20  [ main:153250 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:48:20  [ main:153291 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:48:23  [ main:156301 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:48:23  [ main:156537 ] - [ INFO ]  number of splits:1
+2016-09-19 15:48:24  [ main:156832 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0113
+2016-09-19 15:48:24  [ main:156985 ] - [ INFO ]  Submitted application application_1473744425337_0113
+2016-09-19 15:48:24  [ main:157007 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0113/
+2016-09-19 15:48:24  [ main:157007 ] - [ INFO ]  Running job: job_1473744425337_0113
+2016-09-19 15:48:38  [ main:171282 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:48:39  [ main:172054 ] - [ INFO ]  Job job_1473744425337_0113 running in uber mode : false
+2016-09-19 15:48:39  [ main:172054 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:48:39  [ main:172393 ] - [ INFO ]  Job job_1473744425337_0113 completed successfully
+2016-09-19 15:48:39  [ main:172466 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=840
+		FILE: Number of bytes written=240041
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=9174
+		HDFS: Number of bytes written=959
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1954
+		Total time spent by all reduces in occupied slots (ms)=2228
+		Total time spent by all map tasks (ms)=1954
+		Total time spent by all reduce tasks (ms)=2228
+		Total vcore-milliseconds taken by all map tasks=1954
+		Total vcore-milliseconds taken by all reduce tasks=2228
+		Total megabyte-milliseconds taken by all map tasks=2000896
+		Total megabyte-milliseconds taken by all reduce tasks=2281472
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=3
+		Map output bytes=822
+		Map output materialized bytes=840
+		Input split bytes=118
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=3
+		Reduce shuffle bytes=840
+		Reduce input records=3
+		Reduce output records=3
+		Spilled Records=6
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=102
+		CPU time spent (ms)=2910
+		Physical memory (bytes) snapshot=477200384
+		Virtual memory (bytes) snapshot=4364546048
+		Total committed heap usage (bytes)=345505792
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6750
+	File Output Format Counters 
+		Bytes Written=959
+2016-09-19 15:48:40  [ main:172765 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:48:40  [ main:172807 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:48:44  [ main:176815 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:48:44  [ main:177063 ] - [ INFO ]  number of splits:1
+2016-09-19 15:48:47  [ main:179992 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0114
+2016-09-19 15:48:47  [ main:180129 ] - [ INFO ]  Submitted application application_1473744425337_0114
+2016-09-19 15:48:47  [ main:180148 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0114/
+2016-09-19 15:48:47  [ main:180149 ] - [ INFO ]  Running job: job_1473744425337_0114
+2016-09-19 15:49:00  [ main:192977 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:49:00  [ main:193031 ] - [ INFO ]  Job job_1473744425337_0114 running in uber mode : false
+2016-09-19 15:49:00  [ main:193031 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:49:00  [ main:193080 ] - [ INFO ]  Job job_1473744425337_0114 completed successfully
+2016-09-19 15:49:00  [ main:193100 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=840
+		FILE: Number of bytes written=240041
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=9174
+		HDFS: Number of bytes written=959
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1951
+		Total time spent by all reduces in occupied slots (ms)=2220
+		Total time spent by all map tasks (ms)=1951
+		Total time spent by all reduce tasks (ms)=2220
+		Total vcore-milliseconds taken by all map tasks=1951
+		Total vcore-milliseconds taken by all reduce tasks=2220
+		Total megabyte-milliseconds taken by all map tasks=1997824
+		Total megabyte-milliseconds taken by all reduce tasks=2273280
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=3
+		Map output bytes=822
+		Map output materialized bytes=840
+		Input split bytes=118
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=3
+		Reduce shuffle bytes=840
+		Reduce input records=3
+		Reduce output records=3
+		Spilled Records=6
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=104
+		CPU time spent (ms)=2790
+		Physical memory (bytes) snapshot=480620544
+		Virtual memory (bytes) snapshot=4364029952
+		Total committed heap usage (bytes)=343932928
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6750
+	File Output Format Counters 
+		Bytes Written=959
+2016-09-19 15:49:00  [ main:193540 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:49:01  [ main:193761 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:49:05  [ main:197969 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:49:05  [ main:198311 ] - [ INFO ]  number of splits:1
+2016-09-19 15:49:05  [ main:198550 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0115
+2016-09-19 15:49:06  [ main:198899 ] - [ INFO ]  Submitted application application_1473744425337_0115
+2016-09-19 15:49:06  [ main:198919 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0115/
+2016-09-19 15:49:06  [ main:198919 ] - [ INFO ]  Running job: job_1473744425337_0115
+2016-09-19 15:49:19  [ main:212149 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:49:19  [ main:212218 ] - [ INFO ]  Job job_1473744425337_0115 running in uber mode : false
+2016-09-19 15:49:19  [ main:212218 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:49:19  [ main:212297 ] - [ INFO ]  Job job_1473744425337_0115 completed successfully
+2016-09-19 15:49:19  [ main:212332 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=840
+		FILE: Number of bytes written=240045
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=9174
+		HDFS: Number of bytes written=959
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1958
+		Total time spent by all reduces in occupied slots (ms)=2147
+		Total time spent by all map tasks (ms)=1958
+		Total time spent by all reduce tasks (ms)=2147
+		Total vcore-milliseconds taken by all map tasks=1958
+		Total vcore-milliseconds taken by all reduce tasks=2147
+		Total megabyte-milliseconds taken by all map tasks=2004992
+		Total megabyte-milliseconds taken by all reduce tasks=2198528
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=3
+		Map output bytes=822
+		Map output materialized bytes=840
+		Input split bytes=118
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=3
+		Reduce shuffle bytes=840
+		Reduce input records=3
+		Reduce output records=3
+		Spilled Records=6
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=109
+		CPU time spent (ms)=2540
+		Physical memory (bytes) snapshot=466350080
+		Virtual memory (bytes) snapshot=4360007680
+		Total committed heap usage (bytes)=344457216
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=6750
+	File Output Format Counters 
+		Bytes Written=959
+2016-09-19 15:49:20  [ main:212749 ] - [ INFO ]  Clustering data
+2016-09-19 15:49:20  [ main:212749 ] - [ INFO ]  Running Clustering
+2016-09-19 15:49:20  [ main:212749 ] - [ INFO ]  Input: /kmeans/output/seqfile Clusters In: /kmeans/output Out: /kmeans/output
+2016-09-19 15:49:20  [ main:212918 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:49:20  [ main:213099 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:49:25  [ main:217901 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:49:26  [ main:219448 ] - [ INFO ]  number of splits:1
+2016-09-19 15:49:27  [ main:220350 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0116
+2016-09-19 15:49:28  [ main:220973 ] - [ INFO ]  Submitted application application_1473744425337_0116
+2016-09-19 15:49:28  [ main:221052 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0116/
+2016-09-19 15:49:28  [ main:221052 ] - [ INFO ]  Running job: job_1473744425337_0116
+2016-09-19 15:49:36  [ main:228805 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:49:37  [ main:229848 ] - [ INFO ]  Job job_1473744425337_0116 running in uber mode : false
+2016-09-19 15:49:37  [ main:229849 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:49:38  [ main:231203 ] - [ INFO ]  Job job_1473744425337_0116 completed successfully
+2016-09-19 15:49:38  [ main:231350 ] - [ INFO ]  Counters: 29
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=118916
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=8021
+		HDFS: Number of bytes written=13914
+		HDFS: Number of read operations=13
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=2124
+		Total time spent by all map tasks (ms)=2124
+		Total vcore-milliseconds taken by all map tasks=2124
+		Total megabyte-milliseconds taken by all map tasks=2174976
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=150
+		Input split bytes=118
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=50
+		CPU time spent (ms)=1290
+		Physical memory (bytes) snapshot=179720192
+		Virtual memory (bytes) snapshot=2176172032
+		Total committed heap usage (bytes)=144179200
+	File Input Format Counters 
+		Bytes Read=6750
+	File Output Format Counters 
+		Bytes Written=13914
+2016-09-19 15:49:38  [ Thread-1:231454 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:45:47 CST 2016]; root of context hierarchy
+2016-09-19 15:49:38  [ Thread-1:231462 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 15:57:36  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-19 15:57:36  [ main:12 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-19 15:57:36  [ main:97 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-19 15:57:37  [ main:587 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-19 15:57:37  [ main:625 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:57:37 CST 2016]; root of context hierarchy
+2016-09-19 15:57:37  [ main:794 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-19 15:57:38  [ main:1324 ] - [ INFO ]  {dataSource-1} inited
+2016-09-19 15:57:38  [ main:2006 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 15:57:40  [ main:3646 ] - [ INFO ]  Deleting /kmeans/output
+2016-09-19 15:57:40  [ main:3742 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-19 15:57:40  [ main:4088 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2016-09-19 15:57:41  [ main:5192 ] - [ INFO ]  Total input paths to process : 1
+2016-09-19 15:57:42  [ main:5431 ] - [ INFO ]  number of splits:1
+2016-09-19 15:57:42  [ main:5675 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0117
+2016-09-19 15:57:42  [ main:5929 ] - [ INFO ]  Submitted application application_1473744425337_0117
+2016-09-19 15:57:42  [ main:5982 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0117/
+2016-09-19 15:57:42  [ main:5982 ] - [ INFO ]  Running job: job_1473744425337_0117
+2016-09-19 15:57:50  [ main:13844 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-19 15:57:50  [ main:14017 ] - [ INFO ]  Job job_1473744425337_0117 running in uber mode : false
+2016-09-19 15:57:50  [ main:14019 ] - [ INFO ]   map 100% reduce 100%
+2016-09-19 15:57:51  [ main:14260 ] - [ INFO ]  Job job_1473744425337_0117 completed successfully
+2016-09-19 15:57:51  [ main:14359 ] - [ INFO ]  Counters: 29
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=118277
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2664
+		HDFS: Number of bytes written=6750
+		HDFS: Number of read operations=5
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1927
+		Total time spent by all map tasks (ms)=1927
+		Total vcore-milliseconds taken by all map tasks=1927
+		Total megabyte-milliseconds taken by all map tasks=1973248
+	Map-Reduce Framework
+		Map input records=150
+		Map output records=150
+		Input split bytes=114
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=51
+		CPU time spent (ms)=740
+		Physical memory (bytes) snapshot=176644096
+		Virtual memory (bytes) snapshot=2176028672
+		Total committed heap usage (bytes)=149946368
+	File Input Format Counters 
+		Bytes Read=2550
+	File Output Format Counters 
+		Bytes Written=6750
+2016-09-19 15:57:51  [ main:14845 ] - [ INFO ]  Got brand-new compressor [.deflate]
+2016-09-19 15:57:51  [ main:14854 ] - [ INFO ]  Wrote 3 Klusters to /kmeans/output/initialPoints/part-randomSeed
+2016-09-19 15:57:51  [ main:14933 ] - [ INFO ]  Input: /kmeans/output/seqfile Clusters In: /kmeans/output/initialPoints Out: /kmeans/output
+2016-09-19 15:57:51  [ main:14933 ] - [ INFO ]  convergence: 0.1 max Iterations: 10
+2016-09-19 15:57:51  [ main:15000 ] - [ INFO ]  Got brand-new decompressor [.deflate]
+2016-09-19 15:57:56  [ main:19981 ] - [ INFO ]  Clustering data
+2016-09-19 15:57:56  [ main:19981 ] - [ INFO ]  Running Clustering
+2016-09-19 15:57:56  [ main:19981 ] - [ INFO ]  Input: /kmeans/output/seqfile Clusters In: /kmeans/output Out: /kmeans/output
+2016-09-19 15:57:58  [ Thread-1:21553 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 19 15:57:37 CST 2016]; root of context hierarchy
+2016-09-19 15:57:58  [ Thread-1:21559 ] - [ INFO ]  {dataSource-1} closed
+2016-09-19 16:03:52  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/kmeans/output/clusteredPoints/part-m-0], --startPhase=[0], --tempDir=[temp]}
+2016-09-19 16:03:52  [ main:239 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 16:05:16  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/kmeans/output/clusters-0/part-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-19 16:05:16  [ main:247 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 16:06:12  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/kmeans/output/clusters-3-final/part-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-19 16:06:12  [ main:184 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 16:11:19  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/kmeans/output/clusteredPoints/part-m-0], --startPhase=[0], --tempDir=[temp]}
+2016-09-19 16:11:20  [ main:208 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 16:31:54  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/kmeans/output/seqfile/part-m-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-19 16:31:54  [ main:338 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 16:32:47  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/kmeans/output/clusteredPoints/part-m-0], --startPhase=[0], --tempDir=[temp]}
+2016-09-19 16:32:48  [ main:225 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-19 16:59:06  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/kmeans/output/clusteredPoints/part-m-0], --startPhase=[0], --tempDir=[temp]}
+2016-09-19 16:59:07  [ main:314 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable

@@ -1,0 +1,36 @@
+<link href="../../static/jslib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../static/jslib/fontawesome4.2/css/font-awesome.css" rel="stylesheet">
+<script src="../../static/jslib/jquery/jquery-1.11.2.min.js"></script>
+<script src="../../static/jslib/bootstrap/js/bootstrap.min.js"></script>
+<script src = "../../static/js/util.js"></script>
+
+<script>
+    function getRecommendResult()
+    {
+        $.ajax({
+            type: "POST",
+            url: getContextPath() + "/ItemCFController/getRecommendResult",
+            data: {
+                userId : $('#search_userId').val() ,
+                recommendNum : $('#item_recommend_num').val()
+            },
+            success: function (data) {
+                $('#result_text').html("用户" + data.userId + "推荐结果:" +  data.content);
+            }
+        });
+    }
+</script>
+<div style="padding-top: 20px">
+    <label class="control-label" for="search_userId">查询用户Id：</label>
+    <input type="text" id="search_userId" maxlength="30">
+</div>
+<div>
+    <label class="control-label" for="item_recommend_num">&nbsp;&nbsp;&nbsp;推荐数量：</label>
+    <input type="text" id="item_recommend_num" maxlength="30">
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" onclick="getRecommendResult()">确定</button>
+</div>
+<div id = "result_text">
+</div>
+

@@ -1,0 +1,55 @@
+2016-09-22 14:31:49  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-22 14:31:49  [ main:30 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-22 14:31:49  [ main:294 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-22 14:31:50  [ main:835 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-22 14:31:50  [ main:859 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Thu Sep 22 14:31:50 CST 2016]; root of context hierarchy
+2016-09-22 14:31:50  [ main:1013 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-22 14:31:51  [ main:1503 ] - [ INFO ]  {dataSource-1} inited
+2016-09-22 14:32:21  [ main:32289 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-22 14:32:23  [ main:34138 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[/naivebayes_column/input], --output=[/naivebayes_column/output], --splitCharacterLabel=[:], --splitCharacterVector=[,], --startPhase=[0], --tempDir=[/naivebayes_column/temp]}
+2016-09-22 14:32:23  [ main:34225 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-22 14:32:24  [ main:34980 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2016-09-22 14:32:24  [ main:35072 ] - [ INFO ]  Total input paths to process : 1
+2016-09-22 14:32:25  [ main:35788 ] - [ INFO ]  number of splits:1
+2016-09-22 14:32:25  [ main:36250 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0134
+2016-09-22 14:32:25  [ main:36474 ] - [ INFO ]  Job jar is not present. Not adding any jar to the list of resources.
+2016-09-22 14:32:26  [ main:36729 ] - [ INFO ]  Submitted application application_1473744425337_0134
+2016-09-22 14:32:26  [ main:37085 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0134/
+2016-09-22 14:32:26  [ main:37085 ] - [ INFO ]  Running job: job_1473744425337_0134
+2016-09-22 14:32:43  [ main:54388 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=FAILED. Redirecting to job history server
+2016-09-22 14:32:44  [ main:54721 ] - [ INFO ]  Job job_1473744425337_0134 running in uber mode : false
+2016-09-22 14:32:44  [ main:54723 ] - [ INFO ]   map 0% reduce 100%
+2016-09-22 14:32:44  [ main:54771 ] - [ INFO ]  Task Id : attempt_1473744425337_0134_m_000000_0, Status : FAILED
+2016-09-22 14:32:44  [ main:54792 ] - [ INFO ]  Task Id : attempt_1473744425337_0134_m_000000_1, Status : FAILED
+2016-09-22 14:32:44  [ main:54804 ] - [ INFO ]  Task Id : attempt_1473744425337_0134_m_000000_2, Status : FAILED
+2016-09-22 14:32:44  [ main:54814 ] - [ INFO ]  Task Id : attempt_1473744425337_0134_m_000000_3, Status : FAILED
+2016-09-22 14:32:44  [ main:54851 ] - [ INFO ]  Job job_1473744425337_0134 failed with state FAILED due to: 
+2016-09-22 14:32:44  [ Thread-1:54890 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Thu Sep 22 14:31:50 CST 2016]; root of context hierarchy
+2016-09-22 14:32:44  [ Thread-1:54895 ] - [ INFO ]  {dataSource-1} closed
+2016-09-22 14:44:14  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-22 14:44:14  [ main:12 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-22 14:44:14  [ main:87 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-22 14:44:15  [ main:450 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-22 14:44:15  [ main:483 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Thu Sep 22 14:44:15 CST 2016]; root of context hierarchy
+2016-09-22 14:44:15  [ main:679 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-22 14:44:15  [ main:1097 ] - [ INFO ]  {dataSource-1} inited
+2016-09-22 14:44:46  [ main:31768 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-22 14:44:48  [ main:33372 ] - [ INFO ]  Deleting /naivebayes_column/output
+2016-09-22 14:44:48  [ main:33413 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[/naivebayes_column/input], --output=[/naivebayes_column/output], --splitCharacterLabel=[:], --splitCharacterVector=[,], --startPhase=[0], --tempDir=[/naivebayes_column/temp]}
+2016-09-22 14:44:48  [ main:33474 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-22 14:51:31  [ main:436349 ] - [ INFO ]  Total input paths to process : 1
+2016-09-22 14:51:31  [ main:436615 ] - [ INFO ]  number of splits:1
+2016-09-22 14:51:31  [ main:436875 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0135
+2016-09-22 14:51:32  [ main:438255 ] - [ INFO ]  Submitted application application_1473744425337_0135
+2016-09-22 14:51:33  [ main:438329 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0135/
+2016-09-22 14:51:33  [ main:438329 ] - [ INFO ]  Running job: job_1473744425337_0135
+2016-09-22 14:51:50  [ main:456111 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=FAILED. Redirecting to job history server
+2016-09-22 14:51:50  [ main:456195 ] - [ INFO ]  Job job_1473744425337_0135 running in uber mode : false
+2016-09-22 14:51:50  [ main:456197 ] - [ INFO ]   map 0% reduce 100%
+2016-09-22 14:51:50  [ main:456219 ] - [ INFO ]  Task Id : attempt_1473744425337_0135_m_000000_0, Status : FAILED
+2016-09-22 14:51:50  [ main:456237 ] - [ INFO ]  Task Id : attempt_1473744425337_0135_m_000000_1, Status : FAILED
+2016-09-22 14:51:50  [ main:456252 ] - [ INFO ]  Task Id : attempt_1473744425337_0135_m_000000_2, Status : FAILED
+2016-09-22 14:51:50  [ main:456262 ] - [ INFO ]  Task Id : attempt_1473744425337_0135_m_000000_3, Status : FAILED
+2016-09-22 14:51:51  [ main:456312 ] - [ INFO ]  Job job_1473744425337_0135 failed with state FAILED due to: 
+2016-09-22 14:51:51  [ Thread-1:456370 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Thu Sep 22 14:44:15 CST 2016]; root of context hierarchy
+2016-09-22 14:51:51  [ Thread-1:456376 ] - [ INFO ]  {dataSource-1} closed

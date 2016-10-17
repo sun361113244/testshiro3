@@ -1,0 +1,690 @@
+2016-09-26 10:46:19  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-26 10:46:19  [ main:25 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-26 10:46:19  [ main:148 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-26 10:46:20  [ main:613 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-26 10:46:20  [ main:632 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 26 10:46:20 CST 2016]; root of context hierarchy
+2016-09-26 10:46:20  [ main:761 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-26 10:46:20  [ main:1153 ] - [ INFO ]  {dataSource-1} inited
+2016-09-26 10:46:51  [ main:31881 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 10:46:53  [ main:33711 ] - [ INFO ]  Deleting /naivebayes/output
+2016-09-26 10:46:53  [ main:33830 ] - [ INFO ]  Command line arguments: {--charset=[UTF-8], --chunkSize=[64], --endPhase=[2147483647], --fileFilterClass=[org.apache.mahout.text.PrefixAdditionFilter], --input=[/naivebayes/input], --keyPrefix=[], --method=[sequential], --output=[/naivebayes/output], --startPhase=[0], --tempDir=[temp]}
+2016-09-26 10:46:54  [ Thread-1:34587 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 26 10:46:20 CST 2016]; root of context hierarchy
+2016-09-26 10:46:54  [ Thread-1:34592 ] - [ INFO ]  {dataSource-1} closed
+2016-09-26 10:47:14  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/naivebayes/output/chunk-0], --startPhase=[0], --tempDir=[temp]}
+2016-09-26 10:47:15  [ main:1285 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 11:20:28  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 11:20:30  [ main:1914 ] - [ INFO ]  Deleting /naivebayes/output
+2016-09-26 11:21:01  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 11:21:39  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 11:21:41  [ main:1569 ] - [ INFO ]  Deleting /naivebayes/output
+2016-09-26 11:29:28  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 11:29:29  [ main:1614 ] - [ INFO ]  Deleting /naivebayes/output
+2016-09-26 11:30:22  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 11:30:53  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 11:31:34  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/naivebayes/output/chunk-0], --startPhase=[0], --tempDir=[temp]}
+2016-09-26 11:31:35  [ main:1266 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 11:34:47  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-26 11:34:47  [ main:13 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-26 11:34:47  [ main:84 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-26 11:34:47  [ main:434 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-26 11:34:47  [ main:458 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 26 11:34:47 CST 2016]; root of context hierarchy
+2016-09-26 11:34:47  [ main:613 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-26 11:34:48  [ main:1065 ] - [ INFO ]  {dataSource-1} inited
+2016-09-26 11:34:50  [ main:2745 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 11:34:51  [ main:4332 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[/naivebayes/output], --output=[/naivebayes/vectors], --splitCharacterLabel=[:], --splitCharacterVector=[,], --startPhase=[0], --tempDir=[/naivebayes/temp]}
+2016-09-26 11:34:51  [ main:4431 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-26 11:34:52  [ main:4842 ] - [ INFO ]  Cleaning up the staging area /tmp/hadoop-yarn/staging/zhichaos/.staging/job_1473744425337_0136
+2016-09-26 11:34:52  [ Thread-1:4860 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 26 11:34:47 CST 2016]; root of context hierarchy
+2016-09-26 11:34:52  [ Thread-1:4913 ] - [ INFO ]  {dataSource-1} closed
+2016-09-26 11:35:40  [ main:1 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-26 11:35:40  [ main:12 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-26 11:35:40  [ main:92 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-26 11:35:41  [ main:461 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-26 11:35:41  [ main:482 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 26 11:35:41 CST 2016]; root of context hierarchy
+2016-09-26 11:35:41  [ main:626 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-26 11:35:41  [ main:1067 ] - [ INFO ]  {dataSource-1} inited
+2016-09-26 11:35:50  [ main:10191 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 11:35:52  [ main:11779 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[/naivebayes/output], --output=[/naivebayes/vectors], --splitCharacterLabel=[:], --splitCharacterVector=[,], --startPhase=[0], --tempDir=[/naivebayes/temp]}
+2016-09-26 11:35:52  [ main:11851 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-26 11:35:52  [ main:12172 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2016-09-26 11:35:52  [ main:12269 ] - [ INFO ]  Total input paths to process : 1
+2016-09-26 11:35:53  [ main:12624 ] - [ INFO ]  number of splits:1
+2016-09-26 11:35:53  [ main:12821 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0137
+2016-09-26 11:35:53  [ main:12994 ] - [ INFO ]  Job jar is not present. Not adding any jar to the list of resources.
+2016-09-26 11:35:53  [ main:13106 ] - [ INFO ]  Submitted application application_1473744425337_0137
+2016-09-26 11:35:53  [ main:13173 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0137/
+2016-09-26 11:35:53  [ main:13174 ] - [ INFO ]  Running job: job_1473744425337_0137
+2016-09-26 11:36:10  [ main:30200 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=FAILED. Redirecting to job history server
+2016-09-26 11:36:10  [ main:30258 ] - [ INFO ]  Job job_1473744425337_0137 running in uber mode : false
+2016-09-26 11:36:10  [ main:30260 ] - [ INFO ]   map 0% reduce 100%
+2016-09-26 11:36:10  [ main:30288 ] - [ INFO ]  Task Id : attempt_1473744425337_0137_m_000000_0, Status : FAILED
+2016-09-26 11:36:11  [ main:30305 ] - [ INFO ]  Task Id : attempt_1473744425337_0137_m_000000_1, Status : FAILED
+2016-09-26 11:36:11  [ main:30318 ] - [ INFO ]  Task Id : attempt_1473744425337_0137_m_000000_2, Status : FAILED
+2016-09-26 11:36:11  [ main:30327 ] - [ INFO ]  Task Id : attempt_1473744425337_0137_m_000000_3, Status : FAILED
+2016-09-26 11:36:11  [ main:30353 ] - [ INFO ]  Job job_1473744425337_0137 failed with state FAILED due to: 
+2016-09-26 11:36:11  [ Thread-1:30383 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 26 11:35:41 CST 2016]; root of context hierarchy
+2016-09-26 11:36:11  [ Thread-1:30388 ] - [ INFO ]  {dataSource-1} closed
+2016-09-26 11:37:56  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-09-26 11:37:56  [ main:12 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c29daf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@9660f4e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a8806ef, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c49835d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e853265]
+2016-09-26 11:37:56  [ main:90 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml]
+2016-09-26 11:37:56  [ main:453 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2016-09-26 11:37:56  [ main:475 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 26 11:37:56 CST 2016]; root of context hierarchy
+2016-09-26 11:37:57  [ main:635 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties]
+2016-09-26 11:37:57  [ main:1059 ] - [ INFO ]  {dataSource-1} inited
+2016-09-26 11:37:59  [ main:2754 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 11:38:00  [ main:4332 ] - [ INFO ]  Deleting /naivebayes/vectors
+2016-09-26 11:38:00  [ main:4395 ] - [ INFO ]  Maximum n-gram size is: 1
+2016-09-26 11:38:00  [ main:4403 ] - [ INFO ]  Minimum LLR value: 1.0
+2016-09-26 11:38:00  [ main:4403 ] - [ INFO ]  Number of reduce tasks: 1
+2016-09-26 11:38:00  [ main:4412 ] - [ INFO ]  Tokenizing documents in /naivebayes/output
+2016-09-26 11:38:00  [ main:4481 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-26 11:38:04  [ main:8175 ] - [ INFO ]  Total input paths to process : 1
+2016-09-26 11:38:04  [ main:8450 ] - [ INFO ]  number of splits:1
+2016-09-26 11:38:05  [ main:8695 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0138
+2016-09-26 11:38:05  [ main:9076 ] - [ INFO ]  Submitted application application_1473744425337_0138
+2016-09-26 11:38:05  [ main:9129 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0138/
+2016-09-26 11:38:05  [ main:9130 ] - [ INFO ]  Running job: job_1473744425337_0138
+2016-09-26 11:38:13  [ main:16870 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-26 11:38:13  [ main:16933 ] - [ INFO ]  Job job_1473744425337_0138 running in uber mode : false
+2016-09-26 11:38:13  [ main:16935 ] - [ INFO ]   map 100% reduce 100%
+2016-09-26 11:38:13  [ main:16974 ] - [ INFO ]  Job job_1473744425337_0138 completed successfully
+2016-09-26 11:38:13  [ main:17052 ] - [ INFO ]  Counters: 29
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=118593
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=500154
+		HDFS: Number of bytes written=502413
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1959
+		Total time spent by all map tasks (ms)=1959
+		Total vcore-milliseconds taken by all map tasks=1959
+		Total megabyte-milliseconds taken by all map tasks=2006016
+	Map-Reduce Framework
+		Map input records=1001
+		Map output records=1001
+		Input split bytes=109
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=53
+		CPU time spent (ms)=1370
+		Physical memory (bytes) snapshot=177303552
+		Virtual memory (bytes) snapshot=2176913408
+		Total committed heap usage (bytes)=144703488
+	File Input Format Counters 
+		Bytes Read=500045
+	File Output Format Counters 
+		Bytes Written=502413
+2016-09-26 11:38:13  [ main:17065 ] - [ INFO ]  Creating Term Frequency Vectors
+2016-09-26 11:38:13  [ main:17066 ] - [ INFO ]  Creating dictionary from /naivebayes/vectors/tokenized-documents and saving at /naivebayes/vectors/wordcount
+2016-09-26 11:38:13  [ main:17090 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-26 11:38:17  [ main:20973 ] - [ INFO ]  Total input paths to process : 1
+2016-09-26 11:38:17  [ main:21176 ] - [ INFO ]  number of splits:1
+2016-09-26 11:38:17  [ main:21398 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0139
+2016-09-26 11:38:17  [ main:21508 ] - [ INFO ]  Submitted application application_1473744425337_0139
+2016-09-26 11:38:17  [ main:21528 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0139/
+2016-09-26 11:38:17  [ main:21528 ] - [ INFO ]  Running job: job_1473744425337_0139
+2016-09-26 11:38:32  [ main:36164 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-26 11:38:32  [ main:36220 ] - [ INFO ]  Job job_1473744425337_0139 running in uber mode : false
+2016-09-26 11:38:32  [ main:36220 ] - [ INFO ]   map 100% reduce 100%
+2016-09-26 11:38:32  [ main:36261 ] - [ INFO ]  Job job_1473744425337_0139 completed successfully
+2016-09-26 11:38:32  [ main:36284 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=113553
+		FILE: Number of bytes written=465223
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=502548
+		HDFS: Number of bytes written=83488
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1990
+		Total time spent by all reduces in occupied slots (ms)=2041
+		Total time spent by all map tasks (ms)=1990
+		Total time spent by all reduce tasks (ms)=2041
+		Total vcore-milliseconds taken by all map tasks=1990
+		Total vcore-milliseconds taken by all reduce tasks=2041
+		Total megabyte-milliseconds taken by all map tasks=2037760
+		Total megabyte-milliseconds taken by all reduce tasks=2089984
+	Map-Reduce Framework
+		Map input records=1001
+		Map output records=47941
+		Map output bytes=750808
+		Map output materialized bytes=113553
+		Input split bytes=135
+		Combine input records=47941
+		Combine output records=6160
+		Reduce input groups=6160
+		Reduce shuffle bytes=113553
+		Reduce input records=6160
+		Reduce output records=3401
+		Spilled Records=12320
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=97
+		CPU time spent (ms)=2810
+		Physical memory (bytes) snapshot=463589376
+		Virtual memory (bytes) snapshot=4357709824
+		Total committed heap usage (bytes)=346030080
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=502413
+	File Output Format Counters 
+		Bytes Written=83488
+2016-09-26 11:38:33  [ main:36674 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-26 11:38:36  [ main:40197 ] - [ INFO ]  Total input paths to process : 1
+2016-09-26 11:38:36  [ main:40415 ] - [ INFO ]  number of splits:1
+2016-09-26 11:38:37  [ main:40640 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0140
+2016-09-26 11:38:37  [ main:40765 ] - [ INFO ]  Submitted application application_1473744425337_0140
+2016-09-26 11:38:37  [ main:40789 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0140/
+2016-09-26 11:38:37  [ main:40789 ] - [ INFO ]  Running job: job_1473744425337_0140
+2016-09-26 11:38:52  [ main:55755 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-26 11:38:52  [ main:55814 ] - [ INFO ]  Job job_1473744425337_0140 running in uber mode : false
+2016-09-26 11:38:52  [ main:55815 ] - [ INFO ]   map 100% reduce 100%
+2016-09-26 11:38:52  [ main:55843 ] - [ INFO ]  Job job_1473744425337_0140 completed successfully
+2016-09-26 11:38:52  [ main:55861 ] - [ INFO ]  Counters: 50
+	File System Counters
+		FILE: Number of bytes read=493626
+		FILE: Number of bytes written=1228375
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=572291
+		HDFS: Number of bytes written=427538
+		HDFS: Number of read operations=9
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1875
+		Total time spent by all reduces in occupied slots (ms)=2185
+		Total time spent by all map tasks (ms)=1875
+		Total time spent by all reduce tasks (ms)=2185
+		Total vcore-milliseconds taken by all map tasks=1875
+		Total vcore-milliseconds taken by all reduce tasks=2185
+		Total megabyte-milliseconds taken by all map tasks=1920000
+		Total megabyte-milliseconds taken by all reduce tasks=2237440
+	Map-Reduce Framework
+		Map input records=1001
+		Map output records=1001
+		Map output bytes=490156
+		Map output materialized bytes=493626
+		Input split bytes=135
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=1001
+		Reduce shuffle bytes=493626
+		Reduce input records=1001
+		Reduce output records=770
+		Spilled Records=2002
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=121
+		CPU time spent (ms)=2850
+		Physical memory (bytes) snapshot=460247040
+		Virtual memory (bytes) snapshot=4352352256
+		Total committed heap usage (bytes)=342360064
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	TFPartialVectorReducer
+		emptyVectorCount=231
+	File Input Format Counters 
+		Bytes Read=502413
+	File Output Format Counters 
+		Bytes Written=427538
+2016-09-26 11:38:52  [ main:55912 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-26 11:38:55  [ main:59119 ] - [ INFO ]  Total input paths to process : 1
+2016-09-26 11:38:56  [ main:59779 ] - [ INFO ]  number of splits:1
+2016-09-26 11:38:56  [ main:60080 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0141
+2016-09-26 11:38:56  [ main:60229 ] - [ INFO ]  Submitted application application_1473744425337_0141
+2016-09-26 11:38:56  [ main:60249 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0141/
+2016-09-26 11:38:56  [ main:60250 ] - [ INFO ]  Running job: job_1473744425337_0141
+2016-09-26 11:39:11  [ main:75469 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-26 11:39:12  [ main:75869 ] - [ INFO ]  Job job_1473744425337_0141 running in uber mode : false
+2016-09-26 11:39:12  [ main:75870 ] - [ INFO ]   map 100% reduce 100%
+2016-09-26 11:39:12  [ main:76222 ] - [ INFO ]  Job job_1473744425337_0141 completed successfully
+2016-09-26 11:39:12  [ main:76425 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=420642
+		FILE: Number of bytes written=1080003
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=427671
+		HDFS: Number of bytes written=427538
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1897
+		Total time spent by all reduces in occupied slots (ms)=2176
+		Total time spent by all map tasks (ms)=1897
+		Total time spent by all reduce tasks (ms)=2176
+		Total vcore-milliseconds taken by all map tasks=1897
+		Total vcore-milliseconds taken by all reduce tasks=2176
+		Total megabyte-milliseconds taken by all map tasks=1942528
+		Total megabyte-milliseconds taken by all reduce tasks=2228224
+	Map-Reduce Framework
+		Map input records=770
+		Map output records=770
+		Map output bytes=417628
+		Map output materialized bytes=420642
+		Input split bytes=133
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=770
+		Reduce shuffle bytes=420642
+		Reduce input records=770
+		Reduce output records=770
+		Spilled Records=1540
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=106
+		CPU time spent (ms)=2360
+		Physical memory (bytes) snapshot=457940992
+		Virtual memory (bytes) snapshot=4352458752
+		Total committed heap usage (bytes)=346030080
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=427538
+	File Output Format Counters 
+		Bytes Written=427538
+2016-09-26 11:39:13  [ main:76618 ] - [ INFO ]  Deleting /naivebayes/vectors/partial-vectors-0
+2016-09-26 11:39:13  [ main:76919 ] - [ INFO ]  Calculating IDF
+2016-09-26 11:39:14  [ main:78068 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-26 11:39:20  [ main:84074 ] - [ INFO ]  Total input paths to process : 1
+2016-09-26 11:39:21  [ main:85571 ] - [ INFO ]  number of splits:1
+2016-09-26 11:39:25  [ main:89572 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0142
+2016-09-26 11:39:28  [ main:91620 ] - [ INFO ]  Submitted application application_1473744425337_0142
+2016-09-26 11:39:28  [ main:91772 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0142/
+2016-09-26 11:39:28  [ main:91773 ] - [ INFO ]  Running job: job_1473744425337_0142
+2016-09-26 11:39:40  [ main:104571 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-26 11:39:41  [ main:105022 ] - [ INFO ]  Job job_1473744425337_0142 running in uber mode : false
+2016-09-26 11:39:41  [ main:105022 ] - [ INFO ]   map 100% reduce 100%
+2016-09-26 11:39:41  [ main:105370 ] - [ INFO ]  Job job_1473744425337_0142 completed successfully
+2016-09-26 11:39:42  [ main:105627 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=47634
+		FILE: Number of bytes written=333223
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=427672
+		HDFS: Number of bytes written=68813
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1962
+		Total time spent by all reduces in occupied slots (ms)=2011
+		Total time spent by all map tasks (ms)=1962
+		Total time spent by all reduce tasks (ms)=2011
+		Total vcore-milliseconds taken by all map tasks=1962
+		Total vcore-milliseconds taken by all reduce tasks=2011
+		Total megabyte-milliseconds taken by all map tasks=2009088
+		Total megabyte-milliseconds taken by all reduce tasks=2059264
+	Map-Reduce Framework
+		Map input records=770
+		Map output records=45952
+		Map output bytes=551424
+		Map output materialized bytes=47634
+		Input split bytes=134
+		Combine input records=45952
+		Combine output records=3402
+		Reduce input groups=3402
+		Reduce shuffle bytes=47634
+		Reduce input records=3402
+		Reduce output records=3402
+		Spilled Records=6804
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=101
+		CPU time spent (ms)=2440
+		Physical memory (bytes) snapshot=461852672
+		Virtual memory (bytes) snapshot=4355334144
+		Total committed heap usage (bytes)=350224384
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=427538
+	File Output Format Counters 
+		Bytes Written=68813
+2016-09-26 11:39:46  [ main:110119 ] - [ INFO ]  Pruning
+2016-09-26 11:39:46  [ main:110123 ] - [ INFO ]  mapred.input.dir is deprecated. Instead, use mapreduce.input.fileinputformat.inputdir
+2016-09-26 11:39:46  [ main:110123 ] - [ INFO ]  mapred.compress.map.output is deprecated. Instead, use mapreduce.map.output.compress
+2016-09-26 11:39:46  [ main:110123 ] - [ INFO ]  mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+2016-09-26 11:39:46  [ main:110186 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-26 11:40:06  [ main:130174 ] - [ INFO ]  Total input paths to process : 1
+2016-09-26 11:40:08  [ main:131972 ] - [ INFO ]  number of splits:1
+2016-09-26 11:40:12  [ main:135621 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0143
+2016-09-26 11:40:13  [ main:136623 ] - [ INFO ]  Submitted application application_1473744425337_0143
+2016-09-26 11:40:13  [ main:136721 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0143/
+2016-09-26 11:40:13  [ main:136721 ] - [ INFO ]  Running job: job_1473744425337_0143
+2016-09-26 11:40:25  [ main:149172 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-26 11:40:25  [ main:149368 ] - [ INFO ]  Job job_1473744425337_0143 running in uber mode : false
+2016-09-26 11:40:25  [ main:149369 ] - [ INFO ]   map 100% reduce 100%
+2016-09-26 11:40:25  [ main:149521 ] - [ INFO ]  Job job_1473744425337_0143 completed successfully
+2016-09-26 11:40:25  [ main:149573 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=155631
+		FILE: Number of bytes written=413263
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=427672
+		HDFS: Number of bytes written=420546
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1961
+		Total time spent by all reduces in occupied slots (ms)=2141
+		Total time spent by all map tasks (ms)=1961
+		Total time spent by all reduce tasks (ms)=2141
+		Total vcore-milliseconds taken by all map tasks=1961
+		Total vcore-milliseconds taken by all reduce tasks=2141
+		Total megabyte-milliseconds taken by all map tasks=2008064
+		Total megabyte-milliseconds taken by all reduce tasks=2192384
+	Map-Reduce Framework
+		Map input records=770
+		Map output records=770
+		Map output bytes=417628
+		Map output materialized bytes=86830
+		Input split bytes=134
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=770
+		Reduce shuffle bytes=86830
+		Reduce input records=770
+		Reduce output records=770
+		Spilled Records=1540
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=98
+		CPU time spent (ms)=2340
+		Physical memory (bytes) snapshot=459468800
+		Virtual memory (bytes) snapshot=4357300224
+		Total committed heap usage (bytes)=348127232
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=427538
+	File Output Format Counters 
+		Bytes Written=420546
+2016-09-26 11:40:27  [ main:150813 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-26 11:40:32  [ main:155935 ] - [ INFO ]  Total input paths to process : 1
+2016-09-26 11:40:32  [ main:156572 ] - [ INFO ]  number of splits:1
+2016-09-26 11:40:33  [ main:157271 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0144
+2016-09-26 11:40:34  [ main:157871 ] - [ INFO ]  Submitted application application_1473744425337_0144
+2016-09-26 11:40:34  [ main:157970 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0144/
+2016-09-26 11:40:34  [ main:157970 ] - [ INFO ]  Running job: job_1473744425337_0144
+2016-09-26 11:40:46  [ main:170428 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-26 11:40:46  [ main:170489 ] - [ INFO ]  Job job_1473744425337_0144 running in uber mode : false
+2016-09-26 11:40:46  [ main:170489 ] - [ INFO ]   map 100% reduce 100%
+2016-09-26 11:40:46  [ main:170517 ] - [ INFO ]  Job job_1473744425337_0144 completed successfully
+2016-09-26 11:40:46  [ main:170535 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=413704
+		FILE: Number of bytes written=1065385
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=420690
+		HDFS: Number of bytes written=420546
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1930
+		Total time spent by all reduces in occupied slots (ms)=2054
+		Total time spent by all map tasks (ms)=1930
+		Total time spent by all reduce tasks (ms)=2054
+		Total vcore-milliseconds taken by all map tasks=1930
+		Total vcore-milliseconds taken by all reduce tasks=2054
+		Total megabyte-milliseconds taken by all map tasks=1976320
+		Total megabyte-milliseconds taken by all reduce tasks=2103296
+	Map-Reduce Framework
+		Map input records=770
+		Map output records=770
+		Map output bytes=410696
+		Map output materialized bytes=413704
+		Input split bytes=144
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=770
+		Reduce shuffle bytes=413704
+		Reduce input records=770
+		Reduce output records=770
+		Spilled Records=1540
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=97
+		CPU time spent (ms)=2050
+		Physical memory (bytes) snapshot=456101888
+		Virtual memory (bytes) snapshot=4352512000
+		Total committed heap usage (bytes)=350224384
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=420546
+	File Output Format Counters 
+		Bytes Written=420546
+2016-09-26 11:40:46  [ main:170563 ] - [ INFO ]  Deleting /naivebayes/vectors/tf-vectors-partial
+2016-09-26 11:40:46  [ main:170582 ] - [ INFO ]  Deleting /naivebayes/vectors/tf-vectors-toprune
+2016-09-26 11:40:47  [ main:170615 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-26 11:40:50  [ main:173979 ] - [ INFO ]  Total input paths to process : 1
+2016-09-26 11:40:50  [ main:174154 ] - [ INFO ]  number of splits:1
+2016-09-26 11:40:50  [ main:174402 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0145
+2016-09-26 11:40:50  [ main:174533 ] - [ INFO ]  Submitted application application_1473744425337_0145
+2016-09-26 11:40:50  [ main:174559 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0145/
+2016-09-26 11:40:50  [ main:174559 ] - [ INFO ]  Running job: job_1473744425337_0145
+2016-09-26 11:41:06  [ main:189858 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-26 11:41:06  [ main:189942 ] - [ INFO ]  Job job_1473744425337_0145 running in uber mode : false
+2016-09-26 11:41:06  [ main:189942 ] - [ INFO ]   map 100% reduce 100%
+2016-09-26 11:41:06  [ main:189993 ] - [ INFO ]  Job job_1473744425337_0145 completed successfully
+2016-09-26 11:41:06  [ main:190016 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=413704
+		FILE: Number of bytes written=1068249
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=489465
+		HDFS: Number of bytes written=420546
+		HDFS: Number of read operations=9
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1873
+		Total time spent by all reduces in occupied slots (ms)=2179
+		Total time spent by all map tasks (ms)=1873
+		Total time spent by all reduce tasks (ms)=2179
+		Total vcore-milliseconds taken by all map tasks=1873
+		Total vcore-milliseconds taken by all reduce tasks=2179
+		Total megabyte-milliseconds taken by all map tasks=1917952
+		Total megabyte-milliseconds taken by all reduce tasks=2231296
+	Map-Reduce Framework
+		Map input records=770
+		Map output records=770
+		Map output bytes=410696
+		Map output materialized bytes=413704
+		Input split bytes=126
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=770
+		Reduce shuffle bytes=413704
+		Reduce input records=770
+		Reduce output records=770
+		Spilled Records=1540
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=104
+		CPU time spent (ms)=2560
+		Physical memory (bytes) snapshot=460599296
+		Virtual memory (bytes) snapshot=4353761280
+		Total committed heap usage (bytes)=347602944
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=420546
+	File Output Format Counters 
+		Bytes Written=420546
+2016-09-26 11:41:06  [ main:190085 ] - [ INFO ]  Connecting to ResourceManager at master/106.3.36.146:8032
+2016-09-26 11:41:10  [ main:193859 ] - [ INFO ]  Total input paths to process : 1
+2016-09-26 11:41:10  [ main:194044 ] - [ INFO ]  number of splits:1
+2016-09-26 11:41:10  [ main:194181 ] - [ INFO ]  Submitting tokens for job: job_1473744425337_0146
+2016-09-26 11:41:10  [ main:194334 ] - [ INFO ]  Submitted application application_1473744425337_0146
+2016-09-26 11:41:10  [ main:194362 ] - [ INFO ]  The url to track the job: http://master:8088/proxy/application_1473744425337_0146/
+2016-09-26 11:41:10  [ main:194362 ] - [ INFO ]  Running job: job_1473744425337_0146
+2016-09-26 11:41:25  [ main:209171 ] - [ INFO ]  Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2016-09-26 11:41:25  [ main:209368 ] - [ INFO ]  Job job_1473744425337_0146 running in uber mode : false
+2016-09-26 11:41:25  [ main:209369 ] - [ INFO ]   map 100% reduce 100%
+2016-09-26 11:41:26  [ main:209740 ] - [ INFO ]  Job job_1473744425337_0146 completed successfully
+2016-09-26 11:41:26  [ main:209788 ] - [ INFO ]  Counters: 49
+	File System Counters
+		FILE: Number of bytes read=413704
+		FILE: Number of bytes written=1066117
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=420679
+		HDFS: Number of bytes written=420546
+		HDFS: Number of read operations=7
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=1874
+		Total time spent by all reduces in occupied slots (ms)=2045
+		Total time spent by all map tasks (ms)=1874
+		Total time spent by all reduce tasks (ms)=2045
+		Total vcore-milliseconds taken by all map tasks=1874
+		Total vcore-milliseconds taken by all reduce tasks=2045
+		Total megabyte-milliseconds taken by all map tasks=1918976
+		Total megabyte-milliseconds taken by all reduce tasks=2094080
+	Map-Reduce Framework
+		Map input records=770
+		Map output records=770
+		Map output bytes=410696
+		Map output materialized bytes=413704
+		Input split bytes=133
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=770
+		Reduce shuffle bytes=413704
+		Reduce input records=770
+		Reduce output records=770
+		Spilled Records=1540
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=105
+		CPU time spent (ms)=2480
+		Physical memory (bytes) snapshot=459104256
+		Virtual memory (bytes) snapshot=4353990656
+		Total committed heap usage (bytes)=347602944
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=420546
+	File Output Format Counters 
+		Bytes Written=420546
+2016-09-26 11:41:26  [ main:209869 ] - [ INFO ]  Deleting /naivebayes/vectors/partial-vectors-0
+2016-09-26 11:41:26  [ Thread-1:209920 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7a187f14: startup date [Mon Sep 26 11:37:56 CST 2016]; root of context hierarchy
+2016-09-26 11:41:26  [ Thread-1:209925 ] - [ INFO ]  {dataSource-1} closed
+2016-09-26 15:42:21  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/naivebayes/vectors/tokenized-documents/part-m-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-26 15:42:24  [ main:3289 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 17:01:28  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/naivebayes/vectors/dictionary.file-0], --startPhase=[0], --tempDir=[temp]}
+2016-09-26 17:01:28  [ main:180 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 17:02:16  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/naivebayes/vectors/frequency.file-0], --startPhase=[0], --tempDir=[temp]}
+2016-09-26 17:02:16  [ main:165 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 17:02:54  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/naivebayes/vectors/wordcount/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-26 17:02:54  [ main:164 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 17:03:35  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/naivebayes/vectors/df-count/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-26 17:03:35  [ main:164 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 17:03:59  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/naivebayes/vectors/tf-vectors/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-26 17:03:59  [ main:161 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-26 17:04:26  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/naivebayes/vectors/tfidf-vectors/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-26 17:04:26  [ main:163 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable

@@ -1,0 +1,130 @@
+<link href="../../static/jslib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../static/jslib/fontawesome4.2/css/font-awesome.css" rel="stylesheet">
+<script src="../../static/jslib/jquery/jquery-1.11.2.min.js"></script>
+<script src="../../static/jslib/bootstrap/js/bootstrap.min.js"></script>
+<script src = "../../static/js/util.js"></script>
+
+<script>
+    function runItemCF(onCluster)
+    {
+        $.ajax({
+            type: "POST",
+            url: getContextPath() + "/ItemCFController/runItemCF",
+            data: {
+                onCluster : onCluster ,
+                isOverWrite : true ,
+                input : $('#input').val() ,
+                output : $('#output').val() ,
+                tempDir : $('#tempDir').val() ,
+                similarityClassname : $('#similarityClassname').val(),
+                outputPathForSimilarityMatrix : $('#outputPathForSimilarityMatrix').val() ,
+                usersFile : $('#usersFile').val(),
+                itemsFile : $('#itemsFile').val(),
+                filterFile : $('#filterFile').val(),
+                numRecommendations : $('#numRecommendations').val(),
+                booleanData : $('#booleanData').val(),
+                maxPrefsPerUser : $('#maxPrefsPerUser').val(),
+                maxSimilaritiesPerItem : $('#maxSimilaritiesPerItem').val(),
+                minPrefsPerUser : $('#minPrefsPerUser').val(),
+                maxPrefsPerUserInItemSimilarity : $('#maxPrefsPerUserInItemSimilarity').val(),
+                threshold : $('#threshold').val()
+            },
+            success: function (data) {
+                alert(data.result);
+            }
+        });
+    }
+</script>
+<style>
+    .itemcf_input_path
+    {
+        width: 500px;
+        height: 25px;
+        padding-bottom: 5px;
+    }
+    .itemcf_input_num
+    {
+        width: 500px;
+        height: 25px;
+        padding-bottom: 5px;
+    }
+</style>
+<div style="padding: 10px 0px 0px 10px">
+    <legend>必须输入选项</legend>
+    <table>
+        <tr>
+            <td><label class="control-label" for="input">input(path):</label></td>
+            <td><input type="text" id="input" class="itemcf_input_path" maxlength="200" value="/itemcf/input" placeholder="存储用户偏好数据的目录"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="output">output(path):</label></td>
+            <td><input type="text" id="output" class="itemcf_input_path" maxlength="200" value="/itemcf/output/result/" placeholder="结算结果的输出目录"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="tempDir">tempDir(path):</label></td>
+            <td><input type="text" id="tempDir" class="itemcf_input_path" maxlength="200" value="/itemcf/temp" placeholder="临时文件输出目录"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="outputPathForSimilarityMatrix">outputPathForSimilarityMatrix(path):</label></td>
+            <td><input type="text" id="outputPathForSimilarityMatrix" class="itemcf_input_path" maxlength="200" value="/itemcf/output/matrix" placeholder="相似矩阵输出目录"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="similarityClassname">similarityClassname(classname):</label></td>
+            <td><select id="similarityClassname" class="itemcf_input_path">
+                <option value="SIMILARITY_CITY_BLOCK">CityBlockSimilarity</option>
+                <option value="SIMILARITY_COOCCURRENCE">CooccurrenceCountSimilarity</option>
+                <option value="SIMILARITY_COSINE">CosineSimilarity</option>
+                <option value="SIMILARITY_EUCLIDEAN_DISTANCE" selected = "selected">EuclideanDistanceSimilarity</option>
+                <option value="SIMILARITY_LOGLIKELIHOOD">LoglikelihoodSimilarity</option>
+                <option value="SIMILARITY_PEARSON_CORRELATION">PearsonCorrelationSimilarity</option>
+                <option value="SIMILARITY_TANIMOTO_COEFFICIENT">TanimotoCoefficientSimilarity</option>
+            </select></td>
+        </tr>
+    </table>
+    <legend style="padding-top: 20px">可选输入选项</legend>
+    <table>
+        <tr>
+            <td><label class="control-label" for="output"><label class="control-label" for="usersFile">usersFile(path):</label></label></td>
+            <td><input type="text" id="usersFile" class="itemcf_input_path" placeholder="存储userID的文件路径，该路径下所有文件包含的userID做推荐计算"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="itemsFile">itemsFile(path):</label></td>
+            <td><input type="text" id="itemsFile" class="itemcf_input_path" placeholder="存储itemID的文件路径，该路径下所有文件包含的itemID做推荐计算"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="filterFile">filterFile(path):</label></td>
+            <td><input type="text" id="filterFile" class="itemcf_input_path" placeholder="计算结果将不会为user推荐[userID,itemID]值对中包含的item"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="numRecommendations">numRecommendations(integer):</label></td>
+            <td><input type="text" id="numRecommendations" class="itemcf_input_num" placeholder="为每个用户推荐的item数量，默认为10"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="booleanData">booleanData(boolean):</label></td>
+            <td><input type="text" id="booleanData" class="itemcf_input_num" placeholder="如果输入数据不包含偏好数值，则将该参数设置为true ，默认为false"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="maxPrefsPerUser">maxPrefsPerUser(integer):</label></td>
+            <td><input type="text" id="maxPrefsPerUser" class="itemcf_input_num" placeholder="对每一个user使用的偏好数据的最大数量，默认为10"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="maxSimilaritiesPerItem">maxSimilaritiesPerItem(integer):</label></td>
+            <td><input type="text" id="maxSimilaritiesPerItem" class="itemcf_input_num" placeholder="针对每个item的相似度最大值，默认为100"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="minPrefsPerUser">minPrefsPerUser(integer):</label></td>
+            <td><input type="text" id="minPrefsPerUser" class="itemcf_input_num" placeholder="忽略所有偏好数据量少于该值的用户，默认为1"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="maxPrefsPerUserInItemSimilarity">maxPrefsPerUserInItemSimilarity(integer):</label></td>
+            <td><input type="text" id="maxPrefsPerUserInItemSimilarity" class="itemcf_input_num" placeholder="针对每个用户考虑的偏好数据最大数量，默认为1000"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="threshold">threshold(double):</label></td>
+            <td><input type="text" id="threshold" class="itemcf_input_num" placeholder="忽略相似度低于该阀值的item对"></td>
+        </tr>
+    </table>
+
+    <button class="btn btn-primary" onclick="runItemCF(true)">提交集群运行</button>
+    <button class="btn btn-success" style="padding-left: 20px" onclick="runItemCF(false)">本地模式运行</button>
+</div>

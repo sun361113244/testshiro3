@@ -49,7 +49,7 @@
         $(function(){
             initComponent();
 
-            App.init(6);
+            App.init(75);
         });
 
         function initComponent()
@@ -60,9 +60,32 @@
         function initHDFSExplore()
         {
             $('#hdfs_explore').tree({
-                url: getContextPath() + "/hdfsController/listDirectoryStructs"
+                url: getContextPath() + "/hdfsController/listDirectoryStructs" ,
+                onDblClick: function(node)
+                {
+//                    alert(node.attributes.absPath);
+                    showFileContent(node.attributes.absPath);
+                }
             });
         }
+
+        function showFileContent(path)
+        {
+            $.ajax({
+                type: "POST",
+                url: getContextPath() + "/hdfsController/showFileContent" ,
+                data: {
+                    path : path
+                },
+                success: function (data) {
+                    if(data.result == 1)
+                    {
+                        $('#main_content').html(data.content);
+                    }
+                }
+            });
+        }
+
         function initMenu()
         {
             $('#hdfs_explore').bind('contextmenu',function(e){
@@ -147,8 +170,17 @@
                         data: {
                             path : path
                         },
-                        success: function (records) {
-
+                        success: function (data) {
+                            if(data.result == 1)
+                            {
+                                initHDFSExplore();
+                                initMenu();
+                                alert('删除成功!');
+                            }
+                            else
+                            {
+                                alert('删除失败!');
+                            }
                         }
                     });
                 }
@@ -258,7 +290,7 @@
                 <div data-options="region:'west',split:true" title="文件目录" style="width:30%;padding:10px">
                     <ul id="hdfs_explore"></ul>
                 </div>
-                <div data-options="region:'center'" title="内容">
+                <div data-options="region:'center'" title="内容" id="main_content">
                     <p>hello world</p>
                 </div>
             </div>

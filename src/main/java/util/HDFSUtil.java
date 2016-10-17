@@ -204,4 +204,11 @@ public class HDFSUtil
         }
         return fileContent;
     }
+
+    public static void deleteOnExit(Path initialPoints) throws IOException
+    {
+        FileSystem fs = FileSystem.get(HadoopCommonUtil.getConf());
+        fs.deleteOnExit(initialPoints);
+        fs.close();
+    }
 }

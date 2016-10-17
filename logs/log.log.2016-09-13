@@ -1,0 +1,6 @@
+2016-09-13 16:55:56  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://172.16.174.139:9000/tianchi1/output/result/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-13 16:55:57  [ main:1401 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-13 16:56:12  [ main:0 ] - [ INFO ]  Command line arguments: {--endPhase=[2147483647], --input=[hdfs://master:9000/tianchi1/output/result/part-r-00000], --startPhase=[0], --tempDir=[temp]}
+2016-09-13 16:56:12  [ main:228 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-09-13 16:56:24  [ main:27639 ] - [ INFO ]  Retrying connect to server: 172.16.174.139/172.16.174.139:9000. Already tried 0 time(s); maxRetries=45
+2016-09-13 16:56:44  [ main:47642 ] - [ INFO ]  Retrying connect to server: 172.16.174.139/172.16.174.139:9000. Already tried 1 time(s); maxRetries=45

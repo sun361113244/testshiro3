@@ -1,0 +1,83 @@
+<link href="../../static/jslib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../../static/jslib/fontawesome4.2/css/font-awesome.css" rel="stylesheet">
+<script src="../../static/jslib/jquery/jquery-1.11.2.min.js"></script>
+<script src="../../static/jslib/bootstrap/js/bootstrap.min.js"></script>
+<script src = "../../static/js/util.js"></script>
+
+<script>
+    function runkmeans(onCluster)
+    {
+        $.ajax({
+            type: "POST",
+            url: getContextPath() + "/kmeansController/runKmeans",
+            data: {
+                onCluster : onCluster ,
+                isOverWrite : true ,
+                input : $('#input').val() ,
+                output : $('#output').val() ,
+                tempDir : $('#tempDir').val() ,
+                distanceMeasureClassName : $('#distanceMeasureClassName').val(),
+                k : $('#k').val() ,
+                convergenceDelta : $('#convergenceDelta').val() ,
+                maxIterations : $('#maxIterations').val()
+
+            },
+            success: function (data) {
+                alert(data.result);
+            }
+        });
+    }
+</script>
+<style>
+    .kmeans_input_path
+    {
+        width: 500px;
+        height: 25px;
+        padding-bottom: 5px;
+    }
+    .kmeans_input_num
+    {
+        width: 500px;
+        height: 25px;
+    }
+</style>
+<div style="padding: 10px 0px 0px 10px">
+    <legend>必须输入选项</legend>
+    <table>
+        <tr>
+            <td><label class="control-label" for="input">input(path):</label></td>
+            <td><input type="text" id="input" class="kmeans_input_path" maxlength="200" value="/kmeans/input/irisNoLabel1.data" placeholder="输入数据的目录"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="output">output(path):</label></td>
+            <td><input type="text" id="output" class="kmeans_input_path" maxlength="200" value="/kmeans/output/" placeholder="结算结果的输出目录"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="tempDir">tempDir(path):</label></td>
+            <td><input type="text" id="tempDir" class="kmeans_input_path" maxlength="200" value="/kmeans/temp" placeholder="临时文件输出目录"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="distanceMeasureClassName">distanceMeasureClassName(classname):</label></td>
+            <td><select id="distanceMeasureClassName" class="kmeans_input_path">
+                <option value="MEASURE_COSINE_DISTANCE" selected = "selected">CosineDistanceMeasure</option>
+                <option value="MEASURE_EUCLIDEAN_DISTANCE">EuclideanDistanceMeasure</option>
+                <option value="MEASURE_CHEBYSHEV_DISTANCE">ChebyshevDistanceMeasure</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="k">k(integer):</label></td>
+            <td><input type="text" id="k" class="kmeans_k" maxlength="200" value="10" placeholder="k值"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="convergenceDelta">convergenceDelta(double):</label></td>
+            <td><input type="text" id="convergenceDelta" class="kmeans_convergenceDelta" maxlength="200" value="0.01" placeholder="收敛阀值"></td>
+        </tr>
+        <tr>
+            <td><label class="control-label" for="maxIterations">maxIterations(integer):</label></td>
+            <td><input type="text" id="maxIterations" class="kmeans_maxIterations" maxlength="200" value="10" placeholder="最大迭代次数"></td>
+        </tr>
+    </table>
+
+    <button class="btn btn-primary" onclick="runkmeans(true)">提交集群运行</button>
+    <button class="btn btn-success" style="padding-left: 20px" onclick="runkmeans(false)">本地模式运行</button>
+</div>

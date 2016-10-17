@@ -1,0 +1,32 @@
+2016-09-14 17:58:18  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/fresh_comp_offline/tianchi_fresh_comp_train_user_itemcf.txt
+2016-09-14 17:58:18  [ main:49 ] - [ INFO ]  Reading file info...
+2016-09-14 17:58:18  [ main:189 ] - [ INFO ]  Processed 100000 lines
+2016-09-14 17:58:18  [ main:246 ] - [ INFO ]  Processed 200000 lines
+2016-09-14 17:58:18  [ main:256 ] - [ INFO ]  Read lines: 232579
+2016-09-14 18:03:08  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/fresh_comp_offline/tianchi_fresh_comp_train_user_itemcf.txt
+2016-09-14 18:03:08  [ main:28 ] - [ INFO ]  Reading file info...
+2016-09-14 18:03:08  [ main:170 ] - [ INFO ]  Processed 100000 lines
+2016-09-14 18:03:08  [ main:224 ] - [ INFO ]  Processed 200000 lines
+2016-09-14 18:03:08  [ main:237 ] - [ INFO ]  Read lines: 232579
+2016-09-14 18:04:01  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/itemcf.txt
+2016-09-14 18:04:01  [ main:31 ] - [ INFO ]  Reading file info...
+2016-09-14 18:04:01  [ main:35 ] - [ INFO ]  Read lines: 21
+2016-09-14 18:04:01  [ main:53 ] - [ INFO ]  Processed 5 users
+2016-09-14 18:04:15  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/itemcf.txt
+2016-09-14 18:04:15  [ main:37 ] - [ INFO ]  Reading file info...
+2016-09-14 18:04:15  [ main:42 ] - [ INFO ]  Read lines: 21
+2016-09-14 18:04:15  [ main:65 ] - [ INFO ]  Processed 5 users
+2016-09-14 18:05:05  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/itemcf.txt
+2016-09-14 18:05:05  [ main:33 ] - [ INFO ]  Reading file info...
+2016-09-14 18:05:05  [ main:39 ] - [ INFO ]  Read lines: 21
+2016-09-14 18:05:05  [ main:54 ] - [ INFO ]  Processed 5 users
+2016-09-14 18:05:56  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/fresh_comp_offline/tianchi_fresh_comp_train_user_itemcf.txt
+2016-09-14 18:05:56  [ main:33 ] - [ INFO ]  Reading file info...
+2016-09-14 18:05:56  [ main:179 ] - [ INFO ]  Processed 100000 lines
+2016-09-14 18:05:56  [ main:231 ] - [ INFO ]  Processed 200000 lines
+2016-09-14 18:05:56  [ main:242 ] - [ INFO ]  Read lines: 232579
+2016-09-14 18:07:02  [ main:0 ] - [ INFO ]  Creating FileDataModel for file /Users/charles/Desktop/乐享天下资料/data/fresh_comp_offline/tianchi_fresh_comp_train_user_itemcf.txt
+2016-09-14 18:07:02  [ main:30 ] - [ INFO ]  Reading file info...
+2016-09-14 18:07:02  [ main:173 ] - [ INFO ]  Processed 100000 lines
+2016-09-14 18:07:02  [ main:220 ] - [ INFO ]  Processed 200000 lines
+2016-09-14 18:07:02  [ main:232 ] - [ INFO ]  Read lines: 232579

@@ -24,33 +24,53 @@ public class ItemCFController
     private ItemCFService itemCFService;
 
     @RequestMapping("/runItemCF")
-    public ModelAndView runItemCF(@RequestParam("input")String input ,
+    public ModelAndView runItemCF(@RequestParam("onCluster")Boolean onCluster,
+                                  @RequestParam("isOverWrite")Boolean isOverWrite,
+                                  @RequestParam("input")String input ,
                                   @RequestParam("output")String output ,
+                                  @RequestParam("tempDir")String tempDir ,
+                                  @RequestParam("similarityClassname")String similarityClassname ,
                                   @RequestParam("outputPathForSimilarityMatrix")String outputPathForSimilarityMatrix ,
-                                  @RequestParam("similarityClassname")String similarityClassname)
+                                  String usersFile ,
+                                  String itemsFile ,
+                                  String filterFile ,
+                                  Integer numRecommendations ,
+                                  Boolean booleanData ,
+                                  Integer maxPrefsPerUser ,
+                                  Integer maxSimilaritiesPerItem ,
+                                  Integer minPrefsPerUser ,
+                                  Integer maxPrefsPerUserInItemSimilarity ,
+                                  Double threshold)
     {
         ModelAndView mav = new ModelAndView("JsonView");
 
-        String[] args = new String[]{
-                "-i" , input,
-                "-o", output ,
-                "-s", similarityClassname ,
-                "--outputPathForSimilarityMatrix", outputPathForSimilarityMatrix};
-
-        try
+        int checkRes = itemCFService.checkRunInputIllegal(onCluster ,isOverWrite ,input , output ,tempDir , similarityClassname ,
+                outputPathForSimilarityMatrix , usersFile , itemsFile ,filterFile ,numRecommendations ,
+                booleanData , maxPrefsPerUser , maxSimilaritiesPerItem , minPrefsPerUser ,
+                maxPrefsPerUserInItemSimilarity , threshold);
+        if( 1 == checkRes)
         {
-            if(HDFSUtil.exits(output))
-                HDFSUtil.deleteFile(output);
-            if(HDFSUtil.exits(outputPathForSimilarityMatrix))
-                HDFSUtil.deleteFile(outputPathForSimilarityMatrix);
-
-            ToolRunner.run(HadoopCommonUtil.getConf(), new RecommenderJob(), args);
-        } catch (Exception e)
-        {
-            mav.addObject("result" , -1);
-            e.printStackTrace();
+            int runState = -10;
+            if(onCluster)
+            {
+                runState = itemCFService.runItemCFOnCluster(input , output ,tempDir , similarityClassname ,
+                        outputPathForSimilarityMatrix , usersFile , itemsFile ,filterFile ,numRecommendations ,
+                        booleanData , maxPrefsPerUser , maxSimilaritiesPerItem , minPrefsPerUser ,
+                        maxPrefsPerUserInItemSimilarity , threshold);
+            }
+            else
+            {
+//                runState = itemCFService.runItemCFLocal(input , output ,tempDir , similarityClassname ,
+//                        outputPathForSimilarityMatrix , usersFile , itemsFile ,filterFile ,numRecommendations ,
+//                        booleanData , maxPrefsPerUser , maxSimilaritiesPerItem , minPrefsPerUser ,
+//                        maxPrefsPerUserInItemSimilarity , threshold);
+            }
+            mav.addObject("result" , runState);
         }
-        mav.addObject("result" , 1);
+        else
+        {
+            mav.addObject("result" , checkRes);
+        }
         return mav;
     }
 

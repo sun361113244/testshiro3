@@ -29,4 +29,23 @@
         <name>mapreduce.app-submission.cross-platform</name>
         <value>true</value>
     </property>
+    <property>
+        <name>mapreduce.jobhistory.address</name>
+        <value>master:10020</value>
+    </property>
+    <property>
+        <name>mapreduce.application.classpath</name>
+        <value>
+            /home/zhichaos/lib/hadoop/hadoop-2.7.2/etc/hadoop,
+            /home/zhichaos/lib/hadoop/hadoop-2.7.2/share/hadoop/common/*,
+            /home/zhichaos/lib/hadoop/hadoop-2.7.2/share/hadoop/common/lib/*,
+            /home/zhichaos/lib/hadoop/hadoop-2.7.2/share/hadoop/hdfs/*,
+            /home/zhichaos/lib/hadoop/hadoop-2.7.2/share/hadoop/hdfs/lib/*,
+            /home/zhichaos/lib/hadoop/hadoop-2.7.2/share/hadoop/mapreduce/*,
+            /home/zhichaos/lib/hadoop/hadoop-2.7.2/share/hadoop/mapreduce/lib/*,
+            /home/zhichaos/lib/hadoop/hadoop-2.7.2/share/hadoop/yarn/*,
+            /home/zhichaos/lib/hadoop/hadoop-2.7.2/share/hadoop/yarn/lib/*,
+            /home/zhichaos/lib/hadoop/hadoop-2.7.2/share/hadoop/mahout/*
+        </value>
+    </property>
 </configuration>
